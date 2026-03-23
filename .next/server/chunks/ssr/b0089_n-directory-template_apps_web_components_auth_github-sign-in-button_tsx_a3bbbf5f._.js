@@ -1,3 +1,0 @@
-module.exports=[758685,a=>{"use strict";var b=a.i(564960),c=a.i(290062),d=a.i(913490),e=a.i(894981);function f({callbackUrl:a,disabled:f=!1}){return(0,b.jsxs)(d.Button,{type:"button",variant:"outline",className:"h-11 w-full rounded-none font-bold",disabled:f,onClick:()=>{(0,e.signIn)("github",{callbackUrl:a})},children:[(0,b.jsx)(c.SiGithub,{className:"size-4","aria-hidden":"true"}),"Continue with GitHub"]})}a.s(["GitHubSignInButton",()=>f])}];
-
-//# sourceMappingURL=b0089_n-directory-template_apps_web_components_auth_github-sign-in-button_tsx_a3bbbf5f._.js.map

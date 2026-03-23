@@ -1,3 +1,0 @@
-module.exports=[224361,(e,i,r)=>{i.exports=e.x("util",()=>require("util"))},233405,(e,i,r)=>{i.exports=e.x("child_process",()=>require("child_process"))},522734,(e,i,r)=>{i.exports=e.x("fs",()=>require("fs"))},956573,e=>{"use strict";var i=e.i(233405);let r=e.i(224361).promisify(i.exec);e.s(["execAsync",0,r])},301231,e=>{"use strict";var i=e.i(522734),r=e.i(956573),t=e.i(512956);async function s(){try{return(await i.promises.readFile("/etc/hostid",{encoding:"utf8"})).trim()}catch(e){t.diag.debug(`error reading machine id: ${e}`)}try{return(await (0,r.execAsync)("kenv -q smbios.system.uuid")).stdout.trim()}catch(e){t.diag.debug(`error reading machine id: ${e}`)}}e.s(["getMachineId",()=>s])}];
-
-//# sourceMappingURL=%5Broot-of-the-server%5D__64c67848._.js.map

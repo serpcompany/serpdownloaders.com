@@ -1,3 +1,0 @@
-module.exports=[187070,a=>{"use strict";var b=a.i(860374);let c=(0,b.generateBaseMetadata)({title:"Add Your llms.txt",description:`Add your llms.txt to be included in ${b.SITE_NAME}. Help others discover your AI-ready documentation.`,path:"/submit",keywords:["add project","submit llms.txt","contribute","directory submission"],noindex:!0});function d({children:a}){return a}a.s(["default",()=>d,"metadata",0,c])}];
-
-//# sourceMappingURL=dev_repos_json-directory-template_apps_web_app_submit_layout_tsx_53283200._.js.map

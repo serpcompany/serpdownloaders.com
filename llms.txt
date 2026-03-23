@@ -1,0 +1,250 @@
+# LLMs.txt Hub Directory
+
+## Overview
+This is an automatically generated list of all websites implementing llms.txt, along with related blog posts and resources.
+
+## Websites
+The following websites have implemented llms.txt:
+
+- [Facebook Downloader by SERP](https://serp.ly/facebook-downloader): Download videos, images, and text from Facebook.com. Auto-detects media, converts to MP4. Choose quality. 3 free downloads.
+  - llms.txt: https://serp.ly/facebook-downloader/llms.txt
+  - Full Documentation: https://serp.ly/facebook-downloader/llms-full.txt
+- [Instagram Downloader by SERP](https://serp.ly/instagram-downloader): Download Instagram videos, Reels, photos & Stories. In-page buttons on every post. Saves as MP4 or original format. Free trial.
+  - llms.txt: https://serp.ly/instagram-downloader/llms.txt
+  - Full Documentation: https://serp.ly/instagram-downloader/llms-full.txt
+- [SERP 123Movies Downloader](https://serp.ly/123movies-downloader): Download videos from 123Movies and mirror sites. Auto-detects streams, converts to MP4. 3 free downloads included.
+  - llms.txt: https://serp.ly/123movies-downloader/llms.txt
+  - Full Documentation: https://serp.ly/123movies-downloader/llms-full.txt
+- [SERP AlphaPorno Downloader](https://serp.ly/alpha-porno-downloader): Download videos from AlphaPorno.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/alpha-porno-downloader/llms.txt
+  - Full Documentation: https://serp.ly/alpha-porno-downloader/llms-full.txt
+- [SERP AShemaleTube Downloader](https://serp.ly/ashemaletube-downloader): Download videos from AShemaleTube.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/ashemaletube-downloader/llms.txt
+  - Full Documentation: https://serp.ly/ashemaletube-downloader/llms-full.txt
+- [SERP Beeg Downloader](https://serp.ly/beeg-downloader): Download videos from Beeg.com. Auto-detects streams via Beeg API, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/beeg-downloader/llms.txt
+  - Full Documentation: https://serp.ly/beeg-downloader/llms-full.txt
+- [SERP BongaCams Downloader](https://serp.ly/bongacams-downloader): Record BongaCams live streams and download recordings. Auto-detects HLS, handles Mouflon DRM, converts to MP4. Choose quality. 3 free captures included.
+  - llms.txt: https://serp.ly/bongacams-downloader/llms.txt
+  - Full Documentation: https://serp.ly/bongacams-downloader/llms-full.txt
+- [SERP BoyFriendTV Downloader](https://serp.ly/boyfriendtv-downloader): Download videos from BoyFriendTV.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/boyfriendtv-downloader/llms.txt
+  - Full Documentation: https://serp.ly/boyfriendtv-downloader/llms-full.txt
+- [SERP Cam4 Downloader](https://serp.ly/cam4-video-downloader): Download Cam4 live streams and recorded videos. Captures LL-HLS streams, converts to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/cam4-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/cam4-video-downloader/llms-full.txt
+- [SERP CamsCom Downloader](https://serp.ly/camscom-video-downloader): Record live streams and download videos from Cams.com. Live capture, HLS to MP4, quality selection. 3 free downloads included.
+  - llms.txt: https://serp.ly/camscom-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/camscom-video-downloader/llms-full.txt
+- [SERP CamSoda Downloader](https://serp.ly/camsoda-downloader): Record CamSoda live streams and download recordings. Live capture, HLS to MP4, quality selection. 3 free downloads included.
+  - llms.txt: https://serp.ly/camsoda-downloader/llms.txt
+  - Full Documentation: https://serp.ly/camsoda-downloader/llms-full.txt
+- [SERP Chaturbate Downloader](https://serp.ly/chaturbate-downloader): Record live streams and download videos from Chaturbate.com. Live capture, VOD support, HLS to MP4. Choose quality. 3 free downloads.
+  - llms.txt: https://serp.ly/chaturbate-downloader/llms.txt
+  - Full Documentation: https://serp.ly/chaturbate-downloader/llms-full.txt
+- [SERP Circle Downloader](https://serp.ly/circle-downloader): Download videos from Circle.so, Tella, Loom, Vimeo, YouTube, Wistia. Converts HLS/DASH to MP4. 3 free downloads included.
+  - llms.txt: https://serp.ly/circle-downloader/llms.txt
+  - Full Documentation: https://serp.ly/circle-downloader/llms-full.txt
+- [SERP ClientClub Downloader](https://serp.ly/clientclub-downloader): Download videos from ClientClub/GoHighLevel portals. Detects Loom, Vimeo, Wistia, YouTube embeds. 3 free downloads included.
+  - llms.txt: https://serp.ly/clientclub-downloader/llms.txt
+  - Full Documentation: https://serp.ly/clientclub-downloader/llms-full.txt
+- [SERP Coomer Downloader](https://serp.ly/coomer-downloader): Download videos, images, GIFs, and text from Coomer.su. Bulk save creator content. Organized folders. 3 free downloads included.
+  - llms.txt: https://serp.ly/coomer-downloader/llms.txt
+  - Full Documentation: https://serp.ly/coomer-downloader/llms-full.txt
+- [SERP DreamCam Downloader](https://serp.ly/dreamcam-video-downloader): Record DreamCam live streams and download recordings. Live capture, HLS to MP4, VR support. 3 free downloads included.
+  - llms.txt: https://serp.ly/dreamcam-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/dreamcam-video-downloader/llms-full.txt
+- [SERP DreamCamVR Downloader](https://serp.ly/dreamcam-vr-video-downloader): Record live streams and download recordings from DreamCamVR. VR metadata, quality selection, HLS to MP4. 3 free downloads included.
+  - llms.txt: https://serp.ly/dreamcam-vr-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/dreamcam-vr-video-downloader/llms-full.txt
+- [SERP Erome Downloader](https://serp.ly/erome-downloader): Download videos and images from EroMe.com. Detects album media, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/erome-downloader/llms.txt
+  - Full Documentation: https://serp.ly/erome-downloader/llms-full.txt
+- [SERP FanslyLive Downloader](https://serp.ly/fansly-live-video-downloader): Record Fansly live streams and download VODs. Real-time HLS capture, converts to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/fansly-live-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/fansly-live-video-downloader/llms-full.txt
+- [SERP Flirt4Free Downloader](https://serp.ly/flirt4free-video-downloader): Record Flirt4Free live streams and download videos. HLS capture to MP4. VR support. Quality selection. 3 free downloads included.
+  - llms.txt: https://serp.ly/flirt4free-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/flirt4free-video-downloader/llms-full.txt
+- [SERP GoHighLevel Downloader](https://serp.ly/gohighlevel-downloader): Download videos from GoHighLevel portals and courses. Detects Loom, Vimeo, Wistia, YouTube embeds. 3 free downloads included.
+  - llms.txt: https://serp.ly/gohighlevel-downloader/llms.txt
+  - Full Documentation: https://serp.ly/gohighlevel-downloader/llms-full.txt
+- [SERP GoKollab DL](https://serp.ly/gokollab-downloader): Download videos, images & text from GoKollab courses. Detects Loom, YouTube, Vimeo, Wistia embeds. 3 free downloads included.
+  - llms.txt: https://serp.ly/gokollab-downloader/llms.txt
+  - Full Documentation: https://serp.ly/gokollab-downloader/llms-full.txt
+- [SERP HentaiHaven DL](https://serp.ly/hentaihaven-downloader): Download videos from HentaiHaven.xxx. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/hentaihaven-downloader/llms.txt
+  - Full Documentation: https://serp.ly/hentaihaven-downloader/llms-full.txt
+- [SERP JustForFans Downloader](https://serp.ly/justforfans-downloader): Download videos, images, and text from JustFor.Fans. Auto-detects streams, converts HLS to MP4. 3 free downloads included.
+  - llms.txt: https://serp.ly/justforfans-downloader/llms.txt
+  - Full Documentation: https://serp.ly/justforfans-downloader/llms-full.txt
+- [SERP Kajabi DL](https://serp.ly/kajabi-video-downloader): Download Kajabi course videos. Detects Loom, Vimeo, YouTube, Wistia embeds. Quality selection. MP4 output. 3 free downloads.
+  - llms.txt: https://serp.ly/kajabi-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/kajabi-video-downloader/llms-full.txt
+- [SERP LinkedIn DL](https://serp.ly/linkedin-learning-downloader): Download videos, images & text from LinkedIn posts. Scans your feed, organizes by author. 3 free downloads included.
+  - llms.txt: https://serp.ly/linkedin-learning-downloader/llms.txt
+  - Full Documentation: https://serp.ly/linkedin-learning-downloader/llms-full.txt
+- [SERP LuxureTV Downloader](https://serp.ly/luxuretv-downloader): Download videos from LuxureTV.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/luxuretv-downloader/llms.txt
+  - Full Documentation: https://serp.ly/luxuretv-downloader/llms-full.txt
+- [SERP ManyVids Downloader](https://serp.ly/manyvids-downloader): Download videos from ManyVids.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/manyvids-downloader/llms.txt
+  - Full Documentation: https://serp.ly/manyvids-downloader/llms-full.txt
+- [SERP Motherless Downloader](https://serp.ly/motherless-downloader): Download videos from Motherless.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/motherless-downloader/llms.txt
+  - Full Documentation: https://serp.ly/motherless-downloader/llms-full.txt
+- [SERP MyFreeCams Downloader](https://serp.ly/myfreecams-downloader): Download MyFreeCams live streams and recordings. Live capture, HLS to MP4 conversion. Choose quality. VR support. 3 free downloads.
+  - llms.txt: https://serp.ly/myfreecams-downloader/llms.txt
+  - Full Documentation: https://serp.ly/myfreecams-downloader/llms-full.txt
+- [SERP Notes](https://serp.ly/serp-notes): Markdown notes in your browser sidebar. AI writing assistant, voice transcription, cloud sync, live sharing. Works on any page.
+  - llms.txt: https://serp.ly/serp-notes/llms.txt
+  - Full Documentation: https://serp.ly/serp-notes/llms-full.txt
+- [SERP OnlyFans Bulk Downloader](https://serp.ly/onlyfans-bulk-downloader): Bulk download photos and videos from OnlyFans creators. Rate-limited queue. Chat media. In-page buttons. Free trial included.
+  - llms.txt: https://serp.ly/onlyfans-bulk-downloader/llms.txt
+  - Full Documentation: https://serp.ly/onlyfans-bulk-downloader/llms-full.txt
+- [SERP OnlyFans Downloader](https://serp.ly/onlyfans-downloader): Download videos, images, and posts from OnlyFans. Bulk tools. HLS to MP4 conversion. Per-creator folders. In-page overlays.
+  - llms.txt: https://serp.ly/onlyfans-downloader/llms.txt
+  - Full Documentation: https://serp.ly/onlyfans-downloader/llms-full.txt
+- [SERP PornHub Downloader](https://serp.ly/pornhub-video-downloader): Download videos from Pornhub.com. Auto-detects flashvars and HLS streams, converts to MP4. Choose quality. 3 free downloads.
+  - llms.txt: https://serp.ly/pornhub-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/pornhub-video-downloader/llms-full.txt
+- [SERP Reddit Downloader](https://serp.ly/reddit-downloader): Download videos, images & text from Reddit.com. Detects v.redd.it streams, captures images, exports text. 3 free downloads.
+  - llms.txt: https://serp.ly/reddit-downloader/llms.txt
+  - Full Documentation: https://serp.ly/reddit-downloader/llms-full.txt
+- [SERP RedGifs Downloader](https://serp.ly/redgifs-downloader): Download videos and GIFs from RedGifs.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/redgifs-downloader/llms.txt
+  - Full Documentation: https://serp.ly/redgifs-downloader/llms-full.txt
+- [SERP SexChatHU Downloader](https://serp.ly/sexchathu-video-downloader): Download streams from SexChatHU. Live capture, VR support, HLS to MP4 conversion. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/sexchathu-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/sexchathu-video-downloader/llms-full.txt
+- [SERP Skool Downloader](https://serp.ly/skool-video-downloader): Download videos from Skool.com classrooms and courses. Detects Loom, Vimeo, YouTube, Wistia, and native. MP4. 3 free downloads.
+  - llms.txt: https://serp.ly/skool-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/skool-video-downloader/llms-full.txt
+- [SERP SproutVideo Downloader](https://serp.ly/sprout-video-downloader): Download SproutVideo videos to your computer. Detects embeds on any site, handles passwords and HLS. 3 free downloads included.
+  - llms.txt: https://serp.ly/sprout-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/sprout-video-downloader/llms-full.txt
+- [SERP Streamate Downloader](https://serp.ly/streamate-video-downloader): Download Streamate live streams and recordings. Captures HLS to MP4. Quality selection. VR support. 3 free downloads included.
+  - llms.txt: https://serp.ly/streamate-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/streamate-video-downloader/llms-full.txt
+- [SERP Stripchat Downloader](https://serp.ly/stripchat-video-downloader): Record live streams and download videos from Stripchat.com. Live capture, HLS to MP4 conversion. Quality selection. 3 free downloads.
+  - llms.txt: https://serp.ly/stripchat-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/stripchat-video-downloader/llms-full.txt
+- [SERP StripchatVR Downloader](https://serp.ly/stripchat-vr-video-downloader): Record Stripchat VR live streams. Real-time HLS capture to MP4. VR metadata preserved. Quality selection. 3 free downloads.
+  - llms.txt: https://serp.ly/stripchat-vr-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/stripchat-vr-video-downloader/llms-full.txt
+- [SERP TellaTV Downloader](https://serp.ly/tellatv-downloader): Download videos from Tella.tv. Detects signed HLS streams, converts to MP4. Works on embeds. 3 free downloads included.
+  - llms.txt: https://serp.ly/tellatv-downloader/llms.txt
+  - Full Documentation: https://serp.ly/tellatv-downloader/llms-full.txt
+- [SERP ThisVid Downloader](https://serp.ly/thisvid-downloader): Download videos from ThisVid.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/thisvid-downloader/llms.txt
+  - Full Documentation: https://serp.ly/thisvid-downloader/llms-full.txt
+- [SERP TokyoMotion Downloader](https://serp.ly/tokyomotion-downloader): Download videos from TokyoMotion.net. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/tokyomotion-downloader/llms.txt
+  - Full Documentation: https://serp.ly/tokyomotion-downloader/llms-full.txt
+- [SERP Twitter X Downloader](https://serp.ly/twitter-x-downloader): Download videos, images, and text from X (Twitter). Multi-source detection, bulk download. 3 free downloads included.
+  - llms.txt: https://serp.ly/twitter-x-downloader/llms.txt
+  - Full Documentation: https://serp.ly/twitter-x-downloader/llms-full.txt
+- [SERP Whop Downloader](https://serp.ly/whop-video-downloader): Download videos, images, and text from Whop.com. Detects Mux streams, bulk download support. 3 free downloads included.
+  - llms.txt: https://serp.ly/whop-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/whop-video-downloader/llms-full.txt
+- [SERP XHamsterLive Downloader](https://serp.ly/xhamsterlive-video-downloader): Download XHamsterLive live streams and recordings. Real-time capture, VOD downloads, VR support. Converts to MP4. 3 free downloads.
+  - llms.txt: https://serp.ly/xhamsterlive-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/xhamsterlive-video-downloader/llms-full.txt
+- [SERP XLoveCam Downloader](https://serp.ly/xlovecam-video-downloader): Download live streams and recordings from XLoveCam.com. Live capture, HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/xlovecam-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/xlovecam-video-downloader/llms-full.txt
+- [Video Downloader for Dailymotion](https://serp.ly/dailymotion-downloader): Download videos from Dailymotion.com. Detects all qualities, converts HLS to MP4. Choose resolution. 3 free downloads included.
+  - llms.txt: https://serp.ly/dailymotion-downloader/llms.txt
+  - Full Documentation: https://serp.ly/dailymotion-downloader/llms-full.txt
+- [Video Downloader for Eporner](https://serp.ly/eporner-downloader): Download videos from EPorner.com. Auto-detects streams via API, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/eporner-downloader/llms.txt
+  - Full Documentation: https://serp.ly/eporner-downloader/llms-full.txt
+- [Video Downloader for EroThots](https://serp.ly/erothots-downloader): Download videos from EroThots.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/erothots-downloader/llms.txt
+  - Full Documentation: https://serp.ly/erothots-downloader/llms-full.txt
+- [Video Downloader for HDZog](https://serp.ly/hdzog-downloader): Download videos from HDZog.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/hdzog-downloader/llms.txt
+  - Full Documentation: https://serp.ly/hdzog-downloader/llms-full.txt
+- [Video Downloader for Loom](https://serp.ly/loom-video-downloader): Download Loom videos to your computer as MP4. Works on share links and embeds. Handles HLS/DASH streams. Free trial included.
+  - llms.txt: https://serp.ly/loom-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/loom-video-downloader/llms-full.txt
+- [Video Downloader for M3U8](https://serp.ly/m3u8-downloader): Download M3U8/HLS video streams from any website. Auto-detects streams, converts to MP4. Works everywhere. 3 free downloads.
+  - llms.txt: https://serp.ly/m3u8-downloader/llms.txt
+  - Full Documentation: https://serp.ly/m3u8-downloader/llms-full.txt
+- [Video Downloader for Mindvalley](https://serp.ly/mindvalley-downloader): Download videos from Mindvalley.com. Detects HLS streams, converts to MP4. Supports Vimeo, YouTube, Loom embeds. 3 free downloads.
+  - llms.txt: https://serp.ly/mindvalley-downloader/llms.txt
+  - Full Documentation: https://serp.ly/mindvalley-downloader/llms-full.txt
+- [Video Downloader for NHentai](https://serp.ly/nhentai-downloader): Download videos from nhentai.net. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/nhentai-downloader/llms.txt
+  - Full Documentation: https://serp.ly/nhentai-downloader/llms-full.txt
+- [Video Downloader for Pinterest](https://serp.ly/pinterest-downloader): Download videos, images, and text from Pinterest. Auto-detects media, converts HLS to MP4. Bulk download. 3 free downloads.
+  - llms.txt: https://serp.ly/pinterest-downloader/llms.txt
+  - Full Documentation: https://serp.ly/pinterest-downloader/llms-full.txt
+- [Video Downloader for PornTrex](https://serp.ly/porntrex-downloader): Download videos from PornTrex.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/porntrex-downloader/llms.txt
+  - Full Documentation: https://serp.ly/porntrex-downloader/llms-full.txt
+- [Video Downloader for RedTube](https://serp.ly/redtube-video-downloader): Download videos from RedTube.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/redtube-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/redtube-video-downloader/llms-full.txt
+- [Video Downloader for SERP](https://serp.ly/serp-downloader): Download videos from any site. Supports MP4, HLS, DASH, YouTube, Vimeo, Loom, Wistia, Skool, and more. 3 free downloads.
+  - llms.txt: https://serp.ly/serp-downloader/llms.txt
+  - Full Documentation: https://serp.ly/serp-downloader/llms-full.txt
+- [Video Downloader for SpankBang](https://serp.ly/spankbang-video-downloader): Download videos from SpankBang.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/spankbang-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/spankbang-video-downloader/llms-full.txt
+- [Video Downloader for Thinkific](https://serp.ly/thinkific-downloader): Download videos from Thinkific courses. Auto-detects Wistia streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/thinkific-downloader/llms.txt
+  - Full Documentation: https://serp.ly/thinkific-downloader/llms-full.txt
+- [Video Downloader for TikTok](https://serp.ly/tiktok-video-downloader): Download TikTok videos as MP4. Auto-detects from feed and video pages. Multi-quality support. 3 free downloads included.
+  - llms.txt: https://serp.ly/tiktok-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/tiktok-video-downloader/llms-full.txt
+- [Video Downloader for TNAFlix](https://serp.ly/tnaflix-video-downloader): Download videos from TNAFlix.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/tnaflix-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/tnaflix-video-downloader/llms-full.txt
+- [Video Downloader for TXXX](https://serp.ly/txxx-downloader): Download videos from TXXX.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/txxx-downloader/llms.txt
+  - Full Documentation: https://serp.ly/txxx-downloader/llms-full.txt
+- [Video Downloader for Udemy](https://serp.ly/udemy-video-downloader): Download Udemy course videos as MP4. Bulk download entire courses. Auto-detects lectures. Quality selection. 3 free downloads.
+  - llms.txt: https://serp.ly/udemy-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/udemy-video-downloader/llms-full.txt
+- [Video Downloader for Upornia](https://serp.ly/upornia-downloader): Download videos from Upornia.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/upornia-downloader/llms.txt
+  - Full Documentation: https://serp.ly/upornia-downloader/llms-full.txt
+- [Video Downloader for Vimeo](https://serp.ly/vimeo-video-downloader): Download videos from Vimeo.com and embedded Vimeo players. Auto-detects streams, converts HLS to MP4. 3 free downloads included.
+  - llms.txt: https://serp.ly/vimeo-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/vimeo-video-downloader/llms-full.txt
+- [Video Downloader for Wistia](https://serp.ly/wistia-video-downloader): Download Wistia videos from any website. Detects embedded players, shows all qualities, saves as MP4. 3 free downloads included.
+  - llms.txt: https://serp.ly/wistia-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/wistia-video-downloader/llms-full.txt
+- [Video Downloader for XFantazy](https://serp.ly/xfantazy-downloader): Download videos from XFantazy.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/xfantazy-downloader/llms.txt
+  - Full Documentation: https://serp.ly/xfantazy-downloader/llms-full.txt
+- [Video Downloader for XHamster](https://serp.ly/xhamster-video-downloader): Download videos from xHamster.com and mirrors. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads.
+  - llms.txt: https://serp.ly/xhamster-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/xhamster-video-downloader/llms-full.txt
+- [Video Downloader for XNXX](https://serp.ly/xnxx-video-downloader): Download videos from XNXX.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/xnxx-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/xnxx-video-downloader/llms-full.txt
+- [Video Downloader for XVideos](https://serp.ly/xvideos-downloader): Download videos from XVideos.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/xvideos-downloader/llms.txt
+  - Full Documentation: https://serp.ly/xvideos-downloader/llms-full.txt
+- [Video Downloader for YesPornPlease](https://serp.ly/yespornplease-downloader): Download videos from YesPornPlease.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/yespornplease-downloader/llms.txt
+  - Full Documentation: https://serp.ly/yespornplease-downloader/llms-full.txt
+- [Video Downloader for YouJizz](https://serp.ly/youjizz-downloader): Download videos from YouJizz.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/youjizz-downloader/llms.txt
+  - Full Documentation: https://serp.ly/youjizz-downloader/llms-full.txt
+- [Video Downloader for YouPorn](https://serp.ly/youporn-video-downloader): Download videos from YouPorn.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.
+  - llms.txt: https://serp.ly/youporn-video-downloader/llms.txt
+  - Full Documentation: https://serp.ly/youporn-video-downloader/llms-full.txt
+- [Video Downloader for YouTube](https://serp.ly/youtube-downloader): Download YouTube videos in any quality. In-page button on the player. Multi-format extraction. 3 free downloads included.
+  - llms.txt: https://serp.ly/youtube-downloader/llms.txt
+  - Full Documentation: https://serp.ly/youtube-downloader/llms-full.txt
+
+## Resources
+- [Getting Started with llms.txt](#): Learn how to implement llms.txt in your project [getting-started]
+
+## Contributing
+- Want to add your website? Submit a PR to our GitHub repository
+- Found a bug? Open an issue
+- Have questions? Join our community
