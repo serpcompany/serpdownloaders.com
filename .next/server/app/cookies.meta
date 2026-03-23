@@ -1,0 +1,18 @@
+{
+  "status": 308,
+  "headers": {
+    "location": "/legal/cookies",
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(legal)/layout,_N_T_/(legal)/cookies/layout,_N_T_/(legal)/cookies/page,_N_T_/cookies"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KGxlZ2FsKQ/cookies/__PAGE__",
+    "/!KGxlZ2FsKQ/cookies",
+    "/!KGxlZ2FsKQ",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "node": {
+    "003939d01e3ad5517b0f02709d42e1696030a2b947": {
+      "workers": {
+        "app/[category]/page": {
+          "moduleId": 951557,
+          "async": false,
+          "exportedName": "getHomePageData",
+          "filename": "dev/repos/json-directory-template/apps/web/actions/get-home-page-data.ts"
+        },
+        "app/favorites/page": {
+          "moduleId": 420265,
+          "async": false,
+          "exportedName": "getHomePageData",
+          "filename": "dev/repos/json-directory-template/apps/web/actions/get-home-page-data.ts"
+        },
+        "app/featured/page": {
+          "moduleId": 156083,
+          "async": false,
+          "exportedName": "getHomePageData",
+          "filename": "dev/repos/json-directory-template/apps/web/actions/get-home-page-data.ts"
+        },
+        "app/page": {
+          "moduleId": 41758,
+          "async": false,
+          "exportedName": "getHomePageData",
+          "filename": "dev/repos/json-directory-template/apps/web/actions/get-home-page-data.ts"
+        }
+      },
+      "layer": {
+        "app/[category]/page": "rsc",
+        "app/favorites/page": "rsc",
+        "app/featured/page": "rsc",
+        "app/page": "rsc"
+      },
+      "filename": "dev/repos/json-directory-template/apps/web/actions/get-home-page-data.ts",
+      "exportedName": "getHomePageData"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "IheSIpoJCjsC5UgocSdN47jyZNQeNNMSuYJjT2asQJU="
+}

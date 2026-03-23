@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+Disallow: /404
+Disallow: /500
+Disallow: /submit
+Disallow: /search
+
+Sitemap: https://serp.co/sitemap.xml

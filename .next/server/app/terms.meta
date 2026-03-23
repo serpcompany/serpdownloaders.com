@@ -1,0 +1,18 @@
+{
+  "status": 308,
+  "headers": {
+    "location": "/legal/terms",
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(legal)/layout,_N_T_/(legal)/terms/layout,_N_T_/(legal)/terms/page,_N_T_/terms"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KGxlZ2FsKQ/terms/__PAGE__",
+    "/!KGxlZ2FsKQ/terms",
+    "/!KGxlZ2FsKQ",
+    "/_index",
+    "/_head"
+  ]
+}

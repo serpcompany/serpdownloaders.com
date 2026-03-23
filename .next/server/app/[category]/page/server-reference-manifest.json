@@ -1,0 +1,20 @@
+{
+  "node": {
+    "003939d01e3ad5517b0f02709d42e1696030a2b947": {
+      "workers": {
+        "app/[category]/page": {
+          "moduleId": 951557,
+          "async": false,
+          "exportedName": "getHomePageData",
+          "filename": "dev/repos/json-directory-template/apps/web/actions/get-home-page-data.ts"
+        }
+      },
+      "layer": {
+        "app/[category]/page": "rsc"
+      },
+      "exportedName": "getHomePageData",
+      "filename": "dev/repos/json-directory-template/apps/web/actions/get-home-page-data.ts"
+    }
+  },
+  "edge": {}
+}

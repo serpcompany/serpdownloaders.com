@@ -1,0 +1,18 @@
+{
+  "status": 308,
+  "headers": {
+    "location": "/legal/privacy",
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(legal)/layout,_N_T_/(legal)/privacy/layout,_N_T_/(legal)/privacy/page,_N_T_/privacy"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KGxlZ2FsKQ/privacy/__PAGE__",
+    "/!KGxlZ2FsKQ/privacy",
+    "/!KGxlZ2FsKQ",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../../../../../dev/repos/json-directory-template/apps/web/app/websites/loading.tsx"],"sourcesContent":["export default function Loading() {\n  return null\n}\n"],"names":[],"mappings":"uCAAe,SAAS,IACtB,OAAO,IACT"}

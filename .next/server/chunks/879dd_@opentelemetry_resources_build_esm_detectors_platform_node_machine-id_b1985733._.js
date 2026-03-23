@@ -1,0 +1,3 @@
+module.exports=[268879,e=>{"use strict";var i=e.i(233405);let t=e.i(224361).promisify(i.exec);e.s(["execAsync",0,t])},492148,e=>{"use strict";var i=e.i(268879),t=e.i(73097);async function r(){try{let e=(await (0,i.execAsync)('ioreg -rd1 -c "IOPlatformExpertDevice"')).stdout.split("\n").find(e=>e.includes("IOPlatformUUID"));if(!e)return;let t=e.split('" = "');if(2===t.length)return t[1].slice(0,-1)}catch(e){t.diag.debug(`error reading machine id: ${e}`)}}e.s(["getMachineId",()=>r])}];
+
+//# sourceMappingURL=879dd_%40opentelemetry_resources_build_esm_detectors_platform_node_machine-id_b1985733._.js.map

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../../../../../dev/repos/json-directory-template/apps/web/app/news/loading.tsx"],"sourcesContent":["// News page temporarily disabled — see news/page.tsx\n\n/**\n * News loading skeleton — no-op while news is disabled.\n */\nexport default function Loading() {\n  return null\n}\n"],"names":[],"mappings":"wCAKe,SAAS,IACtB,OAAO,IACT"}
