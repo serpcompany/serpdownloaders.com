@@ -1,0 +1,669 @@
+{
+  "extension": "cam4-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP Cam4 Downloader",
+    "slug": "cam4-downloader",
+    "geckoId": "cam4-downloader@serpapps.com",
+    "category": "Video Downloader (Adult / Live Cam)",
+    "targetSites": [
+      "cam4.com"
+    ],
+    "targetSiteMatches": [
+      "https://cam4.com/*",
+      "https://www.cam4.com/*",
+      "https://hu.cam4.com/*",
+      "https://*.cam4.com/*"
+    ],
+    "description": "Download Cam4 live streams and recordings"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/cam4-downloader",
+    "lastUpdated": "2026-03-06",
+    "buildDate": null,
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": false,
+    "storeSanitizedFile": null,
+    "githubReleasesRepo": "serpapps/cam4-video-downloader",
+    "productPage": "https://serp.ly/cam4-video-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "HLS Live Capture (LL-HLS segment recording)",
+      "HLS VOD Stitching (m3u8 segment to MP4 transmux)",
+      "Direct MP4 (offscreen streaming)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from HLS master manifest EXT-X-STREAM-INF variants (resolution, bandwidth, frame rate)",
+    "qualitySorting": "By height descending, then bandwidth descending",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": true,
+    "liveCaptureMethod": "PROCESS_HLS_LIVE_CAPTURE offscreen message, continuous LL-HLS segment fetching with _HLS_msn/_HLS_part hints",
+    "vodSupport": true,
+    "vodUrlPattern": "/{model}/videos/{videoId}",
+    "vrSupport": true,
+    "vrMetadata": "VR camera settings (stereoPacking, frameFormat, horizontalAngle) from broadcastSettings; VR filename suffix appended",
+    "bulkDownload": false,
+    "inPagePlayerButton": true,
+    "playerButtonTargets": [
+      "[data-testid=\"video-player\"]",
+      ".player__video-wrapper",
+      ".video-player__wrapper",
+      ".media-player",
+      "#player-root",
+      ".video-player",
+      "nearest video parent container"
+    ],
+    "contextMenu": true,
+    "contextMenuId": "download-cam4-video",
+    "contextMenuTitle": "Download Cam4 Stream",
+    "contextMenuContexts": [
+      "page",
+      "video"
+    ],
+    "autoSave": true,
+    "downloadFolder": "CAM4/",
+    "desktopNotifications": false,
+    "notificationNote": "notifications permission declared in manifest but no chrome.notifications.create calls found",
+    "videoDetection": "Cam4 REST API profile/info + streamInfo endpoints via inject.js, HLS master manifest probing across multiple CDN hosts"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "offscreen"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://*/*",
+      "https://cam4.com/*",
+      "https://www.cam4.com/*",
+      "https://hu.cam4.com/*",
+      "https://webchat.cam4.com/*",
+      "https://*.cam4.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "download-manager.js",
+        "content.js",
+        "player-button.js"
+      ],
+      "matches": [
+        "https://cam4.com/*",
+        "https://www.cam4.com/*",
+        "https://hu.cam4.com/*",
+        "https://*.cam4.com/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "MP4 streaming download + HLS segment transmuxing + live capture recording"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true
+    },
+    "pageInjection": {
+      "file": "inject.js",
+      "purpose": "Page-context Cam4 REST API calls (profile info, streamInfo, requestAccess), HLS URL collection, model metadata",
+      "messageType": "CAM4_PAGE_DATA",
+      "requestMessageType": "REQUEST_CAM4_DATA"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "Cam4 Profile Info API (hu.cam4.com/rest/v1.0/profile/{username}/info)",
+      "Cam4 Stream Info API (hu.cam4.com/rest/v1.0/profile/{username}/streamInfo)",
+      "Cam4 Access API (webchat.cam4.com/requestAccess?roomname={username})",
+      "Cam4 Front API (cam4.com/api/front/v2/models/username/{slug}/cam)",
+      "Cam4 Videos API (cam4.com/api/front/v2/users/{id}/videos)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "cam4-video-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/cam4-video-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/cam4-video-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": []
+  },
+  "videoDetectionAndExtraction": {
+    "pageTypeDetection": "URL path matching: /{model}/videos/{id} = VOD, all other model pages = live",
+    "modelIdSources": [
+      "Cam4 profile info API (id, userId)",
+      "inject.js roomSlug from URL path",
+      "API streamName",
+      "API userId"
+    ],
+    "titleSources": [
+      "info.stageName",
+      "info.username",
+      "model displayName",
+      "meta[property=\"og:title\"]",
+      "document.title"
+    ],
+    "thumbnailSources": [
+      "meta[property=\"og:image\"]",
+      "video.currentSrc"
+    ],
+    "streamHostSources": [
+      "cam.hlsStreamHost",
+      "cam.streamHost",
+      "cam.stream_server.hlsStreamHost",
+      "cam.streamServer.hlsStreamHost",
+      "API streamInfo cdnURL",
+      "config fallback domains"
+    ],
+    "streamNameSources": [
+      "cam.streamName",
+      "cam.stream_name",
+      "cam.streamId",
+      "API cam.streamName"
+    ],
+    "hlsMasterUrlPattern": "https://edge-hls.{host}/hls/{streamId}/master/{streamId}_auto.m3u8",
+    "hlsBestOnlyUrlPattern": "https://edge-hls.{host}/hls/{streamId}/master/{streamId}.m3u8",
+    "defaultCdnHosts": [
+      "doppiocdn.com",
+      "doppiocdn.net",
+      "stripcdnm.com",
+      "stripcdnmd.com",
+      "stripcdntmp.com",
+      "sc-cdn.net"
+    ],
+    "injectMessageType": "CAM4_PAGE_DATA",
+    "cam4ApiEndpoints": [
+      "hu.cam4.com/rest/v1.0/profile/{username}/info",
+      "hu.cam4.com/rest/v1.0/profile/{username}/streamInfo",
+      "webchat.cam4.com/requestAccess?roomname={username}"
+    ]
+  },
+  "mouflonDrm": {
+    "description": "Cam4 uses the same Mouflon HLS manifest obfuscation system (shared infrastructure with Stripchat) that encrypts segment filenames",
+    "detectionTag": "#EXT-X-MOUFLON",
+    "pschTag": "#EXT-X-MOUFLON:PSCH:{version}:{pkey}",
+    "fileTag": "#EXT-X-MOUFLON:FILE:{encoded}",
+    "uriTag": "#EXT-X-MOUFLON:URI:{uri}",
+    "keyDerivation": "Fetch config -> get MMP external source origin + version -> download main.js -> extract Doppio bundle filename -> find decode key for pkey in Doppio bundle",
+    "decryptionMethod": "XOR cipher: base64-decode filename, SHA-256 hash the decode key, XOR each byte",
+    "fallbackKeys": {
+      "Ook7quaiNgiyuhai": "EQueeGh2kaewa3ch"
+    },
+    "keyCacheType": "In-memory Map, keyed by pkey value, permanent during session",
+    "manifestRewrite": "Decoded filenames replace Forbidden or media.mp4 placeholders in manifest lines"
+  },
+  "formatObjectStructure": {
+    "url": "string (variant playlist URL)",
+    "requestUrl": "string (URL with extraParams applied)",
+    "masterUrl": "string (master manifest URL)",
+    "quality": "string (e.g. '1080p (HLS)', '720p @ 60fps (HLS)', 'Auto (HLS)')",
+    "format": "hls | mp4",
+    "ext": "m3u8 | mp4",
+    "height": "number | null",
+    "bandwidth": "number | null",
+    "fps": "number | null",
+    "type": "hls | mp4",
+    "extraParams": {
+      "psch": "string | undefined (Mouflon version)",
+      "pkey": "string | undefined (Mouflon public key)",
+      "playlistType": "lowLatency (for live streams only)"
+    }
+  },
+  "hlsProcessingSpecs": {
+    "converter": "SimpleHLS2MP4Converter",
+    "playlistParseTimeoutMs": 12000,
+    "llHlsSupport": true,
+    "llHlsFeatures": [
+      "EXT-X-PART segments",
+      "_HLS_msn/_HLS_part hints",
+      "PRELOAD-HINT skipped"
+    ],
+    "byteRangeSupport": true,
+    "livePlaylistType": "lowLatency",
+    "forbiddenFallback": "Tries best-only master URL ({streamId}.m3u8 instead of {streamId}_auto.m3u8)",
+    "webFallback": "If playlist text is Forbidden, retries with playlistType=web",
+    "segmentDeduplication": "URL + byte-range key deduplication via Set",
+    "credentialMode": {
+      "cam4Domains": "include",
+      "cdnDomains": "include",
+      "others": "omit"
+    },
+    "fetchFallback": "Background fetch -> offscreen fetch (page-like headers/UA)",
+    "referer": "https://cam4.com/",
+    "origin": "https://cam4.com"
+  },
+  "liveCaptureSpecs": {
+    "messageType": "PROCESS_HLS_LIVE_CAPTURE",
+    "stopMessage": "STOP_HLS_LIVE_CAPTURE",
+    "cancelMessage": "CANCEL_HLS_PROCESSING",
+    "progressTracking": [
+      "capturedSegments",
+      "elapsedSeconds",
+      "isLiveCapture flag"
+    ],
+    "uiIndicators": [
+      "capture-hint in popup",
+      "live-capture-status in popup",
+      "elapsed time in download manager"
+    ],
+    "variantParamsForwarded": [
+      "Mouflon psch/pkey",
+      "playlistType=lowLatency"
+    ],
+    "offscreenConstants": {
+      "pollIntervalMs": 1400,
+      "idleLimitWithData": 35,
+      "idleLimitNoData": 12,
+      "maxPlaylistErrors": 8,
+      "firstBatchLimit": 8,
+      "tickTailLimit": 4,
+      "maxSegmentRetries": 3,
+      "backoffBaseMs": 500,
+      "stallTimeoutMs": 30000
+    }
+  },
+  "vodSpecs": {
+    "urlPattern": "/{model}/videos/{videoId}",
+    "videoLookupApi": "GET /api/front/v2/users/{userId}/videos",
+    "formatSources": [
+      "entry.videoUrl (HLS m3u8 or direct MP4)",
+      "entry.trailerUrl (fallback trailer MP4)"
+    ],
+    "qualityLabels": [
+      "Source (MP4)",
+      "Auto (HLS)",
+      "resolution variants",
+      "Trailer (MP4)"
+    ],
+    "accessGate": "Some videos require purchase/fan-club; throws descriptive error",
+    "metaCacheTtlMs": 15000,
+    "videosCacheTtlMs": 15000
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Stream detection, metadata extraction, page type detection (live vs VOD), download progress routing"
+    },
+    {
+      "component": "Player Button",
+      "files": [
+        "player-button.js"
+      ],
+      "purpose": "In-page download button on video player with quality popover"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, HLS master manifest parsing, Cam4 API integration, Mouflon decryption, auth gating, offscreen management, context menu"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "UI, quality selector, live capture status, auth flow"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "MP4 streaming + HLS transmux + live capture recording"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js",
+        "auth/auth-config.js",
+        "auth/auth-api.js",
+        "auth/auth-storage.js",
+        "auth/auth-telemetry.js",
+        "auth/auth-token.js"
+      ],
+      "purpose": "OTP login, entitlements, trial management"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager.js"
+      ],
+      "purpose": "In-page download progress panel with live capture elapsed time"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-context Cam4 REST API calls (profile info, stream info, access check), HLS URL collection, model metadata"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup customizations"
+    }
+  ],
+  "playerButtonConfig": {
+    "containerTargets": [
+      "[data-testid=\"video-player\"]",
+      ".player__video-wrapper",
+      ".video-player__wrapper",
+      ".media-player",
+      "#player-root",
+      ".video-player",
+      "nearest video parent container"
+    ],
+    "buttonText": "Download with down-arrow icon",
+    "buttonClass": ".sc-download-button",
+    "qualityPopover": true,
+    "qualityPopoverClass": ".sc-quality-popover",
+    "visibilityGate": "isActivated = true",
+    "reactive": "Watches chrome.storage.onChanged for activation updates",
+    "css": "styles/player-button.css"
+  },
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (slides from -400px to 20px)",
+    "panelId": "CAM4-download-manager",
+    "cardWidth": "380px",
+    "maxHeight": "80vh",
+    "innerContainerMaxHeight": "400px",
+    "zIndex": 10000,
+    "border": "2px solid var(--brand-accent)",
+    "borderRadius": "10px",
+    "font": "sans-serif",
+    "autoHide": "Downloads auto-close when complete",
+    "features": [
+      "Minimize/close buttons",
+      "Per-download progress bars",
+      "Live capture elapsed time",
+      "Cancel buttons"
+    ],
+    "css": "styles/download-manager.css"
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/styles.css (8.5 KB)",
+      "styles/popup-enhanced.css (17.8 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "popup-ui-overrides.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Quick help banner",
+      "Header",
+      "Activation section",
+      "Loading spinner",
+      "Error state",
+      "Video info card (thumbnail, title, duration, VR badge)",
+      "Quality selector",
+      "Capture hint",
+      "Live capture status",
+      "Download button (Start/Stop for live, Download Video for VOD)",
+      "Progress bar"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing (SimpleHLS2MP4Converter)"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs + modules/eventemitter/",
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    }
+  ],
+  "cdnInfrastructure": [
+    {
+      "domain": "doppiocdn.com",
+      "purpose": "Primary HLS edge CDN"
+    },
+    {
+      "domain": "doppiocdn.net",
+      "purpose": "Secondary HLS edge CDN"
+    },
+    {
+      "domain": "stripcdnm.com",
+      "purpose": "Shared media CDN"
+    },
+    {
+      "domain": "stripcdnmd.com",
+      "purpose": "Shared media CDN (alternate)"
+    },
+    {
+      "domain": "stripcdntmp.com",
+      "purpose": "Shared temporary/transient CDN"
+    },
+    {
+      "domain": "sc-cdn.net",
+      "purpose": "Shared static CDN"
+    }
+  ],
+  "cachingStrategy": [
+    {
+      "cache": "CAM4MetaCache",
+      "ttlMs": 15000,
+      "purpose": "Stream metadata per model slug"
+    },
+    {
+      "cache": "CAM4VideosCache",
+      "ttlMs": 15000,
+      "purpose": "Videos list per user ID"
+    },
+    {
+      "cache": "CAM4ConfigCache",
+      "ttlMs": 300000,
+      "purpose": "Cam4 config (Mouflon origins)"
+    },
+    {
+      "cache": "mouflonKeyCache",
+      "ttl": "permanent (in-memory)",
+      "purpose": "Mouflon decode keys per pkey"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build.js (uses sharp for icons, archiver for zipping)",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/cam4-video-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/cam4-downloader/"
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "test-key",
+    "ghLicenseId": "xTBDv7Igej2iWM7JjbSb",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_U5nhsrNyp5djNw",
+    "stripeProductName": "Cam4 Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [cam4-downloader-monthly-9]",
+    "stripeOneTimePrice": null,
+    "stripePriceIds": [
+      "price_1T7c65DP7AOTRcvmbXKPDyyS"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "32x32",
+      "file": "icons/icon32.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#ff4f70",
+    "brandAccentHover": "#e63d5d",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "extension": "onlyfans-bulk-downloader",
+  "productPositioning": {
+    "headline": "Bulk Download OnlyFans Content — Photos, Videos, Chat Media, All Your Creators at Once",
+    "elevatorPitch": "SERP OnlyFans Bulk Downloader is a browser extension that batch-downloads photos, videos, and chat media from your OnlyFans subscriptions. Select the creators you subscribe to, choose your media type, and the extension downloads everything to your computer — organized, rate-limited, and queue-managed. No external software needed.",
+    "valueProposition": "Purpose-built for OnlyFans with multi-creator bulk download, configurable rate limiting (conservative to aggressive), persistent download queue with pause/resume/retry, in-page download buttons on every image and video, chat media support, and media type filtering. Everything runs in your browser with smart rate limiting to protect your account.",
+    "targetAudience": "OnlyFans subscribers who want to save content from their subscriptions for offline access. Users who follow multiple creators and need an efficient way to download entire profiles. Non-technical users who want a guided, step-by-step bulk download workflow.",
+    "useCases": [
+      "Bulk download all photos and videos from one or more OnlyFans creators you subscribe to",
+      "Download only photos or only videos with the media type filter",
+      "Save chat/DM media from conversations",
+      "Use in-page overlay buttons for quick one-off downloads while browsing",
+      "Manage large download queues with pause, resume, and retry",
+      "Control download speed to avoid triggering platform rate limits"
+    ],
+    "painPointsAddressed": [
+      "OnlyFans has no built-in download-all or bulk save feature",
+      "Right-click save is blocked or delivers low-quality versions",
+      "Manually saving content from multiple creators is time-consuming",
+      "Aggressive downloading can trigger account restrictions",
+      "Users need organized file management for large media libraries",
+      "Chat media is especially difficult to save individually"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Bulk download photos and videos from OnlyFans creators. Rate-limited queue. Chat media. In-page buttons. Free trial included.",
+    "changelog": "v4.0.1 — Multi-creator bulk download, configurable rate limiter (3 presets), download queue with pause/resume, chat media support, in-page overlay buttons, React-based multi-page UI.",
+    "fullDescription": "SERP OnlyFans Bulk Downloader lets you batch-download photos, videos, and chat media from your OnlyFans subscriptions directly to your computer.\n\nHow it works: Install the extension, sign in with your email, then follow the guided 4-step workflow. First, configure your download speed in Settings. Then select the creators you want to download from. The extension fetches their posts, builds a download list, and processes everything through a managed queue with progress tracking.\n\nThe extension includes smart rate limiting with three presets — Conservative, Balanced, and Aggressive — so you can choose between safety and speed. The download queue supports pause, resume, stop, cancel, and retry. You can run 1 to 8 concurrent downloads.\n\nFor quick saves while browsing, the extension also adds download buttons directly on images and videos throughout OnlyFans — including in lightboxes, modals, and chat views.\n\nKey features:\n- Bulk download from multiple OnlyFans creators at once\n- Download photos, videos, or both — media type filter included\n- Chat/DM media download support\n- Smart rate limiting with 3 presets (Conservative, Balanced, Aggressive)\n- Persistent download queue with pause, resume, stop, cancel, and retry\n- Configurable concurrency (1-8 simultaneous downloads)\n- In-page download overlay buttons on every image and video\n- Lightbox and modal support (PhotoSwipe, dialogs, media viewers)\n- Auto-saves to organized OnlyFans/ subfolder\n- Step-by-step guided workflow — no technical knowledge needed\n- Free trial downloads included\n\nGetting started:\n1. Install the extension and sign in with your email\n2. Open Settings — verify your OnlyFans login and choose download speed\n3. Select Creators — browse your subscriptions and pick who to download from\n4. Watch Progress — the queue handles everything with real-time status updates\n\nSign in with your email to unlock trial downloads. Upgrade to a license for unlimited bulk downloading.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Bulk download photos and videos from multiple OnlyFans creators simultaneously",
+      "Media type filter — download all media, photos only, or videos only",
+      "Chat and DM media download support",
+      "Three rate limiter presets — Conservative (safest), Balanced (recommended), Aggressive (fastest)",
+      "Persistent download queue with pause, resume, stop, cancel, and retry",
+      "Configurable concurrency — 1 to 8 simultaneous downloads",
+      "In-page download overlay buttons on every image and video while browsing",
+      "Lightbox, modal, and PhotoSwipe media viewer support",
+      "Creator subscription browser with avatars and multi-select",
+      "Organized auto-save to Downloads/OnlyFans/ folder",
+      "Step-by-step guided workflow — Settings, Selection, Download, Progress",
+      "Free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Configure",
+        "description": "Install the extension, sign in, verify your OnlyFans login, and set your preferred download speed"
+      },
+      {
+        "step": 2,
+        "title": "Select",
+        "description": "Browse your OnlyFans subscriptions, select the creators you want to download from, and choose media type"
+      },
+      {
+        "step": 3,
+        "title": "Build",
+        "description": "The extension fetches all posts from selected creators and builds a download queue"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "Watch real-time progress as files download with rate limiting, pause/resume when needed"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How does bulk downloading work?",
+        "answer": "After setup, select one or more creators from your OnlyFans subscriptions. The extension fetches their posts via the OnlyFans API, extracts all media URLs (photos and videos), and queues them for download. The queue processes files with your chosen rate limit preset."
+      },
+      {
+        "question": "Will this get my OnlyFans account banned?",
+        "answer": "The extension includes three rate limiter presets specifically designed to reduce risk. The Conservative preset (20-30 files/min) is the safest. We recommend using the Balanced preset (40-50 files/min) as a starting point. The extension also includes random timing jitter to simulate human-like behavior."
+      },
+      {
+        "question": "Can I download from any OnlyFans creator?",
+        "answer": "You can only download from creators you are actively subscribed to. The extension uses your existing OnlyFans session and only accesses content your account has permission to view."
+      },
+      {
+        "question": "What media types can I download?",
+        "answer": "Photos (JPG, PNG, GIF, WebP, AVIF) and videos (MP4, MOV, WebM, and more). You can filter to download only photos, only videos, or all media."
+      },
+      {
+        "question": "Can I download chat/DM media?",
+        "answer": "Yes. The extension includes dedicated chat selection and chat list pages for browsing and downloading media from your OnlyFans conversations."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "All files automatically save to an OnlyFans subfolder inside your browser's default Downloads directory."
+      },
+      {
+        "question": "Can I pause and resume downloads?",
+        "answer": "Yes. The download queue supports pause, resume, stop, cancel all, clear finished, and retry cancelled operations. You can also adjust concurrency (1-8 simultaneous downloads) while the queue is running."
+      },
+      {
+        "question": "What are the download speed presets?",
+        "answer": "Conservative (2-3s delay, 25 req/min — safest), Balanced (1-1.5s delay, 45 req/min — recommended), Aggressive (0.5-1s delay, 70 req/min — fastest but riskiest)."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. All downloads happen directly between your browser and the OnlyFans CDN. Extension authentication uses secure OTP — no OnlyFans password is accessed or stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "onlyfans bulk downloader",
+      "onlyfans downloader",
+      "download onlyfans content",
+      "onlyfans mass download",
+      "bulk download onlyfans"
+    ],
+    "longTailKeywords": [
+      "how to bulk download onlyfans photos and videos",
+      "onlyfans downloader chrome extension",
+      "download all onlyfans content at once",
+      "onlyfans batch download extension",
+      "save onlyfans videos browser extension"
+    ],
+    "seoTitle": "OnlyFans Bulk Downloader — Save Photos & Videos | SERP",
+    "metaDescription": "Bulk download photos and videos from OnlyFans creators. Rate-limited queue, chat media, in-page buttons. Chrome, Firefox, Edge. Free trial.",
+    "urlSlug": "/onlyfans-bulk-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Bulk Download OnlyFans Media",
+    "googleAdsDescription": "Download all photos & videos from OnlyFans creators. Rate-limited queue. Free trial included.",
+    "socialMediaHook": "Subscribed to multiple OnlyFans creators? This extension bulk-downloads all their content — photos, videos, chat media — with smart rate limiting.",
+    "cta": "Try Free Bulk Downloads",
+    "competitorComparisons": "Multi-creator selection with subscription browser, three rate limiter presets with jitter for account safety, persistent download queue with full controls (pause/resume/stop/retry), chat media support, and in-page overlay buttons. Most alternatives offer single-file downloads only.",
+    "adAngles": [
+      {
+        "angle": "Bulk Power",
+        "copy": "Select your creators. Hit download. Photos, videos, chat media — all at once."
+      },
+      {
+        "angle": "Account Safety",
+        "copy": "Three download speed presets. Random timing. Smart backoff. Your account stays safe."
+      },
+      {
+        "angle": "Full Control",
+        "copy": "Pause. Resume. Retry. Cancel. You control every download in the queue."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No desktop software. No command line. Step-by-step workflow right in your browser."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "Free trial downloads. No credit card. Try bulk downloading today."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "Photos: JPG, JPEG, PNG, GIF, WebP, AVIF. Videos: MP4, MOV, M4V, WebM, MKV, AVI. Source quality from OnlyFans CDN.",
+    "limitationsAndDisclaimers": "Requires active OnlyFans subscription to target creators. Must be signed in to OnlyFans. Requires email sign-in for extension trial. Download speed depends on rate limiter preset and internet connection. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "M3U8 Downloader",
+      "Fansly Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Bulk Download OnlyFans Content (Step-by-Step Guide)",
+      "OnlyFans Bulk Downloader: Save All Photos & Videos at Once",
+      "How to Download OnlyFans Photos and Videos Safely — No Software",
+      "Best OnlyFans Download Extensions Compared (2026)",
+      "Download OnlyFans Chat Media — Chrome & Firefox Extension"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from OnlyFans is difficult and how bulk downloading solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Active OnlyFans subscription. Internet connection."
+      },
+      {
+        "section": "Step 1: Install & Sign In",
+        "description": "Add from extension store, email + OTP verification"
+      },
+      {
+        "section": "Step 2: Configure Settings",
+        "description": "Verify OnlyFans login, load dynamic rules, choose rate limiter preset"
+      },
+      {
+        "section": "Step 3: Select Creators",
+        "description": "Browse subscriptions, select creators, choose media type filter"
+      },
+      {
+        "section": "Step 4: Build & Download",
+        "description": "Review download list, start queue, monitor progress"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Use Conservative preset for safety. Adjust concurrency for speed. Use in-page buttons for quick single downloads. Download chat media separately."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Sign in to OnlyFans first. Refresh if dynamic rules fail to load. Lower rate limit if errors increase."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing auth section and navigation links (Configure Settings, Select Creators, View Downloads)",
+      "Settings page with OnlyFans sign-in status, rate limiter preset selector, and setup completion",
+      "Selection page showing creator subscription list with avatars, checkboxes, media type filter, and Select All button",
+      "Progress page with download queue — progress bar, item list, concurrency control, pause/resume/stop buttons",
+      "In-page download overlay buttons on OnlyFans images and videos",
+      "Email sign-in / OTP verification screen"
+    ],
+    "iconLogoVariants": "Default icon: 16, 32, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark blue background (#0e1424), settings + selection + progress screenshots, OnlyFans blue accent (#00AFF0)",
+    "gifDemoDescription": "12-second loop: popup auth, settings page (rate limiter), selection page (pick creators), progress page (queue running, progress bar filling), downloads complete"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Bulk Download OnlyFans Content — Photos, Videos, Chat Media",
+      "subheadline": "Select your creators. Set your speed. Download everything. Smart rate limiting, persistent queue, and full download control.",
+      "ctaButton": "Try Free Bulk Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Multi-Creator Bulk Download",
+        "description": "Select multiple creators from your subscriptions. The extension fetches all their posts and downloads photos and videos automatically."
+      },
+      {
+        "title": "Smart Rate Limiting",
+        "description": "Three presets to balance speed and safety. Random timing jitter simulates human behavior. Auto-backoff on errors."
+      },
+      {
+        "title": "Download Queue Management",
+        "description": "Persistent queue with pause, resume, stop, cancel, retry. Configurable 1-8 concurrent downloads. Real-time progress tracking."
+      },
+      {
+        "title": "In-Page Download Buttons",
+        "description": "Overlay buttons appear on every image and video while browsing OnlyFans — including lightboxes, modals, and chat views."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no OnlyFans password accessed or stored",
+      "All downloads happen directly between your browser and OnlyFans CDN",
+      "Smart rate limiting protects your account",
+      "Auto-saves to organized Downloads/OnlyFans/ folder",
+      "Automatic update notifications"
+    ],
+    "footerCta": {
+      "headline": "Ready to download your OnlyFans content?",
+      "button": "Install Free — Trial Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, professional, privacy-conscious. Emphasize account safety and user control. Avoid explicit language in marketing copy.",
+    "bannedWords": [
+      "free porn",
+      "watch free",
+      "stream free",
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack",
+      "hack",
+      "steal"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download. Only download content from creators you are subscribed to."
+    ],
+    "brandColorHex": "#00AFF0",
+    "brandBackgroundHex": "#0e1424",
+    "targetPlatformBranding": "Use \"OnlyFans\" as one word with capital O and F. Reference as \"OnlyFans.com\" for the website."
+  }
+}

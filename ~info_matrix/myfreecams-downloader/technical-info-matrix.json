@@ -1,0 +1,574 @@
+{
+  "extension": "myfreecams-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP MyFreeCams Downloader",
+    "slug": "myfreecams-downloader",
+    "geckoId": "myfreecams-downloader@serpapps.com",
+    "category": "Live Stream Downloader (Adult)",
+    "targetSites": [
+      "myfreecams.com"
+    ],
+    "targetSiteMatches": [
+      "https://myfreecams.com/*",
+      "https://www.myfreecams.com/*",
+      "https://share.myfreecams.com/*",
+      "https://*.myfreecams.com/*"
+    ],
+    "description": "Download MyFreeCams live streams and recordings"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/myfreecams-downloader",
+    "lastUpdated": "2026-03-06",
+    "buildDate": "2026-03-04T17:27:42.649Z",
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "myfreecams-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/myfreecams-video-downloader",
+    "productPage": "https://serp.ly/myfreecams-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "HLS Live Capture (continuous segment recording)",
+      "HLS Stitching (m3u8 segment to MP4 transmux)",
+      "Direct MP4 (offscreen streaming)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from HLS master manifest (BANDWIDTH, RESOLUTION, FRAME-RATE)",
+    "qualitySorting": "By height descending, then by bandwidth descending",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": true,
+    "vrSupport": true,
+    "bulkDownload": false,
+    "inPagePlayerButton": true,
+    "playerButtonTargets": [
+      "[data-testid=\"video-player\"]",
+      ".player__video-wrapper",
+      ".video-player__wrapper",
+      ".media-player",
+      "#player-root",
+      ".video-player",
+      "nearest video container",
+      ".video-container",
+      ".player-container",
+      ".video-wrapper"
+    ],
+    "contextMenu": true,
+    "contextMenuId": "download-myfreecams-video",
+    "contextMenuTitle": "Download MyFreeCams Stream",
+    "contextMenuContexts": [
+      "page",
+      "video"
+    ],
+    "autoSave": true,
+    "downloadFolder": "MYFREECAMS/",
+    "desktopNotifications": false,
+    "videoDetection": "Multi-source: inject.js share.myfreecams.com API scrape, HLS master manifest probing, Performance API resource entries, __PRELOADED_STATE__, script regex, page DOM"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "offscreen"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://*/*",
+      "https://myfreecams.com/*",
+      "https://www.myfreecams.com/*",
+      "https://share.myfreecams.com/*",
+      "https://previews.myfreecams.com/*",
+      "https://*.myfreecams.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "download-manager.js",
+        "content.js",
+        "player-button.js"
+      ],
+      "matches": [
+        "https://myfreecams.com/*",
+        "https://www.myfreecams.com/*",
+        "https://share.myfreecams.com/*",
+        "https://*.myfreecams.com/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "MP4 streaming download + HLS segment transmuxing + HLS live capture"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (320 KB)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true
+    },
+    "pageInjection": {
+      "file": "inject.js",
+      "purpose": "Page-context share.myfreecams.com API scrape, HLS URL collection from DOM/scripts/Performance API, model username extraction",
+      "messageType": "MYFREECAMS_PAGE_DATA"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "MyFreeCams Share API (share.myfreecams.com)",
+      "MyFreeCams Previews CDN (previews.myfreecams.com)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "myfreecams-video-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/myfreecams-video-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/myfreecams-video-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": []
+  },
+  "videoDetectionAndExtraction": {
+    "videoIdPatterns": [
+      "/([^/]+)/videos/(\\d+)(?:/|$)"
+    ],
+    "titleSources": [
+      "inject.js displayName/modelName/modelUsername",
+      "document.title",
+      "meta[property=\"og:title\"]"
+    ],
+    "thumbnailSources": [
+      "og:image",
+      "inject.js avatar/thumbnail"
+    ],
+    "durationSources": [
+      "VOD API entry duration"
+    ],
+    "extraMetadata": {
+      "viewerCount": "inject.js viewerCount",
+      "isLive": "inject.js isLive / API status",
+      "isPrivate": "inject.js isPrivate",
+      "modelId": "share.myfreecams.com data-cam-preview-model-id-value",
+      "serverId": "share.myfreecams.com data-cam-preview-server-id-value"
+    },
+    "formatSources": [
+      "HLS master manifest (edge-hls CDN)",
+      "share.myfreecams.com preview card attributes",
+      "MyFreeCams stream API (/api/front/v2/models/username/*/cam)",
+      "VOD videos API (/api/front/v2/users/*/videos)"
+    ],
+    "scriptUrlRegex": "/https?:\\/\\/[^\"'\\s<>]+\\.m3u8[^\"'\\s<>]*/ig",
+    "cdnDetectionPattern": "doppiocdn.com, doppiocdn.net, stripcdnm.com, stripcdnmd.com, stripcdntmp.com, sc-cdn.net, previews.myfreecams.com",
+    "mediaRequestPatterns": [
+      ".m3u8",
+      "edge-hls.",
+      "doppiocdn",
+      "previews.myfreecams.com",
+      "/hls/",
+      "/master/"
+    ],
+    "injectMessageType": "MYFREECAMS_PAGE_DATA"
+  },
+  "formatObjectStructure": {
+    "format_id": "string",
+    "ext": "m3u8 | mp4",
+    "format_type": "hls | mp4",
+    "quality": "string (e.g. '1080p (HLS)', 'Auto (HLS)', 'Trailer (MP4)')",
+    "url": "string",
+    "requestUrl": "string (with extra query params)",
+    "masterUrl": "string",
+    "height": "number | null",
+    "bandwidth": "number | null",
+    "fps": "number | null",
+    "type": "hls | mp4",
+    "extraParams": "object | null"
+  },
+  "hlsProcessingSpecs": {
+    "converter": "SimpleHLS2MP4Converter",
+    "maxSegmentRetries": 3,
+    "backoffBaseMs": 500,
+    "stallTimeoutMs": 30000,
+    "absoluteTimeoutMs": null,
+    "livePollIntervalMs": 1400,
+    "liveIdleLimitWithData": 35,
+    "liveIdleLimitNoData": 12,
+    "liveMaxPlaylistErrors": 8,
+    "liveFirstBatchLimit": 8,
+    "liveTickTailLimit": 4,
+    "referer": "https://myfreecams.com/",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "origin": "https://myfreecams.com"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Video detection, model/stream info extraction, download progress forwarding, inject.js loader"
+    },
+    {
+      "component": "Player Button",
+      "files": [
+        "player-button.js"
+      ],
+      "purpose": "In-page download button with quality popover"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth gating, HLS master manifest probing, format extraction, offscreen management, context menu, VR metadata handling, Mouflon key decoding"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "UI, quality selector, live capture start/stop, auth flow"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "MP4 streaming + HLS segment transmux + HLS live capture"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js",
+        "auth/auth-config.js",
+        "auth/auth-api.js",
+        "auth/auth-storage.js",
+        "auth/auth-telemetry.js",
+        "auth/auth-token.js"
+      ],
+      "purpose": "OTP login, entitlements, trial management"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager.js"
+      ],
+      "purpose": "In-page download progress panel with live capture segment tracking"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, feature flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release version checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Free trial remaining badge"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-context share.myfreecams.com API scrape, HLS URL collection, model username extraction"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup title/error normalization"
+    }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (slides from -400px to 20px)",
+    "panelId": "MYFREECAMS-download-manager",
+    "cardWidth": "380px",
+    "maxHeight": "80vh",
+    "zIndex": 10000,
+    "border": "2px solid var(--brand-accent)",
+    "borderRadius": "10px",
+    "font": "sans-serif",
+    "autoHideSeconds": 3,
+    "features": [
+      "Minimize/close buttons",
+      "Per-download progress bars",
+      "Speed display",
+      "Cancel buttons",
+      "Live capture segment counter",
+      "Elapsed time display"
+    ]
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/styles.css (12 KB)",
+      "styles/popup-enhanced.css (20 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "popup-ui-overrides.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Quick help banner",
+      "Header with help button",
+      "Activation section",
+      "Loading spinner",
+      "Error state",
+      "Video info card with thumbnail",
+      "VR badge",
+      "Duration badge (LIVE/time)",
+      "Quality selector",
+      "Capture hint (live streams)",
+      "Live capture status",
+      "Download / Start / Stop button",
+      "Progress bar"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing (SimpleHLS2MP4Converter)"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "sizeKB": 320,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "sizeKB": 8,
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "sizeKB": 4,
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/myfreecams-video-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/myfreecams-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "myfreecams-downloader.zip",
+        "sizeMB": 1.2
+      },
+      {
+        "platform": "Chrome",
+        "file": "myfreecams-downloader-chrome.zip",
+        "sizeMB": 1.2
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "myfreecams-downloader-chrome-store-sanitized.zip",
+        "sizeMB": 1.2
+      },
+      {
+        "platform": "Brave",
+        "file": "myfreecams-downloader-brave.zip",
+        "sizeMB": 1.2
+      },
+      {
+        "platform": "Edge",
+        "file": "myfreecams-downloader-edge.zip",
+        "sizeMB": 1.2
+      },
+      {
+        "platform": "Opera",
+        "file": "myfreecams-downloader-opera.zip",
+        "sizeMB": 1.2
+      },
+      {
+        "platform": "Whale",
+        "file": "myfreecams-downloader-whale.zip",
+        "sizeMB": 1.2
+      },
+      {
+        "platform": "Yandex",
+        "file": "myfreecams-downloader-yandex.zip",
+        "sizeMB": 1.2
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "myfreecams-downloader-firefox.zip",
+        "sizeMB": 1.2
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "myfreecams-downloader-firefox-unpacked.xpi",
+        "sizeMB": 1.1
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "test-key",
+    "ghLicenseId": "xTBDv7Igej2iWM7JjbSb",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_U5nhgPXVBKqCnT",
+    "stripeProductName": "MyFreeCams Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [myfreecams-downloader-monthly-9]",
+    "stripeOneTimePrice": null,
+    "stripePriceIds": [
+      "price_1T7c6BDP7AOTRcvmLhdfJvGg"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "32x32",
+      "file": "icons/icon32.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#ff4f70",
+    "brandAccentHover": "#e63d5d",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

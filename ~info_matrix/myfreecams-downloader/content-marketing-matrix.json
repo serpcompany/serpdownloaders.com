@@ -1,0 +1,286 @@
+{
+  "extension": "myfreecams-downloader",
+  "productPositioning": {
+    "headline": "Download MyFreeCams Streams — Live Capture, Any Quality",
+    "elevatorPitch": "SERP MyFreeCams Downloader is a browser extension that records live streams and downloads recordings from MyFreeCams.com. Open a model's page, click the download button or the extension icon, pick your quality, and it captures the stream as MP4. Start and stop live capture anytime. No extra software needed. 3 free downloads included.",
+    "valueProposition": "Purpose-built for MyFreeCams with live stream capture, VOD recording downloads, multi-CDN host probing, HLS-to-MP4 conversion, VR support, and Mouflon key handling. Everything happens in your browser — no external tools required.",
+    "targetAudience": "MyFreeCams users who want to save live streams and recorded videos for offline viewing. Non-technical users who want a simple, reliable capture and download solution.",
+    "useCases": [
+      "Capture a live stream from MyFreeCams in real time",
+      "Download recorded videos (VOD) from model profiles",
+      "Download in your preferred quality from all available resolutions",
+      "Build a personal library of saved streams",
+      "Use the in-page player button for one-click capture without the popup",
+      "Right-click any stream to capture via context menu"
+    ],
+    "painPointsAddressed": [
+      "MyFreeCams uses HLS streaming — can't right-click and save",
+      "Live streams are ephemeral — if you don't capture, they're gone",
+      "Multiple CDN hosts (doppiocdn, stripcdn, sc-cdn) make stream discovery complex",
+      "Generic downloaders can't handle live HLS capture with continuous recording",
+      "Users don't want desktop apps or command-line tools",
+      "No easy quality selection on streaming sites",
+      "VR streams need special metadata handling"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download MyFreeCams live streams and recordings. Live capture, HLS to MP4 conversion. Choose quality. VR support. 3 free downloads.",
+    "changelog": "v4.0.1 — Live stream capture, VOD recording downloads, multi-CDN host probing, VR support, download manager with live segment tracking, updated auth.",
+    "fullDescription": "SERP MyFreeCams Downloader makes it easy to capture live streams and download recordings from MyFreeCams.com.\n\nHow it works: Go to any model's page on MyFreeCams while the stream is live, then click the download button on the player or the extension icon. The extension discovers the HLS stream across multiple CDN hosts, shows available quality options, and captures it as a standard MP4 file. For recorded videos, navigate to the model's video page and download directly.\n\nIt handles live HLS capture, multi-CDN host probing, Mouflon key decoding, and VR metadata automatically — no external tools, no command line, no technical knowledge required. Videos save directly to your Downloads folder in an organized MYFREECAMS subfolder.\n\nKey features:\n- Live stream capture with start/stop controls\n- VOD recording downloads from model profiles\n- Multi-CDN host probing (doppiocdn, stripcdn, sc-cdn, and more)\n- In-page download button right on the video player\n- Converts HLS streams to standard MP4 files in your browser\n- Quality selection from all available resolutions\n- VR stream support with metadata preservation\n- Real-time download progress with segment counter and elapsed time\n- Right-click context menu for quick capture\n- Dark-themed UI with coral pink accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to MyFreeCams.com and open a model's page\n3. Click the download button on the player or the extension icon\n4. Select quality and start capture — saved as MP4\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Live stream capture with start/stop controls — record as long as you want",
+      "VOD recording downloads from model video pages",
+      "Multi-CDN host probing — discovers streams across doppiocdn, stripcdn, sc-cdn, and more",
+      "In-page download button built right into the video player",
+      "Converts HLS streams to downloadable MP4 files in-browser",
+      "Quality selector with all available resolutions sorted by quality",
+      "VR stream support with stereoPacking and frameFormat metadata",
+      "Real-time progress with segment counter, speed display, and elapsed time",
+      "Right-click context menu — Download MyFreeCams Stream",
+      "Auto-saves to organized MYFREECAMS/ subfolder in Downloads",
+      "Dark UI with coral pink accents — clean and unobtrusive",
+      "3 free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP MyFreeCams Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Open",
+        "description": "Navigate to MyFreeCams.com and open a model's page while the stream is live"
+      },
+      {
+        "step": 3,
+        "title": "Click",
+        "description": "Use the in-page download button on the player, the extension popup, or right-click context menu"
+      },
+      {
+        "step": 4,
+        "title": "Capture",
+        "description": "Pick your quality and hit Start — live capture records until you stop it. Video saves as MP4 to your Downloads/MYFREECAMS folder"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I capture a live stream?",
+        "answer": "Go to any model's page on MyFreeCams.com while the stream is live. Click the download button on the player or the extension icon. Select your quality and click Start. The extension captures the stream in real time. Click Stop when you're done — it saves as MP4."
+      },
+      {
+        "question": "Can I download recorded videos?",
+        "answer": "Yes. Navigate to a model's video page and use the extension to download the recording directly."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "The extension detects all available qualities from the HLS master manifest — typically multiple resolutions up to the source quality. Formats are sorted by quality (highest first)."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Videos automatically save to a MYFREECAMS subfolder inside your browser's default Downloads directory."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Does it support VR streams?",
+        "answer": "Yes. The extension detects VR metadata (stereoPacking, frameFormat, horizontalAngle) and preserves it in the filename."
+      },
+      {
+        "question": "Why isn't the extension finding the stream?",
+        "answer": "Make sure the model is online and the stream is live. If the model is offline or in a private show, the extension will display a status message. Refresh the page and try again."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. Video processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "myfreecams downloader",
+      "download myfreecams",
+      "myfreecams stream recorder",
+      "save myfreecams streams"
+    ],
+    "longTailKeywords": [
+      "how to download myfreecams live streams",
+      "myfreecams downloader chrome extension",
+      "record myfreecams streams to mp4",
+      "save myfreecams videos browser",
+      "myfreecams live capture extension"
+    ],
+    "seoTitle": "MyFreeCams Downloader — Capture Live Streams as MP4 | SERP",
+    "metaDescription": "Download live streams and recordings from MyFreeCams.com. Live capture, HLS to MP4 conversion, VR support. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/myfreecams-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download MyFreeCams Streams",
+    "googleAdsDescription": "Capture MyFreeCams live streams as MP4. In-page button. Quality selection. VR support. 3 free downloads included.",
+    "socialMediaHook": "Can't save live streams from MyFreeCams? This extension adds a capture button right on the player. Start, stop, MP4.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Multi-CDN host probing (doppiocdn, stripcdn, sc-cdn) discovers streams that generic tools miss. Live capture with start/stop, in-page player button, context menu, VR support, and organized auto-save folder.",
+    "adAngles": [
+      {
+        "angle": "Live Capture",
+        "copy": "Record live streams in real time. Start and stop whenever you want. Saves as MP4."
+      },
+      {
+        "angle": "Reliability",
+        "copy": "Probes multiple CDN hosts to find the stream. doppiocdn, stripcdn, sc-cdn — never misses."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No desktop software. No command line. Just a browser extension."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it now."
+      },
+      {
+        "angle": "VR Support",
+        "copy": "Captures VR streams with full metadata. Stereoscopic, fisheye, panoramic — all preserved."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Multiple quality levels detected from HLS master manifest. Live capture and VOD download supported. VR streams supported.",
+    "limitationsAndDisclaimers": "Model must be online and streaming for live capture. Private shows cannot be captured. Quality depends on source. Requires email sign-in for trial. Internet connection required. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "M3U8 Downloader",
+      "Chaturbate Downloader",
+      "Stripchat Downloader",
+      "BongaCams Downloader",
+      "CamSoda Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download MyFreeCams Live Streams (Step-by-Step Guide)",
+      "MyFreeCams Downloader: Capture Live Streams with One Click",
+      "How to Save MyFreeCams Streams as MP4 — No Software Required",
+      "Best MyFreeCams Download Extensions Compared",
+      "Record MyFreeCams Live Streams in Any Quality — Chrome & Firefox"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why capturing from MyFreeCams is tricky and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Find Your Stream",
+        "description": "Navigate to MyFreeCams.com and open a model's page while the stream is live"
+      },
+      {
+        "section": "Step 4: Capture",
+        "description": "In-page button, popup, or right-click context menu. Click Start for live capture, Stop when done."
+      },
+      {
+        "section": "Downloading Recordings",
+        "description": "Navigate to a model's video page for VOD downloads."
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Auto-saves to MYFREECAMS/ folder. Use context menu for fastest workflow. VR streams are auto-detected."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Model must be online. Refresh if needed. Private shows cannot be captured. Check extension is enabled."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected model with quality selector and Start button",
+      "In-page download button on the video player",
+      "Download manager panel with active live capture showing segment count and elapsed time",
+      "Right-click context menu showing Download MyFreeCams Stream",
+      "Email sign-in / OTP verification screen",
+      "Popup showing VR badge on a VR stream"
+    ],
+    "iconLogoVariants": "Default icon: 16, 32, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1b1b1b), popup screenshot, coral pink accent (#ff4f70)",
+    "gifDemoDescription": "10-second loop: model page → stream live → player button appears → click → quality popover → select → download manager slides in → live capture progress with segment counter → stop → complete"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Live Streams from MyFreeCams — Capture, Any Quality",
+      "subheadline": "Live stream capture with start/stop. Multi-CDN discovery. HLS to MP4 conversion. VR support. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Live Stream Capture",
+        "description": "Record live streams in real time. Start and stop whenever you want. Saves as MP4."
+      },
+      {
+        "title": "Multi-CDN Discovery",
+        "description": "Probes doppiocdn, stripcdn, sc-cdn, and more to find the stream. Never misses a source."
+      },
+      {
+        "title": "Quality Selection",
+        "description": "All available resolutions from the HLS manifest, sorted by quality. Highest first."
+      },
+      {
+        "title": "Download Manager",
+        "description": "Real-time segment counter, elapsed time, speed, cancel. Live capture progress at a glance."
+      },
+      {
+        "title": "VR Support",
+        "description": "Detects and captures VR streams with stereoscopic metadata preserved in the filename."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "Auto-saves to organized Downloads/MYFREECAMS/ folder",
+      "Automatic update notifications"
+    ],
+    "footerCta": {
+      "headline": "Ready to start capturing?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, minimal, professional. Avoid explicit language in marketing copy.",
+    "bannedWords": [
+      "free porn",
+      "watch free",
+      "stream free",
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download."
+    ],
+    "brandColorHex": "#ff4f70",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"MyFreeCams\" as one word with capital M, F, C. Reference as \"MyFreeCams.com\" for the website."
+  }
+}

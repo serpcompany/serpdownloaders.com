@@ -1,0 +1,446 @@
+{
+  "extension": "serp-video-downloader",
+  "coreIdentity": {
+    "extensionName": "Video Downloader for SERP",
+    "slug": "serp-video-downloader",
+    "geckoId": "serp-video-downloader@serpapps.com",
+    "category": "Video Downloader (Universal)",
+    "targetSites": ["All sites (<all_urls>)"],
+    "targetSiteMatches": ["<all_urls>"],
+    "description": "Download videos across sites with support for MP4, HLS (m3u8), DASH (mpd), Vimeo, YouTube, Wistia, Loom, and more."
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/serp-video-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": null,
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "serp-video-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/serp-video-downloader",
+    "productPage": "https://serp.ly/serp-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Direct MP4 (offscreen streaming)",
+      "HLS Stitching (m3u8 segment to MP4 transmux)",
+      "DASH (mpd) conversion",
+      "FFmpeg offscreen processing (authenticated HLS)",
+      "Platform-specific API extraction (YouTube, Vimeo, Loom, Wistia, Sprout, Skool)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from platform APIs, HTML5 video/source, HLS master playlists, DASH manifests, embedded player configs",
+    "qualitySorting": "By height descending, MP4 before HLS, source/original highest priority, video+audio preferred over video-only",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "downloadManagerType": "Modular in-page download manager (download-manager/ — 13 files) with cross-tab sync",
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": false,
+    "inPagePlayerButton": false,
+    "contextMenu": false,
+    "autoSave": true,
+    "downloadFolder": "Downloads/",
+    "desktopNotifications": true,
+    "notificationTitle": "Download Complete",
+    "videoDetection": "Modular multi-platform detectors (Loom, Vimeo, YouTube, Wistia, Sprout, Skool) + generic HTML5 video/source/m3u8/mpd/mp4 detection + network candidate tracking",
+    "multiVideoCandidates": true,
+    "sidePanel": true,
+    "maxConcurrentDownloads": 3,
+    "autoDownloadBest": true
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "sidePanel",
+      "tabs",
+      "scripting",
+      "offscreen",
+      "cookies",
+      "webNavigation",
+      "declarativeNetRequestWithHostAccess",
+      "webRequest"
+    ],
+    "hostPermissions": [
+      "<all_urls>",
+      "https://auth.serp.co/*"
+    ],
+    "contentScripts": [
+      {
+        "files": ["site-config.js", "logger.js", "content-enhanced-modular.js"],
+        "matches": ["<all_urls>"],
+        "allFrames": false,
+        "runAt": "document_idle"
+      },
+      {
+        "files": ["site-config.js", "logger.js", "content-enhanced-modular.js"],
+        "matches": ["https://vimeo.com/*", "https://*.vimeo.com/*", "https://player.vimeo.com/*", "https://*.vhx.tv/*", "https://embed.vhx.tv/*"],
+        "allFrames": true,
+        "runAt": "document_idle"
+      }
+    ],
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocuments": [
+      {
+        "html": "offscreen.html",
+        "js": "offscreen-faststream-legacy.js",
+        "purpose": "FastStream offscreen document for segment processing"
+      },
+      {
+        "file": "offscreen-ffmpeg.js",
+        "purpose": "FFmpeg WASM-based HLS playlist to MP4 conversion"
+      }
+    ],
+    "usesFFmpeg": true,
+    "ffmpegPath": "libs/ffmpeg/",
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (319 KB)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "youtubeModule": "modules/youtube/",
+    "indexedDB": {
+      "enabled": true,
+      "file": "indexed-db.js"
+    },
+    "pageInjection": null,
+    "dynamicModuleImports": true,
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "YouTube (youtubei.googleapis.com, googlevideo.com)",
+      "Vimeo (vimeo.com, player.vimeo.com)",
+      "Skool (stream.video.skool.com, fastly.video.skool.com)",
+      "Beeg API (beeg.com/api/v6, video.beeg.com/api/v6, store.externulls.com/facts)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "serp-video-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/serp-video-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/serp-video-downloader/releases/latest"
+    },
+    "csp": "script-src 'self'; object-src 'self'; connect-src 'self' https://auth.serp.co;",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';",
+    "dnrRules": [
+      { "id": 10001, "domain": "googlevideo.com", "purpose": "YouTube media segments" },
+      { "id": 10002, "domain": "www.youtube.com", "purpose": "YouTube site API calls" },
+      { "id": 10003, "domain": "youtubei.googleapis.com", "purpose": "YouTube internal API" },
+      { "id": 10011, "domain": "stream.video.skool.com", "purpose": "Skool HLS manifests" },
+      { "id": 10012, "domain": "fastly.video.skool.com", "purpose": "Skool TS/CMF segments" },
+      { "id": 10013, "domain": "video.skool.com", "purpose": "Skool generic video host" },
+      { "id": 10014, "domain": "b-cdn.net", "purpose": "BunnyCDN VOD (Skool)" }
+    ]
+  },
+  "supportedPlatforms": [
+    {
+      "platform": "YouTube",
+      "detector": "youtube-detector.js",
+      "handler": "handlers/youtube/",
+      "domains": ["youtube.com", "youtu.be", "googlevideo.com", "youtubei.googleapis.com"]
+    },
+    {
+      "platform": "Vimeo",
+      "detector": "vimeo-detector.js",
+      "handler": "handlers/vimeo/",
+      "domains": ["vimeo.com", "player.vimeo.com", "*.vhx.tv", "embed.vhx.tv"]
+    },
+    {
+      "platform": "Loom",
+      "detector": "loom-detector.js",
+      "handler": "handlers/loom/",
+      "domains": ["loom.com"]
+    },
+    {
+      "platform": "Wistia",
+      "detector": "wistia-detector.js",
+      "handler": "handlers/wistia/",
+      "domains": ["wistia.com", "wistia.net", "fast.wistia.net"]
+    },
+    {
+      "platform": "Sprout",
+      "detector": "sprout-detector.js",
+      "handler": "background/sprout.js",
+      "domains": ["sproutvideo.com", "videos.sproutvideo.com"]
+    },
+    {
+      "platform": "Skool",
+      "detector": "skool-detector-working.js",
+      "handler": "handlers/skool/",
+      "domains": ["skool.com", "stream.video.skool.com", "fastly.video.skool.com"]
+    },
+    {
+      "platform": "Beeg",
+      "detector": "Inline in popup.js (content harness)",
+      "handler": "Background fetch API",
+      "domains": ["beeg.com", "video.beeg.com", "store.externulls.com"]
+    },
+    {
+      "platform": "Generic",
+      "detector": "video-detector.js (detectGenericVideoSources)",
+      "handler": "Format handlers",
+      "domains": ["Any site — HTML5 video, source, m3u8, mpd, mp4 URLs"]
+    }
+  ],
+  "videoDetectionAndExtraction": {
+    "genericMediaTypes": ["m3u8 (HLS)", "mpd (DASH)", "mp4", "webm", "mov", "mkv"],
+    "urlClassification": "classifyMediaUrl() — matches .m3u8, .mpd, .mp4, .webm, .mov, .mkv, MIME types",
+    "domScanning": ["<video> elements (src, currentSrc)", "<source> elements", "Embedded iframes"],
+    "platformDetection": "Domain-based routing to platform-specific detectors",
+    "networkCandidates": "Background webRequest monitoring + content script Performance API entries",
+    "titleSources": ["LD+JSON VideoObject name", "og:title", "twitter:title", "document.title"],
+    "thumbnailSources": ["LD+JSON thumbnailUrl", "og:image", "og:image:secure_url", "twitter:image", "Largest <img>"],
+    "durationSources": ["LD+JSON duration", "video:duration", "og:video:duration", "ISO 8601 parsing", "HH:MM:SS parsing"],
+    "extraMetadata": ["og:description", "video:width", "video:height", "author/publisher from LD+JSON"],
+    "candidateMerging": "Platform-specific candidates merged with network candidates; platform labels preferred over Generic"
+  },
+  "formatObjectStructure": {
+    "format_id": "string",
+    "ext": "m3u8 | mp4 | mpd | webm | mov | mkv",
+    "format_type": "hls | mp4 | dash | playlist_json",
+    "quality": "number | null",
+    "url": "string",
+    "protocol": "m3u8 | https | mpd",
+    "filesize": null,
+    "tbr": null,
+    "width": "number | null",
+    "height": "number | null",
+    "hasVideo": "boolean",
+    "hasAudio": "boolean",
+    "platform": "string",
+    "source": "string"
+  },
+  "hlsProcessingSpecs": {
+    "converter": "SimpleHLS2MP4Converter + FFmpeg WASM fallback",
+    "maxSegmentRetries": 3,
+    "backoffBaseMs": 500,
+    "stallTimeoutMs": 30000,
+    "absoluteTimeoutMs": null,
+    "authenticatedHls": true,
+    "ffmpegFallback": true
+  },
+  "architecture": [
+    { "component": "Content Script", "files": ["content-enhanced-modular.js"], "purpose": "Unified multi-platform video detection wrapper, modular detector imports, download manager bridge, telemetry relay" },
+    { "component": "Video Detector Coordinator", "files": ["detectors/video-detector.js"], "purpose": "Coordinates all platform-specific detectors, generic HTML5/m3u8/mpd/mp4 source scanning" },
+    { "component": "Loom Detector", "files": ["detectors/loom-detector.js", "detectors/loom/"], "purpose": "Loom embed detection and extraction" },
+    { "component": "Vimeo Detector", "files": ["detectors/vimeo-detector.js", "detectors/vimeo/"], "purpose": "Vimeo embed/page detection, iframe extraction" },
+    { "component": "YouTube Detector", "files": ["detectors/youtube-detector.js"], "purpose": "YouTube embed/page detection" },
+    { "component": "Wistia Detector", "files": ["detectors/wistia-detector.js"], "purpose": "Wistia embed detection" },
+    { "component": "Sprout Detector", "files": ["detectors/sprout-detector.js"], "purpose": "SproutVideo embed detection" },
+    { "component": "Skool Detector", "files": ["detectors/skool-detector-working.js", "detectors/skool/"], "purpose": "Skool native video detection" },
+    { "component": "Service Worker", "files": ["background-enhanced.js", "background/app.js"], "purpose": "Download orchestration, auth gating, offscreen management, side panel, DNR rules, telemetry" },
+    { "component": "Message Router", "files": ["background/message-router.js"], "purpose": "Centralized message routing with auth-gated action handlers" },
+    { "component": "Candidate Handlers", "files": ["background/candidates.js"], "purpose": "Multi-video candidate merging, tab messaging, network+content candidate fusion" },
+    { "component": "Network Candidate Tracker", "files": ["background/network-candidates.js"], "purpose": "Tracks media URLs from network requests" },
+    { "component": "Download Queue", "files": ["background/download-queue.js"], "purpose": "Queued download management (max 3 concurrent)" },
+    { "component": "Download Handlers", "files": ["background/download-handlers.js"], "purpose": "Download action handlers" },
+    { "component": "Download State", "files": ["background/download-state.js", "background/download-state-utils.js"], "purpose": "Download state store with pruning" },
+    { "component": "Format Handlers", "files": ["background/format-handlers.js"], "purpose": "Format-specific download handling" },
+    { "component": "Handler Factory", "files": ["background/handler-factory.js"], "purpose": "Platform-specific handler creation" },
+    { "component": "HLS Playlist", "files": ["background/hls-playlist.js"], "purpose": "Authenticated HLS playlist building and variant parsing" },
+    { "component": "Playlist JSON", "files": ["background/playlist-json.js"], "purpose": "JSON playlist format extraction (FMP4/segmented)" },
+    { "component": "Provider Hints", "files": ["background/provider-hints.js"], "purpose": "Platform label inference from URLs" },
+    { "component": "Vimeo Format Utils", "files": ["background/vimeo-format-utils.js"], "purpose": "Vimeo stream URL extraction" },
+    { "component": "Sprout Handler", "files": ["background/sprout.js"], "purpose": "SproutVideo format extraction" },
+    { "component": "Chrome Downloads", "files": ["background/chrome-downloads.js"], "purpose": "Chrome downloads API wrapper" },
+    { "component": "DNR Rules", "files": ["background/dnr-rules.js"], "purpose": "Declarative net request rules for YouTube and Skool" },
+    { "component": "Offscreen Manager", "files": ["background/offscreen-manager.js"], "purpose": "Offscreen document lifecycle management" },
+    { "component": "Progress Reporter", "files": ["background/progress-reporter.js"], "purpose": "Download progress broadcasting" },
+    { "component": "Side Panel", "files": ["background/side-panel.js"], "purpose": "Side panel registration" },
+    { "component": "Thumbnail Proxy", "files": ["background/thumbnail-proxy.js"], "purpose": "Cross-origin thumbnail proxying" },
+    { "component": "Loom Handler", "files": ["handlers/loom-handler.js", "handlers/loom/"], "purpose": "Loom download handling" },
+    { "component": "Vimeo Handler", "files": ["handlers/vimeo-handler.js", "handlers/vimeo/"], "purpose": "Vimeo download handling" },
+    { "component": "YouTube Handler", "files": ["handlers/youtube-handler.js", "handlers/youtube/"], "purpose": "YouTube download handling" },
+    { "component": "Wistia Handler", "files": ["handlers/wistia-handler.js", "handlers/wistia/"], "purpose": "Wistia download handling" },
+    { "component": "Skool Handler", "files": ["handlers/skool-handler.js", "handlers/skool/"], "purpose": "Skool download handling" },
+    { "component": "Popup", "files": ["popup.html", "popup.js"], "purpose": "UI, multi-candidate selector, quality selector, auth flow, auto-download best" },
+    { "component": "Offscreen (FastStream)", "files": ["offscreen.html", "offscreen-faststream-legacy.js"], "purpose": "FastStream offscreen document for segment processing" },
+    { "component": "Offscreen (FFmpeg)", "files": ["offscreen-ffmpeg.js"], "purpose": "FFmpeg WASM-based HLS playlist to MP4 conversion" },
+    { "component": "Auth", "files": ["auth.js", "auth-ui.js"], "purpose": "OTP login, entitlement checks, trial management" },
+    { "component": "Download Manager", "files": ["download-manager/ (13 files)"], "purpose": "In-page download progress panel with history, speed, cross-tab sync, configurable UI" },
+    { "component": "Logger", "files": ["logger.js"], "purpose": "Structured logging, bg mirroring" },
+    { "component": "Site Config", "files": ["site-config.js"], "purpose": "Brand colors, endpoints, feature flags, entitlement aliases" },
+    { "component": "Update Notifier", "files": ["update-notifier.js"], "purpose": "GitHub release version checks" },
+    { "component": "Trial Banner", "files": ["trial-banner.js"], "purpose": "Free trial remaining badge" },
+    { "component": "Content Messaging", "files": ["content/content-messaging.js"], "purpose": "Content script messaging utilities" },
+    { "component": "Telemetry", "files": ["telemetry/index.js", "telemetry/logger.js", "telemetry/browser/", "telemetry/extension/", "telemetry/shared/"], "purpose": "Console relay, network relay, telemetry buffer" }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (20px from top, 20px from right)",
+    "panelWidth": "380px (responsive: min 340px on small screens)",
+    "maxHeight": "min(window.innerHeight - 80, 500)px",
+    "zIndex": 2147483647,
+    "background": "#1b1b1b",
+    "border": "2px solid #007acc",
+    "borderRadius": "8px",
+    "font": "-apple-system, BlinkMacSystemFont, Segoe UI, Arial, sans-serif",
+    "autoHideMs": 8000,
+    "lingerAfterCompleteMs": 2000,
+    "maxCompletedToKeep": 3,
+    "crossTabSync": true,
+    "animation": "Slide-in from right with cubic-bezier(0.4, 0, 0.2, 1) transition",
+    "features": ["Minimize/close", "Cancel all", "Clear completed", "Per-download progress bars", "Speed display", "Cancel individual", "History", "Responsive layout"]
+  },
+  "popupUI": {
+    "stylesheets": ["styles/styles.css (131 B)", "styles/popup-enhanced.css (10.3 KB)"],
+    "scriptLoadOrder": ["auth.js (module)", "popup.js (module)", "auth-ui.js (defer)", "trial-banner.js (defer)", "site-config.js", "update-notifier.js (defer)"],
+    "sections": ["Header", "Activation section (OTP auth)", "Loading spinner", "Error state", "Video info card (thumbnail + title + duration)", "Candidate selector (multi-video)", "Quality selector", "Download button", "Progress bar"],
+    "autoDownloadBest": true,
+    "candidateSelector": "Shown when multiple videos detected; dropdown with platform + title + hostname labels"
+  },
+  "modulesIncluded": [
+    { "module": "HLS Parser", "path": "modules/hls/", "purpose": "M3U8 playlist parsing" },
+    { "module": "HLS to MP4", "path": "modules/hls2mp4/", "purpose": "HLS segment transmuxing (SimpleHLS2MP4Converter)" },
+    { "module": "DASH to MP4", "path": "modules/dash2mp4/", "purpose": "DASH stream conversion" },
+    { "module": "MediaBunny", "path": "modules/mediabunny/", "purpose": "Audio/video codec handling" },
+    { "module": "Reencoder", "path": "modules/reencoder/", "purpose": "Video re-encoding" },
+    { "module": "Network", "path": "modules/network/", "purpose": "HTTP fetch utilities" },
+    { "module": "Utils", "path": "modules/utils/", "purpose": "General utilities" },
+    { "module": "YouTube", "path": "modules/youtube/", "purpose": "YouTube-specific extraction utilities" },
+    { "module": "MP4Box", "path": "modules/mp4box.mjs", "sizeKB": 319, "purpose": "ISOBMFF manipulation" },
+    { "module": "FSBlob", "path": "modules/FSBlob.mjs", "sizeKB": 4.4, "purpose": "Virtual filesystem blob ops" },
+    { "module": "EventEmitter", "path": "modules/eventemitter.mjs", "sizeKB": 3.5, "purpose": "Event dispatch" },
+    { "module": "Localize", "path": "modules/Localize.mjs", "purpose": "i18n support" },
+    { "module": "AlertPolyfill", "path": "utils/AlertPolyfill.mjs", "purpose": "Alert dialog polyfill" }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/serp-video-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/serp-video-downloader/",
+    "platformBuilds": [
+      { "platform": "Standard", "file": "serp-video-downloader.zip", "sizeMB": null },
+      { "platform": "Chrome", "file": "serp-video-downloader-chrome.zip", "sizeMB": null },
+      { "platform": "Chrome Store Sanitized", "file": "serp-video-downloader-chrome-store-sanitized.zip", "sizeMB": null },
+      { "platform": "Brave", "file": "serp-video-downloader-brave.zip", "sizeMB": null },
+      { "platform": "Edge", "file": "serp-video-downloader-edge.zip", "sizeMB": null },
+      { "platform": "Opera", "file": "serp-video-downloader-opera.zip", "sizeMB": null },
+      { "platform": "Whale", "file": "serp-video-downloader-whale.zip", "sizeMB": null },
+      { "platform": "Yandex", "file": "serp-video-downloader-yandex.zip", "sizeMB": null },
+      { "platform": "Firefox ZIP", "file": "serp-video-downloader-firefox.zip", "sizeMB": null },
+      { "platform": "Firefox XPI", "file": "serp-video-downloader-firefox-unpacked.xpi", "sizeMB": null }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": null,
+    "ghLicenseId": null,
+    "licenseCheckWorker": null,
+    "installCount": null,
+    "revenuePriority": null,
+    "entitlementAliases": [
+      "serp-downloaders-bundle",
+      "serp-video-downloaders-bundle",
+      "123movies-downloader",
+      "circle-downloader",
+      "clientclub-downloader",
+      "dailymotion-downloader",
+      "kajabi-downloader",
+      "loom-downloader",
+      "m3u8-downloader",
+      "skool-downloader",
+      "sprout-downloader",
+      "thinkific-downloader",
+      "tiktok-downloader",
+      "vimeo-downloader",
+      "whop-downloader",
+      "wistia-downloader",
+      "youtube-downloader"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)",
+    "telemetryBuffer": {
+      "enabled": true,
+      "storageKey": "telemetry:serp-video",
+      "limit": 500
+    },
+    "consoleRelay": true,
+    "networkRelay": true
+  },
+  "icons": [
+    { "type": "default", "size": "16x16", "file": "icons/icon16.png" },
+    { "type": "default", "size": "32x32", "file": "icons/icon32.png" },
+    { "type": "default", "size": "48x48", "file": "icons/icon48.png" },
+    { "type": "default", "size": "128x128", "file": "icons/icon128.png" }
+  ],
+  "brandColors": {
+    "brandAccent": "#0ea5e9",
+    "brandAccentHover": "#0b73b9",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  },
+  "webAccessibleResources": [
+    {
+      "group": "Detectors & Download Manager",
+      "files": ["log.js", "download-manager/*.js", "detectors/*.js", "detectors/loom/*.js", "detectors/vimeo/*.js", "detectors/skool/*.js"],
+      "match": "<all_urls>"
+    },
+    {
+      "group": "Offscreen & IndexedDB",
+      "files": ["offscreen-faststream.html", "offscreen-faststream-legacy.js", "indexed-db.js"],
+      "match": "<all_urls>"
+    },
+    {
+      "group": "Modules & Handlers (dynamic URL)",
+      "files": ["modules/**/*", "handlers/**/*", "utils/**/*", "telemetry/**/*", "content/**/*"],
+      "match": "<all_urls>",
+      "useDynamicUrl": true
+    }
+  ],
+  "dnrRules": [
+    { "id": 10001, "domain": "googlevideo.com", "headersModified": ["origin", "referer"], "targetOrigin": "https://www.youtube.com", "purpose": "YouTube media segments" },
+    { "id": 10002, "domain": "www.youtube.com", "headersModified": ["origin", "referer", "x-origin"], "targetOrigin": "https://www.youtube.com", "purpose": "YouTube site API calls" },
+    { "id": 10003, "domain": "youtubei.googleapis.com", "headersModified": ["origin", "referer", "x-origin"], "targetOrigin": "https://www.youtube.com", "purpose": "YouTube internal API" },
+    { "id": 10011, "domain": "stream.video.skool.com", "headersModified": ["origin", "referer"], "targetOrigin": "https://www.skool.com", "purpose": "Skool HLS manifests" },
+    { "id": 10012, "domain": "fastly.video.skool.com", "headersModified": ["origin", "referer"], "targetOrigin": "https://www.skool.com", "purpose": "Skool TS/CMF segments" },
+    { "id": 10013, "domain": "video.skool.com", "headersModified": ["origin", "referer"], "targetOrigin": "https://www.skool.com", "purpose": "Skool generic video host" },
+    { "id": 10014, "domain": "b-cdn.net", "headersModified": ["origin", "referer"], "targetOrigin": "https://www.skool.com", "purpose": "BunnyCDN VOD (Skool)" }
+  ]
+}

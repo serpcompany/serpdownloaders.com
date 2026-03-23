@@ -1,0 +1,570 @@
+{
+  "extension": "tellatv-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP TellaTV Downloader",
+    "slug": "tellatv-downloader",
+    "geckoId": "tellatv-downloader@serpapps.com",
+    "category": "Video Downloader (Professional / Screen Recording)",
+    "targetSites": [
+      "tella.tv"
+    ],
+    "targetSiteMatches": [
+      "https://www.tella.tv/*",
+      "https://*.tella.tv/*"
+    ],
+    "description": "Download videos from Tella.tv"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/tellatv-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": null,
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "tellatv-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/tellatv-downloader",
+    "productPage": "https://serp.ly/tellatv-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "HLS Stitching (signed m3u8 manifest from prod-stream.tella.tv -> segment download -> MP4 transmux)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from HLS manifest renditions",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": false,
+    "inPageOverlayButton": true,
+    "overlayButtonTargets": [
+      "media-theme",
+      "hls-video",
+      "[class*='player']",
+      "[data-testid*='player']",
+      "closest <video> parent"
+    ],
+    "contextMenu": false,
+    "autoSave": false,
+    "saveAsDialog": true,
+    "desktopNotifications": true,
+    "notificationTitle": "Download completed",
+    "videoDetection": "Multi-source: signed HLS manifests from prod-stream.tella.tv, Performance API resource entries, iframe embed detection, HTML regex scan, all-frames scan"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "tabs",
+      "scripting",
+      "offscreen",
+      "cookies",
+      "declarativeNetRequestWithHostAccess"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://www.tella.tv/*",
+      "https://*.tella.tv/*",
+      "https://prod-stream.tella.tv/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "content-enhanced-modular.js"
+      ],
+      "css": [
+        "styles/overlay-buttons.css"
+      ],
+      "matches": [
+        "https://www.tella.tv/*",
+        "https://*.tella.tv/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen-faststream.html",
+      "js": "offscreen-faststream-legacy.js",
+      "purpose": "FastStream-based HLS segment transmuxing to MP4"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (319 KB)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true,
+      "purpose": "Segment caching"
+    },
+    "pageInjection": null,
+    "modularDetectors": {
+      "coordinator": "detectors/video-detector.js",
+      "tellaDetector": "detectors/tella-detector.js",
+      "loadMethod": "Dynamic import() from content script"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "Tella streaming CDN (prod-stream.tella.tv)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "tellatv-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/tellatv-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/tellatv-downloader/releases/latest"
+    },
+    "csp": "script-src 'self'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';",
+    "dnrRules": []
+  },
+  "videoDetectionAndExtraction": {
+    "domainPattern": "/(^|\\.)tella\\.tv$/i",
+    "manifestUrlPattern": "https://prod-stream.tella.tv/media/(manifest|rendition).m3u8",
+    "signedUrlParameters": [
+      "Policy",
+      "Signature",
+      "Key-Pair-Id",
+      "Expires",
+      "story_id",
+      "media_type"
+    ],
+    "storyIdSources": [
+      "URL story_id query parameter",
+      "URL path /video/{storyId}",
+      "Manifest URL parameters"
+    ],
+    "titleSources": [
+      "h1",
+      "[role='dialog'] main h2",
+      "dialog main h2",
+      "meta[property='og:title']",
+      "document.title"
+    ],
+    "thumbnailSources": [
+      "meta[property='og:image']",
+      "video[poster]"
+    ],
+    "durationSources": [
+      "<video> element .duration property"
+    ],
+    "manifestSources": [
+      "Performance API resource timing entries",
+      "HTML regex scan for prod-stream.tella.tv URLs",
+      "iframe src/data-src attributes",
+      "All-frames scripting.executeScript scan"
+    ],
+    "embedDetectionPattern": "https://(?:www\\.)?tella\\.tv/video/[^/?#]+(?:/embed)?",
+    "manifestRanking": {
+      "manifestM3u8": 50,
+      "renditionM3u8": 30,
+      "videoMediaType": 15,
+      "audioMediaType": -25,
+      "signedParams": 20,
+      "freshnessBonus": "up to +40",
+      "nearExpiryPenalty": -200
+    },
+    "manifestExpiryCheck": "Parses Expires parameter or decodes AWS CloudFront Policy base64 for AWS:EpochTime, 30-second skew"
+  },
+  "tellaDownloadPipeline": {
+    "handlerClass": "TellaHandler extends SkoolHandler",
+    "manifestResolution": [
+      "Stored detectedVideo from chrome.storage",
+      "Top-frame query via sendMessage",
+      "All-frames scan via scripting.executeScript",
+      "Warmup + playback refresh",
+      "Page HTML fetch with manifest extraction",
+      "Detached background tab view (acquireFreshManifestFromStoryView)"
+    ],
+    "warmupPlayback": {
+      "method": "Programmatic play button click + video.play() on muted videos",
+      "waitMs": 1600,
+      "playButtonSelectors": [
+        "button[aria-label*='Play']",
+        "button[title*='Play']",
+        "[data-testid*='play']",
+        ".vjs-big-play-button",
+        ".plyr__control--overlaid",
+        ".mejs__overlay-button",
+        ".play-button"
+      ]
+    },
+    "manifestRefresh": "Opens background tab to tella.tv/video/{storyId}/view, waits for tab complete, re-scans",
+    "retryOn403": true,
+    "maxConcurrentDownloads": 3,
+    "segmentDownload": "Delegates to SkoolHandler.downloadSegmentsDirect() — direct or proxy-based fallback"
+  },
+  "overlayButtonConfig": {
+    "containerTargets": [
+      "media-theme",
+      "hls-video",
+      "[class*='player']",
+      "[data-testid*='player']",
+      "closest <video> parent"
+    ],
+    "buttonText": "Download",
+    "buttonColor": "#1f55c6",
+    "buttonHoverColor": "#2a6ef5",
+    "buttonPosition": "Absolute top-right, 8px offset",
+    "zIndex": 2147483647,
+    "dataAttributes": [
+      "data-skool-dl-btn",
+      "data-platform='tella'"
+    ],
+    "mutationObserver": true,
+    "observedElements": [
+      "video",
+      "iframe[src*='tella.tv']",
+      "iframe[data-src*='tella.tv']"
+    ]
+  },
+  "downloadManagerPanel": {
+    "position": "Right (configurable)",
+    "theme": "Dark",
+    "maxVisibleDownloads": 5,
+    "autoHideAfterCompleteMs": 8000,
+    "zIndex": 2147483647,
+    "crossTabSync": true,
+    "lingerAfterCompleteMs": 2000,
+    "features": [
+      "Cancel/cancel-all",
+      "Clear completed",
+      "Collapse",
+      "Per-download progress",
+      "Speed display"
+    ]
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content-enhanced-modular.js"
+      ],
+      "purpose": "Modular video detection coordinator, download control events, dynamic detector loading"
+    },
+    {
+      "component": "Video Detector",
+      "files": [
+        "detectors/video-detector.js"
+      ],
+      "purpose": "Tella-only detection coordinator, delegates to tella-detector.js"
+    },
+    {
+      "component": "Tella Detector",
+      "files": [
+        "detectors/tella-detector.js"
+      ],
+      "purpose": "Signed HLS manifest detection, iframe embed detection, overlay download buttons"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth gating, offscreen management, download state persistence"
+    },
+    {
+      "component": "Tella Handler",
+      "files": [
+        "handlers/tella-handler.js"
+      ],
+      "purpose": "Tella-specific download logic: manifest resolution, signed URL refresh, expiry management"
+    },
+    {
+      "component": "Skool Handler",
+      "files": [
+        "handlers/skool-handler.js"
+      ],
+      "purpose": "Base handler providing HLS segment download pipeline (inherited by TellaHandler)"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup-enhanced.js"
+      ],
+      "purpose": "UI, video info card, quality selector, auth flow"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen-faststream.html",
+        "offscreen-faststream-legacy.js"
+      ],
+      "purpose": "FastStream-based HLS segment transmuxing to MP4"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js"
+      ],
+      "purpose": "OTP login, entitlements, trial management"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager/download-manager.js",
+        "download-manager/download-manager-config.js",
+        "download-manager/download-manager-state.js",
+        "download-manager/download-manager-ui.js",
+        "download-manager/download-task-registry.js",
+        "download-manager/integration-helper.js"
+      ],
+      "purpose": "In-page download progress panel with cross-tab sync"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, feature flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release version checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup customizations"
+    }
+  ],
+  "popupUI": {
+    "title": "Video Downloader for TellaTV",
+    "stylesheets": [
+      "styles/styles.css (9.9 KB)",
+      "styles/popup-enhanced.css (14.4 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup-enhanced.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "popup-ui-overrides.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Header with help button",
+      "Quick tips banner",
+      "Activation section (email + license key)",
+      "Boot splash/loading",
+      "Trial banner",
+      "Video info card (thumbnail, title, owner, quality)",
+      "Password section (hidden)",
+      "Quality selector",
+      "Download button with SVG icon",
+      "Error state",
+      "URL copy section with yt-dlp commands"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "sizeKB": 319,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "sizeKB": 4.3,
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "sizeKB": 3.5,
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    },
+    {
+      "module": "YouTube",
+      "path": "modules/youtube/",
+      "purpose": "YouTube utilities (shared module)"
+    }
+  ],
+  "webAccessibleResources": [
+    {
+      "resources": [
+        "download-manager/integration-helper.js",
+        "download-manager/download-manager.js",
+        "download-manager/download-manager-config.js",
+        "download-manager/download-manager-state.js",
+        "download-manager/download-manager-ui.js",
+        "detectors/video-detector.js",
+        "detectors/tella-detector.js"
+      ],
+      "matches": [
+        "https://www.tella.tv/*",
+        "https://*.tella.tv/*"
+      ]
+    },
+    {
+      "resources": [
+        "offscreen-faststream.html",
+        "offscreen-faststream-legacy.js",
+        "indexed-db.js"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build.js",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/tellatv-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/tellatv-downloader/"
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "DZSfWhkbzpWRm8Rbtt5qMg==",
+    "ghLicenseId": "7cuJJyrNGcAreLmXPA8E",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_U56DtcrP8a9q2a",
+    "stripeProductName": "TellaTV Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [tellatv-downloader-monthly-9]",
+    "stripeOneTimePrice": null,
+    "stripePriceIds": [
+      "price_1T6w0kDP7AOTRcvm549Saa2i"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#506CF0",
+    "brandAccentHover": "#162DAD",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

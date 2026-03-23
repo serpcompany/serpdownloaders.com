@@ -1,0 +1,701 @@
+{
+  "extension": "camsoda-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP CamSoda Downloader",
+    "slug": "camsoda-downloader",
+    "geckoId": "camsoda-downloader@serpapps.com",
+    "category": "Video Downloader (Adult / Live Cam)",
+    "targetSites": [
+      "camsoda.com"
+    ],
+    "targetSiteMatches": [
+      "https://camsoda.com/*",
+      "https://www.camsoda.com/*",
+      "https://*.camsoda.com/*"
+    ],
+    "description": "Download CamSoda live streams and recordings"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/camsoda-downloader",
+    "lastUpdated": "2026-03-06",
+    "buildDate": "2026-03-04T17:01:16.463Z",
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "camsoda-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/camsoda-video-downloader",
+    "productPage": "https://serp.ly/camsoda-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "HLS Live Capture (LL-HLS segment recording)",
+      "HLS VOD Stitching (m3u8 segment to MP4 transmux)",
+      "Direct MP4 (offscreen streaming)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from HLS master manifest EXT-X-STREAM-INF variants (resolution, bandwidth, frame rate)",
+    "qualitySorting": "By height descending, then bandwidth descending",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": true,
+    "liveCaptureMethod": "PROCESS_HLS_LIVE_CAPTURE offscreen message, continuous LL-HLS segment fetching with _HLS_msn/_HLS_part hints",
+    "vodSupport": true,
+    "vodUrlPattern": "/{model}/videos/{videoId}",
+    "vrSupport": false,
+    "bulkDownload": false,
+    "inPagePlayerButton": true,
+    "playerButtonTargets": [
+      "[data-testid=\"video-player\"]",
+      ".player__video-wrapper",
+      ".video-player__wrapper",
+      ".media-player",
+      "#player-root",
+      ".video-player",
+      "nearest video parent container"
+    ],
+    "contextMenu": true,
+    "contextMenuId": "download-camsoda-video",
+    "contextMenuTitle": "Download CamSoda Stream",
+    "contextMenuContexts": [
+      "page",
+      "video"
+    ],
+    "autoSave": true,
+    "downloadFolder": "Downloads/",
+    "desktopNotifications": true,
+    "videoDetection": "CamSoda React Chat API extraction via inject.js, edge_servers + stream_name + token from /api/v1/chat/react/{slug}, HLS master manifest probing across multiple CDN hosts"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "offscreen"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://*/*",
+      "https://camsoda.com/*",
+      "https://www.camsoda.com/*",
+      "https://*.camsoda.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "download-manager.js",
+        "content.js",
+        "player-button.js"
+      ],
+      "matches": [
+        "https://camsoda.com/*",
+        "https://www.camsoda.com/*",
+        "https://*.camsoda.com/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "MP4 streaming download + HLS segment transmuxing + live capture recording"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true
+    },
+    "pageInjection": {
+      "file": "inject.js",
+      "purpose": "Page-context CamSoda React Chat API call, HLS playlist URL construction from edge_servers/stream_name/token, model metadata extraction",
+      "messageType": "CAMSODA_PAGE_DATA",
+      "requestMessageType": "REQUEST_CAMSODA_DATA"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "CamSoda React Chat API (www.camsoda.com/api/v1/chat/react/{slug})",
+      "CamSoda Front API (camsoda.com/api/front/v2/models/username/{slug}/cam)",
+      "CamSoda Videos API (camsoda.com/api/front/v2/users/{id}/videos)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "camsoda-video-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/camsoda-video-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/camsoda-video-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": []
+  },
+  "videoDetectionAndExtraction": {
+    "pageTypeDetection": "URL path matching: /{model}/videos/{id} = VOD, all other model pages = live",
+    "modelIdSources": [
+      "inject.js CamSoda React Chat API response",
+      "videoInfo.modelId",
+      "videoInfo.modelNumericId",
+      "videoInfo.roomSlug",
+      "videoInfo.streamName",
+      "API userId"
+    ],
+    "titleSources": [
+      "stream.username",
+      "model displayName",
+      "meta[property=\"og:title\"]",
+      "document.title"
+    ],
+    "thumbnailSources": [
+      "meta[property=\"og:image\"]",
+      "video entry coverUrl (VOD)",
+      "og:image"
+    ],
+    "streamHostSources": [
+      "CamSoda React Chat API stream.edge_servers[0]",
+      "API cam.hlsStreamHost",
+      "API cam.streamHost",
+      "inject.js discovered HLS hosts",
+      "config fallback domains"
+    ],
+    "streamNameSources": [
+      "CamSoda React Chat API stream.stream_name",
+      "API cam.streamName",
+      "API cam.stream_name",
+      "API cam.streamId"
+    ],
+    "hlsMasterUrlPattern": "https://edge-hls.{host}/hls/{streamId}/master/{streamId}_auto.m3u8",
+    "hlsBestOnlyUrlPattern": "https://edge-hls.{host}/hls/{streamId}/master/{streamId}.m3u8",
+    "camsodaLiveHlsUrlPattern": "https://{edge_server}/{stream_name}_v1/index.ll.m3u8?filter=tracks:v4v3v2v1a1a2&multitrack=true&token={token}",
+    "defaultCdnHosts": [
+      "doppiocdn.com",
+      "doppiocdn.net",
+      "stripcdnm.com",
+      "stripcdnmd.com",
+      "stripcdntmp.com",
+      "sc-cdn.net"
+    ],
+    "injectMessageType": "CAMSODA_PAGE_DATA",
+    "injectRequestType": "REQUEST_CAMSODA_DATA"
+  },
+  "mouflonDrm": {
+    "description": "Mouflon HLS manifest obfuscation system that encrypts segment filenames (shared infrastructure with Stripchat)",
+    "detectionTag": "#EXT-X-MOUFLON",
+    "pschTag": "#EXT-X-MOUFLON:PSCH:{version}:{pkey}",
+    "fileTag": "#EXT-X-MOUFLON:FILE:{encoded}",
+    "uriTag": "#EXT-X-MOUFLON:URI:{uri}",
+    "keyDerivation": "Fetch site config -> get MMP external source origin + version -> download main.js -> extract Doppio bundle filename -> find decode key for pkey in Doppio bundle",
+    "decryptionMethod": "XOR cipher: base64-decode filename, SHA-256 hash the decode key, XOR each byte",
+    "fallbackKeys": {
+      "Ook7quaiNgiyuhai": "EQueeGh2kaewa3ch"
+    },
+    "configCacheTtlMs": 300000,
+    "keyCacheType": "In-memory Map, keyed by pkey value, permanent during session",
+    "manifestRewrite": "Decoded filenames replace Forbidden or media.mp4 placeholders in manifest lines"
+  },
+  "formatObjectStructure": {
+    "url": "string (variant playlist URL)",
+    "requestUrl": "string (URL with extraParams applied)",
+    "masterUrl": "string (master manifest URL)",
+    "quality": "string (e.g. '1080p (HLS)', '720p @ 60fps (HLS)', 'Auto (HLS)')",
+    "format": "hls | mp4",
+    "ext": "m3u8 | mp4",
+    "height": "number | null",
+    "bandwidth": "number | null",
+    "fps": "number | null",
+    "type": "hls | mp4",
+    "extraParams": {
+      "psch": "string | undefined (Mouflon version)",
+      "pkey": "string | undefined (Mouflon public key)",
+      "playlistType": "lowLatency (for live streams only)"
+    }
+  },
+  "hlsProcessingSpecs": {
+    "converter": "SimpleHLS2MP4Converter",
+    "playlistParseTimeoutMs": 12000,
+    "llHlsSupport": true,
+    "llHlsFeatures": [
+      "EXT-X-PART segments",
+      "_HLS_msn/_HLS_part hints",
+      "PRELOAD-HINT skipped"
+    ],
+    "byteRangeSupport": true,
+    "livePlaylistType": "lowLatency",
+    "forbiddenFallback": "Tries best-only master URL ({streamId}.m3u8 instead of {streamId}_auto.m3u8)",
+    "webFallback": "If playlist text is Forbidden, retries with playlistType=web",
+    "segmentDeduplication": "URL + byte-range key deduplication via Set",
+    "credentialMode": {
+      "camsodaDomains": "include",
+      "cdnDomains": "include (doppiocdn, stripcdn, sc-cdn.net, strpst.com)",
+      "others": "omit"
+    },
+    "fetchFallback": "Background fetch -> offscreen fetch (page-like headers/UA)",
+    "referer": "https://camsoda.com/",
+    "origin": "https://camsoda.com"
+  },
+  "liveCaptureSpecs": {
+    "messageType": "PROCESS_HLS_LIVE_CAPTURE",
+    "stopMessage": "STOP_HLS_LIVE_CAPTURE",
+    "cancelMessage": "CANCEL_HLS_PROCESSING",
+    "progressTracking": [
+      "capturedSegments",
+      "elapsedSeconds",
+      "isLiveCapture flag"
+    ],
+    "uiIndicators": [
+      "capture-hint in popup",
+      "live-capture-status in popup",
+      "elapsed time in download manager"
+    ],
+    "variantParamsForwarded": [
+      "Mouflon psch/pkey",
+      "playlistType=lowLatency"
+    ],
+    "livePollIntervalMs": 1400,
+    "liveIdleLimitWithData": 35,
+    "liveIdleLimitNoData": 12,
+    "liveMaxPlaylistErrors": 8,
+    "liveFirstBatchLimit": 8,
+    "liveTickTailLimit": 4
+  },
+  "vodSpecs": {
+    "urlPattern": "/{model}/videos/{videoId}",
+    "videoLookupApi": "GET /api/front/v2/users/{userId}/videos",
+    "formatSources": [
+      "entry.videoUrl (HLS m3u8 or direct MP4)",
+      "entry.trailerUrl (fallback trailer MP4)"
+    ],
+    "qualityLabels": [
+      "Source (MP4)",
+      "Auto (HLS)",
+      "resolution variants",
+      "Trailer (MP4)"
+    ],
+    "accessGate": "Some videos require purchase/fan-club; throws descriptive error",
+    "metaCacheTtlMs": 15000,
+    "videosCacheTtlMs": 15000
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Stream detection, metadata extraction, page type detection (live vs VOD), download progress routing"
+    },
+    {
+      "component": "Player Button",
+      "files": [
+        "player-button.js"
+      ],
+      "purpose": "In-page download button on video player with quality popover"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, HLS master manifest parsing, CamSoda API integration, Mouflon decryption, auth gating, offscreen management, context menu"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "UI, quality selector, live capture status, auth flow"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "MP4 streaming + HLS transmux + live capture recording"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js"
+      ],
+      "purpose": "OTP login, entitlements, trial"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager.js"
+      ],
+      "purpose": "In-page download progress panel with live capture elapsed time"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-context CamSoda React Chat API call, edge server / stream name / token extraction, HLS URL construction"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup customizations"
+    }
+  ],
+  "playerButtonConfig": {
+    "containerTargets": [
+      "[data-testid=\"video-player\"]",
+      ".player__video-wrapper",
+      ".video-player__wrapper",
+      ".media-player",
+      "#player-root",
+      ".video-player",
+      "nearest video parent container"
+    ],
+    "buttonText": "Download with down-arrow icon",
+    "buttonClass": ".sc-download-button",
+    "qualityPopover": true,
+    "qualityPopoverClass": ".sc-quality-popover",
+    "visibilityGate": "isActivated = true",
+    "reactive": "Watches chrome.storage.onChanged for activation updates",
+    "css": "styles/player-button.css"
+  },
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (slides from -400px to 20px)",
+    "panelId": "CAMSODA-download-manager",
+    "cardWidth": "380px",
+    "maxHeight": "80vh",
+    "innerContainerMaxHeight": "400px",
+    "zIndex": 10000,
+    "border": "2px solid var(--brand-accent)",
+    "borderRadius": "10px",
+    "font": "sans-serif",
+    "autoHide": "Downloads auto-close when complete",
+    "features": [
+      "Minimize/close buttons",
+      "Per-download progress bars",
+      "Live capture elapsed time",
+      "Cancel buttons"
+    ],
+    "css": "styles/download-manager.css"
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/styles.css (8.7 KB)",
+      "styles/popup-enhanced.css (18.2 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "popup-ui-overrides.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Quick help banner",
+      "Header",
+      "Activation section",
+      "Loading spinner",
+      "Error state",
+      "Video info card (thumbnail, title, duration, VR badge)",
+      "Quality selector",
+      "Capture hint",
+      "Live capture status",
+      "Download button",
+      "Progress bar"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing (SimpleHLS2MP4Converter)"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs + modules/eventemitter/",
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    }
+  ],
+  "cdnInfrastructure": [
+    {
+      "domain": "doppiocdn.com",
+      "purpose": "Primary HLS edge CDN"
+    },
+    {
+      "domain": "doppiocdn.net",
+      "purpose": "Secondary HLS edge CDN"
+    },
+    {
+      "domain": "stripcdnm.com",
+      "purpose": "Shared media CDN"
+    },
+    {
+      "domain": "stripcdnmd.com",
+      "purpose": "Shared media CDN (alternate)"
+    },
+    {
+      "domain": "stripcdntmp.com",
+      "purpose": "Shared temporary/transient CDN"
+    },
+    {
+      "domain": "sc-cdn.net",
+      "purpose": "Shared static CDN"
+    },
+    {
+      "domain": "CamSoda edge_servers (from React Chat API)",
+      "purpose": "Per-room edge delivery nodes for LL-HLS"
+    }
+  ],
+  "cachingStrategy": [
+    {
+      "cache": "CAMSODAMetaCache",
+      "ttlMs": 15000,
+      "purpose": "Stream metadata per model slug"
+    },
+    {
+      "cache": "CAMSODAVideosCache",
+      "ttlMs": 15000,
+      "purpose": "Videos list per user ID"
+    },
+    {
+      "cache": "CAMSODAConfigCache",
+      "ttlMs": 300000,
+      "purpose": "Site static config (Mouflon origins)"
+    },
+    {
+      "cache": "mouflonKeyCache",
+      "ttl": "permanent (in-memory)",
+      "purpose": "Mouflon decode keys per pkey"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build.js (uses sharp for icons, archiver for zipping)",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/camsoda-video-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/camsoda-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "camsoda-downloader.zip",
+        "sizeMB": 1.24
+      },
+      {
+        "platform": "Chrome",
+        "file": "camsoda-downloader-chrome.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "camsoda-downloader-chrome-store-sanitized.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Brave",
+        "file": "camsoda-downloader-brave.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Edge",
+        "file": "camsoda-downloader-edge.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Opera",
+        "file": "camsoda-downloader-opera.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Whale",
+        "file": "camsoda-downloader-whale.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Yandex",
+        "file": "camsoda-downloader-yandex.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "camsoda-downloader-firefox.zip",
+        "sizeMB": 1.16
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "camsoda-downloader-firefox-unpacked.xpi",
+        "sizeMB": 1.15
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "test-key",
+    "ghLicenseId": "xTBDv7Igej2iWM7JjbSb",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_U5nhvhWVJd1haw",
+    "stripeProductName": "Camsoda Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [camsoda-downloader-monthly-9]",
+    "stripeOneTimePrice": null,
+    "stripePriceIds": [
+      "price_1T7c67DP7AOTRcvmZjFLlAfW"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#ff4f70",
+    "brandAccentHover": "#e63d5d",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

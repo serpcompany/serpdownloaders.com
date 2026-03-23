@@ -1,0 +1,648 @@
+{
+  "extension": "vimeo-downloader",
+  "coreIdentity": {
+    "extensionName": "Video Downloader for Vimeo",
+    "slug": "vimeo-downloader",
+    "geckoId": "vimeo-downloader@serpapps.com",
+    "category": "Video Downloader",
+    "targetSites": [
+      "vimeo.com",
+      "player.vimeo.com",
+      "*.vhx.tv",
+      "embed.vhx.tv"
+    ],
+    "targetSiteMatches": [
+      "https://vimeo.com/*",
+      "https://*.vimeo.com/*",
+      "https://player.vimeo.com/*",
+      "https://*.vhx.tv/*",
+      "https://embed.vhx.tv/*",
+      "<all_urls>"
+    ],
+    "description": "Download Vimeo videos directly to your computer"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/vimeo-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": "2026-02-12 (BUILD TAG: adaptive-quality-fix-2026-02-12-c)",
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "vimeo-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/vimeo-video-downloader",
+    "productPage": "https://serp.ly/vimeo-video-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "HLS Stitching (m3u8 segment to MP4 transmux via offscreen FastStream)",
+      "Progressive MP4 direct download",
+      "DASH URL extraction"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from playerConfig.request.files (HLS, progressive, DASH CDNs), Vimeo config API, JSON-LD, DOM heuristics",
+    "qualitySorting": "By quality, progressive formats mapped with width/height/fps/profile",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": false,
+    "inPagePlayerButton": true,
+    "playerButtonTargets": [
+      ".player",
+      ".player.js-player",
+      ".player-container",
+      ".player_container",
+      ".vh-player-area",
+      "[class*='js-player_container_']",
+      ".js-player",
+      ".vp-video-wrapper",
+      ".vp-player-ui-container",
+      ".vp-video",
+      "video"
+    ],
+    "contextMenu": false,
+    "contextMenuId": null,
+    "contextMenuTitle": null,
+    "contextMenuContexts": null,
+    "autoSave": true,
+    "downloadFolder": null,
+    "desktopNotifications": false,
+    "notificationTitle": null,
+    "videoDetection": "Multi-source: playerConfig, vimeo.config, inline script parsing, bootstrap_data, JSON-LD, DOM heuristics, Performance API resource observer, iframe embed probing",
+    "passwordProtectedVideos": true,
+    "multipleVideoSelection": true,
+    "embedDetection": true,
+    "thirdPartyEmbedSupport": true
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "storage",
+      "tabs",
+      "scripting",
+      "webNavigation",
+      "offscreen",
+      "cookies",
+      "declarativeNetRequest"
+    ],
+    "hostPermissions": [
+      "https://auth.serp.co/*",
+      "https://vimeo.com/*",
+      "https://*.vimeo.com/*",
+      "https://*.vimeocdn.com/*",
+      "https://*.cloudfront.net/*",
+      "https://unpkg.com/*",
+      "https://api.gumroad.com/*",
+      "https://player.vimeo.com/*",
+      "<all_urls>"
+    ],
+    "contentScripts": [
+      {
+        "files": [
+          "site-config.js",
+          "logger.js",
+          "download-manager/inline-manager.js"
+        ],
+        "matches": [
+          "<all_urls>"
+        ],
+        "allFrames": false,
+        "runAt": "document_idle"
+      },
+      {
+        "files": [
+          "site-config.js",
+          "logger.js",
+          "content-enhanced.js"
+        ],
+        "matches": [
+          "https://vimeo.com/*",
+          "https://*.vimeo.com/*",
+          "https://player.vimeo.com/*",
+          "https://*.vhx.tv/*",
+          "https://embed.vhx.tv/*"
+        ],
+        "allFrames": true,
+        "runAt": "document_idle"
+      }
+    ],
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen-faststream.html",
+      "js": "offscreen-faststream-legacy.js",
+      "purpose": "HLS segment transmuxing via FastStream wrapper"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/hls.mjs",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter via FastStreamHLS2MP4Wrapper)",
+    "dashToMp4": null,
+    "mp4Box": null,
+    "reencoder": null,
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true,
+      "dbName": "VimeoDownloaderDB",
+      "storeName": "fileStore",
+      "dbVersion": 1
+    },
+    "pageInjection": {
+      "file": null,
+      "purpose": "content-enhanced.js runs in all_frames:true, monitors Performance API resources, probes iframes",
+      "messageType": null
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "Gumroad License API (api.gumroad.com)",
+      "Vimeo Player Config (player.vimeo.com/video/*/config)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "vimeo-video-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/vimeo-video-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/vimeo-video-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline'; child-src 'self';",
+    "dnrRules": [
+      {
+        "id": 21020,
+        "action": "Set Origin/Referer headers to player.vimeo.com",
+        "condition": "Requests to cloudfront.net (xmlhttprequest, media, other)"
+      },
+      {
+        "id": 21021,
+        "action": "Set CORS allow-origin/expose-headers/timing-allow-origin to *",
+        "condition": "Responses from vimeocdn.com (xmlhttprequest, media, other)"
+      },
+      {
+        "id": 21022,
+        "action": "Set CORS allow-origin/expose-headers/timing-allow-origin to *",
+        "condition": "Responses from cloudfront.net (xmlhttprequest, media, other)"
+      }
+    ]
+  },
+  "videoDetectionAndExtraction": {
+    "videoIdPatterns": [
+      "/video/(\\d+)",
+      "vimeo.com/(\\d+)"
+    ],
+    "titleSources": [
+      "playerConfig.video.title",
+      "vimeo.config.video.title",
+      "JSON-LD name",
+      "document.title",
+      "meta[property=\"og:title\"]"
+    ],
+    "thumbnailSources": [
+      "playerConfig.video.thumbnail_url",
+      "playerConfig.request.thumb_preview.url",
+      "JSON-LD thumbnailUrl",
+      "meta[property=\"og:image\"]"
+    ],
+    "durationSources": [
+      "playerConfig.video.duration",
+      "ISO 8601 PT duration parsing",
+      "JSON-LD duration"
+    ],
+    "extraMetadata": {
+      "owner": "playerConfig.video.owner.name",
+      "description": "playerConfig / JSON-LD / og:description",
+      "embedUrl": "JSON-LD / playerConfig",
+      "thumbPreview": "playerConfig.request.thumb_preview (sprite data)"
+    },
+    "formatSources": [
+      "playerConfig.request.files (HLS CDNs, progressive array, DASH CDNs)",
+      "window.vimeo.config",
+      "Inline script parsing (window.playerConfig = {...})",
+      "Bootstrap data / embedded config objects",
+      "Vimeo Player Config API (/video/*/config)",
+      "JSON-LD",
+      "DOM heuristics"
+    ],
+    "hlsCdnSelection": "chooseFromCdns() -- prefers default_cdn, falls back to first CDN with .url or .avc_url",
+    "cdnDetectionPattern": null,
+    "mediaRequestPatterns": [
+      ".m3u8",
+      "master.json",
+      "player.vimeo.com/video/*/config"
+    ],
+    "injectMessageType": null,
+    "passwordProtected": true,
+    "multipleVideos": true,
+    "embedDetection": {
+      "iframePatterns": [
+        "iframe[src*='player.vimeo.com']",
+        "iframe[data-large*='player.vimeo.com']",
+        "iframe[src*='vimeo.com/event/']",
+        "iframe[src*='vimeo.com/showcase/']",
+        "iframe[src*='embed.vhx.tv']"
+      ],
+      "postMessageMethods": [
+        "getVideoId",
+        "setVolume",
+        "play",
+        "setCurrentTime"
+      ]
+    }
+  },
+  "formatObjectStructure": {
+    "url": "string",
+    "quality": "string | null",
+    "width": "number | null",
+    "height": "number | null",
+    "mime": "string | null",
+    "fps": "number | null",
+    "profile": "string | null"
+  },
+  "hlsProcessingSpecs": {
+    "converter": "FastStreamHLS2MP4Wrapper (wraps HLS2MP4 from modules/hls2mp4/hls2mp4.mjs)",
+    "batchSize": "Math.min(10, totalSegments)",
+    "fallbackSwFetchRetries": 4,
+    "fallbackBackoffBaseMs": 800,
+    "originHeader": "https://player.vimeo.com",
+    "refererHeader": "https://player.vimeo.com/",
+    "formatPreference": "TS (FORCE_TS_FORMAT: true by default)"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content-enhanced.js"
+      ],
+      "purpose": "Video detection, format extraction (playerConfig, vimeo.config, scripts, JSON-LD, DOM), embed iframe probing, Performance API monitoring, overlay download button"
+    },
+    {
+      "component": "Download Manager (inline)",
+      "files": [
+        "download-manager/inline-manager.js"
+      ],
+      "purpose": "In-page download progress panel with cross-tab sync"
+    },
+    {
+      "component": "Download Manager (modular)",
+      "files": [
+        "download-manager/download-manager.js"
+      ],
+      "purpose": "Full modular download manager with state, UI, auto-remove"
+    },
+    {
+      "component": "Download Manager Config",
+      "files": [
+        "download-manager/download-manager-config.js"
+      ],
+      "purpose": "Configuration and presets for download manager"
+    },
+    {
+      "component": "Download Manager State",
+      "files": [
+        "download-manager/download-manager-state.js"
+      ],
+      "purpose": "State management for downloads"
+    },
+    {
+      "component": "Download Manager UI",
+      "files": [
+        "download-manager/download-manager-ui.js"
+      ],
+      "purpose": "UI rendering for download panel"
+    },
+    {
+      "component": "Download Task Registry",
+      "files": [
+        "download-manager/download-task-registry.js"
+      ],
+      "purpose": "Queue management, active/queued/cancelled tracking, chrome download bookkeeping"
+    },
+    {
+      "component": "Integration Helper",
+      "files": [
+        "download-manager/integration-helper.js"
+      ],
+      "purpose": "Integration utilities"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth, offscreen, Vimeo API/config extraction, DNR rules, queue processing"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup-enhanced.js"
+      ],
+      "purpose": "UI, quality selector, video info, password input, multi-video selection, embed detection"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen-faststream.html",
+        "offscreen-faststream-legacy.js"
+      ],
+      "purpose": "HLS segment transmuxing via FastStream"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth/auth-api.js",
+        "auth/auth-config.js",
+        "auth/auth-storage.js",
+        "auth/auth-telemetry.js",
+        "auth/auth-token.js"
+      ],
+      "purpose": "OTP login, entitlements, trial management"
+    },
+    {
+      "component": "Auth UI",
+      "files": [
+        "auth-ui.js"
+      ],
+      "purpose": "OTP auth UI wiring for popup"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging with level gating, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, feature flags, Gumroad/GH license IDs"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge in popup"
+    },
+    {
+      "component": "IndexedDB",
+      "files": [
+        "indexed-db.js"
+      ],
+      "purpose": "Key-value store for segment caching"
+    }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (translateX animation, top:20px, right:20px)",
+    "panelId": "vimeo-download-manager",
+    "cardWidth": "380px (340px max on small screens)",
+    "maxHeight": "min(innerHeight-80, 500)px",
+    "zIndex": 2147483647,
+    "border": "2px solid #15d5ff",
+    "borderRadius": "8px",
+    "font": "-apple-system, BlinkMacSystemFont, Segoe UI, Arial, sans-serif",
+    "autoRemoveDelayMs": 2500,
+    "maxConcurrentDownloads": 3,
+    "features": [
+      "Cancel All button",
+      "Clear completed button",
+      "Collapse/expand toggle",
+      "Per-download progress bars",
+      "Speed display",
+      "Cancel per item",
+      "Cross-tab sync via chrome.storage",
+      "Queued state display",
+      "Awaiting Save As state"
+    ]
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/styles.css (15.1 KB)",
+      "styles/popup-enhanced.css (12.6 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup-enhanced.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)"
+    ],
+    "sections": [
+      "Header",
+      "Help text display",
+      "Boot splash",
+      "Activation section (OTP)",
+      "Embed detected notice",
+      "Video selection (multiple videos)",
+      "Password section",
+      "Status display",
+      "Get Playlist button",
+      "Video info card",
+      "Quality selector",
+      "Download button",
+      "Progress bar with cancel",
+      "Error display",
+      "Update notice",
+      "Footer"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/hls.mjs",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing (hls2mp4.mjs, simple-converter.mjs, MP4Generator.mjs, transmuxer.mjs)"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "sizeKB": 4.5,
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter/",
+      "purpose": "Event dispatch"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build.js with esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/vimeo-video-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/vimeo-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "vimeo-downloader.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Chrome",
+        "file": "vimeo-downloader-chrome.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "vimeo-downloader-chrome-store-sanitized.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Brave",
+        "file": "vimeo-downloader-brave.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Edge",
+        "file": "vimeo-downloader-edge.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Opera",
+        "file": "vimeo-downloader-opera.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Whale",
+        "file": "vimeo-downloader-whale.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Yandex",
+        "file": "vimeo-downloader-yandex.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "vimeo-downloader-firefox.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "vimeo-downloader-firefox-unpacked.xpi",
+        "sizeMB": null
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "1oUX5E-ZrqmNqj1CoYXr-A==",
+    "ghLicenseId": "sbH51axmKWcJTqFGZCO2",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_TadNAFiumGP1XB",
+    "stripeProductName": "Vimeo Video Downloader",
+    "stripeMonthlyPrice": "USD 17.00/month [Subscription - Vimeo Video Downloader] | USD 9.00/month [Subscription - Vimeo Downloader]",
+    "stripeOneTimePrice": "USD 17.00/one_time | USD 8.00/one_time [vimeo-video-downloader-setup-fee-8]",
+    "stripePriceIds": [
+      "price_1SdS70DP7AOTRcvmE9x9q923",
+      "price_1SpcnVDP7AOTRcvmF6LWW6KI",
+      "price_1SpdxeDP7AOTRcvmGxtvDRoq",
+      "price_1SpdxeDP7AOTRcvmomvdZgjx"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < info(20) < warn(30) < error(40) < silent(90)",
+    "loggerPrefix": "VIMEO"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "32x32",
+      "file": "icons/icon32.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#15d5ff",
+    "brandAccentHover": "#13b1d5",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  },
+  "testingConfiguration": {
+    "forceTs": true,
+    "forceFmp4": false,
+    "skipSlowDomExtraction": true,
+    "disableVimeoApi": true,
+    "offscreenIdleTimeoutMs": 60000,
+    "completeLingerMs": 2500
+  }
+}

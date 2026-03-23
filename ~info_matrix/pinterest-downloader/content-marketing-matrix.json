@@ -1,0 +1,272 @@
+{
+  "extension": "pinterest-downloader",
+  "productPositioning": {
+    "headline": "Download Pinterest Videos, Images, and Text — All Visible Pins, One Click",
+    "elevatorPitch": "SERP Pinterest Downloader is a browser extension that saves videos, images, and post text from Pinterest.com to your computer. Browse any Pinterest page, click the extension icon, and download everything visible — videos as MP4, images in original quality, text as plain files. No extra software needed. 3 free downloads included.",
+    "valueProposition": "Purpose-built for Pinterest with multi-source video detection (DOM, inline data, PinResource API, thumbnail derivation), bulk \"Download Visible\" for all pins on a page, and automatic HLS-to-MP4 conversion. Handles images and text posts too. Everything happens in your browser — no external tools required.",
+    "targetAudience": "Pinterest users who want to save pins for offline viewing, designers collecting inspiration, content creators archiving their boards, and anyone who needs to download Pinterest media without technical knowledge.",
+    "useCases": [
+      "Save a video pin for offline viewing",
+      "Download high-resolution images from Pinterest boards",
+      "Bulk download all visible pins on a page",
+      "Archive post text from Pinterest for reference",
+      "Save inspiration boards locally for design projects"
+    ],
+    "painPointsAddressed": [
+      "Pinterest videos use HLS streaming — you cannot right-click and save them",
+      "Pinterest images are served through CDN paths that make direct saving difficult",
+      "No built-in download option on Pinterest for any content type",
+      "Generic downloaders often fail because Pinterest uses dynamic rendering and API-driven content",
+      "Users want to save videos, images, and text from the same page without switching tools"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download videos, images, and text from Pinterest. Auto-detects media, converts HLS to MP4. Bulk download. 3 free downloads.",
+    "changelog": "v4.0.1 — Multi-source video detection, PinResource API integration, bulk download, image and text extraction, overlay buttons.",
+    "fullDescription": "SERP Pinterest Downloader makes it easy to save videos, images, and post text from Pinterest.com to your computer.\n\nHow it works: Browse any page on Pinterest and click the extension icon. The extension scans visible pins and shows you all available videos, images, and text posts in organized tabs. Download individual items or use \"Download Visible\" to save everything at once.\n\nIt handles Pinterest's HLS video streaming, CDN image delivery, and dynamic content automatically — no external tools, no command line, no technical knowledge required. Media saves directly to your Downloads folder in an organized Pinterest Downloader subfolder.\n\nKey features:\n- Download videos, images, and text from any Pinterest page\n- Bulk \"Download Visible\" saves all pins on the current page\n- Multi-source video detection — DOM, inline data, PinResource API, thumbnail derivation\n- Converts HLS streams to standard MP4 files in your browser\n- Overlay buttons appear next to Pinterest's Save button on each pin\n- Tabbed popup showing Videos, Images, and Text Posts with counts\n- Rescan button to detect newly loaded pins after scrolling\n- Auto-saves to organized Pinterest Downloader subfolder\n- Pinterest-themed dark UI with red accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to Pinterest.com and browse any page\n3. Click the extension icon to see detected media\n4. Select items or click \"Download Visible\" — saved to your Downloads folder\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Download videos, images, and text from any Pinterest page",
+      "Bulk \"Download Visible\" saves all visible pins at once",
+      "Multi-source video detection — DOM elements, inline script data, PinResource API, thumbnail derivation",
+      "Converts HLS video streams to downloadable MP4 files in-browser",
+      "Overlay download buttons appear next to Pinterest's Save button",
+      "Tabbed popup organizes content by type — Videos, Images, Text",
+      "Real-time pin count statistics in the popup header",
+      "Rescan button catches newly loaded pins after scrolling",
+      "Auto-saves to organized Pinterest Downloader/ subfolder in Downloads",
+      "Pinterest-themed dark UI with signature red accents",
+      "3 free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP Pinterest Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Browse",
+        "description": "Navigate to Pinterest.com and explore any page, board, or profile"
+      },
+      {
+        "step": 3,
+        "title": "Click",
+        "description": "Use the extension popup or the overlay button on individual pins"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "Pick individual items or hit \"Download Visible\" — videos save as MP4, images in original quality, text as plain files"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I download a video from Pinterest?",
+        "answer": "Go to any Pinterest page and click the extension icon. The popup shows all detected videos in the Videos tab. Click download on the one you want, or use \"Download Visible\" to save all of them."
+      },
+      {
+        "question": "Can I download images too?",
+        "answer": "Yes. The extension detects videos, images, and text posts. Switch to the Images tab in the popup to see and download all detected images."
+      },
+      {
+        "question": "What about text posts?",
+        "answer": "Text from visible pins is extracted and available in the Text tab. Text posts are saved as .txt files with the post URL and timestamp included."
+      },
+      {
+        "question": "What quality are downloaded videos?",
+        "answer": "The extension automatically selects the best available quality. It checks multiple sources — PinResource API, inline data, DOM elements — and picks the highest-resolution progressive MP4 available."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player. HLS streams are automatically converted to MP4 in your browser."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Files save to a Pinterest Downloader subfolder inside your browser's default Downloads directory, organized by source."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Can I download from boards and profiles?",
+        "answer": "Yes. The extension works on any Pinterest page — home feed, boards, profiles, search results, and individual pin pages."
+      },
+      {
+        "question": "Why isn't the extension finding any media?",
+        "answer": "Make sure you are on a Pinterest.com page. Pins must be visible (loaded) on the page. Try scrolling to load more content, then click the Rescan button in the popup."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. All processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "pinterest downloader",
+      "download pinterest",
+      "pinterest video download",
+      "save pinterest images",
+      "pinterest image downloader"
+    ],
+    "longTailKeywords": [
+      "how to download videos from pinterest",
+      "pinterest downloader chrome extension",
+      "download pinterest video to mp4",
+      "save pinterest images to computer",
+      "bulk download pinterest pins"
+    ],
+    "seoTitle": "Pinterest Downloader — Save Videos, Images & Text | SERP",
+    "metaDescription": "Download videos, images, and text from Pinterest with one click. Bulk download visible pins. Converts HLS to MP4. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/pinterest-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download Pinterest Pins",
+    "googleAdsDescription": "Save Pinterest videos, images & text. Bulk download. Quality selection. 3 free downloads included.",
+    "socialMediaHook": "Want to save pins from Pinterest? This extension downloads videos, images, and text — all visible pins, one click.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Multi-source detection (PinResource API, DOM, inline data, thumbnail derivation) catches media that generic tools miss. Handles videos, images, and text in one extension. Bulk download, overlay buttons, and organized auto-save folder.",
+    "adAngles": [
+      {
+        "angle": "All-in-One",
+        "copy": "Videos. Images. Text. One extension downloads everything from Pinterest."
+      },
+      {
+        "angle": "Bulk Download",
+        "copy": "See it. Click it. Download all visible pins at once."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No desktop software. No command line. Just a browser extension."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it now."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output for videos (best quality auto-selected). Original quality for images (JPG, PNG, WebP, GIF, AVIF). Plain text files for post text.",
+    "limitationsAndDisclaimers": "Pins must be visible (loaded) on the page. Video quality depends on source. Requires email sign-in for trial. Internet connection required. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "Instagram Downloader",
+      "Facebook Downloader",
+      "TikTok Downloader",
+      "YouTube Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Videos from Pinterest (Step-by-Step Guide)",
+      "Pinterest Downloader: Save Videos, Images, and Text with One Click",
+      "How to Save Pinterest Images in Original Quality — No Software Required",
+      "Best Pinterest Download Extensions Compared",
+      "Download Pinterest Pins in Bulk — Chrome & Firefox"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from Pinterest is tricky and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Browse Pinterest",
+        "description": "Navigate to any page, board, or profile on Pinterest.com"
+      },
+      {
+        "section": "Step 4: Download",
+        "description": "Use the popup (Videos/Images/Text tabs), overlay buttons, or \"Download Visible\" for bulk download"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Scroll to load more pins before scanning. Use Rescan after scrolling. Auto-saves to Pinterest Downloader/ folder."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Make sure pins are visible. Refresh if needed. Check extension is enabled."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected videos with count and download buttons",
+      "Extension popup showing detected images in the Images tab",
+      "Overlay download button next to Pinterest's Save button on a pin",
+      "Stats grid showing Video, Image, and Text Post counts",
+      "Email sign-in / OTP verification screen"
+    ],
+    "iconLogoVariants": "Default icon: 16, 32, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1A0B0E), popup screenshot, Pinterest red accent (#E60023)",
+    "gifDemoDescription": "10-second loop: Pinterest board page → click extension icon → popup shows Videos/Images/Text tabs with counts → click \"Download Visible\" → downloads start → files appear in Downloads folder"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Videos, Images, and Text from Pinterest — All Visible Pins, One Click",
+      "subheadline": "Overlay buttons on each pin. Multi-source video detection. HLS to MP4 conversion. Bulk download. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Bulk Download",
+        "description": "Click \"Download Visible\" to save every video, image, and text post on the current page. No need to download one at a time."
+      },
+      {
+        "title": "Multi-Source Video Detection",
+        "description": "Finds videos from DOM elements, inline script data, PinResource API, and thumbnail-derived URLs. Never misses a pin."
+      },
+      {
+        "title": "All Content Types",
+        "description": "Videos, images, and text posts — all in one extension. Organized in tabs with real-time counts."
+      },
+      {
+        "title": "Overlay Buttons",
+        "description": "Download buttons appear right next to Pinterest's Save button on each pin. Click and save without opening the popup."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "Auto-saves to organized Downloads/Pinterest Downloader/ folder",
+      "Automatic update notifications"
+    ],
+    "footerCta": {
+      "headline": "Ready to save your favorite pins?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Friendly, clear, professional. Mainstream audience — no technical jargon. Emphasis on simplicity and creative use cases.",
+    "bannedWords": [
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack",
+      "steal",
+      "rip"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download."
+    ],
+    "brandColorHex": "#E60023",
+    "brandBackgroundHex": "#1A0B0E",
+    "targetPlatformBranding": "Use \"Pinterest\" with capital P. Reference as \"Pinterest.com\" for the website. Respect Pinterest brand guidelines in marketing materials."
+  }
+}

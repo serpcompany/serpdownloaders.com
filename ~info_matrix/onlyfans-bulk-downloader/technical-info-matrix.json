@@ -1,0 +1,764 @@
+{
+  "extension": "onlyfans-bulk-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP OnlyFans Bulk Downloader",
+    "slug": "onlyfans-bulk-downloader",
+    "geckoId": "onlyfans-bulk-downloader@serpapps.com",
+    "category": "Bulk Media Downloader (Adult / Creator Platform)",
+    "targetSites": [
+      "onlyfans.com"
+    ],
+    "targetSiteMatches": [
+      "https://onlyfans.com/*",
+      "https://www.onlyfans.com/*",
+      "https://*.onlyfans.com/*"
+    ],
+    "description": "Download OnlyFans profile videos, photos and more."
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/onlyfans-bulk-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": null,
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": null,
+    "storeSanitizedFile": null,
+    "githubReleasesRepo": "serpapps/onlyfans-bulk-downloader",
+    "productPage": "https://serp.ly/onlyfans-bulk-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": "Direct file download via chrome.downloads.download() — images as JPG, videos as MP4",
+    "bulkDownload": true,
+    "bulkDescription": "Multi-creator batch download with configurable rate limiting, concurrency control, and persistent download queue",
+    "mediaTypes": {
+      "photos": [
+        "jpg",
+        "jpeg",
+        "png",
+        "gif",
+        "webp",
+        "avif"
+      ],
+      "videos": [
+        "mp4",
+        "mov",
+        "m4v",
+        "webm",
+        "mkv",
+        "avi",
+        "m3u8",
+        "mpd"
+      ]
+    },
+    "mediaTypeFilter": true,
+    "mediaFilterOptions": [
+      "all",
+      "photos",
+      "videos"
+    ],
+    "qualitySelection": false,
+    "qualityMode": "Source quality from OnlyFans CDN",
+    "authRequired": "OTP (email verification via auth.serp.co) + active OnlyFans session (cookies)",
+    "trialDownloads": true,
+    "trialMode": "Freemium trial via SERP auth entitlements, one credit per bulk operation",
+    "hasDownloadManager": true,
+    "downloadManagerPage": "progress.html",
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "inPageOverlayButtons": true,
+    "overlayButtonTargets": [
+      ".b-post__media__item-inner",
+      ".video-wrapper",
+      ".video-js",
+      "[data-component=\"PostMedia\"]",
+      "[data-component=\"PostMediaVideo\"]",
+      "[data-component=\"PostMediaImage\"]",
+      "img",
+      "video",
+      ".vjs-poster",
+      ".pswp__container",
+      "#pswp__items"
+    ],
+    "contextMenu": false,
+    "autoSave": true,
+    "downloadFolder": "OnlyFans/",
+    "desktopNotifications": false,
+    "creatorSelection": true,
+    "creatorSelectionPage": "selection.html",
+    "rateLimiter": true,
+    "rateLimiterPresets": [
+      "conservative",
+      "balanced",
+      "aggressive"
+    ],
+    "concurrencyControl": true,
+    "concurrencyRange": "1-8",
+    "queueSystem": true,
+    "queueFeatures": [
+      "pause",
+      "resume",
+      "stop",
+      "cancelAll",
+      "clearFinished",
+      "retryCancelled"
+    ],
+    "dynamicRules": true,
+    "dynamicRulesFile": "dynamicRules.json",
+    "chatMediaDownload": true,
+    "chatPages": [
+      "chats.html",
+      "chatlist.html"
+    ]
+  },
+  "technicalDetails": {
+    "permissions": [
+      "storage",
+      "cookies",
+      "downloads",
+      "tabs"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://onlyfans.com/*",
+      "https://www.onlyfans.com/*",
+      "https://*.onlyfans.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "content-scripts/content.js"
+      ],
+      "matches": [
+        "https://*.onlyfans.com/*",
+        "https://onlyfans.com/*"
+      ],
+      "allFrames": true,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": null,
+    "usesFFmpeg": false,
+    "usesMediaBunny": false,
+    "hlsLibrary": null,
+    "indexedDB": false,
+    "pageInjection": {
+      "method": "Content script MutationObserver",
+      "purpose": "Download overlay buttons on media elements"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "OnlyFans API (onlyfans.com — subscriptions, posts, user data, chat media)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "onlyfans-bulk-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/onlyfans-bulk-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/onlyfans-bulk-downloader/releases/latest"
+    },
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "ghLicenseId": "jr6N8ZFfnZa2K90F6pDn",
+    "csp": "Default MV3",
+    "dnrRules": []
+  },
+  "contentScriptOverlay": {
+    "siteMatch": [
+      "https://onlyfans.com/*",
+      "https://*.onlyfans.com/*"
+    ],
+    "allFrames": true,
+    "runAt": "document_idle",
+    "authGate": true,
+    "detectionMethod": "MutationObserver on document.documentElement (childList + subtree), scroll/resize/hashchange/popstate events",
+    "debounceMs": 200,
+    "mediaContainerSelectors": [
+      ".b-post__media__item-inner",
+      ".video-wrapper",
+      ".video-js",
+      "[data-component=\"PostMedia\"]",
+      "[data-component=\"PostMediaVideo\"]",
+      "[data-component=\"PostMediaImage\"]",
+      "img",
+      "video",
+      ".vjs-poster",
+      ".pswp__container",
+      "#pswp__items",
+      "[role=\"dialog\"] variants",
+      "lightbox/modal/MediaViewer variants",
+      ".pswp__item",
+      ".pswp__zoom-wrap",
+      ".pswp__img"
+    ],
+    "lightboxModalSupport": [
+      "PhotoSwipe (.pswp)",
+      "[role=\"dialog\"]",
+      "div[class*=\"lightbox\"]",
+      "div[class*=\"modal\"]",
+      "div[class*=\"MediaViewer\"]"
+    ],
+    "overlayPosition": "Absolute top-right (8px inset), z-index 2147483643",
+    "lightboxPosition": "Top-center with translateX(-50%)",
+    "buttonSize": "34x34px, 8px border-radius",
+    "buttonBackground": "rgba(0,0,0,0.6)",
+    "buttonHover": "rgba(0, 175, 240, 0.25)",
+    "imageDownload": "Extracts currentSrc or src, sends downloadImage message",
+    "videoDownload": "Finds video in container, extracts currentSrc or src, sends downloadVideo message"
+  },
+  "bulkDownloadWorkflow": [
+    {
+      "step": 1,
+      "page": "settings.html",
+      "description": "Verify OnlyFans sign-in, load dynamic rules, configure rate limiter preset, save settings"
+    },
+    {
+      "step": 2,
+      "page": "selection.html",
+      "description": "Fetch subscriptions from OnlyFans API (50 per page), display creators with avatars, multi-select, choose media type filter"
+    },
+    {
+      "step": 3,
+      "page": "list.html",
+      "description": "Iterate selected creators, fetch posts via OnlyFans API, extract media URLs (images/videos), build download queue items"
+    },
+    {
+      "step": 4,
+      "page": "progress.html",
+      "description": "Process download queue with rate limiting, show real-time progress, concurrency control (1-8), pause/resume/stop/cancel/retry"
+    }
+  ],
+  "rateLimiterPresets": {
+    "conservative": {
+      "minDelay": 2000,
+      "maxDelay": 3000,
+      "maxRequestsPerMinute": 25,
+      "enableJitter": true,
+      "backoffMultiplier": 2,
+      "maxBackoffDelay": 30000
+    },
+    "balanced": {
+      "minDelay": 1000,
+      "maxDelay": 1500,
+      "maxRequestsPerMinute": 45,
+      "enableJitter": true,
+      "backoffMultiplier": 1.5,
+      "maxBackoffDelay": 20000
+    },
+    "aggressive": {
+      "minDelay": 500,
+      "maxDelay": 1000,
+      "maxRequestsPerMinute": 70,
+      "enableJitter": true,
+      "backoffMultiplier": 1.2,
+      "maxBackoffDelay": 10000
+    }
+  },
+  "downloadQueueFeatures": {
+    "persistence": "chrome.storage.local key od_queue",
+    "concurrency": "User-configurable 1-8 concurrent downloads",
+    "itemStates": [
+      "pending",
+      "running",
+      "done",
+      "error",
+      "cancelled"
+    ],
+    "controls": [
+      "Pause",
+      "Resume",
+      "Stop",
+      "Cancel All",
+      "Clear Finished",
+      "Retry Cancelled"
+    ],
+    "progressDisplay": "Per-item status, overall progress bar with percentage, count of done/running/pending/error/cancelled",
+    "autoRefreshMs": 1000,
+    "storageListener": "chrome.storage.onChanged for real-time od_queue updates"
+  },
+  "backgroundBulkOperationSemantics": {
+    "paidUsers": "Always allowed, never consumes trial",
+    "trialUsers": "Consumes one trial credit per operation (burst of downloads)",
+    "operationTracking": "activeDownloadIds Set tracks running chrome.downloads IDs",
+    "operationEnd": "When all tracked download IDs complete or interrupt, trialOperationActive resets",
+    "messageActions": [
+      "downloadFile",
+      "downloadImage",
+      "downloadVideo"
+    ],
+    "fileNaming": {
+      "images": "OnlyFans/{sanitizedBaseName}.jpg",
+      "videos": "OnlyFans/{sanitizedBaseName}.mp4",
+      "generic": "OnlyFans/{sanitizedBaseName}"
+    },
+    "filenameSanitization": "Removes <>:\"/\\|?*, control chars, collapses whitespace to _, max 200 chars"
+  },
+  "dynamicRules": {
+    "file": "dynamicRules.json",
+    "purpose": "OnlyFans API request signing parameters",
+    "contents": [
+      "static_param",
+      "format",
+      "checksum_indexes",
+      "checksum_constant"
+    ]
+  },
+  "mediaDetectionAndExtraction": {
+    "videoExtensions": [
+      "mp4",
+      "mov",
+      "m4v",
+      "webm",
+      "mkv",
+      "avi",
+      "m3u8",
+      "mpd"
+    ],
+    "imageExtensions": [
+      "jpg",
+      "jpeg",
+      "png",
+      "gif",
+      "webp",
+      "avif"
+    ],
+    "videoExtPriority": {
+      "mp4": 80,
+      "mov": 70,
+      "m4v": 68,
+      "webm": 65,
+      "mkv": 62,
+      "avi": 58,
+      "m3u8": 35,
+      "mpd": 34
+    },
+    "imageExtPriority": {
+      "jpg": 60,
+      "jpeg": 60,
+      "png": 58,
+      "webp": 57,
+      "avif": 56,
+      "gif": 45
+    },
+    "sourceFields": [
+      "media.files.full",
+      "media.files.source",
+      "media.type",
+      "media.mediaType",
+      "media.mimetype"
+    ],
+    "apiEndpoint": "OnlyFans posts API with pagination (offset-based)",
+    "subscriptionFetch": "50 per page via OnlyFans subscriptions API"
+  },
+  "storageKeys": {
+    "od_setupCompleted": "Settings setup completion flag",
+    "od_selection": "Selected creators list",
+    "od_queue": "Download queue state",
+    "od_mediaType": "Media type filter (all/photos/videos)",
+    "isActivated": "Legacy activation flag",
+    "rateLimiterPreset": "Selected rate limiter preset",
+    "authEmail": "Last entered email for auth"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content-scripts/content.js"
+      ],
+      "purpose": "In-page media overlay buttons, MutationObserver-based media detection"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Auth gating, download orchestration, bulk operation trial management"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "Auth flow (OTP), navigation hub to Settings/Selection/Progress"
+    },
+    {
+      "component": "Settings",
+      "files": [
+        "settings.html",
+        "settings.js"
+      ],
+      "purpose": "OF sign-in check, dynamic rules, rate limiter config, setup completion"
+    },
+    {
+      "component": "Selection",
+      "files": [
+        "selection.html",
+        "selection.js"
+      ],
+      "purpose": "Subscription browser, creator multi-select with avatars, media type filter"
+    },
+    {
+      "component": "List Builder",
+      "files": [
+        "list.html",
+        "list.js"
+      ],
+      "purpose": "Post enumeration, media URL extraction, download queue builder"
+    },
+    {
+      "component": "Progress",
+      "files": [
+        "progress.html",
+        "progress.js"
+      ],
+      "purpose": "Queue dashboard, download execution, concurrency control"
+    },
+    {
+      "component": "Chat Selection",
+      "files": [
+        "chats.html",
+        "chats.js"
+      ],
+      "purpose": "Chat conversation selector for media download"
+    },
+    {
+      "component": "Chat List",
+      "files": [
+        "chatlist.html",
+        "chatlist.js"
+      ],
+      "purpose": "Chat media browser and download"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js",
+        "auth/auth-api.js",
+        "auth/auth-config.js",
+        "auth/auth-storage.js",
+        "auth/auth-telemetry.js",
+        "auth/auth-token.js"
+      ],
+      "purpose": "OTP login, entitlement checks, trial management"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, feature flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release version checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Free trial remaining badge"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup customizations"
+    },
+    {
+      "component": "Config Module",
+      "files": [
+        "config-BKia6imP.js"
+      ],
+      "purpose": "React runtime, page paths, storage keys"
+    },
+    {
+      "component": "API Module",
+      "files": [
+        "api-BDPCBKjU.js"
+      ],
+      "purpose": "OnlyFans API wrappers (subscriptions, posts, user data)"
+    },
+    {
+      "component": "Queue Module",
+      "files": [
+        "queue-Dj02yI2e.js"
+      ],
+      "purpose": "Persistent download queue (DownloadQueue class)"
+    },
+    {
+      "component": "Rate Limiter",
+      "files": [
+        "RateLimiter-C7Y5pLpb.js"
+      ],
+      "purpose": "Configurable rate limiting with presets, jitter, backoff"
+    },
+    {
+      "component": "Harness Module",
+      "files": [
+        "harness-BDpCB9YO.js"
+      ],
+      "purpose": "OnlyFans login detection, dynamic rules loading"
+    },
+    {
+      "component": "Selection Store",
+      "files": [
+        "selection-O4A74MfB.js"
+      ],
+      "purpose": "Creator selection persistence"
+    },
+    {
+      "component": "Chat Selection Store",
+      "files": [
+        "chat_selection-BAJ8ZE37.js"
+      ],
+      "purpose": "Chat selection persistence"
+    }
+  ],
+  "multiPageAppStructure": [
+    {
+      "page": "Popup",
+      "html": "popup.html",
+      "js": "popup.js",
+      "purpose": "Auth + navigation hub"
+    },
+    {
+      "page": "Settings",
+      "html": "settings.html",
+      "js": "settings.js",
+      "purpose": "Setup wizard (OF login, rules, rate limit, save)"
+    },
+    {
+      "page": "Selection",
+      "html": "selection.html",
+      "js": "selection.js",
+      "purpose": "Creator subscription browser + multi-select"
+    },
+    {
+      "page": "List",
+      "html": "list.html",
+      "js": "list.js",
+      "purpose": "Post enumeration + download queue builder"
+    },
+    {
+      "page": "Progress",
+      "html": "progress.html",
+      "js": "progress.js",
+      "purpose": "Queue dashboard + download execution"
+    },
+    {
+      "page": "Chat Selection",
+      "html": "chats.html",
+      "js": "chats.js",
+      "purpose": "Chat conversation selector"
+    },
+    {
+      "page": "Chat List",
+      "html": "chatlist.html",
+      "js": "chatlist.js",
+      "purpose": "Chat media browser + download"
+    }
+  ],
+  "featureFlags": {
+    "ENABLE_DOWNLOAD_MANAGER": true,
+    "ENABLE_DOWNLOAD_OVERLAY": true,
+    "PREFER_FASTSTREAM": true
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/popup-BsjAn_JX.css (3.6 KB)",
+      "styles/popup-enhanced.css (14.4 KB)"
+    ],
+    "scriptLoadOrder": [
+      "auth.js (module)",
+      "popup.js (module)",
+      "config-BKia6imP.js (preload)",
+      "auth-ui.js",
+      "trial-banner.js",
+      "site-config.js",
+      "popup-ui-overrides.js",
+      "update-notifier.js"
+    ],
+    "framework": "React",
+    "sections": [
+      "Header (OnlyFans Downloader)",
+      "DEV mode banner (conditional)",
+      "Auth section (OTP)",
+      "Navigation links: Configure Settings, Select Creators, View Downloads"
+    ],
+    "navigationGates": "Steps 2 and 3 disabled until od_setupCompleted is true"
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (trial downloads per operation, then paid license)",
+    "gumroadProductId": null,
+    "ghLicenseId": "jr6N8ZFfnZa2K90F6pDn",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": [
+      "prod_TadNdRxTOeK7sm",
+      "prod_U5nhbkIqVotD4O"
+    ],
+    "stripeProductName": [
+      "Onlyfans Bulk Downloader",
+      "Onlyfans Downloader"
+    ],
+    "stripeMonthlyPrice": "USD 27.00/month [Subscription - Onlyfans Downloader] | USD 37.00/month [Subscription - Onlyfans Downloader] | USD 37.00/month [Subscription - OnlyFans Downloader] | USD 9.00/month [onlyfans-bulk-downloader-monthly-9] | USD 9.00/month [onlyfans-downloader monthly]",
+    "stripeOneTimePrice": "USD 37.00/one_time | USD 47.00/one_time [onlyfans-downloader $47] | USD 57.00/one_time [onlyfans-downloader]",
+    "stripePriceIds": [
+      "price_1SdS6rDP7AOTRcvmnFgg9D3k",
+      "price_1SeJduDP7AOTRcvmCLZoZ9M8",
+      "price_1Sm9mBDP7AOTRcvmfszxoKZP",
+      "price_1SpfnLDP7AOTRcvmjHpejToz",
+      "price_1SphG8DP7AOTRcvmekJ62sSZ",
+      "price_1SpX5ZDP7AOTRcvmqzdg1fTx",
+      "price_1Symt0DP7AOTRcvmXqF2urXw",
+      "price_1T7c6CDP7AOTRcvm1Fmnxivn"
+    ],
+    "stripeNotes": "multiple_products_matched"
+  },
+  "loggingAndTelemetry": {
+    "logLevelSiteConfig": "debug",
+    "logLevelBundles": "error",
+    "mirrorToBackground": true,
+    "rateLimiterLogging": true,
+    "rateLimiterPrefix": "[RateLimiter]",
+    "contentScriptPrefix": "OF overlay:"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "32x32",
+      "file": "icon32.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icon128.png"
+    }
+  ],
+  "brandColors": {
+    "primary": {
+      "note": "Used in background/content bundles (OnlyFans-themed)",
+      "brandAccent": "#00AFF0",
+      "brandAccentHover": "#00AFF0",
+      "bgDark": "#0e1424",
+      "bgDarker": "#090f1b",
+      "borderDark": "#1c2a40",
+      "inputBorder": "#223556",
+      "textPrimary": "#f1f5ff",
+      "textMuted": "#9ab3db",
+      "textSubtle": "#c5d4f1",
+      "success": "#32d19d",
+      "error": "#ff5c5c",
+      "info": "#4da3ff",
+      "lightBg": "#ffffff",
+      "lightBorder": "#e1e8f5",
+      "lightMutedText": "#5d6d8c",
+      "lightPanelBg": "#f0f4ff",
+      "lightMutedText2": "#7a8bb0",
+      "darkTextStrong": "#0b1529"
+    },
+    "popup": {
+      "note": "Used in site-config.js popup theme",
+      "brandAccent": "#0ea5e9",
+      "brandAccentHover": "#0b73b9",
+      "bgDark": "#1b1b1b",
+      "bgDarker": "#2a2a2a",
+      "borderDark": "#333",
+      "inputBorder": "#555",
+      "textPrimary": "#ffffff",
+      "textMuted": "#999999",
+      "textSubtle": "#cccccc",
+      "success": "#4caf50",
+      "error": "#f44336",
+      "info": "#2196f3"
+    }
+  },
+  "buildAndRelease": {
+    "buildTool": "Vite + esbuild (minified bundles with content hashes)",
+    "watermarked": null,
+    "githubRelease": true,
+    "githubRepo": "serpapps/onlyfans-bulk-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/onlyfans-bulk-downloader/",
+    "reactBundled": true,
+    "modulePreloads": [
+      "config-BKia6imP.js",
+      "RateLimiter-C7Y5pLpb.js",
+      "harness-BDpCB9YO.js",
+      "api-BDPCBKjU.js",
+      "selection-O4A74MfB.js",
+      "queue-Dj02yI2e.js",
+      "chat_selection-BAJ8ZE37.js"
+    ]
+  },
+  "authModuleStructure": [
+    {
+      "file": "auth.js",
+      "purpose": "Main auth entry — imports and re-exports auth subsystem"
+    },
+    {
+      "file": "auth-ui.js",
+      "purpose": "OTP UI rendering and interaction"
+    },
+    {
+      "file": "auth/auth-api.js",
+      "purpose": "OTP request, login, entitlement check, trial status/consume"
+    },
+    {
+      "file": "auth/auth-config.js",
+      "purpose": "Auth configuration (site name, entitlement name)"
+    },
+    {
+      "file": "auth/auth-storage.js",
+      "purpose": "Device ID generation, stored auth reading"
+    },
+    {
+      "file": "auth/auth-telemetry.js",
+      "purpose": "Auth event logging and telemetry"
+    },
+    {
+      "file": "auth/auth-token.js",
+      "purpose": "JWT parsing, entitlement checking"
+    }
+  ]
+}

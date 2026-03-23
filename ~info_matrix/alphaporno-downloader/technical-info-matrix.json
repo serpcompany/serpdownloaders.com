@@ -1,0 +1,550 @@
+{
+  "extension": "alphaporno-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP AlphaPorno Downloader",
+    "slug": "alphaporno-downloader",
+    "geckoId": "alphaporno-downloader@serpapps.com",
+    "category": "Video Downloader (Adult)",
+    "targetSites": [
+      "alphaporno.com"
+    ],
+    "targetSiteRegex": "/^https?:\\/\\/(www\\.)?alphaporno\\.com\\//",
+    "description": "Download AlphaPorno videos"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/alphaporno-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": "2026-03-04T16:59:43.815Z",
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "alphaporno-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/alpha-porno-downloader",
+    "productPage": "https://serp.ly/alpha-porno-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Direct MP4 (offscreen streaming download)",
+      "HLS Stitching (m3u8 segment to MP4 transmux)"
+    ],
+    "qualitySelection": true,
+    "qualityFormat": "720p - MP4, Unknown - HLS",
+    "qualityMode": "Auto-parsed from URL patterns (360p, 480p, 720p, 1080p)",
+    "authRequired": "OTP (email verification via auth.serp.co) + License key (Gumroad / GoHighLevel)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": false,
+    "inPagePlayerButton": true,
+    "playerButtonTarget": "#fluid_video_wrapper_bravoplayer",
+    "contextMenu": true,
+    "autoSave": true,
+    "downloadFolder": "AlphaPorno/",
+    "videoDetection": "Automatic — scans script variables, <video>/<source> tags, og:video meta tags"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "offscreen",
+      "declarativeNetRequest"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://www.alphaporno.com/*",
+      "https://*.alphaporno.com/*",
+      "https://*.ahcdn.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "download-manager.js",
+        "content.js",
+        "player-button.js"
+      ],
+      "matches": [
+        "https://www.alphaporno.com/*",
+        "https://*.alphaporno.com/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module",
+      "sizeKB": null,
+      "lines": null
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "MP4 streaming download + HLS segment transmuxing"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls.mjs",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/ (MP4Generator, transmuxer)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (317 KB — ISOBMFF manipulation)",
+    "indexedDB": {
+      "enabled": true,
+      "database": null,
+      "store": null
+    },
+    "pageInjection": "inject.js (web-accessible, injected into page context)",
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "GoHighLevel license worker"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "intervalHours": 6,
+      "timeoutSeconds": 8
+    },
+    "forbiddenHosts": [],
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": [
+      {
+        "ruleId": 1001,
+        "target": "ahcdn.com/*",
+        "action": "Set Referer to alphaporno.com, Allow CORS"
+      },
+      {
+        "ruleId": 1002,
+        "target": "alphaporno.com/get_file/",
+        "action": "Set Referer to alphaporno.com, Allow CORS"
+      }
+    ]
+  },
+  "videoDetectionAndExtraction": {
+    "pageMatch": "/^https?:\\/\\/(www\\.)?alphaporno\\.com\\//",
+    "videoIdSources": [
+      "URL slug",
+      "meta tags (video:id, identifier)",
+      "script variables"
+    ],
+    "titleSources": [
+      "og:title",
+      "meta[name=\"description\"]",
+      "<h1> elements"
+    ],
+    "thumbnailSources": [
+      "og:image",
+      "meta[itemprop=\"thumbnailUrl\"]"
+    ],
+    "durationFormat": "ISO 8601 (PT#H#M#S) + integer seconds",
+    "urlSources": [
+      "Script variables",
+      "<video> tags",
+      "<source> tags",
+      "og:video meta"
+    ],
+    "urlRegex": "/(video_url|videoUrl|file|file_url|fileUrl|src|url)\\s*[:=]\\s*[\"']([^\"']+(?:\\.mp4|\\.m3u8)[^\"']*)[\"']/gi",
+    "filteredUrls": [
+      "timelines.php",
+      "sprite",
+      "vtt=",
+      "thumbnail",
+      "thumb",
+      "preview"
+    ],
+    "qualityParseRegex": "/_(\\d{3,4})p\\.|\\/( \\d{3,4})p(?:\\/|[?#]|$)/"
+  },
+  "hlsProcessingSpecs": {
+    "maxSegmentRetries": 3,
+    "backoffBaseMs": 500,
+    "backoffStrategy": "Exponential (500, 1000, 2000ms) + random jitter",
+    "stallTimeoutMs": 30000,
+    "absoluteTimeoutMs": null,
+    "refererFallback": "https://alphaporno.com/",
+    "outputType": "video/mp4"
+  },
+  "mp4DownloadMechanism": {
+    "method": "Offscreen document with ReadableStream + Blob API",
+    "requestHeaders": [
+      "Referer",
+      "User-Agent",
+      "Accept (video/* prioritized)",
+      "Origin"
+    ],
+    "referrerPolicy": "no-referrer-when-downgrade",
+    "progressGranularity": "Per-byte updates sent to content script",
+    "downloadFolder": "AlphaPorno/",
+    "saveAsDialog": false
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Video detection, URL extraction, HLS parsing, metadata scraping"
+    },
+    {
+      "component": "Player Button",
+      "files": [
+        "player-button.js"
+      ],
+      "purpose": "In-page download button on video player"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth gating, offscreen management, DNR, message routing"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "User-facing UI (400px wide), quality selector, auth flow"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "MP4 streaming download + HLS segment transmuxing"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js"
+      ],
+      "purpose": "OTP login, entitlement checks, trial management"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager.js"
+      ],
+      "purpose": "In-page download progress panel"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, feature flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release version checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Free trial remaining badge"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-context script for cross-origin access"
+    }
+  ],
+  "messageHandlers": [
+    {
+      "message": "getVideoInfo",
+      "purpose": "Fetch video metadata from content script"
+    },
+    {
+      "message": "getVideoCandidates",
+      "purpose": "Scan page for all video URLs"
+    },
+    {
+      "message": "downloadVideo",
+      "purpose": "Initiate download"
+    },
+    {
+      "message": "getVideoFormats",
+      "purpose": "Parse quality options"
+    },
+    {
+      "message": "mp4Progress",
+      "purpose": "MP4 download progress update"
+    },
+    {
+      "message": "mp4Complete",
+      "purpose": "MP4 download complete"
+    },
+    {
+      "message": "mp4Error",
+      "purpose": "MP4 download error"
+    },
+    {
+      "message": "hlsProgress",
+      "purpose": "HLS download progress update"
+    },
+    {
+      "message": "hlsComplete",
+      "purpose": "HLS download complete"
+    },
+    {
+      "message": "hlsError",
+      "purpose": "HLS download error"
+    },
+    {
+      "message": "PROCESS_HLS_SEGMENTS",
+      "purpose": "Offscreen: download HLS segments"
+    },
+    {
+      "message": "PROCESS_MP4_DOWNLOAD",
+      "purpose": "Offscreen: stream MP4 download"
+    },
+    {
+      "message": "CANCEL_HLS_PROCESSING",
+      "purpose": "Abort HLS (AbortController)"
+    },
+    {
+      "message": "CANCEL_MP4_DOWNLOAD",
+      "purpose": "Abort MP4 (AbortController)"
+    }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right corner (slides in from right)",
+    "background": "#2a2a2a",
+    "borderColor": "#1b1b1b",
+    "accentBorder": "2px solid #c41c00",
+    "headerGradient": "135deg from #c41c00 to #a31500",
+    "progressBarGradient": "#c41c00 to #a31500",
+    "maxHeight": "80vh",
+    "cardWidth": "380px",
+    "autoHideSeconds": 3,
+    "minimizeRestore": true
+  },
+  "popupUI": {
+    "containerWidth": "400px",
+    "minHeight": "200px",
+    "padding": "16px",
+    "videoThumbnail": true,
+    "durationBadge": true,
+    "qualitySelector": "Dropdown (e.g. 720p - MP4)",
+    "downloadButton": "Primary CTA with SVG icon",
+    "progressDisplay": "Indeterminate spinner → Progress bar (0-100%)",
+    "errorDisplay": "Red error message + Refresh button",
+    "trialBanner": "N downloads left + Upgrade link",
+    "helpSystem": "Quick help banner (6 sec auto-hide) + Help icon",
+    "bootSplashTimeoutMs": 2500,
+    "authInitWaitMs": 5000
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "file": "hls.mjs",
+      "sizeKB": 407,
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "file": "hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "file": "dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "file": "mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "MP4Box",
+      "file": "mp4box.mjs",
+      "sizeKB": 317,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "file": "FSBlob.mjs",
+      "sizeKB": 4,
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "file": "eventemitter.mjs",
+      "sizeKB": 3.5,
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "file": "Localize.mjs",
+      "purpose": "i18n support"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/alpha-porno-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/alphaporno-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "alphaporno-downloader.zip",
+        "sizeMB": 1.21
+      },
+      {
+        "platform": "Chrome",
+        "file": "alphaporno-downloader-chrome.zip",
+        "sizeMB": 1.13
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "alphaporno-downloader-chrome-store-sanitized.zip",
+        "sizeMB": 1.13
+      },
+      {
+        "platform": "Brave",
+        "file": "alphaporno-downloader-brave.zip",
+        "sizeMB": 1.13
+      },
+      {
+        "platform": "Edge",
+        "file": "alphaporno-downloader-edge.zip",
+        "sizeMB": 1.13
+      },
+      {
+        "platform": "Opera",
+        "file": "alphaporno-downloader-opera.zip",
+        "sizeMB": 1.13
+      },
+      {
+        "platform": "Whale",
+        "file": "alphaporno-downloader-whale.zip",
+        "sizeMB": 1.13
+      },
+      {
+        "platform": "Yandex",
+        "file": "alphaporno-downloader-yandex.zip",
+        "sizeMB": 1.13
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "alphaporno-downloader-firefox.zip",
+        "sizeMB": 1.13
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "alphaporno-downloader-firefox-unpacked.xpi",
+        "sizeMB": 1.13
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "test-key",
+    "ghLicenseId": "XmQbFfafEcr3XJTKFFwd",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_TadN0hCPtjjwG7",
+    "stripeProductName": "Alpha Porno Video Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [alpha-porno-video-downloader monthly]",
+    "stripeOneTimePrice": "USD 17.00/one_time",
+    "stripePriceIds": [
+      "price_1SdS6fDP7AOTRcvmfxMHMZ2L",
+      "price_1SymsoDP7AOTRcvmXXxlsyc2"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "remoteTelemetry": "Auth errors sent to auth.serp.co/telemetry/auth"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png",
+      "fileSizeBytes": 348
+    },
+    {
+      "type": "default",
+      "size": "32x32",
+      "file": "icons/icon32.png",
+      "fileSizeBytes": 572
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png",
+      "fileSizeBytes": 845
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png",
+      "fileSizeBytes": 2355
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#c41c00",
+    "brandAccentHover": "#a31500",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

@@ -1,0 +1,504 @@
+{
+  "extension": "dailymotion-downloader",
+  "coreIdentity": {
+    "extensionName": "Video Downloader for Dailymotion",
+    "slug": "dailymotion-downloader",
+    "geckoId": "dailymotion-downloader@serpapps.com",
+    "category": "Video Downloader (Mainstream)",
+    "targetSites": [
+      "dailymotion.com",
+      "dmcdn.net"
+    ],
+    "targetSiteMatches": [
+      "https://dailymotion.com/*",
+      "https://www.dailymotion.com/*",
+      "https://*.dailymotion.com/*",
+      "https://*.dmcdn.net/*"
+    ],
+    "description": "Download Dailymotion videos in available qualities."
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/dailymotion-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": null,
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "dailymotion-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/dailymotion-downloader",
+    "productPage": "https://serp.ly/dailymotion-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Direct MP4 (chrome.downloads + offscreen fallback)",
+      "HLS Stitching (m3u8 segment download via offscreen)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from Dailymotion player metadata API qualities object, expanded via HLS master playlist variant parsing",
+    "qualitySorting": "By height descending, HLS before HTTP at same height",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": false,
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": false,
+    "inPagePlayerButton": false,
+    "playerButtonTargets": [],
+    "contextMenu": true,
+    "contextMenuId": "download-dailymotion-video",
+    "contextMenuTitle": "Download Dailymotion video",
+    "contextMenuContexts": [
+      "page"
+    ],
+    "autoSave": true,
+    "downloadFolder": "Dailymotion/",
+    "desktopNotifications": true,
+    "notificationTitle": "Dailymotion Download Complete",
+    "videoDetection": "Content script extracts video ID from URL, background fetches Dailymotion player metadata API for qualities and HLS manifests"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "tabs",
+      "scripting",
+      "offscreen",
+      "notifications",
+      "contextMenus"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://dailymotion.com/*",
+      "https://www.dailymotion.com/*",
+      "https://*.dailymotion.com/*",
+      "https://*.dmcdn.net/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "content-scripts/content.js"
+      ],
+      "matches": [
+        "https://dailymotion.com/*",
+        "https://www.dailymotion.com/*",
+        "https://*.dailymotion.com/*",
+        "https://*.dmcdn.net/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "sizeBytes": 352152,
+      "purpose": "HLS segment stitching to MP4 blob + direct MP4 streaming download"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": false,
+    "hlsLibrary": "Built-in — master playlist parsing + media segment parsing in background-enhanced.js",
+    "hlsToMp4Transmuxer": "Offscreen-based (PROCESS_HLS_SEGMENTS / HLS_PROCESSING_COMPLETE messages)",
+    "dashToMp4": null,
+    "mp4Box": "Bundled in offscreen.js (352 KB total)",
+    "reencoder": null,
+    "networkUtils": null,
+    "indexedDB": {
+      "enabled": false
+    },
+    "pageInjection": null,
+    "externalAPIs": [
+      "Dailymotion Player Metadata API (/player/metadata/video/{id})",
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "dailymotion-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/dailymotion-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/dailymotion-downloader/releases/latest"
+    },
+    "csp": "script-src 'self'; object-src 'self';",
+    "sandboxCsp": null,
+    "dnrRules": []
+  },
+  "videoDetectionAndExtraction": {
+    "videoIdPatterns": [
+      "/video/([^/?#]+)"
+    ],
+    "videoUrlPattern": "https://(?:www\\.)?dailymotion\\.com/video/",
+    "titleSources": [
+      "meta[property=\"og:title\"]",
+      "meta[name=\"twitter:title\"]",
+      "h1 element",
+      "document.title (cleaned of ' - video Dailymotion' suffix)"
+    ],
+    "thumbnailSources": [
+      "og:image",
+      "og:image:secure_url",
+      "twitter:image",
+      "twitter:image (property)",
+      "https://www.dailymotion.com/thumbnail/video/{id} (fallback)"
+    ],
+    "durationSources": [
+      "meta[property=\"video:duration\"]",
+      "meta[name=\"video:duration\"]",
+      "meta[itemprop=\"duration\"]",
+      "JSON-LD VideoObject with ISO 8601 duration (PT#H#M#S)"
+    ],
+    "descriptionSources": [
+      "og:description",
+      "meta[name=\"description\"]",
+      "meta[name=\"twitter:description\"]"
+    ],
+    "metadataApi": "https://www.dailymotion.com/player/metadata/video/{videoId}",
+    "formatSources": [
+      "Metadata API qualities object (keyed by resolution)",
+      "Metadata API manifest_url / streaming_url fallback",
+      "HLS master playlist variant expansion"
+    ],
+    "hlsContentTypes": [
+      "application/vnd.apple.mpegurl",
+      "application/x-mpegURL"
+    ],
+    "injectMessageType": null
+  },
+  "formatObjectStructure": {
+    "format_id": "string (e.g. '720p', 'auto-0')",
+    "qualityLabel": "string (e.g. '720p', 'Auto')",
+    "ext": "m3u8 | mp4",
+    "format_type": "hls | http",
+    "url": "string",
+    "height": "number | undefined",
+    "bandwidth": "number | undefined",
+    "source": "metadata | master-playlist"
+  },
+  "hlsProcessingSpecs": {
+    "playlistParser": "Built-in parseMasterVariants() + parseMediaSegments() in background-enhanced.js",
+    "masterPlaylistParsing": "#EXT-X-STREAM-INF with RESOLUTION and BANDWIDTH extraction",
+    "mediaPlaylistParsing": "#EXTINF durations, #EXT-X-MAP init segments, segment URLs",
+    "maxNestingDepth": 3,
+    "variantSelection": "Sorted by height descending, highest quality selected",
+    "formatDeduplication": "By URL — first occurrence kept",
+    "formatSorting": "By height descending, HLS before HTTP at same height",
+    "referer": "https://www.dailymotion.com/",
+    "credentials": "include",
+    "cache": "no-store"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content-scripts/content.js"
+      ],
+      "purpose": "Video ID extraction, title/thumbnail/duration scraping from DOM and meta tags"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Metadata API fetch, HLS playlist parsing, format extraction, download orchestration, auth, offscreen, context menu"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "UI, video info card, quality/format selector, download trigger"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "HLS segment stitching to MP4 blob + direct MP4 streaming download"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js",
+        "auth/auth-api.js",
+        "auth/auth-config.js",
+        "auth/auth-storage.js",
+        "auth/auth-telemetry.js",
+        "auth/auth-token.js"
+      ],
+      "purpose": "OTP login, entitlements, trial"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Bootstrap",
+      "files": [
+        "bootstrap.js"
+      ],
+      "purpose": "Extension bootstrap"
+    }
+  ],
+  "downloadManagerPanel": null,
+  "contextMenu": {
+    "menuId": "download-dailymotion-video",
+    "title": "Download Dailymotion video",
+    "contexts": [
+      "page"
+    ],
+    "documentUrlPatterns": [
+      "https://dailymotion.com/video/*",
+      "https://www.dailymotion.com/video/*",
+      "https://*.dailymotion.com/video/*"
+    ]
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/popup-enhanced.css (7.3 KB)",
+      "styles/popup-DGzZ2Wge.css (13.8 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Header (SERP Labs / Dailymotion Downloader / subtitle)",
+      "Trial banner",
+      "Activation section",
+      "Stats grid (Video / Formats / Selected)",
+      "Video card (thumbnail + title + meta)",
+      "Download Selected button",
+      "Format list with per-format Select/Download",
+      "Status footer"
+    ]
+  },
+  "buildAndRelease": {
+    "buildTool": "build.js (Node.js, uses PowerShell Compress-Archive)",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/dailymotion-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/dailymotion-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "dailymotion-downloader.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Chrome",
+        "file": "dailymotion-downloader-chrome.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "dailymotion-downloader-chrome-store-sanitized.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Brave",
+        "file": "dailymotion-downloader-brave.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Edge",
+        "file": "dailymotion-downloader-edge.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Opera",
+        "file": "dailymotion-downloader-opera.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Whale",
+        "file": "dailymotion-downloader-whale.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Yandex",
+        "file": "dailymotion-downloader-yandex.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "dailymotion-downloader-firefox.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "dailymotion-downloader-firefox-unpacked.xpi",
+        "sizeMB": null
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": null,
+    "ghLicenseId": null,
+    "licenseCheckWorker": null,
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_TadNBbXZ4w9iil",
+    "stripeProductName": "Dailymotion Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [dailymotion-downloader-monthly-9]",
+    "stripeOneTimePrice": "USD 17.00/one_time",
+    "stripePriceIds": [
+      "price_1SdS6jDP7AOTRcvmSPOaz9gI",
+      "price_1T6w10DP7AOTRcvmaasGwyk3"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "32x32",
+      "file": "icons/icon32.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#0ea5e9",
+    "brandAccentHover": "#0b73b9",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  },
+  "modulesIncluded": [
+    {
+      "module": "Offscreen Worker",
+      "path": "offscreen.js",
+      "sizeKB": 344,
+      "purpose": "HLS segment stitching + MP4 streaming download"
+    },
+    {
+      "module": "Background Legacy",
+      "path": "background.js",
+      "sizeKB": 65,
+      "purpose": "Legacy background script (superseded by background-enhanced.js)"
+    },
+    {
+      "module": "Auth Core",
+      "path": "auth.js",
+      "sizeKB": 6.8,
+      "purpose": "OTP authentication module"
+    },
+    {
+      "module": "Auth UI",
+      "path": "auth-ui.js",
+      "sizeKB": 15.1,
+      "purpose": "Auth form rendering"
+    },
+    {
+      "module": "Auth API",
+      "path": "auth/auth-api.js",
+      "purpose": "Auth API client"
+    },
+    {
+      "module": "Auth Config",
+      "path": "auth/auth-config.js",
+      "purpose": "Auth configuration"
+    },
+    {
+      "module": "Auth Storage",
+      "path": "auth/auth-storage.js",
+      "purpose": "Auth state persistence"
+    },
+    {
+      "module": "Auth Telemetry",
+      "path": "auth/auth-telemetry.js",
+      "purpose": "Auth usage tracking"
+    },
+    {
+      "module": "Auth Token",
+      "path": "auth/auth-token.js",
+      "purpose": "Token management"
+    }
+  ]
+}

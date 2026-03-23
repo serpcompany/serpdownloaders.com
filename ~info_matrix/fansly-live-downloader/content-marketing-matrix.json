@@ -1,0 +1,283 @@
+{
+  "extension": "fansly-live-downloader",
+  "productPositioning": {
+    "headline": "Record Fansly Live Streams -- Capture Any Quality, Start to Stop",
+    "elevatorPitch": "SERP FanslyLive Downloader is a browser extension that records live streams and saves recordings from Fansly.com. Open a model's live page, click Start to capture the stream in real time, then click Stop when done. The extension converts HLS segments to a standard MP4 file and saves it to your Downloads folder. Also supports VOD recordings. VR stream support included. 3 free downloads to try.",
+    "valueProposition": "Purpose-built for Fansly with live stream capture (start/stop recording), VOD download support, Fansly API integration, multi-CDN host probing, VR stream detection, and automatic HLS-to-MP4 conversion. Everything happens in your browser -- no external tools required.",
+    "targetAudience": "Fansly subscribers who want to save live streams and VOD recordings for offline viewing. Users who want a simple, browser-based capture solution without desktop software or command-line tools.",
+    "useCases": [
+      "Record a live stream on Fansly in real time",
+      "Download a VOD recording from a model's video page",
+      "Choose your preferred quality from available HLS variants",
+      "Use the in-page player button for quick access without the popup",
+      "Right-click to start a capture via context menu",
+      "Capture VR streams with proper metadata"
+    ],
+    "painPointsAddressed": [
+      "Fansly uses HLS streaming -- can't right-click and save a live stream",
+      "Live streams are ephemeral -- miss it and it's gone",
+      "Multiple CDN hosts and stream identifiers make manual capture complex",
+      "Generic downloaders don't handle live capture (start/stop recording)",
+      "Users don't want desktop apps or OBS-style tools just to save a stream",
+      "No easy quality selection for live HLS streams"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Record Fansly live streams and download VODs. Real-time HLS capture, converts to MP4. Choose quality. 3 free downloads included.",
+    "changelog": "v4.0.1 -- Live stream capture with start/stop, VOD download support, VR stream detection, in-page download button, download manager with live segment counting.",
+    "fullDescription": "SERP FanslyLive Downloader makes it easy to record live streams and save recordings from Fansly.com.\n\nHow it works: Go to any live model page on Fansly, open the extension popup or click the Download button on the player, select your quality, and hit Start. The extension captures the HLS stream in real time, counting segments as they arrive. When you're done, click Stop -- the captured segments are converted to a standard MP4 file and saved to your Downloads folder.\n\nFor VOD recordings (model video pages), it works just like a standard downloader -- select quality and click Download.\n\nIt handles HLS playlist parsing, multi-CDN host probing, and Fansly API integration automatically -- no external tools, no command line, no technical knowledge required. Videos save to an organized FANSLYLIVE subfolder.\n\nKey features:\n- Live stream capture with Start/Stop controls\n- Real-time segment counting and elapsed time display\n- VOD recording download support\n- VR stream detection with camera settings metadata\n- In-page download button right on the video player\n- Converts HLS streams to standard MP4 files in your browser\n- Quality selection from all available HLS variants\n- Real-time download progress with speed indicators\n- Right-click context menu for quick captures\n- Dark-themed UI with coral pink accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to Fansly.com and open a live model page\n3. Click the download button on the player or the extension icon\n4. Select quality and click Start -- recording begins\n5. Click Stop when done -- saved as MP4\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited use.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Live stream capture -- Start recording, Stop when done, saved as MP4",
+      "Real-time segment counting and elapsed time display during capture",
+      "VOD recording download for model video pages",
+      "VR stream detection with stereo packing and camera metadata",
+      "In-page download button built right into the video player",
+      "Converts HLS streams to downloadable MP4 files in-browser",
+      "Quality selector with all available HLS variant resolutions",
+      "Multi-CDN host probing -- finds the stream even when hosts rotate",
+      "Fansly API integration for reliable stream discovery",
+      "Right-click context menu -- Download FanslyLive Stream",
+      "Auto-saves to organized FANSLYLIVE/ subfolder in Downloads",
+      "Dark UI with coral pink accents -- clean and unobtrusive",
+      "3 free trial downloads -- no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP FanslyLive Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Browse",
+        "description": "Navigate to Fansly.com and open a live model page"
+      },
+      {
+        "step": 3,
+        "title": "Capture",
+        "description": "Use the in-page download button, the extension popup, or right-click context menu"
+      },
+      {
+        "step": 4,
+        "title": "Record",
+        "description": "Select quality, click Start to capture live, Stop when done -- video saves as MP4 to your Downloads/FANSLYLIVE folder"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I record a live stream?",
+        "answer": "Go to any live model page on Fansly.com. Open the extension popup or click the download button on the player. Select your quality and click Start. The extension records the stream in real time. Click Stop when you want to end the recording."
+      },
+      {
+        "question": "Can I download VOD recordings too?",
+        "answer": "Yes. Navigate to a model's video page (e.g., /username/videos/12345) and the extension works as a standard downloader -- select quality and click Download."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "The extension detects all available HLS variants from the stream -- typically multiple resolutions. Formats are listed by resolution (e.g., 1080p, 720p) with bandwidth information."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Videos automatically save to a FANSLYLIVE subfolder inside your browser's default Downloads directory."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited use."
+      },
+      {
+        "question": "Does this support VR streams?",
+        "answer": "Yes. The extension detects VR streams and includes VR camera settings (stereo packing, frame format, horizontal angle) in the download metadata and filename."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes -- supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Why isn't the extension finding the stream?",
+        "answer": "Make sure the model is actually live and streaming. If the model is offline or in a private show, the extension will display a status message. Refresh the page if issues persist."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. Stream processing happens entirely in your browser. Authentication uses secure OTP -- no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "fansly downloader",
+      "download fansly live",
+      "fansly live stream recorder",
+      "fansly video download",
+      "record fansly stream"
+    ],
+    "longTailKeywords": [
+      "how to download fansly live streams",
+      "fansly live stream downloader chrome extension",
+      "record fansly stream to mp4",
+      "save fansly live videos browser",
+      "fansly vod downloader"
+    ],
+    "seoTitle": "Fansly Live Downloader -- Record Streams as MP4 | SERP",
+    "metaDescription": "Record live streams from Fansly.com with one click. Real-time HLS capture, converts to MP4. VR support. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/fansly-live-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Record Fansly Live Streams",
+    "googleAdsDescription": "Capture Fansly live streams as MP4. Start/stop recording. VR support. 3 free downloads included.",
+    "socialMediaHook": "Want to save a Fansly live stream? This extension adds a record button right on the player. Start, stop, MP4. Done.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Live stream capture with real-time start/stop (not just VOD). Multi-CDN host probing finds streams that generic tools miss. VR stream support, Fansly API integration, in-page player button, and organized auto-save folder.",
+    "adAngles": [
+      {
+        "angle": "Live Capture",
+        "copy": "Record Fansly streams in real time. Start. Stop. MP4. Done."
+      },
+      {
+        "angle": "Reliability",
+        "copy": "Multi-CDN probing and Fansly API integration. Finds the stream every time."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No OBS. No desktop software. Just a browser extension."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it now."
+      },
+      {
+        "angle": "VR Support",
+        "copy": "Captures VR streams too -- with full camera metadata."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Multiple HLS variant quality levels. VR streams supported. Live capture and VOD download.",
+    "limitationsAndDisclaimers": "Model must be live for stream capture. VOD requires navigating to video page. Quality depends on source stream. Requires email sign-in for trial. Internet connection required. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "M3U8 Downloader",
+      "Chaturbate Downloader",
+      "Stripchat Downloader",
+      "MyFreeCams Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Record Fansly Live Streams (Step-by-Step Guide)",
+      "Fansly Live Downloader: Capture Streams with One Click",
+      "How to Save Fansly Live Videos as MP4 -- No Software Required",
+      "Best Fansly Stream Download Extensions Compared",
+      "Record Fansly Live Streams in Any Quality -- Chrome & Firefox"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why recording from Fansly is tricky and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection. Fansly account."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Find a Stream",
+        "description": "Navigate to Fansly.com and open a live model page"
+      },
+      {
+        "section": "Step 4: Record",
+        "description": "Select quality, click Start for live capture; click Download for VOD"
+      },
+      {
+        "section": "Step 5: Stop & Save",
+        "description": "Click Stop when done; MP4 saves to Downloads/FANSLYLIVE folder"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Auto-saves to FANSLYLIVE/ folder. Use player button for fastest workflow. VR streams detected automatically."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Model must be live. Private shows cannot be captured. Refresh if stream is not detected."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected live stream with quality selector and Start button",
+      "Live capture in progress -- popup showing segment count, elapsed time, and Stop button",
+      "In-page download button on the video player",
+      "Download manager panel with active live capture progress (segment count, elapsed time)",
+      "Right-click context menu showing Download FanslyLive Stream",
+      "Email sign-in / OTP verification screen"
+    ],
+    "iconLogoVariants": "Default icon: 16, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 -- dark background (#1b1b1b), popup screenshot, coral pink accent (#ff4f70)",
+    "gifDemoDescription": "10-second loop: live model page -> click Start -> download manager slides in -> segment counter ticking -> click Stop -> MP4 saved"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Record Live Streams from Fansly -- Capture Any Quality, Start to Stop",
+      "subheadline": "Download button on the player. Real-time live capture. HLS to MP4 conversion. VR stream support. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Live Stream Capture",
+        "description": "Click Start to begin recording, Stop when done. Real-time segment capture with elapsed timer."
+      },
+      {
+        "title": "Multi-CDN Discovery",
+        "description": "Probes multiple CDN hosts and uses Fansly API integration. Finds the stream even when hosts rotate."
+      },
+      {
+        "title": "Quality Selection",
+        "description": "All available HLS variant resolutions. Pick your quality before recording."
+      },
+      {
+        "title": "Download Manager",
+        "description": "Real-time progress, segment count, speed, cancel. Auto-saves to organized folder."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in -- no passwords stored",
+      "All processing happens locally in your browser",
+      "Auto-saves to organized Downloads/FANSLYLIVE/ folder",
+      "VR stream support with camera metadata",
+      "Automatic update notifications"
+    ],
+    "footerCta": {
+      "headline": "Ready to start recording?",
+      "button": "Install Free -- 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, minimal, professional. Avoid explicit language in marketing copy.",
+    "bannedWords": [
+      "free porn",
+      "watch free",
+      "stream free",
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download."
+    ],
+    "brandColorHex": "#ff4f70",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"FanslyLive\" as the brand name. Reference as \"Fansly.com\" for the website."
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "extension": "kajabi-downloader",
+  "productPositioning": {
+    "headline": "Download Kajabi Course Videos — Loom, Vimeo, YouTube, Wistia Embeds",
+    "elevatorPitch": "SERP Kajabi DL is a browser extension that downloads videos from Kajabi course pages. It automatically detects embedded videos from Loom, Vimeo, YouTube, and Wistia, lets you pick your quality, and saves them as MP4 files. Study your purchased courses offline — no extra software needed. 3 free downloads included.",
+    "valueProposition": "Purpose-built for Kajabi with a modular multi-platform detection system that recognizes Loom, Vimeo, YouTube, and Wistia embeds across Kajabi lesson pages and custom domains. Each platform gets a dedicated handler for reliable extraction. HLS-to-MP4 conversion, quality selection, and concurrent downloads all happen in your browser.",
+    "targetAudience": "Kajabi course students who want to save lesson videos for offline study. Course creators who need to archive their own content. Professionals with limited bandwidth who prefer downloading over streaming. Non-technical users who want a simple download solution for their purchased courses.",
+    "useCases": [
+      "Download a Kajabi lesson video for offline study during travel",
+      "Save Vimeo-hosted course content to your computer",
+      "Archive Loom walkthroughs and tutorials from a membership site",
+      "Download YouTube videos embedded in Kajabi courses",
+      "Save Wistia-hosted training videos from a coaching program",
+      "Build a personal library of your purchased course content"
+    ],
+    "painPointsAddressed": [
+      "Kajabi does not offer a native video download option for students",
+      "Course videos use multiple hosting platforms (Loom, Vimeo, YouTube, Wistia) — no single tool handles them all",
+      "Many courses use private/unlisted embeds that generic downloaders cannot access",
+      "HLS streaming means you cannot right-click and save",
+      "Users want to study offline without relying on internet connectivity",
+      "Desktop download apps are complex and intimidating for non-technical users"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download Kajabi course videos. Detects Loom, Vimeo, YouTube, Wistia embeds. Quality selection. MP4 output. 3 free downloads.",
+    "changelog": "v4.0.1 — Multi-platform video detection, modular detector/handler architecture, concurrent download manager, enhanced Vimeo fMP4 support, YouTube SABR downloads, updated auth.",
+    "fullDescription": "SERP Kajabi DL makes it easy to download videos from your Kajabi courses, memberships, and coaching programs.\n\nHow it works: Open any Kajabi lesson or page with a video, press play on the video, then click the extension icon. The extension automatically detects which platform is hosting the video (Loom, Vimeo, YouTube, or Wistia), shows the available quality options, and downloads it as a standard MP4 file.\n\nEach embedded video platform gets its own detection and download handler, so the extension reliably finds and saves videos regardless of how the course creator hosted them. HLS-to-MP4 conversion happens in your browser — no external tools or command-line knowledge required.\n\nKey features:\n- Multi-platform detection — automatically identifies Loom, Vimeo, YouTube, and Wistia embeds on Kajabi pages\n- Quality selection for each platform's available resolutions\n- Converts HLS streams to standard MP4 files in your browser\n- Concurrent download support (up to 3 simultaneous downloads)\n- In-page download manager with real-time progress, speed, and cancel controls\n- Cross-tab download synchronization\n- yt-dlp command helper for YouTube videos\n- Dark-themed popup with Kajabi red accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Open a Kajabi lesson or page with a video\n3. Press play on the video\n4. Click the extension icon, select quality, and download\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Multi-platform video detection — Loom, Vimeo, YouTube, and Wistia embeds recognized automatically",
+      "Dedicated download handlers for each hosting platform",
+      "Quality selection from all available resolutions per platform",
+      "Converts HLS streams to downloadable MP4 files in-browser",
+      "Concurrent download support — up to 3 simultaneous downloads",
+      "In-page download manager with real-time progress, speed, and cancel controls",
+      "Cross-tab download state synchronization",
+      "yt-dlp command copy helper for YouTube videos",
+      "Dark popup UI with Kajabi red accents — professional and clean",
+      "3 free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP Kajabi DL to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Open a lesson",
+        "description": "Navigate to any Kajabi course page with a video"
+      },
+      {
+        "step": 3,
+        "title": "Play",
+        "description": "Press play on the embedded video (Loom, Vimeo, YouTube, or Wistia)"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "Click the extension icon, pick your quality, and download — video saves as MP4"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I download a video from Kajabi?",
+        "answer": "Open a Kajabi lesson page with a video and press play. Then click the extension icon in your toolbar. The extension detects the video platform and shows available quality options. Select your quality and click Download."
+      },
+      {
+        "question": "Which video platforms are supported?",
+        "answer": "The extension detects videos hosted on Loom, Vimeo, YouTube, and Wistia. These are the most common video hosting platforms used in Kajabi courses."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "Quality depends on the hosting platform and how the course creator uploaded the video. The extension shows all available quality levels for each video."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player."
+      },
+      {
+        "question": "Can I download multiple videos at once?",
+        "answer": "Yes — the extension supports up to 3 concurrent downloads with an in-page download manager showing progress for each."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on custom Kajabi domains?",
+        "answer": "Yes — the extension works on *.kajabi.com, *.mykajabi.com, and custom domains that use Kajabi's platform."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Why isn't the extension finding my video?",
+        "answer": "Press play on the video first. The extension needs the video player to load before it can detect the hosting platform. If issues persist, refresh the page and try again."
+      },
+      {
+        "question": "Is this legal?",
+        "answer": "This extension is intended for downloading content you own or have purchased access to. Users are responsible for ensuring they have the right to download content."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. Video processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "kajabi downloader",
+      "download kajabi videos",
+      "kajabi video downloader",
+      "kajabi course downloader"
+    ],
+    "longTailKeywords": [
+      "how to download videos from kajabi",
+      "kajabi video downloader chrome extension",
+      "download kajabi course videos offline",
+      "save kajabi lesson videos as mp4",
+      "kajabi loom video download",
+      "download vimeo videos from kajabi"
+    ],
+    "seoTitle": "Kajabi Video Downloader — Save Course Videos as MP4 | SERP",
+    "metaDescription": "Download videos from Kajabi courses. Detects Loom, Vimeo, YouTube, Wistia embeds. Quality selection, MP4 output. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/kajabi-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download Kajabi Course Videos",
+    "googleAdsDescription": "Save Kajabi lesson videos as MP4. Detects Loom, Vimeo, YouTube, Wistia. 3 free downloads.",
+    "socialMediaHook": "Bought a Kajabi course but can't download the videos? This extension detects the hosting platform and saves lessons as MP4. Study offline, anywhere.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Multi-platform detection (Loom, Vimeo, YouTube, Wistia) handles any embed type Kajabi courses use. Dedicated handlers per platform with quality selection. Concurrent downloads with in-page progress manager. Generic downloaders miss private embeds.",
+    "adAngles": [
+      {
+        "angle": "Offline Study",
+        "copy": "Download your Kajabi course videos. Study offline, anywhere, anytime."
+      },
+      {
+        "angle": "Multi-Platform",
+        "copy": "Loom, Vimeo, YouTube, Wistia — one extension downloads them all from Kajabi."
+      },
+      {
+        "angle": "Simplicity",
+        "copy": "Press play. Click download. Pick quality. Done. No software to install."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it on your next Kajabi course."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Quality depends on hosting platform (Vimeo multi-resolution, YouTube itag-based, Loom CDN, Wistia direct). HLS and direct MP4 supported.",
+    "limitationsAndDisclaimers": "Must press play before detection. Quality depends on how the course creator uploaded the video. Requires email sign-in for trial. Internet connection required for initial download. Users responsible for download rights. Some DRM-protected content may not be downloadable.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Loom Downloader",
+      "SERP Video Downloader",
+      "SERP Skool Downloader",
+      "SERP Circle Downloader",
+      "SERP GoHighLevel Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Videos from Kajabi Courses (Step-by-Step Guide)",
+      "Kajabi Video Downloader: Save Course Lessons Offline",
+      "How to Save Kajabi Course Videos as MP4 — No Software Required",
+      "Download Loom, Vimeo, and YouTube Videos from Kajabi",
+      "The Best Way to Download Kajabi Course Videos for Offline Study"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from Kajabi is tricky (multiple embedded platforms, HLS streaming, no native download) and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection. A Kajabi course enrollment."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Open a Lesson",
+        "description": "Navigate to your Kajabi course and open a lesson with a video"
+      },
+      {
+        "section": "Step 4: Press Play",
+        "description": "Start the video so the extension can detect the hosting platform"
+      },
+      {
+        "section": "Step 5: Download",
+        "description": "Click the extension icon, select quality, and download"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Concurrent downloads for batch saving. Check download manager for progress. yt-dlp helper for YouTube embeds. Works on custom Kajabi domains."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Press play first. Refresh if detection fails. Ensure the extension is enabled. Check that the video is not DRM-protected."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected Vimeo embed with quality selector on a Kajabi lesson page",
+      "Extension popup detecting a Loom video embed on a Kajabi course page",
+      "In-page download manager panel with active download progress",
+      "Quality selection dropdown showing multiple resolution options",
+      "Email sign-in / OTP verification screen",
+      "YouTube URL helper with yt-dlp command copy buttons"
+    ],
+    "iconLogoVariants": "Default icon: 16, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1b1b1b), popup screenshot on Kajabi lesson page, Kajabi red accent (#FA402B)",
+    "gifDemoDescription": "10-second loop: Kajabi lesson page -> play video -> click extension icon -> popup shows detected Vimeo embed -> select quality -> download -> progress in download manager"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Videos from Your Kajabi Courses",
+      "subheadline": "Automatically detects Loom, Vimeo, YouTube, and Wistia embeds. Quality selection. MP4 output. Study offline.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Multi-Platform Detection",
+        "description": "Automatically identifies whether your Kajabi lesson uses Loom, Vimeo, YouTube, or Wistia. Each platform gets a dedicated handler for reliable downloads."
+      },
+      {
+        "title": "Quality Selection",
+        "description": "Choose from all available resolutions. The extension shows every quality option the hosting platform provides."
+      },
+      {
+        "title": "Concurrent Downloads",
+        "description": "Download up to 3 videos simultaneously. In-page download manager tracks progress, speed, and lets you cancel."
+      },
+      {
+        "title": "Offline Study",
+        "description": "Save your purchased course videos as MP4 files. Study on planes, trains, or anywhere without internet."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Supports Kajabi custom domains (*.kajabi.com, *.mykajabi.com)",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "Automatic update notifications via GitHub releases",
+      "Handles private and unlisted video embeds"
+    ],
+    "footerCta": {
+      "headline": "Ready to study your courses offline?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Professional, educational, helpful. Speak to course students and lifelong learners. Avoid hype — focus on practical utility.",
+    "bannedWords": [
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack",
+      "free courses",
+      "steal",
+      "rip"
+    ],
+    "requiredDisclaimers": [
+      "This extension is intended for downloading content you own or have purchased access to. Users are responsible for ensuring they have the right to download content."
+    ],
+    "brandColorHex": "#FA402B",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"Kajabi\" as-is (capital K). Reference embedded platforms by their official names: \"Loom\", \"Vimeo\", \"YouTube\", \"Wistia\"."
+  }
+}

@@ -1,0 +1,433 @@
+{
+  "extension": "reddit-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP Reddit Downloader",
+    "slug": "reddit-downloader",
+    "geckoId": "reddit-downloader@serpapps.com",
+    "category": "Multi-Asset Downloader (Video, Image, Text)",
+    "targetSites": [
+      "reddit.com"
+    ],
+    "targetSiteMatches": [
+      "https://reddit.com/*",
+      "https://www.reddit.com/*",
+      "https://*.reddit.com/*"
+    ],
+    "description": "Download Reddit videos, images, and post text from visible posts."
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/reddit-downloader",
+    "lastUpdated": "2026-03-06",
+    "buildDate": null,
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "reddit-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/reddit-downloader",
+    "productPage": "https://serp.ly/reddit-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Direct media download (images, MP4 video)",
+      "Blob URL delegation to page-side anchor click",
+      "Permalink tab resolution (background tab open, inject, extract)",
+      "Authenticated fetch fallback (fetchMediaBlob + objectURL)",
+      "Page-side anchor click fallback"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from URL resolution patterns and DOM video/source elements",
+    "qualitySorting": "By score descending (blob 960, direct MP4 900, link MP4 840, resource MP4 820, HLS DOM 680)",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "downloadManagerType": "Modular (download-manager/ directory)",
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": true,
+    "bulkDownloadMode": "Download Visible — downloads all assets in the active tab (Videos, Images, or Text)",
+    "inPagePlayerButton": false,
+    "contextMenu": false,
+    "autoSave": true,
+    "downloadFolder": "Reddit Downloader/",
+    "desktopNotifications": false,
+    "assetTypes": ["video", "image", "text"],
+    "videoDetection": "DOM <video> elements, <source> tags, anchor href video links, Performance API resource entries, blob URLs",
+    "imageDetection": "DOM <img> elements with srcset parsing, filtered by size (min 120px) and Reddit image host matching",
+    "textDetection": "Post text body from [slot='text-body'], [data-click-id='text'], .md, longest <p>/<div> fallback"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "tabs",
+      "scripting"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://reddit.com/*",
+      "https://www.reddit.com/*",
+      "https://*.reddit.com/*",
+      "https://redd.it/*",
+      "https://*.redd.it/*",
+      "https://v.redd.it/*",
+      "https://i.redd.it/*",
+      "https://preview.redd.it/*",
+      "https://external-preview.redd.it/*",
+      "https://*.redditmedia.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "content-enhanced-modular.js"
+      ],
+      "css": [
+        "styles/overlay-buttons.css"
+      ],
+      "matches": [
+        "https://reddit.com/*",
+        "https://www.reddit.com/*",
+        "https://*.reddit.com/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-reddit.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "fastStreamHtml": "offscreen-faststream.html",
+      "js": "offscreen-faststream-legacy.js",
+      "purpose": "HLS/fMP4 segment processing and transmuxing via FastStream"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/ (SimpleHLS2MP4Converter via offscreen FastStream)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true,
+      "file": "indexed-db.js",
+      "dbName": "LoomDownloaderDB",
+      "storeName": "fileStore"
+    },
+    "pageInjection": null,
+    "webAccessibleResources": [
+      "offscreen-faststream.html",
+      "offscreen-faststream-legacy.js"
+    ],
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "reddit-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/reddit-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/reddit-downloader/releases/latest"
+    },
+    "csp": "script-src 'self'; object-src 'self';",
+    "dnrRules": []
+  },
+  "assetDetectionAndExtraction": {
+    "postRootSelectors": [
+      "shreddit-post",
+      "[data-testid='post-container']",
+      "article",
+      "div[id^='t3_']",
+      "faceplate-tracker"
+    ],
+    "maxRootsScanned": 220,
+    "titleSources": [
+      "post-title attribute",
+      "title attribute",
+      "data-postTitle",
+      "h1",
+      "h2",
+      "h3",
+      "a[slot='title']",
+      "[slot='title']"
+    ],
+    "permalinkSources": [
+      "permalink attr",
+      "post-permalink attr",
+      "content-href attr",
+      "data-permalink",
+      "data-url",
+      "anchor href matching /comments/",
+      "window.location.href"
+    ],
+    "textSources": [
+      "[slot='text-body']",
+      "[data-click-id='text']",
+      "[data-testid='post-content']",
+      ".md",
+      "longest <p>/<div>/<span> (min 60 chars)"
+    ],
+    "videoSources": [
+      "DOM <video> elements (currentSrc, src, <source> children)",
+      "Anchor href video links",
+      "Performance API resource entries"
+    ],
+    "imageSources": [
+      "DOM <img> elements with srcset parsing (largest candidate)",
+      "Reddit image host filtering",
+      "Minimum dimension filtering (120px)"
+    ],
+    "imageHostRegex": "/(?:^|\\.)(?:i\\.redd\\.it|preview\\.redd\\.it|external-preview\\.redd\\.it|redditmedia\\.com|redd\\.it)$/i",
+    "videoHostRegex": "/(?:^|\\.)(?:v\\.redd\\.it|reddit\\.com|redditmedia\\.com|redd\\.it)$/i",
+    "videoHintRegex": "/(?:\\.mp4|\\.webm|\\.m3u8|\\.mpd|\\/HLSPlaylist\\.m3u8|\\/DASHPlaylist\\.mpd|\\/DASH_\\d+|\\/dash)/i",
+    "imageHintRegex": "/(?:\\.jpe?g|\\.png|\\.webp|\\.gif|\\.avif)/i",
+    "blockedImageRegex": "/(?:avatar|award|emoji|icon|communityIcon|profileIcon|snoo|logo|sprite|thumbnail-default|vote|badge|awards)/i",
+    "audioOnlyFilter": "URLs matching dash_audio, /audio/, _audio.mp4 are excluded",
+    "videoScoring": {
+      "blob": 960,
+      "domMp4": 900,
+      "linkMp4": 840,
+      "resourceMp4": 820,
+      "domHls": 680,
+      "linkNonMp4": 560,
+      "resourceNonMp4": 520
+    },
+    "cacheKey": "__REDDIT_ASSET_CACHE__"
+  },
+  "contentScriptMessageActions": [
+    {
+      "action": "extractFacebookAssets",
+      "purpose": "Full asset harvest — returns videos, images, texts"
+    },
+    {
+      "action": "resetFacebookAssetCache",
+      "purpose": "Clears cache, re-harvests"
+    },
+    {
+      "action": "resolveVideoAssetByPermalink",
+      "purpose": "Finds best video for a specific permalink"
+    },
+    {
+      "action": "resolvePrimaryVisibleVideoAsset",
+      "purpose": "Finds largest visible <video> element's best asset"
+    },
+    {
+      "action": "downloadAssetInPage",
+      "purpose": "Page-side anchor-click download fallback"
+    }
+  ],
+  "downloadResolutionChain": [
+    { "step": 1, "method": "Direct URL from asset", "condition": "asset.url is present" },
+    { "step": 2, "method": "resolveVideoAssetByPermalink", "condition": "No URL, has permalink, via content script" },
+    { "step": 3, "method": "resolvePrimaryVisibleVideoAsset", "condition": "No URL, no permalink, via content script" },
+    { "step": 4, "method": "Permalink tab resolution", "condition": "Opens background tab, loads content script, extracts video" },
+    { "step": 5, "method": "Blob delegation", "condition": "URL is blob:, delegates to page-side anchor click" },
+    { "step": 6, "method": "chrome.downloads.download", "condition": "Direct download attempt" },
+    { "step": 7, "method": "fetchMediaBlob + objectURL", "condition": "Authenticated fetch fallback on direct failure" },
+    { "step": 8, "method": "Page-side download", "condition": "Final fallback via content script anchor click" }
+  ],
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": ["content-enhanced-modular.js"],
+      "purpose": "Asset harvesting: video, image, text detection from Reddit post roots"
+    },
+    {
+      "component": "Service Worker",
+      "files": ["background-reddit.js"],
+      "purpose": "Download orchestration, auth gating, content script injection, permalink tab resolution"
+    },
+    {
+      "component": "Background Enhanced",
+      "files": ["background-enhanced.js"],
+      "purpose": "X/Twitter API integration layer (shared codebase)"
+    },
+    {
+      "component": "Popup",
+      "files": ["popup.html", "popup-enhanced.js"],
+      "purpose": "Multi-tab asset browser, rescan, download visible, per-asset download"
+    },
+    {
+      "component": "Offscreen",
+      "files": ["offscreen.html", "offscreen-faststream.html", "offscreen-faststream-legacy.js"],
+      "purpose": "HLS/fMP4 segment processing via FastStream"
+    },
+    {
+      "component": "Auth",
+      "files": ["auth.js", "auth-ui.js", "auth/auth-api.js", "auth/auth-config.js", "auth/auth-storage.js", "auth/auth-telemetry.js", "auth/auth-token.js"],
+      "purpose": "OTP login, entitlements, trial management"
+    },
+    {
+      "component": "Download Manager",
+      "files": ["download-manager/download-manager.js", "download-manager/download-manager-config.js", "download-manager/download-manager-state.js", "download-manager/download-manager-ui.js", "download-manager/download-task-registry.js", "download-manager/integration-helper.js"],
+      "purpose": "Modular download task registry, state, UI panel"
+    },
+    {
+      "component": "Logger",
+      "files": ["logger.js"],
+      "purpose": "Structured logging with level control and console patching"
+    },
+    {
+      "component": "Site Config",
+      "files": ["site-config.js"],
+      "purpose": "Brand colors (Reddit orange), endpoints, feature flags, CSS variables"
+    },
+    {
+      "component": "Update Notifier",
+      "files": ["update-notifier.js"],
+      "purpose": "GitHub release version checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": ["trial-banner.js"],
+      "purpose": "Trial remaining badge in popup"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": ["popup-ui-overrides.js"],
+      "purpose": "Header text normalization, error message overrides"
+    },
+    {
+      "component": "IndexedDB",
+      "files": ["indexed-db.js"],
+      "purpose": "Key/value file storage for offscreen processing"
+    }
+  ],
+  "popupUI": {
+    "stylesheets": [
+      "styles/popup-enhanced.css (8.7 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup-enhanced.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "popup-ui-overrides.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Boot splash",
+      "Header (SERP Labs / Reddit Downloader)",
+      "Trial banner",
+      "Activation section",
+      "Stats grid (Videos / Images / Text Posts)",
+      "Tab bar (Videos / Images / Text)",
+      "Download Visible button",
+      "Asset list (per-asset cards)",
+      "Status footer"
+    ],
+    "tabSystem": ["Videos", "Images", "Text"],
+    "rescanBehavior": "Click = incremental merge scan; Shift+Click = hard reset and fresh scan",
+    "downloadAllBehavior": "Downloads all assets in active tab sequentially"
+  },
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/reddit-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/reddit-downloader/",
+    "platformBuilds": [
+      { "platform": "Standard", "file": "reddit-downloader.zip", "sizeMB": null },
+      { "platform": "Chrome", "file": "reddit-downloader-chrome.zip", "sizeMB": null },
+      { "platform": "Chrome Store Sanitized", "file": "reddit-downloader-chrome-store-sanitized.zip", "sizeMB": null },
+      { "platform": "Brave", "file": "reddit-downloader-brave.zip", "sizeMB": null },
+      { "platform": "Edge", "file": "reddit-downloader-edge.zip", "sizeMB": null },
+      { "platform": "Opera", "file": "reddit-downloader-opera.zip", "sizeMB": null },
+      { "platform": "Whale", "file": "reddit-downloader-whale.zip", "sizeMB": null },
+      { "platform": "Yandex", "file": "reddit-downloader-yandex.zip", "sizeMB": null },
+      { "platform": "Firefox ZIP", "file": "reddit-downloader-firefox.zip", "sizeMB": null },
+      { "platform": "Firefox XPI", "file": "reddit-downloader-firefox-unpacked.xpi", "sizeMB": null }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": null,
+    "ghLicenseId": null,
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_U56DpnQjYZpJ1s",
+    "stripeProductName": "Reddit Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [reddit-downloader-monthly-9]",
+    "stripeOneTimePrice": null,
+    "stripePriceIds": [
+      "price_1T6w0pDP7AOTRcvmWQfNfHNX"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < info(20) < warn(30) < error(40) < silent(90)",
+    "loggerPrefix": "TWITTER_X",
+    "consolePatching": true
+  },
+  "icons": [
+    { "type": "default", "size": "16x16", "file": "icons/icon16.png" },
+    { "type": "default", "size": "32x32", "file": "icons/icon32.png" },
+    { "type": "default", "size": "48x48", "file": "icons/icon48.png" },
+    { "type": "default", "size": "128x128", "file": "icons/icon128.png" }
+  ],
+  "brandColors": {
+    "brandAccent": "#ff4500",
+    "brandAccentHover": "#e03d00",
+    "bgDark": "#1a1a1b",
+    "bgDarker": "#111113",
+    "borderDark": "#343536",
+    "inputBorder": "#444546",
+    "textPrimary": "#f6f7f8",
+    "textMuted": "#818384",
+    "textSubtle": "#b5b7b8",
+    "success": "#46d160",
+    "error": "#ff585b",
+    "info": "#ff7a33",
+    "lightBg": "#ffffff",
+    "lightBorder": "#d7dadc",
+    "lightMutedText": "#6b6f73",
+    "lightPanelBg": "#f6f7f8",
+    "lightMutedText2": "#878a8c",
+    "darkTextStrong": "#1a1a1b"
+  },
+  "modulesIncluded": [
+    { "module": "HLS Parser", "path": "modules/hls/", "purpose": "M3U8 playlist parsing" },
+    { "module": "HLS to MP4", "path": "modules/hls2mp4/", "purpose": "HLS segment transmuxing" },
+    { "module": "DASH to MP4", "path": "modules/dash2mp4/", "purpose": "DASH stream conversion" },
+    { "module": "MediaBunny", "path": "modules/mediabunny/", "purpose": "Audio/video codec handling" },
+    { "module": "Reencoder", "path": "modules/reencoder/", "purpose": "Video re-encoding" },
+    { "module": "Network", "path": "modules/network/", "purpose": "HTTP fetch utilities" },
+    { "module": "Utils", "path": "modules/utils/", "purpose": "General utilities" },
+    { "module": "MP4Box", "path": "modules/mp4box.mjs", "purpose": "ISOBMFF manipulation" },
+    { "module": "FSBlob", "path": "modules/FSBlob.mjs", "purpose": "Virtual filesystem blob ops" },
+    { "module": "EventEmitter", "path": "modules/eventemitter.mjs", "purpose": "Event dispatch" },
+    { "module": "Localize", "path": "modules/Localize.mjs", "purpose": "i18n support" },
+    { "module": "Download Manager", "path": "download-manager/", "purpose": "Modular download task registry, state, UI, config" },
+    { "module": "Auth Module", "path": "auth/", "purpose": "auth-api, auth-config, auth-storage, auth-telemetry, auth-token" }
+  ]
+}

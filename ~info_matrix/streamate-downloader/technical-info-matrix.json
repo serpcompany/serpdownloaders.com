@@ -1,0 +1,572 @@
+{
+  "extension": "streamate-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP Streamate Downloader",
+    "slug": "streamate-downloader",
+    "geckoId": "streamate-downloader@serpapps.com",
+    "category": "Live Stream Downloader (Adult)",
+    "targetSites": [
+      "streamate.com"
+    ],
+    "targetSiteMatches": [
+      "https://streamate.com/*",
+      "https://www.streamate.com/*",
+      "https://*.streamate.com/*"
+    ],
+    "description": "Download Streamate live streams and recordings"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/streamate-downloader",
+    "lastUpdated": "2026-03-06",
+    "buildDate": "2026-03-04T17:32:08.668Z",
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "streamate-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/streamate-video-downloader",
+    "productPage": "https://serp.ly/streamate-video-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "HLS Stitching (m3u8 segment to MP4 transmux)",
+      "Direct MP4 (offscreen streaming)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from Streamate manifest API, HLS master playlist variant streams",
+    "qualitySorting": "By height descending",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": true,
+    "liveStreamFeatures": [
+      "Real-time HLS live capture",
+      "Start/stop controls",
+      "Segment polling (1400ms interval)",
+      "Graceful stop with finalization",
+      "Elapsed time and segment counter"
+    ],
+    "vrSupport": true,
+    "vrFeatures": [
+      "VR camera settings detection (stereoPacking, frameFormat, horizontalAngle)",
+      "VR badge in popup UI",
+      "VR metadata appended to filename"
+    ],
+    "bulkDownload": false,
+    "inPagePlayerButton": true,
+    "playerButtonTargets": [
+      "[data-testid=\"video-player\"]",
+      ".player__video-wrapper",
+      ".video-player__wrapper",
+      ".media-player",
+      "#player-root",
+      ".video-player",
+      "nearest video container"
+    ],
+    "contextMenu": true,
+    "contextMenuId": "download-streamate-video",
+    "contextMenuTitle": "Download Streamate Stream",
+    "contextMenuContexts": [
+      "page",
+      "video"
+    ],
+    "autoSave": true,
+    "downloadFolder": "STREAMATE/",
+    "desktopNotifications": true,
+    "videoDetection": "Multi-source: Streamate manifest API (naiadsystems.com), Streamate Front API, HLS host candidate probing, inject.js page-context monitor"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "offscreen"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://*/*",
+      "https://streamate.com/*",
+      "https://www.streamate.com/*",
+      "https://manifest-server.naiadsystems.com/*",
+      "https://*.streamate.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "download-manager.js",
+        "content.js",
+        "player-button.js"
+      ],
+      "matches": [
+        "https://streamate.com/*",
+        "https://www.streamate.com/*",
+        "https://*.streamate.com/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "MP4 streaming download + HLS segment transmuxing + live capture processing"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (319 KB)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true
+    },
+    "pageInjection": {
+      "file": "inject.js",
+      "purpose": "Page-context state collector, Streamate manifest API caller, HLS URL discovery",
+      "messageType": "STREAMATE_PAGE_DATA"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "Streamate Manifest Server (manifest-server.naiadsystems.com)",
+      "Streamate Front API (streamate.com/api/front/v2/)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "streamate-video-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/streamate-video-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/streamate-video-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": []
+  },
+  "videoDetectionAndExtraction": {
+    "modelIdSources": [
+      "modelId from page data",
+      "modelNumericId from page data",
+      "roomSlug from URL path",
+      "modelUsername from page data",
+      "Streamate Front API (/api/front/v2/models/username/{slug}/cam)"
+    ],
+    "titleSources": [
+      "displayName",
+      "modelName",
+      "modelUsername",
+      "document.title"
+    ],
+    "thumbnailSources": [
+      "og:image"
+    ],
+    "pageTypeDetection": {
+      "live": "Default for model room pages",
+      "vod": "URL pattern: /{model}/videos/{id}"
+    },
+    "formatSources": [
+      "Streamate Manifest Server (manifest-server.naiadsystems.com/live/s:{model}.json)",
+      "Streamate Front API (/api/front/v2/models/username/{slug}/cam)",
+      "HLS master playlist probing across CDN hosts",
+      "inject.js page state collection"
+    ],
+    "cdnHostDetection": [
+      "doppiocdn.com",
+      "doppiocdn.net",
+      "stripcdnm.com",
+      "stripcdnmd.com",
+      "stripcdntmp.com",
+      "sc-cdn.net",
+      "strpst.com"
+    ],
+    "mediaRequestPatterns": [
+      ".m3u8",
+      "manifest-server.naiadsystems.com",
+      "HLS master/variant playlists"
+    ],
+    "injectMessageType": "STREAMATE_PAGE_DATA",
+    "mouflonKeyDecryption": true
+  },
+  "formatObjectStructure": {
+    "type": "hls | mp4",
+    "quality": "string (e.g. '1080p')",
+    "url": "string",
+    "format": "string (e.g. 'HLS')",
+    "height": "number | null",
+    "requestUrl": "string | null",
+    "extraParams": "object | null"
+  },
+  "hlsProcessingSpecs": {
+    "converter": "SimpleHLS2MP4Converter",
+    "maxSegmentRetries": 3,
+    "backoffBaseMs": 500,
+    "stallTimeoutMs": 30000,
+    "absoluteTimeoutMs": null,
+    "livePollIntervalMs": 1400,
+    "liveIdleLimitWithData": 35,
+    "liveIdleLimitNoData": 12,
+    "liveMaxPlaylistErrors": 8,
+    "liveFirstBatchLimit": 8,
+    "liveTickTailLimit": 4,
+    "credentialMode": "include for streamate.com, doppiocdn.*, stripcdn*, sc-cdn.net, strpst.com; omit for others"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Stream detection, model info extraction, page data relay"
+    },
+    {
+      "component": "Player Button",
+      "files": [
+        "player-button.js"
+      ],
+      "purpose": "In-page download button with quality popover"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth, offscreen, context menu, Streamate API, HLS parsing, Mouflon key decryption"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "UI, quality selector, live capture start/stop, auth flow"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "MP4 streaming + HLS transmux + live capture processing"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js",
+        "auth/auth-config.js",
+        "auth/auth-api.js",
+        "auth/auth-storage.js",
+        "auth/auth-telemetry.js",
+        "auth/auth-token.js"
+      ],
+      "purpose": "OTP login, entitlements, trial"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager.js"
+      ],
+      "purpose": "In-page download progress panel with live capture segment counter"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-context state collector, Streamate manifest API, HLS URL discovery"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup customizations"
+    }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (slides from -400px to 20px)",
+    "panelId": "STREAMATE-download-manager",
+    "cardWidth": "380px",
+    "maxHeight": "80vh",
+    "zIndex": 10000,
+    "border": "2px solid var(--brand-accent)",
+    "borderRadius": "10px",
+    "font": "sans-serif",
+    "autoHideSeconds": 3,
+    "features": [
+      "Minimize/close buttons",
+      "Per-download progress bars",
+      "Speed display",
+      "Cancel buttons",
+      "Live capture segment counter with elapsed time"
+    ]
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/styles.css (8.5 KB)",
+      "styles/popup-enhanced.css (17.8 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "popup-ui-overrides.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Header",
+      "Quick help banner",
+      "Activation section",
+      "Loading spinner",
+      "Error state",
+      "Video info card (with VR badge, live badge)",
+      "Quality selector",
+      "Capture hint",
+      "Live capture status",
+      "Download button (Start/Stop for live)",
+      "Progress bar"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "sizeKB": 319,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "sizeKB": 4.3,
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "sizeKB": 3.5,
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/streamate-video-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/streamate-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "streamate-downloader.zip",
+        "sizeMB": 1.24
+      },
+      {
+        "platform": "Chrome",
+        "file": "streamate-downloader-chrome.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "streamate-downloader-chrome-store-sanitized.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Brave",
+        "file": "streamate-downloader-brave.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Edge",
+        "file": "streamate-downloader-edge.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Opera",
+        "file": "streamate-downloader-opera.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Whale",
+        "file": "streamate-downloader-whale.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Yandex",
+        "file": "streamate-downloader-yandex.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "streamate-downloader-firefox.zip",
+        "sizeMB": 1.16
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "streamate-downloader-firefox-unpacked.xpi",
+        "sizeMB": 1.15
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "test-key",
+    "ghLicenseId": "xTBDv7Igej2iWM7JjbSb",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_U5nhzdXK1bdcNI",
+    "stripeProductName": "Streamate Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [streamate-downloader-monthly-9]",
+    "stripeOneTimePrice": null,
+    "stripePriceIds": [
+      "price_1T7c6DDP7AOTRcvmOuBXdkh6"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "32x32",
+      "file": "icons/icon32.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#ff4f70",
+    "brandAccentHover": "#e63d5d",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

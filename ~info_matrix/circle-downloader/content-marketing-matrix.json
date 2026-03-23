@@ -1,0 +1,294 @@
+{
+  "extension": "circle-downloader",
+  "productPositioning": {
+    "headline": "Download Videos from Circle.so Communities, Tella, Loom, and More",
+    "elevatorPitch": "SERP Circle Downloader is a browser extension that saves videos from Circle.so communities, Tella.tv recordings, Loom videos, and embedded content from YouTube, Vimeo, and Wistia. Open a lesson or post with a video, click the extension icon, pick your quality, and it saves as MP4. No external software needed. 3 free downloads included.",
+    "valueProposition": "Purpose-built for online course platforms and community sites. Detects videos across 7+ platforms using modular detectors, handles Shadow DOM traversal for Circle.so, converts HLS and DASH streams to MP4 in-browser, and supports embedded players from YouTube, Vimeo, Wistia, Loom, and Tella. Everything happens locally in your browser -- no data leaves your machine.",
+    "targetAudience": "Course members who want to save lessons for offline study. Community members on Circle.so who need to archive video posts. Professionals who want to save Loom walkthroughs and Tella recordings before they expire. Anyone who needs to download embedded videos from multi-platform course environments.",
+    "useCases": [
+      "Save a Circle.so community video lesson for offline viewing",
+      "Download a Tella recording before it expires",
+      "Archive Loom walkthrough videos before auto-deletion",
+      "Save embedded Vimeo or Wistia course videos",
+      "Download YouTube videos embedded in course content",
+      "Build a personal library of course materials for offline study",
+      "Copy YouTube URLs with yt-dlp commands for advanced downloading"
+    ],
+    "painPointsAddressed": [
+      "Circle.so has no native download button for community videos",
+      "Tella recordings expire and become inaccessible",
+      "Loom auto-deletes older videos on free plans",
+      "Course platforms embed videos from multiple sources (Vimeo, Wistia, YouTube) with no unified download option",
+      "HLS and DASH streaming prevents right-click save",
+      "Generic downloaders can't traverse Circle's Shadow DOM to find embedded players",
+      "Users don't want to install desktop software or use command-line tools"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download videos from Circle.so, Tella, Loom, Vimeo, YouTube, Wistia. Converts HLS/DASH to MP4. 3 free downloads included.",
+    "changelog": "v4.0.1 -- Multi-platform modular detection, Shadow DOM traversal for Circle.so, download manager with concurrent downloads, updated auth.",
+    "fullDescription": "SERP Circle Downloader makes it easy to save videos from Circle.so communities, Tella recordings, Loom videos, and embedded content from YouTube, Vimeo, and Wistia.\n\nHow it works: Navigate to any Circle.so community page, Tella recording, or Loom video and press play. Click the extension icon to detect the video, select your quality, and download. The extension automatically identifies the video source across 7+ platforms and converts streams to standard MP4 files.\n\nIt handles HLS streaming, DASH manifests, Shadow DOM traversal, and multi-platform embedded players automatically -- no external tools, no command line, no technical knowledge required. Videos save directly to your Downloads folder in an organized Circle Downloader subfolder.\n\nKey features:\n- Multi-platform video detection: Circle.so, Tella.tv, Loom.com, YouTube.com, Vimeo.com, Wistia.com\n- Shadow DOM traversal for Circle.so embedded players\n- Converts HLS and DASH streams to standard MP4 files in your browser\n- Quality selection from all available resolutions\n- Up to 3 concurrent downloads with real-time progress\n- YouTube URL display with yt-dlp copy commands (Mac and Windows)\n- Right-click context menu for quick downloads\n- Dark-themed UI with blue accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to a Circle.so community, Tella recording, or Loom video and press play\n3. Click the extension icon\n4. Select quality and download -- saved as MP4\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Multi-platform detection -- Circle.so, Tella.tv, Loom.com, YouTube, Vimeo, Wistia",
+      "Shadow DOM traversal finds embedded players hidden inside Circle.so components",
+      "Converts HLS and DASH streams to downloadable MP4 files in-browser",
+      "Quality selector with all available resolutions per platform",
+      "Up to 3 concurrent downloads with per-download progress, speed, and cancel",
+      "YouTube URL display with one-click yt-dlp copy for Mac and Windows",
+      "Right-click context menu -- Download Circle Video",
+      "Auto-saves to organized Circle Downloader/ subfolder in Downloads",
+      "Dark UI with blue accents -- professional and unobtrusive",
+      "3 free trial downloads -- no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP Circle Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Navigate",
+        "description": "Go to a Circle.so community lesson, Tella recording, Loom video, or any page with embedded video"
+      },
+      {
+        "step": 3,
+        "title": "Play",
+        "description": "Start playing the video so the extension can detect the stream"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "Click the extension icon, pick your quality, and hit Download -- video saves as MP4 to your Downloads/Circle Downloader folder"
+      }
+    ],
+    "faq": [
+      {
+        "question": "What sites does this extension support?",
+        "answer": "Circle.so (and Circle.com), Tella.tv, Loom.com, YouTube.com, Vimeo.com, and Wistia.com. It also detects generic embedded video players on other sites."
+      },
+      {
+        "question": "How do I download a video from Circle.so?",
+        "answer": "Go to any Circle.so community page with a video, press play, then click the extension icon. The extension traverses Circle's Shadow DOM to detect the embedded player, extracts available qualities, and lets you download as MP4."
+      },
+      {
+        "question": "Can I download Loom videos before they auto-delete?",
+        "answer": "Yes. Navigate to the Loom video URL, press play, and use the extension to save it as MP4 before it expires or gets deleted."
+      },
+      {
+        "question": "What about Tella recordings?",
+        "answer": "Tella recordings are fully supported. Open the Tella.tv recording link, let the video load, and download with the extension."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "Quality depends on the source platform. The extension detects all available resolutions and lists them in the quality selector, sorted highest to lowest."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Videos automatically save to a Circle Downloader subfolder inside your browser's default Downloads directory."
+      },
+      {
+        "question": "Can I download multiple videos at once?",
+        "answer": "Yes. The extension supports up to 3 concurrent downloads with individual progress tracking."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes -- supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Why isn't the extension finding my video?",
+        "answer": "Press play on the video first. The extension needs the stream to start before detection works. On Circle.so, make sure the lesson or post page is fully loaded. If issues persist, refresh the page."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. All video processing happens entirely in your browser. Authentication uses secure OTP -- no passwords stored. No video data is sent to external servers."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "circle downloader",
+      "circle.so downloader",
+      "download circle videos",
+      "circle video download",
+      "tella downloader",
+      "loom video downloader"
+    ],
+    "longTailKeywords": [
+      "how to download videos from circle.so",
+      "download circle.so community videos",
+      "save tella recordings",
+      "download loom videos before they expire",
+      "circle.so video downloader chrome extension",
+      "download embedded vimeo from circle"
+    ],
+    "seoTitle": "Circle Downloader -- Save Circle.so & Tella Videos | SERP",
+    "metaDescription": "Download videos from Circle.so communities, Tella recordings, Loom videos. Supports YouTube, Vimeo, Wistia. Converts to MP4. 3 free downloads.",
+    "urlSlug": "/circle-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download Circle.so Videos",
+    "googleAdsDescription": "Save Circle.so community videos, Tella recordings, Loom videos as MP4. 3 free downloads included.",
+    "socialMediaHook": "Can't download videos from your Circle.so community? SERP Circle Downloader saves course videos from Circle, Tella, Loom, Vimeo, and more. One click, MP4, done.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Multi-platform modular detection handles Circle.so Shadow DOM, Tella streams, Loom recordings, and embedded Vimeo/Wistia/YouTube. Generic downloaders can't find videos behind Circle's component architecture.",
+    "adAngles": [
+      {
+        "angle": "Course Access",
+        "copy": "Bought a course? Save the videos for offline study. Circle, Tella, Loom, Vimeo -- all in one extension."
+      },
+      {
+        "angle": "Expiring Content",
+        "copy": "Loom auto-deletes. Tella recordings expire. Download them before they're gone."
+      },
+      {
+        "angle": "Multi-Platform",
+        "copy": "7+ platforms. One extension. Circle.so, Tella, Loom, YouTube, Vimeo, Wistia."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No desktop software. No command line. Just a browser extension that handles everything."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it now."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Multiple quality levels detected per platform. HLS, DASH, and direct MP4 supported.",
+    "limitationsAndDisclaimers": "Must press play before detection. Quality depends on source platform. Requires email sign-in for trial. Internet connection required. Users responsible for ensuring they have the right to download content.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Loom Downloader",
+      "SERP Tella.tv Downloader",
+      "SERP Vimeo Downloader",
+      "SERP YouTube Downloader",
+      "SERP Wistia Downloader",
+      "SERP Skool Downloader",
+      "SERP Kajabi Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Videos from Circle.so Communities (Step-by-Step Guide)",
+      "Save Tella Recordings Before They Expire -- Circle Downloader",
+      "How to Download Loom Videos Before Auto-Delete",
+      "Download Embedded Vimeo and Wistia Videos from Course Platforms",
+      "Circle.so Video Downloader: Save Course Content for Offline Study",
+      "The Best Way to Download Videos from Online Course Communities"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from Circle.so and other course platforms is tricky and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection. Access to the course or community."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store or GitHub release"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Find Your Video",
+        "description": "Navigate to a Circle.so community lesson, Tella recording, or Loom video"
+      },
+      {
+        "section": "Step 4: Play the Video",
+        "description": "Press play so the extension can detect the stream"
+      },
+      {
+        "section": "Step 5: Download",
+        "description": "Click extension icon, select quality, download as MP4"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Auto-saves to Circle Downloader/ folder. Use YouTube URL copy for yt-dlp. Up to 3 concurrent downloads."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Press play first. Refresh if Circle.so page loads slowly. Check extension is enabled. Ensure community access."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected Circle.so video with quality selector and download button",
+      "Extension popup with Tella.tv recording detected",
+      "Download in progress with real-time progress bar and speed",
+      "YouTube URL section with yt-dlp copy buttons for Mac and Windows",
+      "Email sign-in / OTP verification screen",
+      "Right-click context menu showing Download Circle Video"
+    ],
+    "iconLogoVariants": "Default icon: 16, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 -- dark background (#1b1b1b), popup screenshot, blue accent (#506CF0)",
+    "gifDemoDescription": "10-second loop: Circle.so community page -> play video -> click extension icon -> popup shows detected video -> select quality -> download starts -> progress bar -> complete"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Videos from Circle.so, Tella, Loom, and More",
+      "subheadline": "Multi-platform video downloader for course communities. Supports Circle.so, Tella.tv, Loom.com, YouTube, Vimeo, and Wistia. HLS and DASH to MP4 conversion. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Multi-Platform Detection",
+        "description": "One extension for Circle.so, Tella, Loom, YouTube, Vimeo, and Wistia. Modular detectors identify video sources across platforms."
+      },
+      {
+        "title": "Shadow DOM Traversal",
+        "description": "Circle.so uses complex web components. This extension traverses Shadow DOM to find embedded players that generic tools miss."
+      },
+      {
+        "title": "Quality Selection",
+        "description": "All available resolutions detected per platform. HLS and DASH streams converted to standard MP4 automatically."
+      },
+      {
+        "title": "Concurrent Downloads",
+        "description": "Download up to 3 videos at once. Real-time progress, speed, and cancel controls for each download."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in -- no passwords stored",
+      "All processing happens locally in your browser",
+      "Auto-saves to organized Downloads/Circle Downloader/ folder",
+      "Automatic update notifications via GitHub releases",
+      "Professional, educational-focused tool -- not a generic scraper"
+    ],
+    "footerCta": {
+      "headline": "Ready to save your course videos?",
+      "button": "Install Free -- 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Professional, educational, helpful. Speak to course members and community participants. Emphasize offline access to learning materials.",
+    "bannedWords": [
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack",
+      "rip",
+      "steal"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have legitimate access to. Respect content creators' terms of service."
+    ],
+    "brandColorHex": "#506CF0",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"Circle\" to refer to Circle.so platform. Use \"Circle.so\" when referencing the website. \"Tella\" for Tella.tv. \"Loom\" for Loom.com. Never abbreviate YouTube, Vimeo, or Wistia."
+  }
+}

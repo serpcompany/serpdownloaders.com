@@ -1,0 +1,254 @@
+{
+  "extension": "123movies-downloader",
+  "productPositioning": {
+    "headline": "Download Any Video from 123Movies — One Click, Any Quality",
+    "elevatorPitch": "SERP 123Movies Downloader lets you save videos from 123Movies and all its mirror sites directly to your computer. Just press play on any video, choose your quality, and download. No technical knowledge required — 3 free downloads included.",
+    "valueProposition": "The only browser extension purpose-built for 123Movies and its mirrors. Automatically detects videos when you press play, converts HLS streams to MP4 in-browser, and saves them locally — no external tools or software needed.",
+    "targetAudience": "Casual users who watch content on 123Movies mirror sites and want to save videos for offline viewing. Non-technical users who want a one-click solution.",
+    "useCases": [
+      "Save a movie or show from 123Movies for offline viewing on a flight or commute",
+      "Archive content from mirrors that frequently go down",
+      "Download videos from any 123Movies variant/domain without figuring out which mirror is real",
+      "Save content in the best available quality without dealing with HLS streams manually",
+      "Keep a personal library of downloaded content"
+    ],
+    "painPointsAddressed": [
+      "123Movies uses HLS streaming which can't be saved with right-click",
+      "Mirror sites change constantly — this extension works across all of them",
+      "Generic video downloaders often don't detect 123Movies streams",
+      "Users don't want to install desktop software or use command-line tools",
+      "No easy way to choose quality when downloading from streaming sites"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download videos from 123Movies and mirror sites. Auto-detects streams, converts to MP4. 3 free downloads included.",
+    "changelog": "v4.0.1 — Improved HLS stream detection, modular download manager with progress tracking, updated auth flow.",
+    "fullDescription": "SERP 123Movies Downloader is the easiest way to download videos from 123Movies and all its mirror sites.\n\nHow it works: Navigate to any 123Movies page, press play on a video, then click the extension icon. The extension automatically detects the video stream, shows you available quality options, and downloads it as an MP4 file directly to your computer.\n\nThe extension handles HLS streaming conversion automatically — no external tools, no command line, no technical knowledge needed. It works across all 123Movies mirrors and domain variants.\n\nKey features:\n- Automatically detects video playback on any 123Movies mirror\n- Converts HLS streams to standard MP4 files in your browser\n- Choose your preferred quality (720p, 480p, etc.)\n- In-page download manager with real-time progress tracking\n- Works on all 123Movies domain variants and mirrors\n- Dark-themed UI that matches the viewing experience\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to any 123Movies site and play a video\n3. Click the extension icon in your toolbar\n4. Select quality and click Download\n\nSign in with your email to unlock 3 free trial downloads. Upgrade for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Auto-detects videos when you press play on any 123Movies mirror site",
+      "Converts HLS streaming video to downloadable MP4 files in-browser",
+      "Quality selection — choose the resolution that works for you",
+      "In-page download manager with real-time progress bar",
+      "Works across all 123Movies domains and mirror variants",
+      "Dark-themed popup UI — clean and easy to use",
+      "Automatic update notifications when new versions are available",
+      "3 free trial downloads included — no credit card required to start"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP 123Movies Downloader to your browser from the extension store"
+      },
+      {
+        "step": 2,
+        "title": "Navigate",
+        "description": "Go to any 123Movies site and start playing a video"
+      },
+      {
+        "step": 3,
+        "title": "Detect",
+        "description": "The extension automatically detects the video stream (icon highlights when a video is found)"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "Click the extension icon, pick your quality, and hit Download — the video saves as MP4"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Which 123Movies sites does this work on?",
+        "answer": "It works on all 123Movies mirrors and variants — any domain containing \"123movies\" or \"123-movies\" is automatically detected."
+      },
+      {
+        "question": "What format are the downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player."
+      },
+      {
+        "question": "Do I need to press play first?",
+        "answer": "Yes — the extension detects the video stream when you start playback. Press play, then click the extension icon."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "You get 3 free trial downloads after signing in with your email. After that, you can upgrade for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — SERP 123Movies Downloader supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Why isn't the extension detecting my video?",
+        "answer": "Make sure you've pressed play on the video first. Some sites require playback to start before the stream can be captured. If the issue persists, try refreshing the page."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "The extension only processes video data locally in your browser. Authentication uses a secure OTP (one-time password) system — no passwords are stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "123movies downloader",
+      "download 123movies",
+      "123movies video download",
+      "save 123movies videos"
+    ],
+    "longTailKeywords": [
+      "how to download videos from 123movies",
+      "123movies downloader chrome extension",
+      "download 123movies to mp4",
+      "save movies from 123movies browser",
+      "123movies mirror downloader"
+    ],
+    "seoTitle": "123Movies Downloader — Save Videos as MP4 | SERP",
+    "metaDescription": "Download videos from 123Movies and all mirror sites. Auto-detects HLS streams, converts to MP4. Chrome, Firefox, Edge. 3 free downloads included.",
+    "urlSlug": "/123movies-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download 123Movies Videos",
+    "googleAdsDescription": "Save any 123Movies video as MP4. Works on all mirrors. Auto HLS conversion. Try 3 free.",
+    "socialMediaHook": "Tired of not being able to save videos from 123Movies? One click. Any mirror. MP4. Done.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Unlike generic video downloaders, SERP 123Movies Downloader is purpose-built for 123Movies and its mirrors. It handles HLS streams that generic tools miss, works across all domain variants automatically, and converts to MP4 in-browser without external software.",
+    "adAngles": [
+      {
+        "angle": "Simplicity",
+        "copy": "Press play. Click download. That's it. Save 123Movies videos in one click."
+      },
+      {
+        "angle": "Mirror Coverage",
+        "copy": "Works on every 123Movies mirror. No matter which domain — we've got it."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No software to install. No command line. Just a browser extension that converts streams to MP4."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. See for yourself."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Quality depends on source — typically 720p, 480p, 360p via HLS variants. Automatic best-quality selection or manual choice.",
+    "limitationsAndDisclaimers": "Only works when video is playing (must press play first). Quality limited to what the source site provides. Requires email sign-in for trial. Internet connection required during download. Videos subject to copyright — users are responsible for ensuring they have rights to download content.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader (generic)",
+      "M3U8 Downloader (protocol-level)",
+      "YouTube Downloader",
+      "Facebook Downloader",
+      "Reddit Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Videos from 123Movies in 2026 (Step-by-Step Guide)",
+      "123Movies Downloader: The Easiest Way to Save Streaming Videos",
+      "How to Save 123Movies Videos as MP4 — No Software Required",
+      "Best 123Movies Download Extensions Compared",
+      "How to Download from 123Movies Mirror Sites (All Variants)"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from 123Movies is tricky (HLS streaming, changing mirrors) and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera browser. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Go to the extension store, search for SERP 123Movies Downloader, click Add to Browser"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Click the extension icon, enter your email, verify with the OTP code sent to your inbox"
+      },
+      {
+        "section": "Step 3: Find Your Video",
+        "description": "Navigate to any 123Movies site and start playing the video you want to download"
+      },
+      {
+        "section": "Step 4: Download",
+        "description": "Click the extension icon (it highlights when a video is detected), select quality, hit Download"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Use on any 123Movies mirror (the extension auto-detects all variants). Check the in-page download manager for progress. Videos save to your default Downloads folder."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Video not detected? Make sure you pressed play. Still nothing? Refresh the page and try again. Check that the extension is enabled in your browser's extension settings."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected video with quality selector and download button",
+      "In-page download manager showing active download with progress bar",
+      "Email sign-in / OTP verification screen",
+      "Quality selection dropdown with multiple format options",
+      "Extension icon in toolbar — default vs highlighted (video detected) state"
+    ],
+    "promoVideoScript": "[Screen: 123Movies page with a video]\n\"Want to download videos from 123Movies? Here's how.\"\n\n[Click play on video]\n\"Step one: play the video.\"\n\n[Extension icon highlights in toolbar]\n\"The extension detects it automatically.\"\n\n[Click extension icon, popup opens showing video info]\n\"Step two: click the icon. Pick your quality.\"\n\n[Click download, progress bar appears]\n\"Step three: download. It converts the stream to MP4 right in your browser.\"\n\n[Download complete notification]\n\"Done. Works on every 123Movies mirror. Try 3 downloads free.\"\n\n[End card: SERP 123Movies Downloader logo + CTA]",
+    "iconLogoVariants": "Default (dark) + Highlight (green glow for video detected). Sizes: 16, 32, 48, 64, 96, 128px",
+    "bannerHeroImageSpec": "1280x800 store banner — dark background (#1b1b1b), extension popup screenshot, green accent (#8dca5e), tagline overlay",
+    "gifDemoDescription": "10-second loop: user navigates to 123Movies → presses play → extension icon highlights → clicks icon → popup shows video with quality dropdown → clicks download → progress bar fills → complete"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Videos from 123Movies — Any Mirror, One Click",
+      "subheadline": "Auto-detects streams, converts HLS to MP4 in your browser. No extra software. No command line. Just press play and download.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Auto-Detection",
+        "description": "Automatically finds video streams when you press play. Works on every 123Movies mirror and domain variant."
+      },
+      {
+        "title": "HLS to MP4",
+        "description": "Converts streaming video to standard MP4 files right in your browser. No external tools needed."
+      },
+      {
+        "title": "Quality Choice",
+        "description": "Pick your preferred resolution from available options. The extension selects the best quality by default."
+      },
+      {
+        "title": "Download Manager",
+        "description": "Track progress with the built-in download manager. See real-time progress, pause, or cancel anytime."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All video processing happens locally in your browser",
+      "Automatic update notifications for new versions"
+    ],
+    "footerCta": {
+      "headline": "Ready to start downloading?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Casual, direct, no-nonsense. Speak to non-technical users. Avoid jargon (say \"stream\" or \"video\" not \"HLS manifest\").",
+    "bannedWords": [
+      "piracy",
+      "illegal",
+      "free movies",
+      "watch free",
+      "stream free",
+      "bypass",
+      "crack"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download.",
+      "I confirm that I am the rights owner of this video or that I have been authorized by him to download this video."
+    ],
+    "brandColorHex": "#8dca5e",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"123Movies\" (capital M) when referring to the site. Use \"123Movies sites\" or \"123Movies mirrors\" for variants. Never use specific mirror domain names in marketing copy."
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "extension": "sexchathu-downloader",
+  "productPositioning": {
+    "headline": "Download SexChatHU Streams — Live Capture, Any Quality",
+    "elevatorPitch": "SERP SexChatHU Downloader is a browser extension that records live streams and downloads recordings from SexChatHU.com. Open a model's page, click the download button or the extension icon, pick your quality, and start capturing. Streams save as MP4 files. VR streams supported. 3 free downloads included.",
+    "valueProposition": "Purpose-built for SexChatHU with API-driven stream detection (room list + chat API + CDN probing), live capture with start/stop controls, VR stream support, and automatic HLS-to-MP4 conversion. Everything happens in your browser — no external tools required.",
+    "targetAudience": "SexChatHU users who want to save live streams or recordings for offline viewing. Non-technical users who want a simple, reliable capture solution.",
+    "useCases": [
+      "Record a live stream from SexChatHU for offline viewing",
+      "Download recorded videos (VOD) in your preferred quality",
+      "Capture VR streams with proper metadata",
+      "Use the in-page player button for one-click captures without the popup",
+      "Right-click to download via context menu"
+    ],
+    "painPointsAddressed": [
+      "SexChatHU uses HLS streaming — can't right-click and save",
+      "Live streams require continuous capture, not just a single download",
+      "Multiple CDN hosts and Mouflon-encoded URIs make detection complex",
+      "Generic downloaders can't handle the live capture workflow",
+      "VR streams require special handling and metadata preservation"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download streams from SexChatHU. Live capture, VR support, HLS to MP4 conversion. Choose quality. 3 free downloads included.",
+    "changelog": "v4.0.1 — API-driven stream detection, live capture with start/stop, VR support, download manager with progress tracking, updated auth.",
+    "fullDescription": "SERP SexChatHU Downloader makes it easy to save live streams and recordings from SexChatHU to your computer.\n\nHow it works: Go to any model page on SexChatHU, and either click the download button on the player or the extension icon in your toolbar. The extension detects the stream using the site's API, shows available quality options, and lets you start a live capture or download a recording as a standard MP4 file.\n\nIt handles HLS streaming, CDN host probing, and Mouflon URI decryption automatically — no external tools, no command line, no technical knowledge required. Videos save directly to your Downloads folder in an organized SEXCHATHU subfolder.\n\nKey features:\n- API-driven stream detection (room list + chat API + CDN probing)\n- Live capture with start/stop controls — record as long as you want\n- VR stream support with camera metadata preservation\n- In-page download button right on the video player\n- Converts HLS streams to standard MP4 files in your browser\n- Quality selection from all available resolutions\n- Real-time download progress with speed indicators\n- Right-click context menu for quick downloads\n- Dark-themed UI with rose/pink accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to SexChatHU and open a model's page\n3. Click the download button on the player or the extension icon\n4. Select quality and start capturing — saved as MP4\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "API-driven stream detection — room list, chat API, CDN host probing",
+      "Live capture with start/stop controls — record streams in real-time",
+      "VR stream support with stereoscopic metadata preservation",
+      "In-page download button built right into the video player",
+      "Converts HLS streams to downloadable MP4 files in-browser",
+      "Quality selector with all available resolutions",
+      "Real-time progress bar with download speed and segment counter",
+      "Right-click context menu — Download SexChatHU Stream",
+      "Auto-saves to organized SEXCHATHU/ subfolder in Downloads",
+      "Dark UI with rose/pink accents — clean and unobtrusive",
+      "3 free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP SexChatHU Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Browse",
+        "description": "Navigate to SexChatHU and open a model's page"
+      },
+      {
+        "step": 3,
+        "title": "Click",
+        "description": "Use the in-page download button on the player, the extension popup, or right-click context menu"
+      },
+      {
+        "step": 4,
+        "title": "Capture",
+        "description": "Pick your quality and hit Start for live streams or Download for recordings — video saves as MP4 to your Downloads/SEXCHATHU folder"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I record a live stream?",
+        "answer": "Go to any model's page on SexChatHU while they are live. Click the download button on the player or the extension icon. Select your quality and click Start. Click Stop when you want to finish — the stream saves as MP4."
+      },
+      {
+        "question": "Can I download recorded videos (VOD)?",
+        "answer": "Yes — navigate to a model's video page and the extension will detect the recording. Select quality and click Download."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "The extension detects all available qualities from the HLS master playlist — typically multiple resolutions. Formats are sorted by quality (highest first)."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player."
+      },
+      {
+        "question": "Does it support VR streams?",
+        "answer": "Yes — VR streams are detected automatically with camera metadata (stereoPacking, frameFormat, angle). The VR info is shown in the UI and appended to the filename."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Videos automatically save to a SEXCHATHU subfolder inside your browser's default Downloads directory."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Why isn't the extension finding the stream?",
+        "answer": "Make sure the model is currently live and streaming publicly. If the model is offline or in a private show, the extension will display a status message. Refresh the page if issues persist."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. Video processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "sexchathu downloader",
+      "download sexchathu",
+      "sexchathu stream download",
+      "save sexchathu streams"
+    ],
+    "longTailKeywords": [
+      "how to download streams from sexchathu",
+      "sexchathu downloader chrome extension",
+      "download sexchathu to mp4",
+      "record sexchathu live streams browser"
+    ],
+    "seoTitle": "SexChatHU Downloader — Save Live Streams as MP4 | SERP",
+    "metaDescription": "Download live streams from SexChatHU with one click. Live capture, VR support, HLS to MP4 conversion. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/sexchathu-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download SexChatHU Streams",
+    "googleAdsDescription": "Save SexChatHU live streams as MP4. Live capture. VR support. Quality selection. 3 free downloads.",
+    "socialMediaHook": "Can't save streams from SexChatHU? This extension adds a download button right on the player. Live capture, VR support, MP4 output.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "API-driven detection (room list, chat API, CDN probing) catches streams that generic tools miss. Live capture with start/stop, VR metadata, in-page player button, context menu, and organized auto-save folder.",
+    "adAngles": [
+      {
+        "angle": "Live Capture",
+        "copy": "Record live streams with start/stop. Save as MP4 when you're done."
+      },
+      {
+        "angle": "VR Support",
+        "copy": "Full VR stream support. Captures stereoscopic metadata automatically."
+      },
+      {
+        "angle": "Reliability",
+        "copy": "API-driven detection — room list, chat API, CDN probing. Never misses a stream."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No desktop software. No command line. Just a browser extension."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it now."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Multiple quality levels from HLS master playlist. Live capture and VOD download supported. VR streams supported.",
+    "limitationsAndDisclaimers": "Model must be live and streaming publicly for live capture. VOD depends on availability. Quality depends on source. Requires email sign-in for trial. Internet connection required. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "M3U8 Downloader",
+      "Chaturbate Downloader",
+      "Stripchat Downloader",
+      "BongaCams Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Live Streams from SexChatHU (Step-by-Step Guide)",
+      "SexChatHU Downloader: Record Live Streams with One Click",
+      "How to Save SexChatHU Streams as MP4 — No Software Required",
+      "Best SexChatHU Download Extensions Compared",
+      "Download SexChatHU Streams in Any Quality — Chrome & Firefox"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from SexChatHU is tricky and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Find a Stream",
+        "description": "Navigate to SexChatHU and open a live model page"
+      },
+      {
+        "section": "Step 4: Capture",
+        "description": "In-page button, popup, or right-click context menu. Start/Stop for live, Download for VOD."
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Auto-saves to SEXCHATHU/ folder. Use context menu for fastest workflow. VR streams auto-detected."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Model must be live and public. Refresh if needed. Check extension is enabled."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected stream with quality selector and Start button",
+      "In-page download button on the video player",
+      "Download manager panel with active live capture (segment counter + elapsed time)",
+      "Right-click context menu showing Download SexChatHU Stream",
+      "Email sign-in / OTP verification screen",
+      "VR badge displayed on a VR stream detection"
+    ],
+    "iconLogoVariants": "Default icon: 16, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1b1b1b), popup screenshot, rose/pink accent (#ff4f70)",
+    "gifDemoDescription": "10-second loop: model page → player button appears → click → quality popover → select quality → live capture starts → segment counter ticking → stop → download manager shows complete"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Streams from SexChatHU — Live Capture, Any Quality",
+      "subheadline": "Download button on the player. API-driven stream detection. Live capture with start/stop. VR support. HLS to MP4 conversion. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Live Capture",
+        "description": "Record live streams in real-time. Click Start to begin, Stop when done. Saves as MP4."
+      },
+      {
+        "title": "API-Driven Detection",
+        "description": "Uses SexChatHU's room list and chat APIs plus CDN host probing. Never misses a stream."
+      },
+      {
+        "title": "VR Stream Support",
+        "description": "Detects VR streams automatically. Preserves stereoscopic metadata in the filename."
+      },
+      {
+        "title": "Quality Selection",
+        "description": "All available resolutions from the HLS master playlist. Pick your preferred quality."
+      },
+      {
+        "title": "Download Manager",
+        "description": "Real-time progress, segment counter, elapsed time, speed, cancel. Desktop notification when complete."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "Auto-saves to organized Downloads/SEXCHATHU/ folder",
+      "Automatic update notifications"
+    ],
+    "footerCta": {
+      "headline": "Ready to start recording?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, minimal, professional. Avoid explicit language in marketing copy.",
+    "bannedWords": [
+      "free porn",
+      "watch free",
+      "stream free",
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download."
+    ],
+    "brandColorHex": "#ff4f70",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"SexChatHU\" as one word with capital S, C, H, U. Reference as \"SexChatHU\" for the platform (domain is sexchat.hu)."
+  }
+}

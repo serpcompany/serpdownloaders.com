@@ -1,0 +1,587 @@
+{
+  "extension": "sexchathu-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP SexChatHU Downloader",
+    "slug": "sexchathu-downloader",
+    "geckoId": "sexchathu-downloader@serpapps.com",
+    "category": "Live Stream Downloader (Adult)",
+    "targetSites": [
+      "sexchat.hu"
+    ],
+    "targetSiteMatches": [
+      "https://sexchat.hu/*",
+      "https://www.sexchat.hu/*",
+      "https://*.sexchat.hu/*"
+    ],
+    "description": "Download SexChatHU live streams and recordings"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/sexchathu-downloader",
+    "lastUpdated": "2026-03-06",
+    "buildDate": "2026-03-04T17:30:56.759Z",
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "sexchathu-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/sexchathu-video-downloader",
+    "productPage": "https://serp.ly/sexchathu-video-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "HLS Stitching (m3u8 segment to MP4 transmux)",
+      "Direct MP4 (offscreen streaming)",
+      "Live Capture (continuous HLS recording)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from HLS master playlist variants via SEXCHATHU API + CDN host probing",
+    "qualitySorting": "By height descending",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": true,
+    "liveCaptureMode": "Continuous HLS recording with start/stop controls",
+    "vrSupport": true,
+    "vrFeatures": "Detects VR camera settings (stereoPacking, frameFormat, horizontalAngle), appends VR suffix to filename",
+    "bulkDownload": false,
+    "inPagePlayerButton": true,
+    "playerButtonTargets": [
+      "[data-testid=\"video-player\"]",
+      ".player__video-wrapper",
+      ".video-player__wrapper",
+      ".media-player",
+      "#player-root",
+      ".video-player",
+      "nearest video container"
+    ],
+    "contextMenu": true,
+    "contextMenuId": "download-sexchathu-video",
+    "contextMenuTitle": "Download SexChatHU Stream",
+    "contextMenuContexts": [
+      "page",
+      "video"
+    ],
+    "autoSave": true,
+    "downloadFolder": "SEXCHATHU/",
+    "desktopNotifications": true,
+    "videoDetection": "API-driven: SexChatHU room list API + chat API (apn2.com), inject.js HLS discovery, CDN host probing"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "offscreen"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://*/*",
+      "https://sexchat.hu/*",
+      "https://www.sexchat.hu/*",
+      "https://chat.a.apn2.com/*",
+      "https://*.sexchat.hu/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "download-manager.js",
+        "content.js",
+        "player-button.js"
+      ],
+      "matches": [
+        "https://sexchat.hu/*",
+        "https://www.sexchat.hu/*",
+        "https://*.sexchat.hu/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "MP4 streaming download + HLS segment transmuxing + Live capture recording"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (311 KB)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true
+    },
+    "pageInjection": {
+      "file": "inject.js",
+      "purpose": "SexChatHU adapter: room list API, chat API, HLS host discovery",
+      "messageType": "SEXCHATHU_PAGE_DATA",
+      "requestType": "REQUEST_SEXCHATHU_DATA"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "SexChatHU Room List (sexchat.hu/ajax/api/roomList/babes)",
+      "SexChatHU Chat API (chat.a.apn2.com/chat-api/index.php/room/getRoom)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "sexchathu-video-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/sexchathu-video-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/sexchathu-video-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": []
+  },
+  "videoDetectionAndExtraction": {
+    "streamDetection": "API-driven: room list -> chat API -> HLS address extraction",
+    "roomListApi": "https://sexchat.hu/ajax/api/roomList/babes",
+    "chatApi": "https://chat.a.apn2.com/chat-api/index.php/room/getRoom?tokenID=guest&roomID=<id>",
+    "usernameExtraction": "URL path parsing: /mypage/<lang>/<username>, fallback path segment scanning",
+    "titleSources": [
+      "displayName",
+      "modelName",
+      "modelUsername",
+      "document.title"
+    ],
+    "thumbnailSources": [
+      "meta[property=\"og:image\"]"
+    ],
+    "pageTypeDetection": "/videos?/ path -> VOD, otherwise -> live",
+    "vodVideoPattern": "/<username>/videos/<videoId>",
+    "cdnHosts": [
+      "doppiocdn.com",
+      "doppiocdn.net",
+      "stripcdnm.com",
+      "stripcdnmd.com",
+      "stripcdntmp.com",
+      "sc-cdn.net"
+    ],
+    "hlsDiscoverySources": [
+      "Performance API resource entries",
+      "__PRELOADED_STATE__",
+      "__INITIAL_STATE__",
+      "Script regex for m3u8 URLs",
+      "inject.js multi-source collection"
+    ],
+    "injectMessageType": "SEXCHATHU_PAGE_DATA",
+    "injectRequestType": "REQUEST_SEXCHATHU_DATA"
+  },
+  "formatObjectStructure": {
+    "quality": "string",
+    "url": "string",
+    "type": "hls | mp4",
+    "format": "string",
+    "height": "number | null",
+    "requestUrl": "string | null",
+    "extraParams": "object | null"
+  },
+  "hlsProcessingSpecs": {
+    "converter": "SimpleHLS2MP4Converter",
+    "maxSegmentRetries": 3,
+    "backoffBaseMs": 500,
+    "stallTimeoutMs": 30000,
+    "absoluteTimeoutMs": null,
+    "livePollIntervalMs": 1400,
+    "liveIdleLimitWithData": 35,
+    "liveIdleLimitNoData": 12,
+    "liveMaxPlaylistErrors": 8,
+    "liveFirstBatchLimit": 8,
+    "liveTickTailLimit": 4,
+    "referer": "https://sexchat.hu/",
+    "credentialDomains": [
+      "sexchat.hu",
+      "doppiocdn.*",
+      "stripcdn*",
+      "sc-cdn.net",
+      "strpst.com"
+    ]
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Video/stream detection, room metadata extraction, page data relay"
+    },
+    {
+      "component": "Player Button",
+      "files": [
+        "player-button.js"
+      ],
+      "purpose": "In-page download button with quality popover"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth, offscreen, context menu, SEXCHATHU API, Mouflon decryption, VR metadata"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "UI, quality selector, live capture start/stop, auth flow"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "MP4 streaming + HLS transmux + Live capture"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js",
+        "auth/auth-config.js",
+        "auth/auth-api.js",
+        "auth/auth-storage.js",
+        "auth/auth-telemetry.js",
+        "auth/auth-token.js"
+      ],
+      "purpose": "OTP login, entitlements, trial"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager.js"
+      ],
+      "purpose": "In-page download progress panel with live capture support"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-context SexChatHU adapter: room list API, chat API, HLS discovery"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup customizations"
+    }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (slides from -400px to 20px)",
+    "panelId": "SEXCHATHU-download-manager",
+    "cardWidth": "380px",
+    "maxHeight": "80vh",
+    "zIndex": 10000,
+    "border": "2px solid var(--brand-accent)",
+    "borderRadius": "10px",
+    "font": "sans-serif",
+    "autoHideSeconds": 3,
+    "features": [
+      "Minimize/close buttons",
+      "Per-download progress bars",
+      "Speed display",
+      "Cancel buttons",
+      "Live capture segment counter",
+      "Elapsed time display"
+    ]
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/styles.css (8.5 KB)",
+      "styles/popup-enhanced.css (17.7 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "popup-ui-overrides.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Header",
+      "Quick help banner",
+      "Activation section",
+      "Loading spinner",
+      "Error state",
+      "Video info card (with VR badge)",
+      "Quality selector",
+      "Live capture hint",
+      "Live capture status",
+      "Download button (Start/Stop for live)",
+      "Progress bar"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "sizeKB": 311,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "sizeKB": 4.2,
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "sizeKB": 3.3,
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/sexchathu-video-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/sexchathu-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "sexchathu-downloader.zip",
+        "sizeMB": 1.24
+      },
+      {
+        "platform": "Chrome",
+        "file": "sexchathu-downloader-chrome.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "sexchathu-downloader-chrome-store-sanitized.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Brave",
+        "file": "sexchathu-downloader-brave.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Edge",
+        "file": "sexchathu-downloader-edge.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Opera",
+        "file": "sexchathu-downloader-opera.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Whale",
+        "file": "sexchathu-downloader-whale.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Yandex",
+        "file": "sexchathu-downloader-yandex.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "sexchathu-downloader-firefox.zip",
+        "sizeMB": 1.16
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "sexchathu-downloader-firefox-unpacked.xpi",
+        "sizeMB": 1.15
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "test-key",
+    "ghLicenseId": "xTBDv7Igej2iWM7JjbSb",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_U5nh5xUohqJgDX",
+    "stripeProductName": "SexChatHU Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [sexchathu-downloader-monthly-9]",
+    "stripeOneTimePrice": null,
+    "stripePriceIds": [
+      "price_1T7c6CDP7AOTRcvmwtvVYnrq"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#ff4f70",
+    "brandAccentHover": "#e63d5d",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  },
+  "sexchathuSpecific": {
+    "mouflonKeyDecryption": true,
+    "mouflonFallbackKeys": {
+      "Ook7quaiNgiyuhai": "EQueeGh2kaewa3ch"
+    },
+    "metaCacheTtlMs": 15000,
+    "configCacheTtlMs": 300000,
+    "vrFrameFormatMap": {
+      "FISHEYE": "F",
+      "PANORAMIC": "P",
+      "CIRCULAR": "C"
+    },
+    "defaultCdnHosts": [
+      "doppiocdn.com",
+      "doppiocdn.net",
+      "stripcdnm.com",
+      "stripcdnmd.com",
+      "stripcdntmp.com",
+      "sc-cdn.net"
+    ],
+    "credentialDomains": [
+      "sexchat.hu",
+      "doppiocdn.*",
+      "stripcdn*",
+      "sc-cdn.net",
+      "strpst.com"
+    ],
+    "vodApi": "https://sexchat.hu/api/front/v2/users/<id>/videos",
+    "configApi": "https://sexchat.hu/api/front/v2/config"
+  }
+}

@@ -1,0 +1,562 @@
+{
+  "extension": "stripchat-vr-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP StripchatVR Downloader",
+    "slug": "stripchat-vr-downloader",
+    "geckoId": "stripchat-vr-downloader@serpapps.com",
+    "category": "Live Stream / VR Downloader (Adult)",
+    "targetSites": [
+      "vr.stripchat.com",
+      "stripchat.com"
+    ],
+    "targetSiteMatches": [
+      "https://vr.stripchat.com/*",
+      "https://stripchat.com/*",
+      "https://www.stripchat.com/*",
+      "https://*.stripchat.com/*"
+    ],
+    "description": "Download StripchatVR live streams and recordings"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/stripchat-vr-downloader",
+    "lastUpdated": "2026-03-06",
+    "buildDate": "2026-03-04T17:33:10.095Z",
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "stripchat-vr-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/stripchat-vr-video-downloader",
+    "productPage": "https://serp.ly/stripchat-vr-video-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "HLS Live Capture (real-time segment recording)",
+      "HLS Stitching (m3u8 segment to MP4 transmux)",
+      "Direct MP4 (offscreen streaming)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from HLS master manifests, Stripchat API metadata, VR camera settings",
+    "qualitySorting": "By height descending",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": true,
+    "liveStreamMethod": "Real-time HLS live capture with start/stop controls",
+    "vrSupport": true,
+    "vrFeatures": "VR camera settings (stereoPacking, frameFormat, horizontalAngle), VR filename suffixes, VR badge in UI",
+    "bulkDownload": false,
+    "inPagePlayerButton": true,
+    "playerButtonTargets": [
+      "[data-testid=\"video-player\"]",
+      ".player__video-wrapper",
+      ".video-player__wrapper",
+      ".media-player",
+      "#player-root",
+      ".video-player",
+      "nearest video container (.video-container, .player-container, .video-wrapper)"
+    ],
+    "contextMenu": true,
+    "contextMenuId": "download-stripchat-vr-video",
+    "contextMenuTitle": "Download StripchatVR Stream",
+    "contextMenuContexts": [
+      "page",
+      "video"
+    ],
+    "autoSave": true,
+    "downloadFolder": null,
+    "desktopNotifications": false,
+    "videoDetection": "Multi-source: Stripchat API, __PRELOADED_STATE__, Performance API, script regex, inject.js state monitor"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "offscreen"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://*/*",
+      "https://vr.stripchat.com/*",
+      "https://stripchat.com/*",
+      "https://www.stripchat.com/*",
+      "https://assets.striiiipst.com/*",
+      "https://*.stripchat.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "download-manager.js",
+        "content.js",
+        "player-button.js"
+      ],
+      "matches": [
+        "https://vr.stripchat.com/*",
+        "https://stripchat.com/*",
+        "https://www.stripchat.com/*",
+        "https://*.stripchat.com/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "MP4 streaming download + HLS segment transmuxing + live capture recording"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (319 KB)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true
+    },
+    "pageInjection": {
+      "file": "inject.js",
+      "purpose": "Page-context state extractor — __PRELOADED_STATE__, Performance API, Stripchat front API, HLS URL discovery",
+      "messageType": "STRIPCHAT_VR_PAGE_DATA"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "Stripchat Front API (vr.stripchat.com/api/front/v2/models/username/*/cam)",
+      "GitHub Releases API (api.github.com)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "stripchat-vr-video-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/stripchat-vr-video-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/stripchat-vr-video-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": []
+  },
+  "videoDetectionAndExtraction": {
+    "pageTypeDetection": "URL path analysis: /videos?/ = VOD, else = live",
+    "modelIdSources": [
+      "__PRELOADED_STATE__ (viewCam.model.id, viewCam.modelId)",
+      "Stripchat Front API (/api/front/v2/models/username/*/cam)"
+    ],
+    "titleSources": [
+      "displayName",
+      "modelName",
+      "modelUsername",
+      "document.title"
+    ],
+    "thumbnailSources": [
+      "meta[property=\"og:image\"]"
+    ],
+    "vrDetection": {
+      "isVrFlag": true,
+      "vrCameraSettings": "stereoPacking, frameFormat, horizontalAngle",
+      "broadcastSettings": "broadcastSettings.vrCameraSettings"
+    },
+    "formatSources": [
+      "Stripchat Front API stream metadata",
+      "__PRELOADED_STATE__ HLS hosts/URLs",
+      "Performance API resource entries",
+      "Script regex for m3u8 URLs"
+    ],
+    "scriptUrlRegex": "/https?:\\/\\/[^\"'\\s<>]+\\.m3u8[^\"'\\s<>]*/ig",
+    "cdnDefaultHosts": [
+      "doppiocdn.com",
+      "doppiocdn.net",
+      "stripcdnm.com",
+      "stripcdnmd.com",
+      "stripcdntmp.com",
+      "sc-cdn.net"
+    ],
+    "hlsMasterUrlPatterns": [
+      "https://edge-hls.{host}/hls/{modelId}_vr/master/{modelId}_vr.m3u8",
+      "https://edge-hls.{host}/hls/{modelId}/master/{modelId}_auto.m3u8"
+    ],
+    "mouflonKeyDecoding": true,
+    "injectMessageType": "STRIPCHAT_VR_PAGE_DATA"
+  },
+  "formatObjectStructure": {
+    "quality": "string (e.g. '1080p', '720p')",
+    "format": "string (e.g. 'hls')",
+    "type": "hls | mp4",
+    "url": "string",
+    "requestUrl": "string | null",
+    "extraParams": "object | null",
+    "height": "number | null",
+    "width": "number | null",
+    "bandwidth": "number | null"
+  },
+  "hlsProcessingSpecs": {
+    "converter": "SimpleHLS2MP4Converter",
+    "maxSegmentRetries": 3,
+    "backoffBaseMs": 500,
+    "stallTimeoutMs": 30000,
+    "absoluteTimeoutMs": null,
+    "livePollIntervalMs": 1400,
+    "liveIdleLimitWithData": 35,
+    "liveIdleLimitNoData": 12,
+    "liveMaxPlaylistErrors": 8,
+    "liveFirstBatchLimit": 8,
+    "liveTickTailLimit": 4,
+    "credentialMode": "include for stripchat.com, doppiocdn, stripcdn, sc-cdn.net, strpst.com; omit otherwise",
+    "referer": "https://vr.stripchat.com/"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Stream detection, VR metadata extraction, page data relay"
+    },
+    {
+      "component": "Player Button",
+      "files": [
+        "player-button.js"
+      ],
+      "purpose": "In-page download button with quality popover"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth, offscreen, context menu, Stripchat API, Mouflon key decoding, VR metadata merging"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "UI, quality selector, live capture start/stop, VR badge, auth flow"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "MP4 streaming + HLS transmux + live capture"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js"
+      ],
+      "purpose": "OTP login, entitlements, trial"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager.js"
+      ],
+      "purpose": "In-page download progress panel with live capture segment counting"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-context state extractor — __PRELOADED_STATE__, Performance API, Stripchat API"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup customizations"
+    }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (slides from -400px to 20px)",
+    "panelId": "STRIPCHATVR-download-manager",
+    "cardWidth": "380px",
+    "maxHeight": "80vh",
+    "zIndex": 10000,
+    "border": "2px solid var(--brand-accent)",
+    "borderRadius": "10px",
+    "font": "sans-serif",
+    "autoHideSeconds": 3,
+    "features": [
+      "Minimize/close buttons",
+      "Per-download progress bars",
+      "Speed display",
+      "Cancel buttons",
+      "Live capture segment counting with elapsed time"
+    ]
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/styles.css (8.5 KB)",
+      "styles/popup-enhanced.css (17.8 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "popup-ui-overrides.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Header",
+      "Quick help banner",
+      "Activation section",
+      "Loading spinner",
+      "Error state",
+      "Video info card (with VR badge)",
+      "Quality selector",
+      "Live capture hint",
+      "Live capture status",
+      "Download button (Start/Stop for live)",
+      "Progress bar"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "sizeKB": 319,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "sizeKB": 4.3,
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "sizeKB": 3.5,
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/stripchat-vr-video-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/stripchat-vr-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "stripchat-vr-downloader.zip",
+        "sizeMB": 1.24
+      },
+      {
+        "platform": "Chrome",
+        "file": "stripchat-vr-downloader-chrome.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "stripchat-vr-downloader-chrome-store-sanitized.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Brave",
+        "file": "stripchat-vr-downloader-brave.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Edge",
+        "file": "stripchat-vr-downloader-edge.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Opera",
+        "file": "stripchat-vr-downloader-opera.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Whale",
+        "file": "stripchat-vr-downloader-whale.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Yandex",
+        "file": "stripchat-vr-downloader-yandex.zip",
+        "sizeMB": 1.15
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "stripchat-vr-downloader-firefox.zip",
+        "sizeMB": 1.16
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "stripchat-vr-downloader-firefox-unpacked.xpi",
+        "sizeMB": 1.15
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "test-key (placeholder)",
+    "ghLicenseId": "xTBDv7Igej2iWM7JjbSb",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_U5nhUIqHzJrssH",
+    "stripeProductName": "Stripchat VR Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [stripchat-vr-downloader-monthly-9]",
+    "stripeOneTimePrice": null,
+    "stripePriceIds": [
+      "price_1T7c6EDP7AOTRcvmrHpk8GTT"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "32x32",
+      "file": "icons/icon32.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#ff4f70",
+    "brandAccentHover": "#e63d5d",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

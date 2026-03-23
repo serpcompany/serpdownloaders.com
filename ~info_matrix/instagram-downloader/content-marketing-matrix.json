@@ -1,0 +1,308 @@
+{
+  "extension": "instagram-downloader",
+  "productPositioning": {
+    "headline": "Download Instagram Videos, Photos & Reels — One Click, Best Quality",
+    "elevatorPitch": "SERP Instagram Downloader is a browser extension that saves videos, photos, Reels, Stories, and post text from Instagram to your computer. Browse Instagram normally, and the extension adds download buttons directly on posts. Click to save any media as MP4 or its original image format. No external tools, no copy-pasting links. Free trial included.",
+    "valueProposition": "Purpose-built for Instagram with multi-source video detection (DOM, GraphQL API, CDN monitoring, inline data), in-page download buttons on every post, carousel image support, Reels and Stories download, and automatic text export. Everything happens in your browser — no external tools required.",
+    "targetAudience": "Instagram users who want to save content for offline viewing, content creators who need to archive their own posts, social media managers who need to repurpose content, and anyone who wants a simple way to download from Instagram.",
+    "useCases": [
+      "Save Instagram Reels for offline viewing",
+      "Download photos from carousel posts",
+      "Archive your own Instagram content",
+      "Save post text and captions",
+      "Download Stories before they expire",
+      "Bulk-download all visible media on a profile or feed page",
+      "Save IGTV videos"
+    ],
+    "painPointsAddressed": [
+      "Instagram does not provide a native download button for posts",
+      "Reels and Stories are ephemeral or hard to save",
+      "Carousel posts require downloading multiple images individually",
+      "Copy-pasting URLs into third-party websites is cumbersome and risky",
+      "Generic downloaders often fail because Instagram uses dynamic CDN URLs and requires authentication",
+      "Users want to save post captions along with media"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download Instagram videos, Reels, photos & Stories. In-page buttons on every post. Saves as MP4 or original format. Free trial.",
+    "changelog": "v3.0.0 — Multi-source video detection, in-page overlay buttons, Instagram GraphQL API integration, carousel support, text export, download manager.",
+    "fullDescription": "SERP Instagram Downloader makes it easy to save videos, photos, Reels, Stories, and post text from Instagram to your computer.\n\nHow it works: Browse Instagram normally. The extension adds download buttons directly on every post, Reel, and image. Click a button to save the media instantly. Or use the extension popup to see all detected media on the current page and download them at once.\n\nIt handles Instagram's dynamic CDN URLs, authentication requirements, and multiple media sources automatically. Videos from Reels and posts are saved as MP4. Photos keep their original format (JPEG, PNG, WebP). Post text is saved as a plain text file with the post URL and timestamp.\n\nKey features:\n- In-page download buttons on every post, Reel, and image\n- Download Instagram Reels as MP4 video files\n- Save all photos from carousel posts — including multi-image downloads\n- Download Instagram Stories before they expire\n- Save IGTV videos\n- Export post text and captions as text files\n- Bulk download all visible media with \"Download Visible\" button\n- Multi-source video detection: DOM, GraphQL API, CDN monitoring, inline data\n- Automatic best-quality selection\n- Organized downloads in an Instagram Downloader/ subfolder\n- Dark-themed popup UI with video/image/text tabs\n- Free trial downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to Instagram.com and browse normally\n3. Click the download button on any post, Reel, or image\n4. Or open the popup to see all detected media and download them\n\nSign in with your email to unlock free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "In-page download buttons on every Instagram post, Reel, and image",
+      "Download Reels as MP4 video files in best available quality",
+      "Save all photos from carousel posts with one click",
+      "Download Instagram Stories before they disappear",
+      "Save IGTV videos as MP4",
+      "Export post text and captions as plain text files",
+      "Bulk \"Download Visible\" button for all media on the page",
+      "Multi-source detection: DOM video, GraphQL API, CDN, inline script data",
+      "Automatic best-quality selection with HD preference",
+      "Organized folder structure: Instagram Downloader/{source}/{title}",
+      "Tabbed popup showing Videos, Images, and Text counts",
+      "Configurable download manager with progress tracking",
+      "Free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP Instagram Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Browse",
+        "description": "Go to Instagram.com and scroll through your feed, visit profiles, or open Reels"
+      },
+      {
+        "step": 3,
+        "title": "Click",
+        "description": "Use the in-page download button on any post, the popup for bulk actions, or the per-image/video overlay buttons"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "Media saves instantly as MP4, JPEG, or text to your Instagram Downloader/ folder"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I download an Instagram Reel?",
+        "answer": "Navigate to any Reel on Instagram. The extension adds a \"Download video\" button directly on the Reel. Click it and the video saves as MP4. You can also open the extension popup for more options."
+      },
+      {
+        "question": "Can I download all images from a carousel post?",
+        "answer": "Yes. Carousel posts show a \"Download images (N)\" button where N is the number of images. Click to download all of them at once. You can also download individual images using the per-image download icon."
+      },
+      {
+        "question": "What about Instagram Stories?",
+        "answer": "The extension detects Stories from their URL pattern and allows downloading videos and images from visible Stories."
+      },
+      {
+        "question": "What formats are downloaded files saved in?",
+        "answer": "Videos are saved as MP4 files. Images keep their original format (JPEG, PNG, WebP, etc.). Post text is saved as a plain text file with the post URL and timestamp."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Media saves to an Instagram Downloader subfolder inside your browser's default Downloads directory, organized by source and title."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "Sign in with your email to get free trial downloads. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Why is the extension not detecting a video?",
+        "answer": "Make sure the post or Reel is visible and loaded on the page. Try scrolling to it or refreshing. For feed posts, the video may need to start playing. Use the \"Rescan\" button in the popup if needed."
+      },
+      {
+        "question": "Can I download from private accounts?",
+        "answer": "The extension works with content visible in your browser. If you are logged in and can see a private account's posts, the extension can detect and download them."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. All media processing happens locally in your browser. The extension reads Instagram's public CDN URLs and your own session data. Authentication uses secure OTP — no passwords stored. No data is sent to third-party servers."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "instagram downloader",
+      "download instagram",
+      "instagram video downloader",
+      "save instagram reels",
+      "instagram photo download"
+    ],
+    "longTailKeywords": [
+      "how to download instagram reels",
+      "download instagram videos chrome extension",
+      "save instagram stories",
+      "download instagram carousel photos",
+      "instagram downloader browser extension",
+      "download instagram post to mp4"
+    ],
+    "seoTitle": "Instagram Downloader — Save Videos, Reels & Photos | SERP",
+    "metaDescription": "Download Instagram videos, Reels, photos, Stories & carousels with one click. In-page buttons. Best quality MP4. Chrome, Firefox, Edge. Free trial.",
+    "urlSlug": "/instagram-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download Instagram Videos",
+    "googleAdsDescription": "Save Instagram Reels, photos & Stories as MP4. In-page buttons. Quality selection. Free trial.",
+    "socialMediaHook": "Want to save Instagram Reels and photos? This extension adds download buttons right on the posts. One click, done.",
+    "cta": "Try Free Downloads",
+    "competitorComparisons": "Multi-source detection (GraphQL API, DOM, CDN, inline data) catches videos that web-based tools miss. In-page overlay buttons, carousel support, text export, and bulk download. No URL copy-pasting required.",
+    "adAngles": [
+      {
+        "angle": "Simplicity",
+        "copy": "Download buttons right on the post. Click and save. That simple."
+      },
+      {
+        "angle": "Reels",
+        "copy": "Save Instagram Reels as MP4 — one click, best quality, no websites needed."
+      },
+      {
+        "angle": "Carousel",
+        "copy": "Download all photos from carousel posts in one click. No more saving one by one."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No copy-pasting URLs. No sketchy websites. Just a browser extension."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "Free trial downloads. No credit card. Try it now."
+      },
+      {
+        "angle": "Stories",
+        "copy": "Download Instagram Stories before they disappear forever."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 video output with automatic best-quality selection. Images in original format (JPEG, PNG, WebP, AVIF, GIF). Text as plain .txt files.",
+    "limitationsAndDisclaimers": "Content must be visible and loaded in the browser. Quality depends on what Instagram serves. Requires email sign-in for trial. Internet connection required. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "Facebook Downloader",
+      "TikTok Downloader",
+      "YouTube Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Instagram Reels — Step-by-Step Guide (2026)",
+      "Instagram Downloader: Save Videos, Photos & Stories with One Click",
+      "How to Save Instagram Photos from Carousel Posts — No Software Required",
+      "Best Instagram Download Extensions for Chrome & Firefox (2026)",
+      "Download Instagram Stories Before They Expire — Complete Guide",
+      "How to Download Instagram Videos as MP4 — Browser Extension Method"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from Instagram is tricky and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection. Instagram account."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification for free trial"
+      },
+      {
+        "section": "Step 3: Browse Instagram",
+        "description": "Navigate to feed, profiles, Reels, or Stories"
+      },
+      {
+        "section": "Step 4: Download",
+        "description": "In-page buttons for individual media, popup for bulk download"
+      },
+      {
+        "section": "Downloading Reels",
+        "description": "How to save Instagram Reels as MP4"
+      },
+      {
+        "section": "Downloading Carousel Posts",
+        "description": "How to save all images from multi-photo posts"
+      },
+      {
+        "section": "Downloading Stories",
+        "description": "How to save Stories before they expire"
+      },
+      {
+        "section": "Saving Post Text",
+        "description": "How to export captions and text"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Use Download Visible for bulk. Use Rescan if media not detected. Files organize into Instagram Downloader/ folder."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Scroll to load content. Refresh if needed. Check extension is enabled."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected videos, images, and text counts with tabbed interface",
+      "In-page 'Download video' overlay button on an Instagram Reel",
+      "Per-image download icon buttons on carousel post images",
+      "'Download images (3)' overlay button on a carousel post",
+      "'Save text' button on a text-heavy Instagram post",
+      "Email sign-in / OTP verification screen"
+    ],
+    "iconLogoVariants": "Default icon: 16, 48, 128px.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#0F1626), popup screenshot showing tabs with detected media, blue accent (#0A8FDC)",
+    "gifDemoDescription": "10-second loop: Instagram feed -> scroll -> overlay buttons appear on posts -> click Download video on a Reel -> download starts -> click Download images (3) on carousel -> images download"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Instagram Videos, Photos & Reels — One Click, Best Quality",
+      "subheadline": "Download buttons on every post. Multi-source video detection. Carousel support. Reels, Stories, and IGTV. No external tools.",
+      "ctaButton": "Try Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "In-Page Download Buttons",
+        "description": "Download buttons appear directly on posts, Reels, and images. Click and save — no popup needed."
+      },
+      {
+        "title": "Reels & Stories",
+        "description": "Save Reels as MP4 video. Download Stories before they disappear. IGTV supported too."
+      },
+      {
+        "title": "Carousel Support",
+        "description": "Download all images from multi-photo posts with one click. Individual per-image buttons also available."
+      },
+      {
+        "title": "Multi-Source Detection",
+        "description": "Finds media from DOM video elements, Instagram's GraphQL API, CDN entries, and inline script data. Never misses a post."
+      },
+      {
+        "title": "Text Export",
+        "description": "Save post captions and text as plain text files. Includes post URL and timestamp."
+      },
+      {
+        "title": "Bulk Download",
+        "description": "\"Download Visible\" button in the popup saves all detected media on the current page at once."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "Organized downloads in Instagram Downloader/ folder structure",
+      "No data sent to third-party servers",
+      "Supports mobile Instagram domain (m.instagram.com)"
+    ],
+    "footerCta": {
+      "headline": "Ready to start downloading from Instagram?",
+      "button": "Install Free — Trial Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Professional, clear, mainstream-friendly. Instagram is a mainstream platform — keep copy clean and approachable.",
+    "bannedWords": [
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack",
+      "hack",
+      "steal"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download. Respect creators' rights."
+    ],
+    "brandColorHex": "#0A8FDC",
+    "brandBackgroundHex": "#0F1626",
+    "targetPlatformBranding": "Use \"Instagram\" (capital I). Reference as \"Instagram.com\" for the website. Use \"Reels\" (capital R) when referring to the feature. Use \"Stories\" (capital S) when referring to the feature."
+  }
+}

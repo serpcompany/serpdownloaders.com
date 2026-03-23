@@ -1,0 +1,272 @@
+{
+  "extension": "redgifs-downloader",
+  "productPositioning": {
+    "headline": "Download RedGifs Videos — One Click, Any Quality",
+    "elevatorPitch": "SERP RedGifs Downloader is a browser extension that saves videos and GIFs from RedGifs.com to your computer. Browse to any video, click the download button on the player or the extension icon, pick your quality, and it saves as MP4. No extra software needed. 3 free downloads included.",
+    "valueProposition": "Purpose-built for RedGifs with direct API integration (v2 token-based access), in-page download button, feed scanning for multiple videos, and automatic HLS-to-MP4 conversion. Everything happens in your browser — no external tools required.",
+    "targetAudience": "RedGifs users who want to save videos and GIFs for offline viewing. Non-technical users who want a simple, reliable download solution.",
+    "useCases": [
+      "Save a video or GIF from RedGifs for offline viewing",
+      "Download in your preferred quality",
+      "Build a personal library",
+      "Use the in-page player button for one-click downloads without the popup",
+      "Right-click any video to download via context menu",
+      "Browse feed pages and download multiple videos"
+    ],
+    "painPointsAddressed": [
+      "RedGifs uses HLS streaming — can't right-click and save",
+      "RedGifs API requires temporary bearer tokens for access",
+      "Generic downloaders often miss the streams or fail authentication",
+      "Users don't want desktop apps or command-line tools",
+      "No easy quality selection on streaming sites",
+      "Feed pages contain many videos but no native download option"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download videos and GIFs from RedGifs.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
+    "changelog": "v4.0.1 — RedGifs API v2 integration, in-page download button, feed scanning, download manager with progress tracking, side panel UI.",
+    "fullDescription": "SERP RedGifs Downloader makes it easy to save videos and GIFs from RedGifs.com to your computer.\n\nHow it works: Go to any video page on RedGifs, and either click the download button on the player or the extension icon in your toolbar. The extension connects to the RedGifs API, detects available formats, shows quality options, and downloads the video as a standard MP4 file.\n\nIt handles HLS streaming and API authentication automatically — no external tools, no command line, no technical knowledge required. Videos save directly to your Downloads folder in an organized RedGifs subfolder.\n\nKey features:\n- Automatic video detection via RedGifs API and page scanning\n- In-page download button right on the video player\n- Converts HLS streams to standard MP4 files in your browser\n- Quality selection from all available resolutions\n- Real-time download progress with speed indicators\n- Right-click context menu for quick downloads\n- Desktop notifications when downloads complete\n- Side panel UI with video, image, and text tabs\n- Feed page scanning — detect and download multiple videos\n- Dark-themed UI with sky blue accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to RedGifs.com and find a video\n3. Click the download button on the player or the extension icon\n4. Select quality and download — saved as MP4\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "RedGifs API v2 integration — direct authenticated access to video formats",
+      "In-page download button built right into the video player",
+      "Converts HLS streams to downloadable MP4 files in-browser",
+      "Quality selector with all available resolutions sorted by quality",
+      "Feed page scanning — detects multiple videos on browse and search pages",
+      "Real-time progress bar with download speed and file size",
+      "Right-click context menu — Download RedGifs Video",
+      "Desktop notifications when downloads complete",
+      "Auto-saves to organized RedGifs/ subfolder in Downloads",
+      "Side panel UI with Videos, Images, and Text tabs",
+      "Dark UI with sky blue accents — clean and unobtrusive",
+      "3 free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP RedGifs Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Browse",
+        "description": "Navigate to RedGifs.com and find any video or GIF"
+      },
+      {
+        "step": 3,
+        "title": "Click",
+        "description": "Use the in-page download button on the player, the extension popup, or right-click context menu"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "Pick your quality and hit Download — video saves as MP4 to your Downloads/RedGifs folder"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I download a video?",
+        "answer": "Go to any video page on RedGifs.com. Then click the download button on the player, click the extension icon, or right-click and select \"Download RedGifs Video.\""
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "The extension retrieves all available qualities from the RedGifs API — typically multiple resolutions. Formats are sorted by quality (highest first), with MP4 preferred over HLS."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Videos automatically save to a RedGifs subfolder inside your browser's default Downloads directory."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Can I download from feed pages?",
+        "answer": "Yes. The extension scans feed and search pages, detecting multiple videos. Use the side panel to see all detected videos, images, and text."
+      },
+      {
+        "question": "Why isn't the extension finding my video?",
+        "answer": "Make sure you are on a RedGifs.com page. If the video is not detected, try refreshing the page. The extension needs the page to fully load before detection works."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. Video processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "redgifs downloader",
+      "download redgifs",
+      "redgifs video download",
+      "save redgifs videos"
+    ],
+    "longTailKeywords": [
+      "how to download videos from redgifs",
+      "redgifs downloader chrome extension",
+      "download redgifs to mp4",
+      "save redgifs videos browser",
+      "redgifs gif downloader"
+    ],
+    "seoTitle": "RedGifs Downloader — Save Videos as MP4 | SERP",
+    "metaDescription": "Download videos and GIFs from RedGifs.com with one click. Auto-detects HLS streams, converts to MP4. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/redgifs-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download RedGifs Videos",
+    "googleAdsDescription": "Save RedGifs videos as MP4. In-page button. Quality selection. Feed scanning. 3 free downloads.",
+    "socialMediaHook": "Can't save videos from RedGifs? This extension adds a download button right on the player. One click, MP4, done.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Direct RedGifs API v2 integration with token authentication catches streams that generic tools miss. In-page player button, feed scanning, context menu, side panel UI, desktop notifications, and organized auto-save folder.",
+    "adAngles": [
+      {
+        "angle": "Simplicity",
+        "copy": "Download button. Right on the player. Click it. Done."
+      },
+      {
+        "angle": "Reliability",
+        "copy": "Direct API integration with RedGifs. Authenticated access. Never misses a stream."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No desktop software. No command line. Just a browser extension."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it now."
+      },
+      {
+        "angle": "Feed Scanning",
+        "copy": "Browse feeds and search results. Download any video you see."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Multiple quality levels retrieved from RedGifs API. HLS and direct MP4 supported.",
+    "limitationsAndDisclaimers": "Quality depends on source. Requires email sign-in for trial. Internet connection required. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "M3U8 Downloader",
+      "XHamster Downloader",
+      "PornHub Downloader",
+      "XVideos Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Videos from RedGifs (Step-by-Step Guide)",
+      "RedGifs Downloader: Save Videos with One Click",
+      "How to Save RedGifs Videos as MP4 — No Software Required",
+      "Best RedGifs Download Extensions Compared",
+      "Download RedGifs Videos in Any Quality — Chrome & Firefox"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from RedGifs is tricky (HLS streaming, API authentication) and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Find Your Video",
+        "description": "Navigate to RedGifs.com and browse to a video"
+      },
+      {
+        "section": "Step 4: Download",
+        "description": "In-page button, popup/side panel, or right-click context menu"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Auto-saves to RedGifs/ folder. Desktop notifications on complete. Use the side panel for feed pages. Context menu for fastest workflow."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Refresh if video not detected. Check extension is enabled. Make sure you are on RedGifs.com."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension side panel showing detected videos with quality selector and download button",
+      "In-page download button on the video player",
+      "Download manager panel with active download progress",
+      "Right-click context menu showing Download RedGifs Video",
+      "Email sign-in / OTP verification screen",
+      "Feed page with multiple detected videos in the side panel"
+    ],
+    "iconLogoVariants": "Default icon: 16, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1b1b1b), popup screenshot, sky blue accent (#0ea5e9)",
+    "gifDemoDescription": "8-second loop: video page -> player button appears -> click -> side panel opens with detected content -> download -> progress -> complete notification"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Videos from RedGifs — One Click, Any Quality",
+      "subheadline": "Download button on the player. Direct API integration. HLS to MP4 conversion. Feed scanning. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "In-Page Download Button",
+        "description": "Appears right on the video player. Click and save — no popup needed."
+      },
+      {
+        "title": "RedGifs API Integration",
+        "description": "Connects directly to the RedGifs API with authenticated access. Retrieves all available formats reliably."
+      },
+      {
+        "title": "Quality Selection",
+        "description": "All available resolutions sorted by quality. MP4 preferred, HLS converted automatically."
+      },
+      {
+        "title": "Feed Scanning",
+        "description": "Browse feeds and search results. The side panel shows all detected videos, images, and text on the page."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "Auto-saves to organized Downloads/RedGifs/ folder",
+      "Automatic update notifications"
+    ],
+    "footerCta": {
+      "headline": "Ready to start downloading?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, minimal, professional. Avoid explicit language in marketing copy.",
+    "bannedWords": [
+      "free porn",
+      "watch free",
+      "stream free",
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download."
+    ],
+    "brandColorHex": "#0ea5e9",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"RedGifs\" as one word with capital R and G. Reference as \"RedGifs.com\" for the website."
+  }
+}

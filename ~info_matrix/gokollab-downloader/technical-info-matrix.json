@@ -1,0 +1,689 @@
+{
+  "extension": "gokollab-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP GoKollab DL",
+    "slug": "gokollab-downloader",
+    "geckoId": null,
+    "category": "Video / Media Downloader (Education & Collaboration Platforms)",
+    "targetSites": [
+      "gokollab.com",
+      "clientclub.net",
+      "GoHighLevel client portals"
+    ],
+    "targetSiteMatches": [
+      "*://*/*"
+    ],
+    "description": "Download videos from GoKollab. Supports downloading Loom, YouTube, Vimeo, Wistia embeds where available."
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/gokollab-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": null,
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": false,
+    "storeSanitizedFile": null,
+    "githubReleasesRepo": "serpapps/gokollab-downloader",
+    "productPage": "https://serp.ly/gokollab-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Direct MP4/WebM download",
+      "HLS stitching (offscreen FastStream)",
+      "Platform-specific API extraction (Loom, Vimeo, YouTube, Wistia)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Per-platform quality extraction from Loom, Vimeo, YouTube, Wistia, GoHighLevel native video",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": true,
+    "bulkDownloadMode": "Download Visible — downloads all detected assets on page",
+    "inPagePlayerButton": false,
+    "contextMenu": false,
+    "autoSave": true,
+    "autoSaveMode": "chrome.downloads.download() with conflictAction: uniquify, saveAs: false",
+    "downloadFolder": null,
+    "desktopNotifications": false,
+    "videoDetection": "Multi-platform: Loom, Vimeo, YouTube, Wistia, GoHighLevel native, Circle HLS, linked video URLs; gated by HighLevel platform markers",
+    "imageGifDetection": true,
+    "textExtraction": true,
+    "platformGating": "Content script only activates on verified GoKollab/HighLevel pages via DOM markers"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "tabs",
+      "scripting",
+      "offscreen",
+      "cookies",
+      "declarativeNetRequestWithHostAccess"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://vimeo.com/*",
+      "https://*.vimeo.com/*",
+      "https://*.vimeocdn.com/*",
+      "https://*.cloudfront.net/*",
+      "https://unpkg.com/*",
+      "https://api.gumroad.com/*",
+      "https://player.vimeo.com/*",
+      "https://www.loom.com/*",
+      "https://*.loom.com/*",
+      "https://*.loomcdn.com/*",
+      "https://www.youtube.com/*",
+      "https://*.youtube.com/*",
+      "https://youtu.be/*",
+      "https://*.googlevideo.com/*",
+      "https://*.googleapis.com/*",
+      "https://wistia.com/*",
+      "https://*.wistia.com/*",
+      "https://wistia.net/*",
+      "https://*.wistia.net/*",
+      "https://fast.wistia.net/*",
+      "https://fast.wistia.com/*",
+      "https://*.b-cdn.net/*",
+      "https://*.kajabi.com/*",
+      "https://kajabi.com/*",
+      "https://*.mykajabi.com/*",
+      "https://*.kax16.com/*",
+      "https://*.kxcdn.com/*",
+      "https://content.apisystem.tech/*",
+      "https://highleveltechie.com/*",
+      "https://*.highleveltechie.com/*",
+      "https://clientclub.net/*",
+      "https://*.clientclub.net/*",
+      "https://gokollab.com/*",
+      "https://*.gokollab.com/*",
+      "*://*/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "content-enhanced-modular.js"
+      ],
+      "matches": [
+        "*://*/*"
+      ],
+      "allFrames": true,
+      "runAt": "document_idle",
+      "excludeMatches": [
+        "https://www.skool.com/*",
+        "https://*.skool.com/*",
+        "https://stream.video.skool.com/*",
+        "https://*.video.skool.com/*",
+        "https://kajabi.com/*",
+        "https://*.kajabi.com/*",
+        "https://*.mykajabi.com/*",
+        "https://*.kax16.com/*",
+        "https://*.kxcdn.com/*",
+        "https://circle.so/*",
+        "https://*.circle.so/*",
+        "https://circle.com/*",
+        "https://*.circle.com/*"
+      ]
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen-faststream.html",
+      "js": [
+        "offscreen-faststream-legacy.js",
+        "indexed-db.js"
+      ],
+      "purpose": "HLS/FastStream media processing and segment stitching",
+      "idleTimeoutMs": 25000,
+      "readySignal": "FASTSTREAM_OFFSCREEN_READY",
+      "errorSignal": "OFFSCREEN_ERROR"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (319 KB)",
+    "youtubeModule": "modules/youtube/ (client.js, constants.js, media-assembler.js, sabr.js, signature.js, ump.js, utils.js)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true,
+      "file": "indexed-db.js",
+      "purpose": "Segment caching"
+    },
+    "pageInjection": null,
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "Gumroad API (api.gumroad.com)",
+      "Loom CDN (loomcdn.com)",
+      "Vimeo Player API (player.vimeo.com)",
+      "YouTube (googlevideo.com, googleapis.com)",
+      "Wistia (fast.wistia.net, fast.wistia.com)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "gokollab-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/gokollab-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/gokollab-downloader/releases/latest"
+    },
+    "dnrRules": {
+      "enabled": true,
+      "targets": [
+        "googlevideo headers",
+        "YouTubei headers",
+        "Skool video hosts",
+        "BunnyCDN (b-cdn.net)",
+        "apisystem.tech (GHL content)"
+      ]
+    },
+    "csp": "script-src 'self'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+  },
+  "platformGating": {
+    "gatingMarkers": [
+      "meta[name=\"x-cp-build-version\"]",
+      "#clientportal-siteCustomHeader",
+      "script[src*=\"clientclub.net\"]",
+      "link[href*=\"clientclub.net\"]"
+    ],
+    "gatingMessage": "GATING_DIAGNOSTIC",
+    "backgroundTabCheck": {
+      "function": "isGoKollabActiveTab()",
+      "hostnameAllowlist": [
+        "clientclub.net",
+        "mykajabi.com",
+        "gohighlevel.com"
+      ],
+      "domMarkerInspection": true
+    },
+    "blockedHostsRuntime": [
+      "skool.com",
+      "video.skool.com",
+      "circle.so",
+      "circle.com"
+    ],
+    "overlayCleanup": {
+      "selector": "[data-clientclub-overlay]",
+      "intervalMs": 1500,
+      "mutationObserverFallback": true,
+      "observerTimeoutMs": 10000
+    }
+  },
+  "supportedVideoPlatforms": [
+    {
+      "platform": "Loom",
+      "detector": "detectors/loom-detector.js",
+      "handler": "handlers/loom-handler.js",
+      "detectionMethod": "Iframe src*=\"loom.com/embed\" or loom.com/share, video ID regex, thumbnail from script tags"
+    },
+    {
+      "platform": "Vimeo",
+      "detector": "detectors/vimeo-detector.js",
+      "handler": "handlers/vimeo-handler.js",
+      "detectionMethod": "window.playerConfig, iframe, data attributes, player API"
+    },
+    {
+      "platform": "YouTube",
+      "detector": "detectors/youtube-detector.js",
+      "handler": "handlers/youtube-handler.js",
+      "detectionMethod": "Iframe embeds, direct links, video ID patterns"
+    },
+    {
+      "platform": "Wistia",
+      "detector": "detectors/wistia-detector.js",
+      "handler": "handlers/wistia-handler.js",
+      "detectionMethod": "Iframe src, embed/medias URL patterns, wmediaid parameter"
+    },
+    {
+      "platform": "GoHighLevel",
+      "detector": "detectors/gohighlevel-detector.js",
+      "handler": "handlers/gohighlevel-handler.js",
+      "detectionMethod": ".video-player-container, Plyr wrapper, native <video>, HLS m3u8 from Performance API"
+    },
+    {
+      "platform": "Circle",
+      "detector": "detectors/circle-detector.js",
+      "handler": "handlers/circle-handler.js",
+      "detectionMethod": "media-theme, hls-video elements, shadow DOM traversal"
+    },
+    {
+      "platform": "Linked Videos",
+      "detector": "detectors/video-detector.js (detectLinkedVideo)",
+      "handler": null,
+      "detectionMethod": "<a href> matching Loom/Vimeo/YouTube/Wistia/m3u8/mp4 URL regex patterns"
+    }
+  ],
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content-enhanced-modular.js"
+      ],
+      "purpose": "Platform gating, multi-platform video detection, overlay management, asset scanning"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth gating, offscreen management, DNR rules, handler dispatch"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup-enhanced.js"
+      ],
+      "purpose": "UI with asset tabs (Videos, Images/GIFs, Text), quality selection, bulk download"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen-faststream.html",
+        "offscreen-faststream-legacy.js"
+      ],
+      "purpose": "HLS/FastStream media processing"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js",
+        "auth/auth-api.js",
+        "auth/auth-config.js",
+        "auth/auth-storage.js",
+        "auth/auth-telemetry.js",
+        "auth/auth-token.js"
+      ],
+      "purpose": "OTP login, entitlements, trial management"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager/download-manager.js",
+        "download-manager/download-manager-config.js",
+        "download-manager/download-manager-state.js",
+        "download-manager/download-manager-ui.js",
+        "download-manager/download-task-registry.js",
+        "download-manager/integration-helper.js"
+      ],
+      "purpose": "In-page download progress panel"
+    },
+    {
+      "component": "Video Detector Coordinator",
+      "files": [
+        "detectors/video-detector.js"
+      ],
+      "purpose": "Unified detection across all platform detectors"
+    },
+    {
+      "component": "Loom Detector",
+      "files": [
+        "detectors/loom-detector.js"
+      ],
+      "purpose": "Loom embed/link detection, thumbnail extraction"
+    },
+    {
+      "component": "Vimeo Detector",
+      "files": [
+        "detectors/vimeo-detector.js"
+      ],
+      "purpose": "Vimeo playerConfig, iframe, data-attribute detection"
+    },
+    {
+      "component": "YouTube Detector",
+      "files": [
+        "detectors/youtube-detector.js"
+      ],
+      "purpose": "YouTube embed/link detection, video ID extraction"
+    },
+    {
+      "component": "Wistia Detector",
+      "files": [
+        "detectors/wistia-detector.js"
+      ],
+      "purpose": "Wistia iframe, embed, source element detection"
+    },
+    {
+      "component": "GoHighLevel Detector",
+      "files": [
+        "detectors/gohighlevel-detector.js"
+      ],
+      "purpose": "GoHighLevel native video (Plyr, HLS via Performance API)"
+    },
+    {
+      "component": "Circle Detector",
+      "files": [
+        "detectors/circle-detector.js"
+      ],
+      "purpose": "Circle HLS video with shadow DOM traversal"
+    },
+    {
+      "component": "Loom Handler",
+      "files": [
+        "handlers/loom-handler.js"
+      ],
+      "purpose": "Loom download orchestration"
+    },
+    {
+      "component": "Vimeo Handler",
+      "files": [
+        "handlers/vimeo-handler.js"
+      ],
+      "purpose": "Vimeo download orchestration"
+    },
+    {
+      "component": "YouTube Handler",
+      "files": [
+        "handlers/youtube-handler.js"
+      ],
+      "purpose": "YouTube download orchestration"
+    },
+    {
+      "component": "Wistia Handler",
+      "files": [
+        "handlers/wistia-handler.js"
+      ],
+      "purpose": "Wistia download orchestration"
+    },
+    {
+      "component": "GoHighLevel Handler",
+      "files": [
+        "handlers/gohighlevel-handler.js"
+      ],
+      "purpose": "GoHighLevel download orchestration"
+    },
+    {
+      "component": "Circle Handler",
+      "files": [
+        "handlers/circle-handler.js"
+      ],
+      "purpose": "Circle download orchestration"
+    },
+    {
+      "component": "Skool Handler",
+      "files": [
+        "handlers/skool-handler.js"
+      ],
+      "purpose": "Skool download orchestration (blocked via exclude_matches)"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup header/status customizations"
+    },
+    {
+      "component": "Bootstrap",
+      "files": [
+        "bootstrap.js"
+      ],
+      "purpose": "Extension bootstrap"
+    },
+    {
+      "component": "Log",
+      "files": [
+        "log.js"
+      ],
+      "purpose": "Lightweight log helper for detectors"
+    }
+  ],
+  "downloadManagerPanel": {
+    "panelId": "skool-download-manager",
+    "position": "Fixed top-right (top: 20px, right: 20px)",
+    "cardWidth": "380px (responsive: Math.min(innerWidth - 40, 340) on small screens)",
+    "maxHeight": "Math.min(window.innerHeight - 80, 500)px",
+    "zIndex": 2147483647,
+    "background": "#1b1b1b",
+    "border": "2px solid #007acc",
+    "borderRadius": "8px",
+    "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
+    "autoHideMs": 8000,
+    "lingerAfterCompleteMs": 2000,
+    "maxConcurrentDownloads": 3,
+    "features": [
+      "Collapse/close buttons",
+      "Per-download progress bars",
+      "Speed display",
+      "Cancel buttons",
+      "Cancel all",
+      "Clear completed",
+      "Cross-tab sync"
+    ]
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/popup-enhanced.css (14.4 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup-enhanced.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "popup-ui-overrides.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Boot splash",
+      "Header (SERP Labs kicker + GoKollab Downloader)",
+      "Trial banner",
+      "Activation section",
+      "Stats grid (Videos / Images-GIFs / Text)",
+      "Tab buttons (Videos / Images-GIFs / Text)",
+      "Download Visible button",
+      "Asset list",
+      "Status footer"
+    ],
+    "tabs": [
+      "videos",
+      "images",
+      "texts"
+    ],
+    "popupTitle": "SERP GoKollab DL",
+    "pageTitle": "Video Downloader for GoKollab"
+  },
+  "buildAndRelease": {
+    "buildTool": "build.js (Node.js, PowerShell Compress-Archive)",
+    "buildLogLevel": "error (patched from debug during build)",
+    "watermarked": false,
+    "githubRelease": true,
+    "githubRepo": "serpapps/gokollab-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/gokollab-downloader/",
+    "outputDirectory": "release/",
+    "outputFile": "gokollab-downloader.zip"
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": null,
+    "ghLicenseId": null,
+    "licenseCheckWorker": null,
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_TadNizz3EowTtF",
+    "stripeProductName": "Gokollab Downloader",
+    "stripeMonthlyPrice": "USD 17.00/month [Subscription - Gokollab Downloader]",
+    "stripeOneTimePrice": "USD 17.00/one_time",
+    "stripePriceIds": [
+      "price_1SdS6nDP7AOTRcvmjvQU4RIn",
+      "price_1SrVARDP7AOTRcvmo7th7sk6"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < info(20) < warn(30) < error(40) < silent(90)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#0ea5e9",
+    "brandAccentHover": "#0b73b9",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "YouTube",
+      "path": "modules/youtube/",
+      "purpose": "YouTube client, SABR, signature, UMP, media assembler",
+      "files": [
+        "client.js",
+        "constants.js",
+        "media-assembler.js",
+        "sabr.js",
+        "signature.js",
+        "ump.js",
+        "utils.js"
+      ]
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "sizeKB": 319,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "sizeKB": 4.3,
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "sizeKB": 3.5,
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "sizeKB": 1.2,
+      "purpose": "i18n support"
+    }
+  ]
+}

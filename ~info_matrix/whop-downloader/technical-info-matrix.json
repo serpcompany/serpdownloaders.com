@@ -1,0 +1,658 @@
+{
+  "extension": "whop-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP Whop Downloader",
+    "slug": "whop-downloader",
+    "geckoId": "whop-downloader@serpapps.com",
+    "category": "Content Downloader (SaaS/Creator Platform)",
+    "targetSites": [
+      "whop.com"
+    ],
+    "targetSiteMatches": [
+      "https://whop.com/*",
+      "https://*.whop.com/*"
+    ],
+    "description": "Download Whop videos directly to your computer"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/whop-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": null,
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "whop-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/whop-video-downloader",
+    "productPage": "https://serp.ly/whop-video-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Direct download (chrome.downloads)",
+      "HLS Stitching (m3u8 segment to MP4 transmux via offscreen)"
+    ],
+    "qualitySelection": false,
+    "qualityMode": "Downloads best available quality automatically",
+    "qualitySorting": null,
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": true,
+    "bulkDownloadMode": "Download Visible — downloads all detected assets of the active tab (videos, images, or text)",
+    "inPageOverlayButtons": true,
+    "overlayButtonTargets": [
+      ".video-container",
+      "[data-testid=\"video-container\"]",
+      ".whopp-video-container",
+      ".whopp-player-container",
+      "[data-whopp-player]",
+      ".player-wrapper"
+    ],
+    "libraryCardSelectors": [
+      "article[data-videoid]",
+      "[data-whopp-video-card]"
+    ],
+    "contextMenu": false,
+    "contextMenuId": null,
+    "contextMenuTitle": null,
+    "contextMenuContexts": null,
+    "autoSave": true,
+    "downloadFolder": null,
+    "desktopNotifications": false,
+    "notificationTitle": null,
+    "assetDetection": "Multi-type: Videos (HTML5 video, Mux players, og:video), Images, Text posts — from visible DOM including shadow DOM",
+    "concurrentDownloads": 3
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "tabs",
+      "scripting",
+      "offscreen"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://whop.com/*",
+      "https://*.whop.com/*",
+      "https://assets.whop.com/*",
+      "https://api.gumroad.com/*",
+      "https://stream.mux.com/*",
+      "https://image.mux.com/*",
+      "https://*.mux.com/*"
+    ],
+    "contentScripts": [
+      {
+        "files": [
+          "site-config.js",
+          "logger.js",
+          "download-manager/inline-manager.js"
+        ],
+        "matches": [
+          "https://whop.com/*",
+          "https://*.whop.com/*"
+        ],
+        "allFrames": false,
+        "runAt": "document_idle"
+      },
+      {
+        "files": [
+          "site-config.js",
+          "logger.js",
+          "content-enhanced.js"
+        ],
+        "matches": [
+          "https://whop.com/*",
+          "https://*.whop.com/*"
+        ],
+        "allFrames": true,
+        "runAt": "document_idle"
+      }
+    ],
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "HLS transmux via FastStream/MediaBunny"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true,
+      "dbName": "WhoppDownloaderDB",
+      "storeName": "fileStore",
+      "version": 1
+    },
+    "pageInjection": null,
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "Gumroad License API (api.gumroad.com)",
+      "Mux Streaming (stream.mux.com)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "whop-video-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/whop-video-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/whop-video-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": []
+  },
+  "videoDetectionAndExtraction": {
+    "assetTypes": [
+      "video",
+      "image",
+      "text"
+    ],
+    "videoSources": [
+      "HTML5 <video> elements (src, currentSrc, <source>)",
+      "Mux players (<mux-player>, <mux-video>)",
+      "og:video meta tags"
+    ],
+    "imageSources": [
+      "All visible <img> elements on the page"
+    ],
+    "textSources": [
+      "Visible text post content from Whop feed/lesson pages"
+    ],
+    "muxDetection": {
+      "elements": [
+        "mux-player",
+        "mux-video"
+      ],
+      "playbackIdExtraction": true,
+      "streamHost": "stream.mux.com"
+    },
+    "shadowDomSupport": true,
+    "cdnDetectionHosts": [
+      "whop",
+      "whopp",
+      "mux.com",
+      "stream.mux"
+    ],
+    "mediaExtensions": [
+      ".mp4",
+      ".m4v",
+      ".mov",
+      ".webm",
+      ".mpg",
+      ".mpeg",
+      ".m3u8",
+      ".mpd"
+    ],
+    "titleSources": [
+      "mux-player title attribute",
+      "page title",
+      "og:title"
+    ],
+    "thumbnailSources": [
+      "video poster attribute",
+      "img[alt='product image'] srcset/src"
+    ],
+    "overlayContainers": [
+      ".video-container",
+      "[data-testid='video-container']",
+      ".whopp-video-container",
+      ".whopp-player-container",
+      "[data-whopp-player]",
+      ".player-wrapper"
+    ],
+    "libraryCardSelectors": [
+      "article[data-videoid]",
+      "[data-whopp-video-card]"
+    ],
+    "backgroundEmbedFinder": "findWhoppEmbed() — probes active tab for embedded video via scripting API"
+  },
+  "formatObjectStructure": {
+    "type": "string (video | image | text)",
+    "url": "string",
+    "downloadUrl": "string",
+    "title": "string",
+    "fileName": "string",
+    "poster": "string | null",
+    "quality": "string | null",
+    "source": "string (mux-player | html5-video | og:video)",
+    "permalink": "string | null",
+    "text": "string | null (for text assets)"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content-enhanced.js"
+      ],
+      "purpose": "Video/image/text detection, Mux extraction, overlay buttons, library card buttons, shadow DOM traversal"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth, offscreen, task registry/queue, embed finder"
+    },
+    {
+      "component": "Popup (Enhanced)",
+      "files": [
+        "popup.html",
+        "popup-enhanced.js"
+      ],
+      "purpose": "Asset dashboard with tabs, rescan, bulk download"
+    },
+    {
+      "component": "Popup (Legacy)",
+      "files": [
+        "popup.js"
+      ],
+      "purpose": "Legacy single-video popup with quality selector"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "HLS transmux (FastStream/MediaBunny)"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js"
+      ],
+      "purpose": "OTP login, entitlements, trial"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager/inline-manager.js"
+      ],
+      "purpose": "In-page download progress panel with cross-tab sync"
+    },
+    {
+      "component": "Download Manager Config",
+      "files": [
+        "download-manager/download-manager-config.js"
+      ],
+      "purpose": "UI, behavior, integration, style configuration"
+    },
+    {
+      "component": "Download Task Registry",
+      "files": [
+        "download-manager/download-task-registry.js"
+      ],
+      "purpose": "Concurrent download queue, abort controllers, Chrome download ID mapping"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging (WhoppLogger), bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup title and error normalization"
+    },
+    {
+      "component": "IndexedDB",
+      "files": [
+        "indexed-db.js"
+      ],
+      "purpose": "Key-value storage for segment caching"
+    },
+    {
+      "component": "Auth Config",
+      "files": [
+        "auth/auth-config.js"
+      ],
+      "purpose": "Auth base URL, entitlement, storage prefix"
+    },
+    {
+      "component": "Auth API",
+      "files": [
+        "auth/auth-api.js"
+      ],
+      "purpose": "OTP request, login, entitlement check, trial"
+    },
+    {
+      "component": "Auth Storage",
+      "files": [
+        "auth/auth-storage.js"
+      ],
+      "purpose": "Device ID, stored auth persistence"
+    },
+    {
+      "component": "Auth Telemetry",
+      "files": [
+        "auth/auth-telemetry.js"
+      ],
+      "purpose": "Auth event logging"
+    },
+    {
+      "component": "Auth Token",
+      "files": [
+        "auth/auth-token.js"
+      ],
+      "purpose": "Entitlement validation"
+    }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (slides from translateX(100%) to translateX(0))",
+    "panelId": "whopp-download-manager",
+    "cardWidth": "380px (responsive, min 340px)",
+    "maxHeight": "min(innerHeight - 80, 500)px",
+    "zIndex": 2147483647,
+    "border": "2px solid #625df5",
+    "borderRadius": "8px",
+    "font": "-apple-system, BlinkMacSystemFont, Segoe UI, Arial, sans-serif",
+    "autoRemoveDelayMs": 2500,
+    "features": [
+      "Collapse/expand",
+      "Per-download progress bars with percentage",
+      "Cancel (STOP) buttons",
+      "Remove buttons",
+      "Cancel all",
+      "Clear completed",
+      "Cross-tab sync via chrome.storage",
+      "Queue snapshot polling"
+    ]
+  },
+  "downloadTaskRegistry": {
+    "maxConcurrent": 3,
+    "queueProcessing": "Automatic after registration and completion",
+    "abortSupport": true,
+    "cancellation": "Per-download and cancel-all",
+    "statePersistence": "chrome.storage.local key downloadManagerGlobalState",
+    "staleEntryPruning": {
+      "activeEntriesTtlHours": 2,
+      "terminalEntriesTtlHours": 12
+    },
+    "completeLingerMs": 2500
+  },
+  "popupUI": {
+    "popupWidth": "480px",
+    "popupMinHeight": "560px",
+    "stylesheets": [
+      "styles/popup-enhanced.css (9.0 KB)",
+      "styles/styles.css (17.7 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup-enhanced.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "popup-ui-overrides.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Boot splash",
+      "Header (SERP Labs / Whopp Downloader / subtitle)",
+      "Trial banner",
+      "Activation section",
+      "Stats grid (Videos/Images/Text counts)",
+      "Tabs (Videos/Images/Text)",
+      "Download Visible button",
+      "Asset list",
+      "Status footer"
+    ],
+    "tabs": [
+      "Videos",
+      "Images",
+      "Text"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    },
+    {
+      "module": "YouTube",
+      "path": "modules/youtube/",
+      "purpose": "YouTube utilities (shared module)"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/whop-video-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/whop-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "whop-downloader.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Chrome",
+        "file": "whop-downloader-chrome.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "whop-downloader-chrome-store-sanitized.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Brave",
+        "file": "whop-downloader-brave.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Edge",
+        "file": "whop-downloader-edge.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Opera",
+        "file": "whop-downloader-opera.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Whale",
+        "file": "whop-downloader-whale.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Yandex",
+        "file": "whop-downloader-yandex.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "whop-downloader-firefox.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "whop-downloader-firefox-unpacked.xpi",
+        "sizeMB": null
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "OHxjL9F6j-RfWU-DNCNGOg==",
+    "ghLicenseId": "DASgFDBPAGrFKaLMatnf",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_TadNyzhiDsmtJC",
+    "stripeProductName": "Whop Video Downloader",
+    "stripeMonthlyPrice": "USD 17.00/month [Subscription - Whop Video Downloader] | USD 9.00/month [whop-video-downloader-monthly-9]",
+    "stripeOneTimePrice": "USD 17.00/one_time | USD 8.00/one_time [whop-video-downloader-setup-fee-8]",
+    "stripePriceIds": [
+      "price_1SdS71DP7AOTRcvmRHPIpT8y",
+      "price_1SpcnVDP7AOTRcvmSvsW56MG",
+      "price_1SpdxeDP7AOTRcvmpCrdzRlJ",
+      "price_1SpdxfDP7AOTRcvmDL1luIZA"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < info(20) < warn(30) < error(40) < silent(90)",
+    "loggerName": "WhoppLogger",
+    "logPrefix": "WHOPP"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "32x32",
+      "file": "icons/icon32.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#FA4C1D",
+    "brandAccentHover": "#e9542b",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333333",
+    "inputBorder": "#555555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  },
+  "downloadManagerAccentColors": {
+    "panelAccent": "#625df5",
+    "overlayAccent": "#7c5cff"
+  }
+}

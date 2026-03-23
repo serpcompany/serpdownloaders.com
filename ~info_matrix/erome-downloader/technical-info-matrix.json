@@ -1,0 +1,617 @@
+{
+  "extension": "erome-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP Erome Downloader",
+    "slug": "erome-downloader",
+    "geckoId": "erome-downloader@serpapps.com",
+    "category": "Video & Image Downloader (Adult)",
+    "targetSites": [
+      "erome.com"
+    ],
+    "targetSiteMatches": [
+      "https://erome.com/*",
+      "https://www.erome.com/*"
+    ],
+    "description": "Download Erome videos"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/erome-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": "2026-03-04T17:08:48.443Z",
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "erome-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/erome-downloader",
+    "productPage": "https://serp.ly/erome-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Direct MP4 (offscreen streaming)",
+      "HLS Stitching (m3u8 segment to MP4 transmux)",
+      "Direct Image Download"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from HTML5 video/source elements, inline script regex, global window objects, inject.js XHR/fetch monitor",
+    "qualitySorting": "By height descending, MP4 before HLS",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": false,
+    "albumSupport": true,
+    "albumDescription": "Detects all media items (videos and images) in an EroMe album page",
+    "inPagePlayerButton": true,
+    "playerButtonTargets": [
+      ".media-group",
+      ".video",
+      ".video-player",
+      ".player",
+      ".video-js",
+      "video.vjs-tech",
+      "video#html5_api",
+      "video[id^=\"player-\"]"
+    ],
+    "imageDownload": true,
+    "imageSelectors": [
+      ".album-photo img",
+      ".album img",
+      ".gallery img",
+      ".post-content img",
+      ".viewer img",
+      ".media img[data-full]"
+    ],
+    "contextMenu": true,
+    "contextMenuId": "download-erome-video",
+    "contextMenuTitle": "Download Erome Video",
+    "contextMenuContexts": [
+      "page",
+      "video"
+    ],
+    "autoSave": true,
+    "downloadFolder": "Erome/",
+    "desktopNotifications": true,
+    "notificationTitle": "Download Complete",
+    "videoDetection": "Multi-source: HTML5 video elements, inline script regex, global window objects (eromePlayer, eromeConfig, __EROME_INITIAL_STATE__, __NUXT__), inject.js XHR/fetch monitor",
+    "imageDetection": "Automatic — data-src, data-full, data-original, data-download attributes on img elements within album containers"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "offscreen",
+      "declarativeNetRequest"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://erome.com/*",
+      "https://www.erome.com/*",
+      "https://*.erome.com/*",
+      "https://*.sacdnssedge.com/*",
+      "https://store.externulls.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "download-manager.js",
+        "content.js",
+        "player-button.js"
+      ],
+      "matches": [
+        "https://erome.com/*",
+        "https://www.erome.com/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "MP4 streaming download + HLS segment transmuxing"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (311 KB)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true
+    },
+    "pageInjection": {
+      "file": "inject.js",
+      "purpose": "Page-context XHR/fetch monitor, scans playervars/mediaDefinitions, extracts media URLs",
+      "messageType": "EROME_PAGE_DATA"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "erome-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/erome-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/erome-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": [
+      {
+        "id": 4701,
+        "priority": 1,
+        "action": "modifyHeaders — sets Referer to https://www.erome.com/",
+        "condition": "Requests matching erome.com (types: xmlhttprequest, media, other)"
+      }
+    ]
+  },
+  "videoDetectionAndExtraction": {
+    "videoIdPatterns": [
+      "/a/([A-Za-z0-9_-]+)",
+      "/album/([A-Za-z0-9_-]+)",
+      "/video/([A-Za-z0-9_-]+)",
+      "/videos/([A-Za-z0-9_-]+)",
+      "/v/([A-Za-z0-9_-]+)",
+      "embed.erome.com.*?id=([A-Za-z0-9_-]+)"
+    ],
+    "titleSources": [
+      "h1[class*=\"title\"]",
+      ".video-title",
+      ".album-title",
+      "h1",
+      "meta[property=\"og:title\"]",
+      "meta[name=\"twitter:title\"]",
+      "document.title (cleaned)"
+    ],
+    "thumbnailSources": [
+      "og:image",
+      "twitter:image",
+      "video[poster]"
+    ],
+    "durationSources": [
+      "meta[property=\"video:duration\"]",
+      "meta[itemprop=\"duration\"]",
+      "ISO 8601 parsing"
+    ],
+    "videoElementSelectors": [
+      ".video video",
+      ".video-player video",
+      ".player video",
+      "video.vjs-tech",
+      "video#html5_api",
+      "video[id^=\"player-\"]",
+      "video"
+    ],
+    "formatSources": [
+      "HTML5 <video>/<source> elements",
+      "Inline script regex for mp4/m3u8 URLs",
+      "Global window objects (eromePlayer, eromeConfig, __EROME_INITIAL_STATE__, __NUXT__, __INITIAL_STATE__)",
+      "inject.js XHR/fetch interception"
+    ],
+    "scriptUrlRegex": "/https?:\\/\\/[^\"'\\s]+?\\.(?:mp4|m3u8)(?:[^\"'\\s]*)/gi",
+    "xhrFetchMonitor": "Intercepts requests matching erome, externulls, or video in URL",
+    "injectMessageType": "EROME_PAGE_DATA"
+  },
+  "imageDetectionAndExtraction": {
+    "albumContainer": ".media-group",
+    "imageSelectors": [
+      ".album-photo img",
+      ".album img",
+      ".gallery img",
+      ".post-content img",
+      ".viewer img",
+      ".media img[data-full]"
+    ],
+    "imageUrlCandidates": [
+      "data-src",
+      "data-full",
+      "data-original",
+      "data-download",
+      "img.src"
+    ],
+    "imageFilename": "Page title + image alt text or index suffix, preserving original file extension",
+    "downloadPath": "Erome/{filename}.{ext}",
+    "thumbnailFilter": "Skips elements with thumb in class names; skips .album-infos containers"
+  },
+  "formatObjectStructure": {
+    "format_id": "string",
+    "ext": "m3u8 | mp4 | webm",
+    "format_type": "hls | mp4 | webm",
+    "quality": "string",
+    "url": "string",
+    "protocol": "m3u8 | https",
+    "height": "number | null",
+    "label": "string | undefined",
+    "source": "video-element | video-source | video-attr | video-data-sources | inline-script | window-data | dom"
+  },
+  "hlsProcessingSpecs": {
+    "converter": "SimpleHLS2MP4Converter",
+    "masterPlaylist": "Auto-detects master vs media playlists; selects highest resolution variant",
+    "segmentParsing": "Handles #EXT-X-STREAM-INF (master) and #EXTINF: (media) playlists",
+    "referer": "https://www.erome.com/ (set via DeclarativeNetRequest)",
+    "offscreenFallback": "Content-script HLS fallback if offscreen document unavailable"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Video detection, format extraction from HTML5 elements, inline scripts, global objects, album media enumeration"
+    },
+    {
+      "component": "Player Button",
+      "files": [
+        "player-button.js"
+      ],
+      "purpose": "In-page download buttons on video players and image containers with quality popover"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth, offscreen, context menu, notifications, image downloads, DNR rules"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "UI, quality selector, auth flow"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "MP4 streaming + HLS transmux"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js"
+      ],
+      "purpose": "OTP login, entitlements, trial"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager.js"
+      ],
+      "purpose": "In-page download progress panel"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-context XHR/fetch monitor, playervars/mediaDefinitions scanning"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup customizations"
+    }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (slides from -400px to 20px)",
+    "panelId": "erome-download-manager",
+    "cardWidth": "380px",
+    "maxHeight": "80vh",
+    "zIndex": 10040,
+    "border": "2px solid var(--brand-accent)",
+    "borderRadius": "8px",
+    "font": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+    "autoHideSeconds": 4,
+    "features": [
+      "Minimize/close buttons",
+      "Per-download progress bars",
+      "Speed display",
+      "Cancel buttons"
+    ]
+  },
+  "playerButtonConfig": {
+    "containerTargets": [
+      ".media-group",
+      ".player",
+      ".video-player",
+      ".video-wrapper",
+      ".video-js",
+      ".video",
+      "figure",
+      "article"
+    ],
+    "videoButtonText": "Download (with down-arrow icon)",
+    "imageButtonText": "Download Image (with down-arrow icon)",
+    "qualityPopover": true,
+    "qualitySorting": "By height descending, MP4 before HLS",
+    "visibilityGate": "Only visible if isActivated = true",
+    "reactive": "Watches chrome.storage.onChanged for activation updates",
+    "mutationObserver": true
+  },
+  "contextMenu": {
+    "menuId": "download-erome-video",
+    "title": "Download Erome Video",
+    "contexts": [
+      "page",
+      "video"
+    ],
+    "documentUrlPatterns": [
+      "https://erome.com/*",
+      "https://www.erome.com/*"
+    ]
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/popup-enhanced.css (14.7 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "popup-ui-overrides.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Header",
+      "Quick help banner",
+      "Boot splash",
+      "Activation section",
+      "Loading spinner",
+      "Error state",
+      "Video info card",
+      "Quality selector",
+      "Download button",
+      "Progress bar"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "sizeKB": 311,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "sizeKB": 4.2,
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "sizeKB": 3.3,
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/erome-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/erome-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "erome-downloader.zip",
+        "sizeMB": 1.21
+      },
+      {
+        "platform": "Chrome",
+        "file": "erome-downloader-chrome.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "erome-downloader-chrome-store-sanitized.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Brave",
+        "file": "erome-downloader-brave.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Edge",
+        "file": "erome-downloader-edge.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Opera",
+        "file": "erome-downloader-opera.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Whale",
+        "file": "erome-downloader-whale.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Yandex",
+        "file": "erome-downloader-yandex.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "erome-downloader-firefox.zip",
+        "sizeMB": 1.13
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "erome-downloader-firefox-unpacked.xpi",
+        "sizeMB": 1.13
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "test-key",
+    "ghLicenseId": "Z3TKUAarTyDYdesn9knw",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_TadN8tuks5WclX",
+    "stripeProductName": "Erome Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [erome-downloader monthly]",
+    "stripeOneTimePrice": "USD 17.00/one_time",
+    "stripePriceIds": [
+      "price_1SdS6lDP7AOTRcvm2uSqP6Ek",
+      "price_1SymstDP7AOTRcvmj36uKy9o"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#ec567c",
+    "brandAccentHover": "#d64a73",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

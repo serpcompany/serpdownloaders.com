@@ -1,0 +1,280 @@
+{
+  "extension": "skool-downloader",
+  "productPositioning": {
+    "headline": "Download Videos from Skool — Classrooms, Courses, and Community Posts",
+    "elevatorPitch": "SERP Skool Downloader is a browser extension that saves videos from Skool.com to your computer. It automatically detects videos in classrooms, community posts, about pages, and course modules -- whether they are hosted on Loom, Vimeo, YouTube, Wistia, or Skool's native player. Open a lesson, play the video, click the extension icon, pick your quality, and it saves as MP4. No extra software needed. 3 free downloads included.",
+    "valueProposition": "Purpose-built for Skool with multi-platform video detection that recognizes Loom, Vimeo, YouTube, Wistia, and Skool's native Mux-based player. Extracts videos from Next.js page data, embedded iframes, and native video elements. HLS-to-MP4 conversion happens in your browser -- no external tools, no command-line knowledge required. Concurrent download queue with real-time progress tracking.",
+    "targetAudience": "Skool community members and course students who want to save lesson videos and community content for offline study. Course creators who need to archive their own content. Non-technical users who want a reliable, one-click download solution for Skool.",
+    "useCases": [
+      "Save a Skool classroom lesson video for offline study",
+      "Download community post videos for later review",
+      "Archive course module content you have purchased access to",
+      "Download Loom walkthroughs embedded in Skool posts",
+      "Save Vimeo or YouTube videos embedded in Skool course pages",
+      "Download Wistia-hosted training content within Skool",
+      "Choose your preferred quality before downloading"
+    ],
+    "painPointsAddressed": [
+      "Skool uses multiple video platforms (Loom, Vimeo, YouTube, Wistia, native Mux) -- no single tool handles all of them",
+      "Skool's native player uses HLS streaming -- cannot right-click and save",
+      "Embedded videos from third-party platforms are difficult to extract from Skool's single-page app architecture",
+      "Generic downloaders do not understand Skool's Next.js data structure",
+      "Course students often have limited access windows and need offline copies",
+      "Users do not want desktop apps or command-line tools just to save a lesson"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download videos from Skool.com classrooms and courses. Detects Loom, Vimeo, YouTube, Wistia, and native. MP4. 3 free downloads.",
+    "changelog": "v4.0.3 -- Multi-platform video detection (Skool native, Loom, Vimeo, YouTube, Wistia), modular detector architecture, concurrent download queue, HLS-to-MP4 conversion, updated auth system.",
+    "fullDescription": "SERP Skool Downloader makes it easy to save videos from Skool.com to your computer.\n\nHow it works: Go to any Skool classroom, community post, or course module that contains a video. Play the video, then click the extension icon in your toolbar. The extension detects the video -- whether it is hosted on Loom, Vimeo, YouTube, Wistia, or Skool's native player -- shows available quality options, and downloads it as a standard MP4 file.\n\nIt handles HLS streaming, Loom GraphQL extraction, Vimeo configuration parsing, YouTube format extraction, and Wistia embed detection automatically. No external tools, no command line, no technical knowledge required. Videos download directly to your computer.\n\nKey features:\n- Automatic multi-platform video detection (Skool native, Loom, Vimeo, YouTube, Wistia)\n- Downloads from Skool classrooms, community posts, about pages, and course modules\n- Converts HLS streams to standard MP4 files in your browser\n- Quality selection from all available resolutions\n- Concurrent download queue with real-time progress and speed indicators\n- Dark-themed UI with warm red accents matching Skool's aesthetic\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to Skool.com and open a classroom, post, or course module with a video\n3. Play the video, then click the extension icon\n4. Select quality and download -- saved as MP4\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Multi-platform video detection -- Skool native (Mux), Loom, Vimeo, YouTube, Wistia",
+      "Downloads from classrooms, community posts, about pages, and course modules",
+      "Understands Skool's Next.js architecture -- extracts video data from page props",
+      "Converts HLS streams to downloadable MP4 files in-browser",
+      "Quality selector with all available resolutions per platform",
+      "Concurrent download queue (up to 3 simultaneous downloads)",
+      "Real-time progress bars with download speed tracking",
+      "Intelligent platform detection -- auto-identifies embedded video source",
+      "Dark UI with warm red accents -- clean and professional",
+      "3 free trial downloads -- no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP Skool Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Navigate",
+        "description": "Open a Skool.com classroom, community post, or course module with a video"
+      },
+      {
+        "step": 3,
+        "title": "Play",
+        "description": "Start the video so the extension can detect the stream"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "Click the extension icon, pick your quality, and hit Download -- video saves as MP4"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I download a video from Skool?",
+        "answer": "Open any Skool classroom, community post, or course page with a video. Press play on the video, then click the SERP Skool Downloader icon in your toolbar. Select your preferred quality and click Download."
+      },
+      {
+        "question": "What video platforms does this support?",
+        "answer": "The extension detects videos from Skool's native player (Mux-based), Loom, Vimeo, YouTube, and Wistia -- all of which are commonly used within Skool communities and courses."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "Quality options depend on the video platform and source. The extension shows all available resolutions from the original video."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player."
+      },
+      {
+        "question": "Can I download videos from Skool courses I have purchased?",
+        "answer": "Yes. If you have access to a Skool classroom or course and can play the video in your browser, the extension can detect and download it."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes -- supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Why isn't the extension finding my video?",
+        "answer": "Press play on the video first. The extension needs the stream to start before detection works. If the video is embedded from an external platform, make sure the embed has loaded fully. Refresh the page if issues persist."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. Video processing happens entirely in your browser. Authentication uses secure OTP -- no passwords stored. No video data is sent to external servers."
+      },
+      {
+        "question": "Does this work with password-protected Skool communities?",
+        "answer": "The extension works with any Skool community or course you can access in your browser. If you can see and play the video, you can download it."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "skool downloader",
+      "download skool videos",
+      "skool video download",
+      "save skool videos",
+      "skool course downloader"
+    ],
+    "longTailKeywords": [
+      "how to download videos from skool",
+      "skool video downloader chrome extension",
+      "download skool course videos mp4",
+      "save skool classroom videos offline",
+      "download loom videos from skool",
+      "skool community video download"
+    ],
+    "seoTitle": "Skool Video Downloader — Save Course Videos as MP4 | SERP",
+    "metaDescription": "Download videos from Skool.com classrooms and courses. Detects Loom, Vimeo, YouTube, Wistia, native player. MP4 output. Chrome, Firefox. 3 free downloads.",
+    "urlSlug": "/skool-video-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download Skool Course Videos",
+    "googleAdsDescription": "Save Skool.com videos as MP4. Detects Loom, Vimeo, YouTube, Wistia. Quality selection. 3 free.",
+    "socialMediaHook": "Taking a Skool course? Save lesson videos for offline study. This extension downloads from any video platform used on Skool -- Loom, Vimeo, YouTube, Wistia, and native.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Multi-platform detection handles Loom, Vimeo, YouTube, Wistia, and Skool's native Mux player in one extension. Understands Skool's Next.js architecture for reliable detection. Concurrent download queue, HLS conversion, and quality selection -- no other tool covers all Skool video sources.",
+    "adAngles": [
+      {
+        "angle": "Multi-Platform",
+        "copy": "One extension. Every video platform on Skool. Loom, Vimeo, YouTube, Wistia, native."
+      },
+      {
+        "angle": "Offline Study",
+        "copy": "Save Skool course videos for offline review. Study anywhere, anytime."
+      },
+      {
+        "angle": "Simplicity",
+        "copy": "Play the video. Click the icon. Pick quality. Done. MP4 to your computer."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it on your next Skool lesson."
+      },
+      {
+        "angle": "Reliability",
+        "copy": "Built for Skool's architecture. Reads page data directly. Never misses a video."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Multiple quality levels from source platform. HLS, progressive, and FMP4 formats supported. Platform-specific quality extraction.",
+    "limitationsAndDisclaimers": "Must press play before detection. Quality depends on source platform. Requires email sign-in for trial. Internet connection required. Works only on content you have access to. Users responsible for ensuring they have the right to download content.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Loom Downloader",
+      "SERP Video Downloader",
+      "M3U8 Downloader",
+      "SERP Kajabi Downloader",
+      "SERP Mindvalley Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Videos from Skool.com (Step-by-Step Guide)",
+      "Skool Video Downloader: Save Course Lessons with One Click",
+      "How to Save Skool Course Videos as MP4 for Offline Study",
+      "Download Loom, Vimeo, and YouTube Videos from Skool Communities",
+      "Best Way to Download Skool Classroom Videos -- Chrome & Firefox"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from Skool is tricky (multiple video platforms, HLS streaming, Next.js SPA) and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Active Skool community/course access. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add the extension from the store or GitHub release"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification for trial activation"
+      },
+      {
+        "section": "Step 3: Open a Skool Page",
+        "description": "Navigate to a classroom, community post, or course module with a video"
+      },
+      {
+        "section": "Step 4: Play the Video",
+        "description": "Let the video start so the extension can detect the platform and stream"
+      },
+      {
+        "section": "Step 5: Download",
+        "description": "Click the extension icon, select quality, download as MP4"
+      },
+      {
+        "section": "Platform Tips",
+        "description": "How detection works for Loom, Vimeo, YouTube, Wistia, and native Skool videos"
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Press play first. Refresh if detection fails. Make sure you have access to the content. Check that the extension is enabled."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected Skool video with quality selector and download button",
+      "Extension popup detecting a Loom video embedded in a Skool community post",
+      "Download manager panel with active download progress bar",
+      "Email sign-in / OTP verification screen",
+      "Extension popup on a Skool course module page with Vimeo video detected"
+    ],
+    "iconLogoVariants": "Default icon: 16, 32, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 -- dark background (#1b1b1b), popup screenshot over Skool classroom page, warm red accent (#d3513e)",
+    "gifDemoDescription": "10-second loop: Skool classroom page with video -> play video -> click extension icon -> popup shows detected video with quality options -> select quality -> download progress -> complete"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Videos from Skool -- Classrooms, Courses, and Community Posts",
+      "subheadline": "Detects Loom, Vimeo, YouTube, Wistia, and Skool's native player. Quality selection. HLS to MP4 conversion. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Multi-Platform Detection",
+        "description": "Automatically identifies videos from Loom, Vimeo, YouTube, Wistia, and Skool's native Mux player. One extension covers every source."
+      },
+      {
+        "title": "Built for Skool",
+        "description": "Reads Skool's Next.js page data for reliable video detection. Works in classrooms, community posts, about pages, and course modules."
+      },
+      {
+        "title": "Quality Selection",
+        "description": "All available resolutions from the source platform. Pick the quality that suits your needs."
+      },
+      {
+        "title": "Download Queue",
+        "description": "Queue up to 3 concurrent downloads with real-time progress, speed tracking, and cancel controls."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in -- no passwords stored",
+      "All processing happens locally in your browser",
+      "No video data sent to external servers",
+      "Automatic update notifications via GitHub releases"
+    ],
+    "footerCta": {
+      "headline": "Ready to save your Skool course videos?",
+      "button": "Install Free -- 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Professional, educational, helpful. Speak to course students and community members. Avoid hype. Clear and direct.",
+    "bannedWords": [
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack",
+      "rip",
+      "steal"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download. Respect course creators' intellectual property."
+    ],
+    "brandColorHex": "#d3513e",
+    "brandBackgroundHex": "#1b1b1b",
+    "brandHoverHex": "#0693e3",
+    "targetPlatformBranding": "Use \"Skool\" (capital S). Reference as \"Skool.com\" for the website. Do not use \"Skool.com\" possessively. Mention supported platforms: \"Loom, Vimeo, YouTube, Wistia\" in feature descriptions."
+  }
+}

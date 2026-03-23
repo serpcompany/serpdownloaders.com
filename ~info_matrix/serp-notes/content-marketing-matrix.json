@@ -1,0 +1,321 @@
+{
+  "extension": "serp-notes",
+  "productPositioning": {
+    "headline": "Your Markdown Workspace — Built into Your Browser",
+    "elevatorPitch": "SERP Notes is a browser extension that gives you a full markdown note-taking workspace right in your browser's side panel. Write in markdown, organize with folders and tags, search instantly, and sync across devices. A built-in AI assistant (Serpy) can draft, summarize, expand, rewrite, or generate notes from natural language instructions, and voice transcription lets you dictate hands-free. Share any note as a live link — or export to Markdown, Word, HTML, PDF, or plain text.",
+    "valueProposition": "A complete note-taking workspace that lives in your browser sidebar. No app switching, no tab clutter, no SaaS logins. Write markdown alongside any web page, capture selections with a right-click, snip screenshots into your notes, and let AI help you write. Cloud sync keeps everything available across devices, and offline-first storage means your notes are always accessible.",
+    "targetAudience": "Researchers, students, developers, content writers, knowledge workers, and anyone who takes notes while browsing the web. Ideal for people who want a distraction-free writing tool that stays beside their browser content.",
+    "useCases": [
+      "Take research notes alongside articles, documentation, or tutorials in the browser side panel",
+      "Right-click selected text on any web page to save it as a note",
+      "Use Serpy AI to summarize a web page into structured notes",
+      "Dictate meeting notes or quick thoughts using voice transcription",
+      "Share a live note link with a colleague for real-time collaboration visibility",
+      "Organize project research with folders and tags",
+      "Export notes as Word documents or PDFs for reports and deliverables"
+    ],
+    "painPointsAddressed": [
+      "Switching between browser and note-taking apps breaks focus and flow",
+      "Existing note apps do not integrate with web browsing (no side panel, no right-click capture)",
+      "Copying content from web pages loses formatting and context",
+      "Note-taking tools charge monthly fees for basic features",
+      "No easy way to share a single note as a live web link without creating a full document",
+      "Voice-to-text tools are separate apps that do not integrate with a note editor"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Markdown notes in your browser sidebar. AI writing assistant, voice transcription, cloud sync, live sharing. Works on any page.",
+    "changelog": "v1.0.0 — Full markdown workspace with side panel, Serpy AI agent, voice transcription, cloud sync, live sharing, folders, tags, wiki links, multi-format export.",
+    "fullDescription": "SERP Notes is a markdown note-taking workspace built into your browser. Open it in the side panel with Ctrl+Shift+Y and start writing alongside any web page.\n\nHow it works: Click the extension icon or press Ctrl+Shift+Y to open the workspace in the browser side panel. Create notes in markdown with a full formatting toolbar — headings, bold, italic, lists, checkboxes, code blocks, links, and images. Organize notes into folders, add tags, pin important items, and search across everything instantly.\n\nSERP Notes is offline-first. All notes are stored locally on your device and sync to the cloud when you are online. Your workspace is always available, even without an internet connection.\n\nAI-powered writing: Serpy, the built-in AI assistant, can help you draft, summarize, expand, rewrite, or generate notes from natural language instructions. Enable web context capture to let Serpy read the current page and create structured notes from its content.\n\nVoice transcription: Press and hold the microphone button to record, then release to transcribe. Serpy converts your speech into text and inserts it directly into your note.\n\nLive sharing: Share any note as a public live link. Recipients always see the latest version, or freeze a snapshot to share a specific point in time.\n\nKey features:\n- Full markdown editor with formatting toolbar\n- Browser side panel — write notes alongside any web page\n- Serpy AI assistant — draft, summarize, expand, rewrite notes\n- Voice transcription — dictate notes hands-free\n- Web context capture — create AI notes from any web page\n- Cloud sync — access notes across devices\n- Offline-first — always available without internet\n- Folders, tags, and pinning for organization\n- Full-text search with page-aware filtering\n- Wiki links ([[note title]]) with backlinks\n- Command palette and slash commands\n- Right-click to capture selected text as a note\n- Screenshot snipping — capture screen regions into notes\n- Live sharing with public links\n- Export to Markdown, Plain Text, Word, HTML, or PDF\n- Import/export JSON workspace backups\n- Stats dashboard — total notes, word count, images\n- Dark-themed professional interface\n\nGetting started:\n1. Install the extension\n2. Press Ctrl+Shift+Y or click the icon to open the side panel\n3. Start writing in markdown — your notes save automatically\n4. Use Serpy to help write, or dictate with the mic button\n\nSign in with your email to get started. Works on Chrome, Edge, Brave, Opera, and more.",
+    "featureBulletPoints": [
+      "Full markdown editor — headings, bold, italic, lists, checkboxes, code blocks, links, images",
+      "Browser side panel — take notes alongside any web page without switching apps",
+      "Serpy AI assistant — natural language instructions to draft, summarize, expand, or rewrite notes",
+      "Voice transcription — press and hold to record, release to transcribe into your note",
+      "Web context capture — Serpy reads the current page and creates structured notes from headings, lists, tables, and code",
+      "Cloud sync — notes sync across devices in real time",
+      "Offline-first — all notes stored locally, always available without internet",
+      "Folders and tags — organize notes your way",
+      "Full-text search — find any note instantly; filter by All, Pinned, or This Page",
+      "Wiki links — [[note title]] syntax with autocomplete and backlinks",
+      "Right-click capture — save selected text from any web page as a note",
+      "Screenshot snipping — capture a screen region and embed it in a note",
+      "Live sharing — share any note as a public link (live or snapshot mode)",
+      "Export to Markdown, Plain Text, Word (.docx), HTML, or PDF",
+      "Import/export JSON workspace backups",
+      "Command palette (Ctrl/Cmd+P) and slash commands for power users",
+      "Pin important notes to the top",
+      "Duplicate notes with one click",
+      "Stats dashboard — total notes, pinned count, word count, total images",
+      "Keyboard shortcuts for every action",
+      "Dark-themed professional UI"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP Notes to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Open",
+        "description": "Press Ctrl+Shift+Y or click the extension icon to open the side panel"
+      },
+      {
+        "step": 3,
+        "title": "Write",
+        "description": "Create markdown notes with the formatting toolbar, or ask Serpy AI to help"
+      },
+      {
+        "step": 4,
+        "title": "Organize",
+        "description": "Use folders, tags, pinning, and search to keep notes structured"
+      },
+      {
+        "step": 5,
+        "title": "Share",
+        "description": "Generate a live link to share any note, or export as PDF/Word/Markdown"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I open the notes workspace?",
+        "answer": "Press Ctrl+Shift+Y to open the side panel, or click the SERP Notes icon in your browser toolbar. The full workspace opens alongside your current page."
+      },
+      {
+        "question": "Can I use this alongside any website?",
+        "answer": "Yes. The side panel works on any page. You can also right-click selected text on any page to save it as a note."
+      },
+      {
+        "question": "Where are my notes stored?",
+        "answer": "Notes are stored locally in your browser first (offline-first). When you are online, they sync to the cloud so you can access them across devices."
+      },
+      {
+        "question": "What is Serpy?",
+        "answer": "Serpy is the built-in AI assistant. Type a natural language instruction (like 'summarize this,' 'make this more concise,' or 'create meeting notes') and Serpy will edit or generate content in your note."
+      },
+      {
+        "question": "How does voice transcription work?",
+        "answer": "Click and hold the microphone button in the Serpy bar. Speak your note, then release. Serpy transcribes the audio and inserts the text into your note. Maximum recording is 25 seconds."
+      },
+      {
+        "question": "Can I share a note with someone?",
+        "answer": "Yes. Click 'Share live' in the note footer. This generates a public link at notes.serp.co that shows the latest version of your note. You can also create a frozen snapshot."
+      },
+      {
+        "question": "What export formats are supported?",
+        "answer": "Markdown (.md), Plain Text (.txt), Word (.docx), HTML (.html), and PDF (.pdf). You can also export your entire workspace as a JSON backup."
+      },
+      {
+        "question": "Does this work offline?",
+        "answer": "Yes. SERP Notes is offline-first. All notes are saved locally and sync to the cloud when connectivity returns. The editor, search, and export features all work without internet."
+      },
+      {
+        "question": "What are wiki links?",
+        "answer": "Type [[ followed by a note title to create a link between notes. The backlinks panel shows which notes link to the current one."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Chrome, Edge, Brave, and Opera are fully supported. Firefox support depends on side panel API availability."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "browser notes extension",
+      "markdown notes extension",
+      "side panel notes chrome",
+      "note taking browser extension",
+      "AI notes extension"
+    ],
+    "longTailKeywords": [
+      "how to take notes in chrome side panel",
+      "markdown note taking extension for chrome",
+      "browser extension with AI writing assistant",
+      "voice transcription notes extension",
+      "share notes as a link browser extension"
+    ],
+    "seoTitle": "SERP Notes — Markdown Notes in Your Browser Side Panel",
+    "metaDescription": "Take markdown notes in your browser sidebar. AI writing assistant, voice transcription, cloud sync, live sharing. Works alongside any web page. Free trial.",
+    "urlSlug": "/serp-notes",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Notes in Your Browser Sidebar",
+    "googleAdsDescription": "Markdown notes with AI assistant, voice dictation, and cloud sync. Side panel works on any page. Free trial.",
+    "socialMediaHook": "Stop switching between your browser and your note app. SERP Notes puts a full markdown workspace in your browser sidebar — with AI, voice transcription, and live sharing.",
+    "cta": "Start Taking Notes Free",
+    "competitorComparisons": "Unlike Notion or Obsidian, SERP Notes lives in your browser sidebar — no tab switching. Unlike Google Keep, it supports full markdown with headings, code blocks, and export. Unlike web clippers, it is a full editor with AI, voice, and live sharing. No monthly fee for core features like Evernote or Bear.",
+    "adAngles": [
+      {
+        "angle": "Side Panel Workflow",
+        "copy": "Take notes right next to the page you are reading. No tab switching. No app switching."
+      },
+      {
+        "angle": "AI Writing",
+        "copy": "Tell Serpy what to write. It drafts, summarizes, and rewrites your notes with one command."
+      },
+      {
+        "angle": "Voice-to-Notes",
+        "copy": "Hold the mic button, speak, release. Your words appear as text in your note."
+      },
+      {
+        "angle": "Live Sharing",
+        "copy": "Share any note as a live link. Your reader always sees the latest version."
+      },
+      {
+        "angle": "Offline-First",
+        "copy": "Your notes work without internet. Cloud sync kicks in when you are back online."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndOutputs": "Markdown (.md), Plain Text (.txt), Word (.docx), HTML (.html), PDF (.pdf), JSON workspace backup",
+    "limitationsAndDisclaimers": "Cloud sync limited to 400 notes. Image uploads limited to 5 MB per image, 10,000 images on Pro tier. Voice transcription requires microphone permission and internet. AI features require Pro tier. Side panel API requires Chrome 114+ or equivalent Chromium browser.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Notes V2 (next-generation)",
+      "Invoice Generator",
+      "SERP Video Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Take Notes in Your Browser Without Leaving the Page",
+      "SERP Notes: The AI-Powered Markdown Workspace for Chrome",
+      "Best Note-Taking Extensions for Chrome in 2026",
+      "How to Use AI to Write Better Notes While Browsing",
+      "Voice Transcription Meets Note-Taking: A Browser Extension Guide",
+      "How to Share Notes as Live Links from Your Browser",
+      "Markdown Note-Taking in the Browser Side Panel — A Complete Guide"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why taking notes in the browser sidebar improves focus and productivity"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, or Opera (Chromium 114+). Internet for initial sign-in and cloud sync."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store or load unpacked"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Open the Side Panel",
+        "description": "Ctrl+Shift+Y or click the icon"
+      },
+      {
+        "section": "Step 4: Create Your First Note",
+        "description": "Title, markdown content, folder, tags"
+      },
+      {
+        "section": "Step 5: Use Serpy AI",
+        "description": "Type instructions in the Serpy bar to draft or edit content"
+      },
+      {
+        "section": "Step 6: Voice Transcription",
+        "description": "Grant mic permission, press and hold to record"
+      },
+      {
+        "section": "Step 7: Organize",
+        "description": "Folders, tags, pinning, search, wiki links"
+      },
+      {
+        "section": "Step 8: Share and Export",
+        "description": "Live sharing, multi-format export, JSON backup"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Use web context capture for AI-generated page summaries. Use slash commands for quick formatting. Use [[ for wiki links. Use the command palette for fast navigation."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Mic permission issues, cloud sync status, side panel not opening"
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Side panel open alongside a web page showing the note workspace with notes list and editor",
+      "Markdown editor with formatting toolbar, title input, folder/tag metadata",
+      "Serpy AI bar with a natural language instruction and the What Serpy did output panel",
+      "Voice transcription recording indicator with meter and hint text",
+      "Notes list with search, filter buttons (All / Pinned / This Page), folder and tag dropdowns",
+      "Live sharing — Share live button, live link active chip, Open link and Stop share options",
+      "Export format picker showing Markdown, Plain Text, Word, HTML, and PDF options",
+      "Command palette overlay with fuzzy search",
+      "Stats dashboard showing total notes, pinned, word count, and total images",
+      "Right-click context menu showing Save selection to current SERP note and Save selection as new SERP note"
+    ],
+    "iconLogoVariants": "Default icon: 16, 32, 48, 128px. Splash logo for boot screen. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#050506), side panel screenshot alongside a web page, neutral gray accent (#6e747d)",
+    "gifDemoDescription": "12-second loop: press Ctrl+Shift+Y -> side panel opens -> create new note -> type markdown -> toggle live preview -> ask Serpy to summarize -> share as live link"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Your Markdown Workspace — Built into Your Browser",
+      "subheadline": "Full markdown editor in the side panel. AI writing assistant, voice transcription, cloud sync, live sharing, and multi-format export. Take notes without leaving the page.",
+      "ctaButton": "Start Taking Notes Free"
+    },
+    "featureBlocks": [
+      {
+        "title": "Side Panel Workspace",
+        "description": "Open a full note-taking workspace in your browser sidebar. Write alongside any web page without switching tabs or apps. Supports popup and side panel modes."
+      },
+      {
+        "title": "Serpy AI Assistant",
+        "description": "Tell Serpy what to write in plain language. Draft, summarize, expand, rewrite, or generate notes. Enable web context capture to let Serpy read the page and create structured notes automatically."
+      },
+      {
+        "title": "Voice Transcription",
+        "description": "Press and hold the mic button, speak, and release. Serpy transcribes your audio and inserts it into your note. Perfect for quick thoughts, meeting notes, and hands-free writing."
+      },
+      {
+        "title": "Cloud Sync & Offline-First",
+        "description": "Notes sync across devices in real time. Everything is stored locally first, so your workspace is always available — even without internet."
+      },
+      {
+        "title": "Organize & Find",
+        "description": "Folders, tags, pinning, full-text search, and wiki links. Filter notes by domain to see everything related to the page you are on."
+      },
+      {
+        "title": "Share & Export",
+        "description": "Share any note as a live public link. Export to Markdown, Word, HTML, PDF, or plain text. Back up your workspace as JSON."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, and Opera",
+      "Offline-first — notes are always available, even without internet",
+      "All data stored locally on your device with optional cloud sync",
+      "Secure OTP sign-in — no passwords stored",
+      "Dark-themed professional interface",
+      "Automatic update notifications",
+      "Built on Cloudflare infrastructure (D1, R2, AI)"
+    ],
+    "footerCta": {
+      "headline": "Ready to take better notes?",
+      "button": "Install Free — Open Your Workspace"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Professional, productivity-focused, knowledgeable. Speaks to people who value efficient workflows and clean tools. Avoid hype. Focus on capability and integration with browser workflows.",
+    "bannedWords": [
+      "Notion killer",
+      "Obsidian replacement",
+      "second brain",
+      "PKM system",
+      "life-changing"
+    ],
+    "requiredDisclaimers": [
+      "AI-generated content should be reviewed for accuracy. Voice transcription quality depends on audio clarity and microphone hardware. Cloud sync requires internet connectivity. Free tier is limited and intended for evaluation."
+    ],
+    "brandColorHex": "#6e747d",
+    "brandBackgroundHex": "#050506",
+    "brandSuccessHex": "#44b974",
+    "targetPlatformBranding": "Use \"SERP Notes\" as the product name. Reference as a browser extension / productivity tool / markdown workspace."
+  }
+}

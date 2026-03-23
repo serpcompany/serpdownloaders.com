@@ -1,0 +1,281 @@
+{
+  "extension": "stripchat-vr-downloader",
+  "productPositioning": {
+    "headline": "Record Stripchat VR Live Streams — Capture in Real Time, Download as MP4",
+    "elevatorPitch": "SERP StripchatVR Downloader is a browser extension that records live VR streams from Stripchat directly to your computer. Open a model page, click Start, and the extension captures the HLS stream in real time. When you stop, it saves as a standard MP4 file. VR metadata is preserved in the filename. 3 free downloads included.",
+    "valueProposition": "Purpose-built for Stripchat VR with live stream capture, Stripchat API integration, Mouflon CDN decoding, and VR camera metadata (stereoPacking, frameFormat, angle). Records directly in your browser — no external software, no command-line tools.",
+    "targetAudience": "Stripchat VR users who want to save live cam streams for offline viewing. VR headset owners who want local VR content. Non-technical users who want a simple, reliable capture solution.",
+    "useCases": [
+      "Record a live VR stream from Stripchat for offline VR viewing",
+      "Capture in your preferred quality with VR metadata preserved",
+      "Download recorded/VOD content from Stripchat",
+      "Use the in-page player button for one-click capture without the popup",
+      "Right-click any stream page to start capture via context menu"
+    ],
+    "painPointsAddressed": [
+      "Stripchat uses HLS streaming with CDN encoding — can't right-click and save",
+      "VR streams require special handling for stereoPacking and frame format metadata",
+      "Live streams are ephemeral — if you don't record in real time, the content is gone",
+      "Generic downloaders can't handle Stripchat's CDN (Mouflon key encoding, doppiocdn)",
+      "Users don't want desktop apps or command-line tools for live capture"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Record Stripchat VR live streams. Real-time HLS capture to MP4. VR metadata preserved. Quality selection. 3 free downloads.",
+    "changelog": "v4.0.1 — Live stream capture, VR metadata support, Stripchat API integration, in-page player button, download manager with progress.",
+    "fullDescription": "SERP StripchatVR Downloader makes it easy to record live VR streams from Stripchat directly to your computer.\n\nHow it works: Go to any model page on Stripchat VR, click the Start button in the popup or the download button on the player, select your quality, and the extension begins capturing the live stream in real time. Click Stop when you're done, and it saves as a standard MP4 file with VR metadata in the filename.\n\nIt handles Stripchat's HLS streaming, CDN encoding (including Mouflon key decoding), and VR camera settings automatically — no external tools, no command line, no technical knowledge required. The extension uses the Stripchat API to detect stream availability, model status, and VR configuration.\n\nKey features:\n- Real-time live stream capture with start/stop controls\n- VR metadata support — stereoPacking, frameFormat, and horizontal angle preserved\n- Stripchat API integration for reliable stream detection\n- In-page download button right on the video player\n- Converts HLS streams to standard MP4 files in your browser\n- Quality selection from all available resolutions\n- Real-time capture progress with segment counting and elapsed time\n- Right-click context menu for quick capture\n- VR badge showing stream configuration details\n- Dark-themed UI with coral pink accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to Stripchat VR and open a model page while the stream is live\n3. Click the Start button in the popup or the player download button\n4. Select quality and start capture — click Stop when done — saved as MP4\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited captures.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Real-time live stream capture — start recording, stop when you're done",
+      "VR metadata preserved — stereoPacking, frameFormat, horizontal angle in filename",
+      "Stripchat API integration for reliable model and stream detection",
+      "In-page download button built right into the video player",
+      "Converts HLS streams to downloadable MP4 files in-browser",
+      "Quality selector with all available resolutions",
+      "Live capture progress with segment counting and elapsed time display",
+      "Right-click context menu — Download StripchatVR Stream",
+      "VR badge in popup showing stereoPacking, frame format, and angle",
+      "Dark UI with coral pink accents — clean and unobtrusive",
+      "3 free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP StripchatVR Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Open",
+        "description": "Navigate to Stripchat VR and open a live model page"
+      },
+      {
+        "step": 3,
+        "title": "Start",
+        "description": "Use the in-page download button, the extension popup, or right-click context menu"
+      },
+      {
+        "step": 4,
+        "title": "Capture",
+        "description": "Select quality and click Start — capture runs in real time with segment counting"
+      },
+      {
+        "step": 5,
+        "title": "Stop",
+        "description": "Click Stop when done — video saves as MP4 with VR metadata"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I record a live stream?",
+        "answer": "Go to any model page on Stripchat VR while the stream is live. Click the Start button in the popup or the download button on the player. Select quality and begin capture. Click Stop when you're done."
+      },
+      {
+        "question": "Does this support VR content?",
+        "answer": "Yes. The extension detects VR camera settings (stereoPacking, frameFormat, horizontal angle) and includes them in the filename. A VR badge shows the configuration details in the popup."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "The extension detects all available HLS quality levels from the stream — typically multiple resolutions. Formats are sorted by quality (highest first)."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device, media player, or VR headset."
+      },
+      {
+        "question": "Can I download recorded/VOD content too?",
+        "answer": "Yes. The extension supports both live stream capture and VOD downloads from Stripchat video pages."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited captures."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "What if the model is offline or in a private show?",
+        "answer": "The extension will show a status message indicating the model is offline or in a private show. You need to wait for the public stream to resume."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. Stream processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "stripchat vr downloader",
+      "download stripchat vr",
+      "stripchat vr recorder",
+      "record stripchat vr streams"
+    ],
+    "longTailKeywords": [
+      "how to download stripchat vr streams",
+      "stripchat vr downloader chrome extension",
+      "record stripchat vr to mp4",
+      "save stripchat vr live streams browser"
+    ],
+    "seoTitle": "Stripchat VR Downloader — Record Live VR Streams | SERP",
+    "metaDescription": "Record Stripchat VR live streams with one click. Real-time HLS capture to MP4. VR metadata preserved. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/stripchat-vr-video-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Record Stripchat VR Streams",
+    "googleAdsDescription": "Capture Stripchat VR live streams as MP4. VR metadata preserved. Quality selection. 3 free downloads.",
+    "socialMediaHook": "Want to save live VR streams from Stripchat? This extension captures them in real time. Start, stop, MP4. VR metadata included.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Stripchat API integration with Mouflon CDN decoding catches streams that generic tools can't. VR metadata preservation, live capture with segment counting, and in-page player button.",
+    "adAngles": [
+      {
+        "angle": "VR First",
+        "copy": "Record VR streams with metadata preserved. stereoPacking, frameFormat, angle — all in the filename."
+      },
+      {
+        "angle": "Live Capture",
+        "copy": "Live streams disappear. Capture them in real time. Start, stop, MP4."
+      },
+      {
+        "angle": "Simplicity",
+        "copy": "Download button. Right on the player. Click Start. Click Stop. Done."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No desktop software. No command line. Just a browser extension."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it now."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Multiple HLS quality levels from source. VR metadata preserved in filename.",
+    "limitationsAndDisclaimers": "Stream must be live for capture. Quality depends on source. VR metadata depends on model's camera settings. Requires email sign-in for trial. Internet connection required. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Stripchat Downloader",
+      "SERP Chaturbate Downloader",
+      "SERP BongaCams Downloader",
+      "SERP DreamCam VR Downloader",
+      "SERP M3U8 Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Record Stripchat VR Live Streams (Step-by-Step Guide)",
+      "Stripchat VR Downloader: Capture Live VR Streams with One Click",
+      "How to Save Stripchat VR Streams as MP4 — No Software Required",
+      "Best Stripchat VR Download Extensions Compared",
+      "Record Stripchat VR Streams in Any Quality — Chrome & Firefox"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why capturing from Stripchat VR is tricky and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Find a Live Stream",
+        "description": "Navigate to Stripchat VR and open a live model page"
+      },
+      {
+        "section": "Step 4: Capture",
+        "description": "Select quality, click Start, wait, click Stop"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "VR badge shows camera config. Live capture shows segment count and elapsed time. Use context menu for fastest workflow."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Model must be live and public. Refresh if stream isn't detected. Check VR badge for confirmation."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected live VR stream with VR badge, quality selector, and Start button",
+      "In-page download button on the video player",
+      "Download manager panel with active live capture showing segment count and elapsed time",
+      "Right-click context menu showing Download StripchatVR Stream",
+      "Email sign-in / OTP verification screen",
+      "VR badge detail showing stereoPacking, frameFormat, and angle"
+    ],
+    "iconLogoVariants": "Default icon: 16, 32, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1b1b1b), popup screenshot with VR badge, coral pink accent (#ff4f70)",
+    "gifDemoDescription": "10-second loop: model page -> live stream -> player button appears -> click -> quality popover -> select quality -> download manager slides in -> segment counting -> stop -> complete"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Record Live VR Streams from Stripchat — Capture in Real Time",
+      "subheadline": "Download button on the player. Stripchat API integration. VR metadata preserved. HLS to MP4 conversion. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Live Stream Capture",
+        "description": "Real-time HLS recording with start/stop controls. Segment counting and elapsed time display."
+      },
+      {
+        "title": "VR Metadata Support",
+        "description": "Detects stereoPacking, frameFormat, and horizontal angle. VR badge in UI. Metadata preserved in filename."
+      },
+      {
+        "title": "Stripchat API Integration",
+        "description": "Uses the Stripchat front API for reliable model detection, stream availability, and VR camera settings."
+      },
+      {
+        "title": "Quality Selection",
+        "description": "All available HLS resolutions. Select your preferred quality before capture."
+      },
+      {
+        "title": "In-Page Download Button",
+        "description": "Appears right on the video player. Click and capture — no popup needed."
+      },
+      {
+        "title": "Download Manager",
+        "description": "Real-time progress, segment counting, elapsed time, cancel. Slides in from the right."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "VR metadata automatically detected and preserved",
+      "Automatic update notifications"
+    ],
+    "footerCta": {
+      "headline": "Ready to start recording?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, minimal, professional. Avoid explicit language in marketing copy.",
+    "bannedWords": [
+      "free porn",
+      "watch free",
+      "stream free",
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download."
+    ],
+    "brandColorHex": "#ff4f70",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"Stripchat VR\" or \"StripchatVR\" for the brand. Reference as \"Stripchat VR\" in marketing copy and \"vr.stripchat.com\" for the website URL."
+  }
+}

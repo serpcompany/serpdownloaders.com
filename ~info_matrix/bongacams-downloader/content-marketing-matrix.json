@@ -1,0 +1,278 @@
+{
+  "extension": "bongacams-downloader",
+  "productPositioning": {
+    "headline": "Record BongaCams Live Streams and Download Recordings — Any Quality",
+    "elevatorPitch": "SERP BongaCams Downloader is a browser extension that records live streams and downloads VOD recordings from BongaCams.com. Open a model's page, pick your quality, and hit Start to capture the live stream or download a recording as MP4. Handles LL-HLS, Mouflon DRM decryption, and VR streams. No extra software needed. 3 free downloads included.",
+    "valueProposition": "Purpose-built for BongaCams with AMF API integration, multi-CDN HLS probing (doppiocdn, stripcdn, sc-cdn), Mouflon DRM decryption, low-latency live capture, VR metadata support, and automatic HLS-to-MP4 conversion. Everything happens in your browser — no external tools required.",
+    "targetAudience": "BongaCams users who want to record live streams or save VOD recordings for offline viewing. Non-technical users who want a reliable, one-click solution.",
+    "useCases": [
+      "Record a live BongaCams stream in real time",
+      "Download a BongaCams VOD recording",
+      "Capture in your preferred quality (up to 1080p)",
+      "Download VR streams with proper stereoscopic metadata",
+      "Use the in-page player button for one-click capture without the popup",
+      "Right-click any stream to start recording via context menu"
+    ],
+    "painPointsAddressed": [
+      "BongaCams uses LL-HLS streaming with Mouflon DRM obfuscation — can't right-click and save",
+      "Multiple CDN hosts and dynamic stream URLs make manual capture impossible",
+      "Generic downloaders can't handle Mouflon-encrypted HLS manifests",
+      "Users don't want desktop recording apps, OBS, or command-line tools",
+      "No easy way to select quality on live cam sites",
+      "VR streams require special handling for stereoscopic metadata"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Record BongaCams live streams and download recordings. Auto-detects HLS, handles Mouflon DRM, converts to MP4. Choose quality. 3 free captures included.",
+    "changelog": "v4.0.1 — Live stream capture, VOD download, Mouflon DRM decryption, VR support, multi-CDN probing, in-page download button, download manager with live capture progress.",
+    "fullDescription": "SERP BongaCams Downloader makes it easy to record live streams and download recordings from BongaCams.com.\n\nHow it works: Go to any model page on BongaCams, and either click the download button on the player or the extension icon in your toolbar. For live streams, select your quality and hit Start — the extension captures the stream in real time until you stop it. For VOD recordings, select quality and download — it saves as a standard MP4 file.\n\nIt handles LL-HLS streaming, Mouflon DRM decryption, multi-CDN host probing, and VR stream metadata automatically — no external tools, no command line, no technical knowledge required. Videos save directly to your Downloads folder in an organized BONGACAMS subfolder.\n\nKey features:\n- Live stream recording with real-time capture\n- VOD recording downloads with quality selection\n- Mouflon DRM decryption — handles encrypted HLS manifests\n- VR stream support with stereoscopic metadata\n- In-page download button right on the video player\n- Converts HLS streams to standard MP4 files in your browser\n- Quality selection from all available resolutions\n- Real-time capture progress with elapsed time and segment count\n- Right-click context menu for quick capture\n- Dark-themed UI with coral pink accents\n- 3 free captures to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to BongaCams.com and open a model page\n3. Click the download button on the player or the extension icon\n4. Select quality and Start (live) or Download (VOD) — saved as MP4\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited captures.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Live stream recording — capture BongaCams streams in real time",
+      "VOD recording downloads — save model recordings as MP4",
+      "Mouflon DRM decryption — handles encrypted HLS manifests automatically",
+      "VR stream support — preserves stereoscopic metadata",
+      "In-page download button built right into the video player",
+      "Converts LL-HLS streams to downloadable MP4 files in-browser",
+      "Quality selector with all available resolutions sorted by quality",
+      "Real-time capture progress with elapsed time and segment count",
+      "Right-click context menu — Download BongaCams Stream",
+      "Auto-saves to organized BONGACAMS/ subfolder in Downloads",
+      "Dark UI with coral pink accents — clean and unobtrusive",
+      "3 free trial captures — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP BongaCams Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Open",
+        "description": "Navigate to BongaCams.com and open a model's page"
+      },
+      {
+        "step": 3,
+        "title": "Click",
+        "description": "Use the in-page download button on the player, the extension popup, or right-click context menu"
+      },
+      {
+        "step": 4,
+        "title": "Capture",
+        "description": "Pick your quality and hit Start (live) or Download (VOD) — video saves as MP4 to your Downloads/BONGACAMS folder"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I record a live stream?",
+        "answer": "Go to any model page on BongaCams.com while the stream is live. Click the download button on the player or the extension icon. Select your quality and click Start. The extension records in real time. Click Stop when you're done — the recording saves as MP4."
+      },
+      {
+        "question": "How do I download a VOD recording?",
+        "answer": "Navigate to a model's Videos page on BongaCams and select a recording. Click the extension icon, choose your quality, and hit Download. The recording saves as MP4."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "The extension detects all available qualities from the HLS master manifest — typically multiple resolutions up to 1080p. Formats are sorted by quality (highest first)."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Videos automatically save to a BONGACAMS subfolder inside your browser's default Downloads directory."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial captures after signing in with your email. Purchase a license for unlimited captures."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Why isn't the extension finding the stream?",
+        "answer": "Make sure the model is currently live. If the model is offline or in a private show, the extension will display a status message. Refresh the page if issues persist."
+      },
+      {
+        "question": "Does this support VR streams?",
+        "answer": "Yes. The extension detects VR streams and preserves stereoscopic metadata (stereoPacking, frameFormat, horizontalAngle) in the filename."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. All stream processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "bongacams downloader",
+      "download bongacams",
+      "bongacams recorder",
+      "record bongacams streams",
+      "bongacams video download"
+    ],
+    "longTailKeywords": [
+      "how to record bongacams live streams",
+      "bongacams downloader chrome extension",
+      "download bongacams to mp4",
+      "save bongacams streams browser",
+      "bongacams live stream recorder extension"
+    ],
+    "seoTitle": "BongaCams Downloader — Record Live Streams & Save as MP4 | SERP",
+    "metaDescription": "Record BongaCams live streams and download recordings with one click. Handles Mouflon DRM, LL-HLS, VR. Chrome, Firefox, Edge. 3 free captures.",
+    "urlSlug": "/bongacams-video-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Record BongaCams Live Streams",
+    "googleAdsDescription": "Capture BongaCams streams as MP4. Quality selection. VR support. Mouflon DRM handled. 3 free captures included.",
+    "socialMediaHook": "Can't save BongaCams streams? This extension records live streams and downloads recordings — one click, MP4, done.",
+    "cta": "Try 3 Free Captures",
+    "competitorComparisons": "Handles Mouflon DRM decryption that generic tools can't crack. Multi-CDN probing across 6+ BongaCams CDN hosts. LL-HLS live capture with real-time segment recording. VR stream support with stereoscopic metadata. In-page player button and context menu.",
+    "adAngles": [
+      {
+        "angle": "Simplicity",
+        "copy": "Download button. Right on the player. Click Start. Done."
+      },
+      {
+        "angle": "DRM Handled",
+        "copy": "Mouflon-encrypted streams? No problem. Automatic decryption built in."
+      },
+      {
+        "angle": "Live Capture",
+        "copy": "Record live streams in real time. Stop when you're done. Saved as MP4."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No OBS. No desktop software. No command line. Just a browser extension."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free captures. No credit card. Try it now."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Multiple quality levels from HLS master manifest (up to 1080p). LL-HLS live capture and VOD HLS/MP4 supported. VR streams supported.",
+    "limitationsAndDisclaimers": "Model must be live for live capture. VOD recordings must be publicly accessible. Quality depends on source. Requires email sign-in for trial. Internet connection required. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Chaturbate Downloader",
+      "SERP Stripchat Downloader",
+      "SERP CamSoda Downloader",
+      "SERP MyFreeCams Downloader",
+      "SERP M3U8 Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Record BongaCams Live Streams (Step-by-Step Guide)",
+      "BongaCams Downloader: Record Streams with One Click",
+      "How to Save BongaCams Streams as MP4 — No Software Required",
+      "Best BongaCams Recording Extensions Compared",
+      "Record BongaCams Live Streams in Any Quality — Chrome & Firefox"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why recording from BongaCams is tricky (LL-HLS, Mouflon DRM, multi-CDN) and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store or GitHub releases"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Open a Model Page",
+        "description": "Navigate to BongaCams.com and open a live model page"
+      },
+      {
+        "section": "Step 4: Capture",
+        "description": "In-page button, popup, or right-click context menu. Start/Stop for live, Download for VOD."
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Auto-saves to BONGACAMS/ folder. Use context menu for fastest workflow. VR badge shown for VR streams."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Model must be live. Refresh if needed. Check extension is enabled. Private shows are not accessible."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected live stream with quality selector and Start button",
+      "In-page download button on the video player",
+      "Download manager panel with active live capture progress (elapsed time, segments)",
+      "Right-click context menu showing Download BongaCams Stream",
+      "Email sign-in / OTP verification screen",
+      "VR badge displayed on a VR-enabled stream"
+    ],
+    "iconLogoVariants": "Default icon: 16, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1b1b1b), popup screenshot, coral pink accent (#ff4f70)",
+    "gifDemoDescription": "10-second loop: model page -> live stream playing -> player button appears -> click -> quality popover -> Start -> download manager slides in -> live capture progress with elapsed time"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Record BongaCams Live Streams — One Click, Any Quality",
+      "subheadline": "Download button on the player. Live stream capture. Mouflon DRM handled. HLS to MP4 conversion. VR support. No software to install.",
+      "ctaButton": "Try 3 Free Captures"
+    },
+    "featureBlocks": [
+      {
+        "title": "Live Stream Recording",
+        "description": "Capture live BongaCams streams in real time. Click Start, watch, click Stop. Saved as MP4."
+      },
+      {
+        "title": "Mouflon DRM Decryption",
+        "description": "Handles encrypted HLS manifests that other tools can't crack. Automatic key derivation and XOR decryption."
+      },
+      {
+        "title": "Quality Selection",
+        "description": "All available resolutions from the HLS master manifest, sorted by quality. Up to 1080p."
+      },
+      {
+        "title": "Download Manager",
+        "description": "Real-time progress with elapsed time, segment count, speed. Stop or cancel any capture."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "Auto-saves to organized Downloads/BONGACAMS/ folder",
+      "Automatic update notifications",
+      "VR stream support with stereoscopic metadata"
+    ],
+    "footerCta": {
+      "headline": "Ready to start recording?",
+      "button": "Install Free — 3 Captures Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, minimal, professional. Avoid explicit language in marketing copy.",
+    "bannedWords": [
+      "free porn",
+      "watch free",
+      "stream free",
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download."
+    ],
+    "brandColorHex": "#ff4f70",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"BongaCams\" as one word with capital B and C. Reference as \"BongaCams.com\" for the website."
+  }
+}

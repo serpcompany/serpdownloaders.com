@@ -1,0 +1,592 @@
+{
+  "extension": "xlovecam-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP XLoveCam Downloader",
+    "slug": "xlovecam-downloader",
+    "geckoId": "xlovecam-downloader@serpapps.com",
+    "category": "Live Stream Downloader (Adult)",
+    "targetSites": [
+      "xlovecam.com"
+    ],
+    "targetSiteMatches": [
+      "https://xlovecam.com/*",
+      "https://www.xlovecam.com/*",
+      "https://*.xlovecam.com/*"
+    ],
+    "description": "Download XLoveCam live streams and recordings"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/xlovecam-downloader",
+    "lastUpdated": "2026-03-06",
+    "buildDate": "2026-03-04T17:37:29.005Z",
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "xlovecam-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/xlovecam-video-downloader",
+    "productPage": "https://serp.ly/xlovecam-video-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "HLS Live Capture (real-time segment recording with fMP4 transmux)",
+      "HLS VOD Stitching (m3u8 segment to MP4 transmux)",
+      "Direct MP4 (offscreen streaming)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from XLoveCam API (performer room / videos endpoint), HLS master manifest variants (BANDWIDTH, RESOLUTION, FRAME-RATE)",
+    "qualitySorting": "By height descending with bandwidth tiebreak, HLS variants sorted highest first",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": true,
+    "liveStreamMethod": "HLS live capture with LL-HLS support, graceful stop, fMP4 segment stitching",
+    "vrSupport": true,
+    "vrFeatures": "VR camera settings detection (stereoPacking, frameFormat, horizontalAngle), VR filename suffix, VR badge in popup",
+    "bulkDownload": false,
+    "inPagePlayerButton": true,
+    "playerButtonTargets": [
+      "[data-testid=\"video-player\"]",
+      ".player__video-wrapper",
+      ".video-player__wrapper",
+      ".media-player",
+      "#player-root",
+      ".video-player",
+      "nearest video container"
+    ],
+    "contextMenu": true,
+    "contextMenuId": "download-xlovecam-video",
+    "contextMenuTitle": "Download XLoveCam Stream",
+    "contextMenuContexts": [
+      "page",
+      "video"
+    ],
+    "autoSave": true,
+    "downloadFolder": "XLOVECAM/",
+    "desktopNotifications": false,
+    "videoDetection": "Inject.js page-context adapter: XLoveCam API (onlineList + getPerformerRoom), HLS playlist discovery, Performance API resource entries, DOM script regex, global state objects"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "offscreen"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://*/*",
+      "https://xlovecam.com/*",
+      "https://www.xlovecam.com/*",
+      "https://*.xlovecam.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "download-manager.js",
+        "content.js",
+        "player-button.js"
+      ],
+      "matches": [
+        "https://xlovecam.com/*",
+        "https://www.xlovecam.com/*",
+        "https://*.xlovecam.com/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "MP4 streaming download + HLS segment transmuxing + live capture fMP4 stitching"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (318 KB)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true
+    },
+    "pageInjection": {
+      "file": "inject.js",
+      "purpose": "Page-context XLoveCam adapter: calls XLoveCam API (onlineList + getPerformerRoom), collects HLS playlists from global state/Performance API/DOM scripts, publishes XLOVECAM_PAGE_DATA messages",
+      "messageType": "XLOVECAM_PAGE_DATA"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "XLoveCam Performer API (xlovecam.com/hu/performerAction/onlineList)",
+      "XLoveCam Room API (xlovecam.com/hu/performerAction/getPerformerRoom)",
+      "XLoveCam Stream Meta API (xlovecam.com/api/front/v2/models/username/*/cam)",
+      "XLoveCam Videos API (xlovecam.com/api/front/v2/users/*/videos)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "xlovecam-video-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/xlovecam-video-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/xlovecam-video-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": [],
+    "mouflonSupport": {
+      "enabled": true,
+      "fallbackKeys": {
+        "Ook7quaiNgiyuhai": "EQueeGh2kaewa3ch"
+      },
+      "purpose": "URI decoding for obfuscated XLoveCam HLS manifest segment URIs"
+    },
+    "cdnHosts": [
+      "doppiocdn.com",
+      "doppiocdn.net",
+      "stripcdnm.com",
+      "stripcdnmd.com",
+      "stripcdntmp.com",
+      "sc-cdn.net"
+    ]
+  },
+  "videoDetectionAndExtraction": {
+    "videoIdPatterns": [
+      "URL path segments (last non-generic segment as model username/room slug)"
+    ],
+    "titleSources": [
+      "inject.js displayName/modelName/modelUsername",
+      "document.title"
+    ],
+    "thumbnailSources": [
+      "inject.js thumbnail",
+      "meta[property=\"og:image\"]"
+    ],
+    "durationSources": [
+      "XLoveCam Videos API (entry.duration)"
+    ],
+    "extraMetadata": {
+      "viewerCount": "inject.js viewerCount",
+      "isLive": "inject.js isLive",
+      "isPrivate": "inject.js isPrivate",
+      "isVr": "inject.js isVr / vrCameraSettings detection",
+      "vrCameraSettings": "stereoPacking, frameFormat, horizontalAngle",
+      "broadcastSettings": "inject.js broadcastSettings"
+    },
+    "formatSources": [
+      "XLoveCam API hlsPlaylistFree (live streams)",
+      "XLoveCam Videos API videoUrl/trailerUrl (VOD)",
+      "HLS master manifest parsing (BANDWIDTH, RESOLUTION, FRAME-RATE)",
+      "inject.js hlsMasterUrls collection (global state, Performance API, DOM script regex)"
+    ],
+    "scriptUrlRegex": "/https?:\\/\\/[^\"'\\s<>]+\\.m3u8[^\"'\\s<>]*/ig",
+    "cdnDetectionPattern": "Performance API resource entries matching .m3u8",
+    "mediaRequestPatterns": [
+      ".m3u8",
+      ".mp4",
+      "hlsPlaylistFree",
+      "/api/front/v2/models/",
+      "/performerAction/getPerformerRoom"
+    ],
+    "injectMessageType": "XLOVECAM_PAGE_DATA",
+    "injectRequestType": "REQUEST_XLOVECAM_DATA"
+  },
+  "formatObjectStructure": {
+    "url": "string",
+    "requestUrl": "string (with query params applied) | undefined",
+    "masterUrl": "string | undefined",
+    "quality": "string (e.g. '720p (HLS)', 'Auto (HLS)', 'Source (MP4)', 'Trailer (MP4)')",
+    "format": "hls | mp4",
+    "ext": "m3u8 | mp4",
+    "type": "hls | mp4",
+    "height": "number | undefined",
+    "bandwidth": "number | undefined",
+    "fps": "number | undefined",
+    "extraParams": "object | null (psch, pkey, playlistType for LL-HLS)"
+  },
+  "hlsProcessingSpecs": {
+    "converter": "SimpleHLS2MP4Converter",
+    "maxSegmentRetries": 3,
+    "backoffBaseMs": 500,
+    "stallTimeoutMs": 30000,
+    "absoluteTimeoutMs": null,
+    "livePollIntervalMs": 1400,
+    "liveIdleLimitWithData": 35,
+    "liveIdleLimitNoData": 12,
+    "liveMaxPlaylistErrors": 8,
+    "liveFirstBatchLimit": 8,
+    "liveTickTailLimit": 4,
+    "referer": "https://xlovecam.com/",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "origin": "https://xlovecam.com",
+    "credentialMode": "include for xlovecam.com and CDN hosts (doppiocdn, stripcdn, sc-cdn, strpst)"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Video info extraction, message routing for download progress, inject.js loader, page data polling (8s interval)"
+    },
+    {
+      "component": "Player Button",
+      "files": [
+        "player-button.js"
+      ],
+      "purpose": "In-page download button with quality popover on video player"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth gating, offscreen management, context menu, XLoveCam API calls, HLS manifest parsing, Mouflon URI decoding, VR metadata handling"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "UI, quality selector, live capture start/stop, auth flow, VR badge"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "MP4 streaming download + HLS segment transmuxing + live capture fMP4 stitching"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth/auth-config.js",
+        "auth/auth-api.js",
+        "auth/auth-storage.js",
+        "auth/auth-telemetry.js",
+        "auth/auth-token.js"
+      ],
+      "purpose": "OTP login, entitlement checks, trial management"
+    },
+    {
+      "component": "Auth UI",
+      "files": [
+        "auth-ui.js"
+      ],
+      "purpose": "Popup authentication UI rendering"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager.js"
+      ],
+      "purpose": "In-page download progress panel with live capture segment tracking"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, feature flags, theme variable injection"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release version checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Free trial remaining badge in popup"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-context XLoveCam adapter: API calls (onlineList, getPerformerRoom), HLS discovery, XLOVECAM_PAGE_DATA publisher"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup header/title customizations and error message normalization"
+    }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (slides from -400px to 20px)",
+    "panelId": "XLOVECAM-download-manager",
+    "cardWidth": "380px",
+    "maxHeight": "80vh",
+    "zIndex": 10000,
+    "border": "2px solid var(--brand-accent)",
+    "borderRadius": "10px",
+    "font": "sans-serif",
+    "autoHideSeconds": 3,
+    "features": [
+      "Minimize/close buttons",
+      "Per-download progress bars",
+      "Speed display",
+      "Cancel buttons",
+      "Live capture segment count and elapsed time tracking"
+    ]
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/styles.css (8.5 KB)",
+      "styles/popup-enhanced.css (17.8 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "popup-ui-overrides.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Quick help banner",
+      "Header",
+      "Activation section",
+      "Loading spinner",
+      "Error state",
+      "Video info card with thumbnail and VR badge",
+      "Quality selector (with live capture hint)",
+      "Live capture status display",
+      "Download button (Start/Stop for live, Download Video for VOD)",
+      "Progress bar"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing (SimpleHLS2MP4Converter)"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "sizeKB": 318,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "sizeKB": 4.3,
+      "purpose": "Virtual filesystem blob ops (IndexedDB + Cache API)"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter/",
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "EventEmitter (standalone)",
+      "path": "modules/eventemitter.mjs",
+      "purpose": "Event dispatch (standalone module)"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/xlovecam-video-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/xlovecam-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "xlovecam-downloader.zip",
+        "sizeMB": 1.18
+      },
+      {
+        "platform": "Chrome",
+        "file": "xlovecam-downloader-chrome.zip",
+        "sizeMB": 1.10
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "xlovecam-downloader-chrome-store-sanitized.zip",
+        "sizeMB": 1.10
+      },
+      {
+        "platform": "Brave",
+        "file": "xlovecam-downloader-brave.zip",
+        "sizeMB": 1.10
+      },
+      {
+        "platform": "Edge",
+        "file": "xlovecam-downloader-edge.zip",
+        "sizeMB": 1.10
+      },
+      {
+        "platform": "Opera",
+        "file": "xlovecam-downloader-opera.zip",
+        "sizeMB": 1.10
+      },
+      {
+        "platform": "Whale",
+        "file": "xlovecam-downloader-whale.zip",
+        "sizeMB": 1.10
+      },
+      {
+        "platform": "Yandex",
+        "file": "xlovecam-downloader-yandex.zip",
+        "sizeMB": 1.10
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "xlovecam-downloader-firefox.zip",
+        "sizeMB": 1.11
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "xlovecam-downloader-firefox-unpacked.xpi",
+        "sizeMB": 1.10
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "test-key",
+    "ghLicenseId": "xTBDv7Igej2iWM7JjbSb",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_U5nhyBl8PpvaSv",
+    "stripeProductName": "XLoveCam Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [xlovecam-downloader-monthly-9]",
+    "stripeOneTimePrice": null,
+    "stripePriceIds": [
+      "price_1T7c6GDP7AOTRcvmAXYR7H9d"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "32x32",
+      "file": "icons/icon32.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#ff4f70",
+    "brandAccentHover": "#e63d5d",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

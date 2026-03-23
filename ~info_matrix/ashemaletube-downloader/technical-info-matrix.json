@@ -1,0 +1,544 @@
+{
+  "extension": "ashemaletube-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP AShemaleTube Downloader",
+    "slug": "ashemaletube-downloader",
+    "geckoId": "ashemaletube-downloader@serpapps.com",
+    "category": "Video Downloader (Adult)",
+    "targetSites": [
+      "ashemaletube.com"
+    ],
+    "targetSiteMatches": [
+      "https://ashemaletube.com/*",
+      "https://*.ashemaletube.com/*"
+    ],
+    "description": "Download AShemaleTube videos"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/ashemaletube-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": "2026-03-04T16:59:43.958Z",
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "ashemaletube-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/ashemaletube-downloader",
+    "productPage": "https://serp.ly/ashemaletube-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Direct MP4 (offscreen streaming)",
+      "HLS Stitching (m3u8 segment to MP4 transmux)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from flashvars mediaDefinitions, HTML5 video/source, script regex, Performance API CDN entries",
+    "qualitySorting": "By height descending, MP4 before HLS",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": false,
+    "inPagePlayerButton": true,
+    "playerButtonTargets": [
+      "#videoplayer-v3",
+      "#mediaplayer_wrapper",
+      "#player",
+      ".mainPlayerDiv",
+      "nearest video container",
+      ".video-container"
+    ],
+    "contextMenu": true,
+    "contextMenuId": "download-ashemaletube-video",
+    "contextMenuTitle": "Download AShemaleTube Video",
+    "contextMenuContexts": [
+      "page",
+      "video"
+    ],
+    "autoSave": true,
+    "downloadFolder": "AShemaleTube/",
+    "desktopNotifications": true,
+    "notificationTitle": "AShemaleTube Download Complete",
+    "videoDetection": "Multi-source: flashvars, HTML5 video, script regex, Performance API CDN entries, inject.js XHR/fetch monitor"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "offscreen"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://ashemaletube.com/*",
+      "https://*.ashemaletube.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "download-manager.js",
+        "content.js",
+        "player-button.js"
+      ],
+      "matches": [
+        "https://ashemaletube.com/*",
+        "https://*.ashemaletube.com/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "MP4 streaming download + HLS segment transmuxing"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (318 KB)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true
+    },
+    "pageInjection": {
+      "file": "inject.js",
+      "purpose": "Page-context XHR/fetch monitor, extracts media URLs",
+      "messageType": "PORNHUB_PAGE_DATA"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "ashemaletube-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/ashemaletube-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/ashemaletube-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": []
+  },
+  "videoDetectionAndExtraction": {
+    "videoIdPatterns": [
+      "/videos/(\\d+)(?:/|$)",
+      "/watch/(\\d+)(?:/|$)",
+      "[?&](?:video_id|videoId|id|v)=([a-zA-Z0-9]+)",
+      "viewkey=([a-zA-Z0-9]+)"
+    ],
+    "titleSources": [
+      "h1.title",
+      "[data-video-title]",
+      "meta[property=\"og:title\"]"
+    ],
+    "thumbnailSources": [
+      "og:image",
+      "og:image:secure_url",
+      "twitter:image",
+      "largest <img>"
+    ],
+    "durationSources": [
+      "<video> element",
+      "flashvars.video_duration",
+      "ISO 8601",
+      "meta[property=\"video:duration\"]"
+    ],
+    "extraMetadata": {
+      "views": ".count",
+      "likes": ".votesUp",
+      "dislikes": ".votesDown",
+      "tags": ".tagsWrapper a",
+      "categories": ".categoriesWrapper a"
+    },
+    "formatSources": [
+      "flashvars_* mediaDefinitions",
+      "HTML5 <video>/<source>",
+      "Script regex for mp4/m3u8 URLs",
+      "Performance API CDN entries"
+    ],
+    "scriptUrlRegex": "/https?:\\\\?\\/\\\\?\\/[^\"'\\\\\\s]+?\\.(?:m3u8|mp4)(?:\\\\?[^\"'\\\\\\s]*)?/gi",
+    "cdnDetectionPattern": "/cdn\\.ashemaletube\\.com/i",
+    "mediaRequestPatterns": [
+      "/video/get_media",
+      "mediaDefinitions",
+      ".m3u8",
+      ".mp4",
+      "media=hls",
+      "/seg-\\d+[^/?#]*\\.ts"
+    ],
+    "injectMessageType": "PORNHUB_PAGE_DATA"
+  },
+  "formatObjectStructure": {
+    "format_id": "string",
+    "ext": "m3u8 | mp4",
+    "format_type": "hls | mp4",
+    "quality": "number | null",
+    "url": "string",
+    "protocol": "m3u8 | https",
+    "filesize": null,
+    "tbr": null,
+    "width": null,
+    "height": "number | null"
+  },
+  "hlsProcessingSpecs": {
+    "converter": "SimpleHLS2MP4Converter",
+    "maxSegmentRetries": 3,
+    "backoffBaseMs": 500,
+    "stallTimeoutMs": 30000,
+    "absoluteTimeoutMs": null,
+    "referer": "https://ashemaletube.com/",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "origin": "https://ashemaletube.com"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Video detection, format extraction, flashvars parsing, metadata scraping"
+    },
+    {
+      "component": "Player Button",
+      "files": [
+        "player-button.js"
+      ],
+      "purpose": "In-page download button with quality popover"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth, offscreen, context menu, notifications"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "UI, quality selector, auth flow"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "MP4 streaming + HLS transmux"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js"
+      ],
+      "purpose": "OTP login, entitlements, trial"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager.js"
+      ],
+      "purpose": "In-page download progress panel"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-context XHR/fetch monitor"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup customizations"
+    }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (slides from -400px to 20px)",
+    "panelId": "ashemaletube-download-manager",
+    "cardWidth": "380px",
+    "maxHeight": "80vh",
+    "zIndex": 10000,
+    "border": "2px solid var(--brand-accent)",
+    "borderRadius": "10px",
+    "font": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+    "autoHideSeconds": 3,
+    "features": [
+      "Minimize/close buttons",
+      "Per-download progress bars",
+      "Speed display",
+      "Cancel buttons"
+    ]
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/styles.css (8.5 KB)",
+      "styles/popup-enhanced.css (14.7 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "auth.js (module)",
+      "popup.js (module)",
+      "auth-ui.js",
+      "trial-banner.js",
+      "popup-ui-overrides.js",
+      "update-notifier.js"
+    ],
+    "sections": [
+      "Header",
+      "Quick help banner",
+      "Activation section",
+      "Loading spinner",
+      "Error state",
+      "Video info card",
+      "Quality selector",
+      "Download button",
+      "Progress bar"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "sizeKB": 318,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "sizeKB": 4.3,
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "sizeKB": 3.3,
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/ashemaletube-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/ashemaletube-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "ashemaletube-downloader.zip",
+        "sizeMB": 1.24
+      },
+      {
+        "platform": "Chrome",
+        "file": "ashemaletube-downloader-chrome.zip",
+        "sizeMB": 1.16
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "ashemaletube-downloader-chrome-store-sanitized.zip",
+        "sizeMB": 1.16
+      },
+      {
+        "platform": "Brave",
+        "file": "ashemaletube-downloader-brave.zip",
+        "sizeMB": 1.16
+      },
+      {
+        "platform": "Edge",
+        "file": "ashemaletube-downloader-edge.zip",
+        "sizeMB": 1.16
+      },
+      {
+        "platform": "Opera",
+        "file": "ashemaletube-downloader-opera.zip",
+        "sizeMB": 1.16
+      },
+      {
+        "platform": "Whale",
+        "file": "ashemaletube-downloader-whale.zip",
+        "sizeMB": 1.16
+      },
+      {
+        "platform": "Yandex",
+        "file": "ashemaletube-downloader-yandex.zip",
+        "sizeMB": 1.16
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "ashemaletube-downloader-firefox.zip",
+        "sizeMB": 1.17
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "ashemaletube-downloader-firefox-unpacked.xpi",
+        "sizeMB": 1.16
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": null,
+    "ghLicenseId": null,
+    "licenseCheckWorker": null,
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_TfxYX3PRhGWJaD",
+    "stripeProductName": "AShemaleTube Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [ashemaletube-downloader monthly]",
+    "stripeOneTimePrice": "USD 17.00/one_time",
+    "stripePriceIds": [
+      "price_1SibdSDP7AOTRcvmPfnaHVgB",
+      "price_1SymspDP7AOTRcvm27GW0bPb"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#0ea5e9",
+    "brandAccentHover": "#0b73b9",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

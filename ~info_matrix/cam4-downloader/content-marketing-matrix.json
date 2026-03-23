@@ -1,0 +1,281 @@
+{
+  "extension": "cam4-downloader",
+  "productPositioning": {
+    "headline": "Download Cam4 Live Streams & Recordings — Capture Any Quality",
+    "elevatorPitch": "SERP Cam4 Downloader is a browser extension that records live streams and downloads recorded videos from Cam4.com. Open a model's page, click Start to capture the live stream, or pick a recorded video and download it as MP4. Choose your quality, and it saves directly to your computer. No extra software needed. 3 free downloads included.",
+    "valueProposition": "Purpose-built for Cam4 with live stream capture, VOD downloading, HLS-to-MP4 conversion, and Mouflon DRM handling. Multi-CDN probing across six edge servers ensures reliable stream detection. In-page download button and real-time capture progress. Everything happens in your browser.",
+    "targetAudience": "Cam4 users who want to save live streams or recorded videos for offline viewing. Non-technical users who want a simple, reliable capture solution without desktop software.",
+    "useCases": [
+      "Capture a Cam4 live stream in real time",
+      "Download recorded Cam4 videos (VOD) as MP4",
+      "Choose your preferred quality from available HLS variants",
+      "Use the in-page player button for one-click capture without the popup",
+      "Right-click any stream to capture via context menu"
+    ],
+    "painPointsAddressed": [
+      "Cam4 uses LL-HLS streaming with Mouflon DRM — can't right-click and save",
+      "Live streams are ephemeral — once the broadcast ends, the content is gone",
+      "Multiple CDN hosts and obfuscated segment URLs make capture complex",
+      "Generic downloaders can't handle Mouflon-encrypted HLS manifests",
+      "Users don't want desktop apps or command-line tools for stream recording",
+      "No easy quality selection when capturing live streams"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download Cam4 live streams and recorded videos. Captures LL-HLS streams, converts to MP4. Choose quality. 3 free downloads included.",
+    "changelog": "v4.0.1 — Live stream capture, VOD downloads, Mouflon DRM handling, in-page download button, download manager with progress tracking, VR support.",
+    "fullDescription": "SERP Cam4 Downloader makes it easy to capture live streams and download recorded videos from Cam4.com.\n\nHow it works: Go to any model's page on Cam4. For live streams, click Start to begin capturing — the extension records HLS segments in real time until you click Stop or the stream ends. For recorded videos, select quality and download. Everything saves as a standard MP4 file.\n\nIt handles Low-Latency HLS streaming, Mouflon DRM decryption, and multi-CDN probing automatically — no external tools, no command line, no technical knowledge required. Videos save directly to your Downloads folder in an organized CAM4 subfolder.\n\nKey features:\n- Live stream capture with Start/Stop controls\n- VOD video downloading from model profiles\n- Handles Mouflon-encrypted HLS manifests automatically\n- Multi-CDN probing across six edge server domains\n- In-page download button right on the video player\n- Quality selection from all available HLS variants\n- Real-time capture progress with segment count and elapsed time\n- Right-click context menu for quick captures\n- VR stream support with camera settings metadata\n- Dark-themed UI with coral pink accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to Cam4.com and open a model's page\n3. Click Start on the player or the extension popup\n4. Click Stop when done — saved as MP4\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Live stream capture with Start/Stop controls and elapsed time tracking",
+      "VOD video downloads from recorded content on model profiles",
+      "Handles Mouflon DRM-encrypted HLS manifests automatically",
+      "Multi-CDN probing — six edge server domains for reliable detection",
+      "In-page download button built right into the video player",
+      "Quality selector with all available HLS resolution variants",
+      "Real-time progress with segment count, elapsed time, and download speed",
+      "Right-click context menu — Download Cam4 Stream",
+      "VR stream support with stereoPacking and camera settings metadata",
+      "Auto-saves to organized CAM4/ subfolder in Downloads",
+      "Dark UI with coral pink accents — clean and unobtrusive",
+      "3 free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP Cam4 Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Browse",
+        "description": "Navigate to Cam4.com and open any model's page"
+      },
+      {
+        "step": 3,
+        "title": "Capture",
+        "description": "Click Start on the in-page button, the extension popup, or right-click context menu"
+      },
+      {
+        "step": 4,
+        "title": "Save",
+        "description": "Click Stop when done — the captured stream saves as MP4 to your Downloads/CAM4 folder"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I capture a live stream?",
+        "answer": "Go to any model's page on Cam4.com while they are live. Click the Start button on the player or in the extension popup. The extension begins recording HLS segments in real time. Click Stop when you want to end the capture — the stream saves as MP4."
+      },
+      {
+        "question": "Can I download recorded videos too?",
+        "answer": "Yes. Navigate to a model's video page (/{model}/videos/{id}) and the extension detects the VOD content. Select quality and download — it saves as MP4."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "The extension parses the HLS master manifest and shows all available resolution variants — typically ranging from 360p to 1080p, some with frame rate labels (e.g. 720p @ 60fps). Quality is sorted highest first."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All captures and downloads are saved as standard MP4 files that play on any device or media player."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Videos automatically save to a CAM4 subfolder inside your browser's default Downloads directory."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited captures and downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Why does the extension say the model is offline?",
+        "answer": "The model must be actively streaming for live capture to work. If they are offline or in a private show, the extension will display a status message. Wait for the public stream to resume."
+      },
+      {
+        "question": "What is Mouflon DRM?",
+        "answer": "Mouflon is an HLS manifest obfuscation system that encrypts segment filenames. The extension handles this automatically — no action required from you."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. All stream processing and capture happens entirely in your browser. Authentication uses secure OTP — no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "cam4 downloader",
+      "download cam4",
+      "cam4 stream recorder",
+      "save cam4 videos",
+      "cam4 live stream download"
+    ],
+    "longTailKeywords": [
+      "how to download cam4 live streams",
+      "cam4 downloader chrome extension",
+      "record cam4 streams to mp4",
+      "save cam4 videos browser extension",
+      "cam4 hls stream capture"
+    ],
+    "seoTitle": "Cam4 Downloader — Capture Live Streams & Save Videos | SERP",
+    "metaDescription": "Download Cam4 live streams and recorded videos with one click. Captures LL-HLS streams, handles Mouflon DRM, converts to MP4. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/cam4-video-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download Cam4 Live Streams",
+    "googleAdsDescription": "Capture Cam4 streams as MP4. Live recording + VOD downloads. Quality selection. 3 free captures included.",
+    "socialMediaHook": "Can't save Cam4 live streams? This extension captures them in real time. Click Start, click Stop, MP4 saved.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Handles Mouflon DRM that blocks generic downloaders. Multi-CDN probing across six edge servers. Live capture with Start/Stop controls and elapsed time. In-page player button and context menu.",
+    "adAngles": [
+      {
+        "angle": "Live Capture",
+        "copy": "Record live Cam4 streams in real time. Start, stop, saved as MP4."
+      },
+      {
+        "angle": "DRM Handling",
+        "copy": "Handles Mouflon-encrypted HLS — the streams generic tools can't touch."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No desktop software. No command line. Just a browser extension."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it now."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Multiple HLS quality variants from master manifest. Live capture and VOD download supported. VR streams with camera metadata.",
+    "limitationsAndDisclaimers": "Model must be live for stream capture. VOD access may require fan-club membership. Quality depends on source broadcast. Requires email sign-in for trial. Internet connection required. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "M3U8 Downloader",
+      "Chaturbate Downloader",
+      "Stripchat Downloader",
+      "BongaCams Downloader",
+      "CamSoda Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Cam4 Live Streams (Step-by-Step Guide)",
+      "Cam4 Downloader: Capture Live Streams & Save Videos",
+      "How to Record Cam4 Streams as MP4 — No Software Required",
+      "Best Cam4 Stream Capture Extensions Compared",
+      "Download Cam4 Videos in Any Quality — Chrome & Firefox"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why capturing from Cam4 is tricky (LL-HLS, Mouflon DRM, ephemeral streams) and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store or GitHub release"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Open a Model's Page",
+        "description": "Navigate to Cam4.com and visit a live or recorded model page"
+      },
+      {
+        "section": "Step 4: Capture or Download",
+        "description": "Live: click Start, wait, click Stop. VOD: select quality and download. In-page button, popup, or context menu."
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Auto-saves to CAM4/ folder. Use context menu for fastest workflow. Quality variants sorted by resolution. VR badge appears for VR streams."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Model must be online and public. Refresh if detection stalls. Private shows cannot be captured. Check extension is enabled."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected live stream with quality selector and Start button",
+      "In-page download button on the video player",
+      "Download manager panel with active live capture showing segment count and elapsed time",
+      "Extension popup with VOD video detected — quality variants and Download Video button",
+      "Right-click context menu showing Download Cam4 Stream",
+      "Email sign-in / OTP verification screen"
+    ],
+    "iconLogoVariants": "Default icon: 16, 32, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1b1b1b), popup screenshot, coral pink accent (#ff4f70)",
+    "gifDemoDescription": "10-second loop: model page live -> player button appears -> click Start -> download manager slides in -> segment count ticks up -> click Stop -> MP4 saved"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Cam4 Live Streams & Recordings — Capture Any Quality",
+      "subheadline": "Live stream capture with Start/Stop controls. VOD downloads. Mouflon DRM handled automatically. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Live Stream Capture",
+        "description": "Record Cam4 live streams in real time. Click Start to begin, Stop when done — saves as MP4."
+      },
+      {
+        "title": "VOD Downloads",
+        "description": "Download recorded videos from model profiles. Select quality from available HLS variants."
+      },
+      {
+        "title": "Mouflon DRM Handling",
+        "description": "Automatically decrypts Mouflon-obfuscated HLS manifests that block generic tools."
+      },
+      {
+        "title": "Multi-CDN Detection",
+        "description": "Probes six edge server domains for reliable stream discovery. Never misses a stream."
+      },
+      {
+        "title": "Quality Selection",
+        "description": "All available resolution variants from the HLS master manifest, sorted highest first."
+      },
+      {
+        "title": "Download Manager",
+        "description": "Real-time progress with segment count, elapsed time, and speed. Minimize, cancel, or close."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "Auto-saves to organized Downloads/CAM4/ folder",
+      "Automatic update notifications via GitHub releases"
+    ],
+    "footerCta": {
+      "headline": "Ready to start capturing?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, minimal, professional. Avoid explicit language in marketing copy.",
+    "bannedWords": [
+      "free porn",
+      "watch free",
+      "stream free",
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download."
+    ],
+    "brandColorHex": "#ff4f70",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"Cam4\" with capital C. Reference as \"Cam4.com\" for the website."
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "extension": "onlyfans-downloader",
+  "productPositioning": {
+    "headline": "Download OnlyFans Content — Videos, Images, and Posts",
+    "elevatorPitch": "SERP OnlyFans Downloader is a browser extension that saves videos, images, GIFs, and text posts from OnlyFans to your computer. Open any creator's page, and the extension detects all visible media. Download individually with overlay buttons, or use bulk tools to save everything at once. All video downloads are saved as MP4. No external software needed.",
+    "valueProposition": "Purpose-built for OnlyFans with multi-media detection (videos, images, GIFs, text posts), in-page download overlays, bulk gallery scanning with auto-scroll, per-creator folder organization, and HLS-to-MP4 conversion. Handles OnlyFans API signing natively. Everything happens in your browser — no external tools required.",
+    "targetAudience": "OnlyFans subscribers who want to save content they have paid for. Users who want to archive creator media for offline viewing. Non-technical users who want a simple, reliable download solution.",
+    "useCases": [
+      "Save a video from an OnlyFans post for offline viewing",
+      "Download all images from a creator's media gallery",
+      "Archive an entire creator's content using bulk tools",
+      "Use in-page overlay buttons to download individual media items",
+      "Organize downloads by creator in named subfolders"
+    ],
+    "painPointsAddressed": [
+      "OnlyFans uses HLS streaming — can't right-click and save videos",
+      "No built-in download option for images or posts",
+      "OnlyFans API requires signed requests — generic tools fail",
+      "DRM protection on some content blocks standard downloaders",
+      "Users don't want desktop apps or command-line tools",
+      "Manually saving each image one by one is tedious"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download videos, images, and posts from OnlyFans. Bulk tools. HLS to MP4 conversion. Per-creator folders. In-page overlays.",
+    "changelog": "v4.0.1 — Multi-media detection (video/image/text), bulk gallery scanner, in-page download overlays, side panel UI, DRM detection.",
+    "fullDescription": "SERP OnlyFans Downloader makes it easy to save content from OnlyFans to your computer — videos, images, GIFs, and text posts.\n\nHow it works: Navigate to any creator's page on OnlyFans. The extension automatically detects all visible media. Download individual items using the overlay buttons that appear on each photo and video, or open the side panel to see a full list of detected content organized by type.\n\nFor bulk downloads, use the built-in gallery scanner. It auto-scrolls through a creator's media page, collects all content, and downloads everything to organized folders on your computer. Filter by media type (all, photos, or videos) and let the extension handle the rest.\n\nHLS video streams are automatically converted to standard MP4 files. The extension handles OnlyFans API signing natively, so it works where generic tools fail. DRM-protected content is detected and flagged before download.\n\nKey features:\n- Download videos, images, GIFs, and text posts from OnlyFans\n- In-page download overlay buttons on every media item\n- Bulk gallery scanner with auto-scroll\n- Converts HLS video streams to MP4 in your browser\n- Per-creator folder organization (OnlyFans/creator/Videos/)\n- Side panel UI with tabs for Videos, Images, Text, and Bulk\n- Real-time download progress with speed indicators\n- DRM detection with user-facing notifications\n- File System Access API for bulk saves to your chosen folder\n- Dark-themed UI with OnlyFans blue accents\n\nGetting started:\n1. Install the extension\n2. Go to OnlyFans and navigate to any creator's page\n3. Use overlay buttons to download individual items, or open the side panel for bulk tools\n4. Videos save as MP4, images in their original format\n\nSign in with your email to activate. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Download videos, images, GIFs, and text posts from any OnlyFans page",
+      "In-page download overlay buttons appear on every media item",
+      "Bulk gallery scanner with auto-scroll collects all media from a creator's page",
+      "Converts HLS video streams to downloadable MP4 files in-browser",
+      "Per-creator folder organization — saves to OnlyFans/{creator}/Videos/",
+      "Side panel UI with tabs: Videos, Images/GIFs, Text, Bulk",
+      "Real-time download manager with progress, speed, and cancel controls",
+      "DRM detection — flags protected content before download attempts",
+      "File System Access API — choose your save folder for bulk operations",
+      "Dark UI with OnlyFans blue accents — clean and unobtrusive"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP OnlyFans Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Browse",
+        "description": "Navigate to any OnlyFans creator's page"
+      },
+      {
+        "step": 3,
+        "title": "Download",
+        "description": "Use overlay buttons on individual items, or open the side panel for bulk tools"
+      },
+      {
+        "step": 4,
+        "title": "Save",
+        "description": "Videos save as MP4, images in original format, organized by creator"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I download a video?",
+        "answer": "Go to any OnlyFans page with video content. Hover over the video and click the download overlay button, or open the extension's side panel and select the video from the list."
+      },
+      {
+        "question": "Can I download images and GIFs too?",
+        "answer": "Yes. The extension detects videos, images, GIFs, and text posts. Each media item gets a download overlay button. The side panel organizes content by type."
+      },
+      {
+        "question": "How does bulk download work?",
+        "answer": "Open the Bulk tab in the side panel. The extension auto-scrolls through the creator's media page, detects all content, and downloads everything. You can filter by media type (all, photos, or videos)."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "The extension detects all available qualities from the source. For videos, common options include 720p, 1080p, source, and original. Quality is parsed from the video URL."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player. HLS streams are automatically converted."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Videos save to an OnlyFans/Videos/ or OnlyFans/{creator}/Videos/ subfolder inside your Downloads directory. For bulk operations, you can choose a custom folder."
+      },
+      {
+        "question": "Why does a video show 'DRM Protected'?",
+        "answer": "Some OnlyFans content uses DRM encryption. The extension detects this and notifies you. DRM-protected videos cannot be downloaded at this time."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. Video processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored. The extension accesses OnlyFans using your existing logged-in session cookies."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "onlyfans downloader",
+      "download onlyfans",
+      "onlyfans video download",
+      "save onlyfans content"
+    ],
+    "longTailKeywords": [
+      "how to download videos from onlyfans",
+      "onlyfans downloader chrome extension",
+      "download onlyfans to mp4",
+      "save onlyfans images browser",
+      "onlyfans bulk downloader"
+    ],
+    "seoTitle": "OnlyFans Downloader — Save Videos & Images as MP4 | SERP",
+    "metaDescription": "Download videos, images, and posts from OnlyFans. Bulk tools, HLS to MP4 conversion, per-creator folders. Chrome, Firefox, Edge.",
+    "urlSlug": "/onlyfans-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download OnlyFans Content",
+    "googleAdsDescription": "Save OnlyFans videos & images. Bulk tools. Per-creator folders. HLS to MP4 conversion.",
+    "socialMediaHook": "Want to save content from OnlyFans? This extension adds download buttons right on the page. Videos, images, GIFs — one click each.",
+    "cta": "Install Free",
+    "competitorComparisons": "Native OnlyFans API signing handles authenticated requests where generic tools fail. Bulk gallery scanner with auto-scroll, per-creator folder organization, DRM detection, and in-page overlay buttons on every media item.",
+    "adAngles": [
+      {
+        "angle": "Multi-Media",
+        "copy": "Videos, images, GIFs, text posts. Download everything from OnlyFans."
+      },
+      {
+        "angle": "Bulk Tools",
+        "copy": "Auto-scroll. Bulk scan. Download an entire creator's gallery in one go."
+      },
+      {
+        "angle": "Simplicity",
+        "copy": "Hover. Click. Downloaded. Overlay buttons on every media item."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No desktop software. No command line. Just a browser extension."
+      },
+      {
+        "angle": "Organization",
+        "copy": "Per-creator folders. Everything sorted automatically."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 video output. Multiple quality levels detected from source (720p, 1080p, source, original). HLS and direct MP4 supported. Images in original format (JPG, PNG, GIF, WebP, AVIF).",
+    "limitationsAndDisclaimers": "Must be logged in to OnlyFans. Must have an active subscription to the creator. DRM-protected videos cannot be downloaded. Quality depends on source. Requires email sign-in for activation. Internet connection required. Users are responsible for ensuring they have the right to download content.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "M3U8 Downloader",
+      "Fansly Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Videos from OnlyFans (Step-by-Step Guide)",
+      "OnlyFans Downloader: Save Videos and Images with One Click",
+      "How to Save OnlyFans Content as MP4 — No Software Required",
+      "Best OnlyFans Download Extensions Compared",
+      "Download OnlyFans Videos in Any Quality — Chrome & Firefox",
+      "How to Bulk Download an OnlyFans Creator's Gallery"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from OnlyFans is tricky (HLS streaming, API signing, DRM) and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Active OnlyFans subscription. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store or GitHub release"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification to activate the extension"
+      },
+      {
+        "section": "Step 3: Browse OnlyFans",
+        "description": "Navigate to any creator's page while logged in"
+      },
+      {
+        "section": "Step 4: Download Individual Items",
+        "description": "Use the overlay buttons on images and videos"
+      },
+      {
+        "section": "Step 5: Bulk Download",
+        "description": "Open side panel, switch to Bulk tab, auto-scroll and download entire galleries"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Per-creator folders. Filter by media type. Use File System Access API to choose save folder. Check DRM status before downloading."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Must be logged in. Must have active subscription. DRM content is flagged. Refresh page if media not detected."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Side panel showing detected videos with stats grid and download buttons",
+      "In-page download overlay button on an image in a creator's feed",
+      "In-page download overlay button on a video post",
+      "Bulk tab with auto-scroll gallery scanner in progress",
+      "Download manager panel with active download progress",
+      "Email sign-in / OTP verification screen"
+    ],
+    "iconLogoVariants": "Default icon: 16, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#0e1424), side panel screenshot, OnlyFans blue accent (#00AFF0)",
+    "gifDemoDescription": "10-second loop: creator page → hover over image → overlay button appears → click → download manager shows progress → switch to Bulk tab → auto-scroll scanning"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Content from OnlyFans — Videos, Images, and Posts",
+      "subheadline": "In-page download overlays. Bulk gallery scanner. HLS to MP4 conversion. Per-creator folders. No software to install.",
+      "ctaButton": "Install Free"
+    },
+    "featureBlocks": [
+      {
+        "title": "In-Page Download Overlays",
+        "description": "Hover over any image or video and a download button appears. Click and save — no popup needed."
+      },
+      {
+        "title": "Bulk Gallery Scanner",
+        "description": "Auto-scrolls through a creator's media page, detects all content, and downloads everything. Filter by photos, videos, or all."
+      },
+      {
+        "title": "Multi-Media Support",
+        "description": "Downloads videos, images, GIFs, and text posts. Videos convert from HLS to MP4 automatically."
+      },
+      {
+        "title": "Per-Creator Organization",
+        "description": "Downloads save to OnlyFans/{creator}/Videos/ folders. Everything stays organized."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "Native OnlyFans API signing — works where generic tools fail",
+      "DRM detection protects you from failed downloads",
+      "Auto-saves to organized per-creator folders"
+    ],
+    "footerCta": {
+      "headline": "Ready to start downloading?",
+      "button": "Install Free"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, minimal, professional. Avoid explicit language in marketing copy. Do not reference specific creators or content.",
+    "bannedWords": [
+      "free porn",
+      "watch free",
+      "stream free",
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack",
+      "leaked"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you have paid for and have permission to save. An active OnlyFans subscription is required."
+    ],
+    "brandColorHex": "#00AFF0",
+    "brandBackgroundHex": "#0e1424",
+    "targetPlatformBranding": "Use \"OnlyFans\" as one word with capital O and F. Reference as \"OnlyFans\" for the platform. Do not abbreviate as \"OF\" in customer-facing copy."
+  }
+}

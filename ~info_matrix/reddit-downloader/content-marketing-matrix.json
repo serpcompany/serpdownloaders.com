@@ -1,0 +1,269 @@
+{
+  "extension": "reddit-downloader",
+  "productPositioning": {
+    "headline": "Download Reddit Videos, Images & Text — One Click from Any Post",
+    "elevatorPitch": "SERP Reddit Downloader is a browser extension that saves videos, images, and post text from Reddit.com to your computer. Browse Reddit, click the extension icon, and download everything visible on the page. It detects embedded videos from v.redd.it and i.redd.it, captures full-resolution images, and exports post text. No extra software needed. 3 free downloads included.",
+    "valueProposition": "Purpose-built for Reddit with multi-asset detection (videos, images, text), bulk download of all visible content, DASH/HLS video handling from v.redd.it, full-resolution image capture from i.redd.it and preview.redd.it, and post text export. Everything processes in your browser — no external tools required.",
+    "targetAudience": "Reddit users who want to save videos, images, or post text for offline use. Content collectors, researchers, and non-technical users who want a reliable, one-click solution for archiving Reddit content.",
+    "useCases": [
+      "Save a Reddit video for offline viewing",
+      "Download images from Reddit posts and galleries",
+      "Export post text for reference or archival",
+      "Bulk download all visible media from a subreddit feed or post",
+      "Archive content before posts are deleted"
+    ],
+    "painPointsAddressed": [
+      "Reddit uses DASH/HLS streaming for videos — can't right-click and save",
+      "v.redd.it serves video and audio in separate streams",
+      "Reddit images are served through multiple CDN hosts (i.redd.it, preview.redd.it, redditmedia.com)",
+      "No built-in download button on Reddit",
+      "Generic downloaders miss Reddit's unique post structure and streaming format",
+      "Post text disappears when deleted — no easy way to export"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download videos, images & text from Reddit.com. Detects v.redd.it streams, captures images, exports text. 3 free downloads.",
+    "changelog": "v4.0.1 — Multi-asset detection (video, image, text), bulk download, tabbed popup UI, incremental scan merging, updated auth.",
+    "fullDescription": "SERP Reddit Downloader makes it easy to save videos, images, and post text from Reddit.com to your computer.\n\nHow it works: Browse Reddit, click the extension icon, and the popup shows you every detectable video, image, and text post on the current page. Switch between Videos, Images, and Text tabs. Download individually or use \"Download Visible\" to grab everything at once.\n\nIt handles Reddit's DASH/HLS video streams from v.redd.it automatically, captures full-resolution images from i.redd.it and preview.redd.it, and exports post text as plain text files. No external tools, no command line, no technical knowledge required.\n\nKey features:\n- Detects videos, images, and text from Reddit posts automatically\n- Tabbed popup: browse Videos, Images, and Text separately\n- Bulk download all visible assets with one click\n- Handles v.redd.it DASH/HLS video streams\n- Full-resolution image capture from all Reddit image hosts\n- Exports post text as plain text files with metadata\n- Rescan to pick up newly loaded content as you scroll\n- Shift+Click Rescan for a complete refresh\n- Auto-saves to organized Reddit Downloader subfolder\n- Dark-themed UI with Reddit orange accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to Reddit.com and browse any page\n3. Click the extension icon to scan the page\n4. Switch tabs, select assets, and download\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Multi-asset detection — videos, images, and post text from any Reddit page",
+      "Tabbed popup UI — browse Videos, Images, and Text separately",
+      "Bulk download all visible assets in the active tab with one click",
+      "Handles v.redd.it DASH/HLS video streams automatically",
+      "Full-resolution images from i.redd.it, preview.redd.it, and redditmedia.com",
+      "Post text export as plain text files with permalink and timestamp",
+      "Incremental scan merging — scroll and rescan to discover more content",
+      "Shift+Click Rescan for a complete page refresh",
+      "Auto-saves to organized Reddit Downloader/ subfolder in Downloads",
+      "Dark UI with Reddit orange (#ff4500) accents — native Reddit feel",
+      "3 free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP Reddit Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Browse",
+        "description": "Navigate to Reddit.com and browse any page, subreddit, or post"
+      },
+      {
+        "step": 3,
+        "title": "Scan",
+        "description": "Click the extension icon to detect all videos, images, and text on the page"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "Switch tabs, download individually, or use Download Visible to grab everything"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I download a Reddit video?",
+        "answer": "Go to any Reddit page with video content. Click the extension icon. Videos appear in the Videos tab. Click Download on any video, or use Download Visible to download all detected videos."
+      },
+      {
+        "question": "Can I download images from Reddit?",
+        "answer": "Yes. The extension detects images from i.redd.it, preview.redd.it, and redditmedia.com. Switch to the Images tab in the popup and download individually or in bulk."
+      },
+      {
+        "question": "Can I save post text?",
+        "answer": "Yes. The extension extracts post text and saves it as a plain text file with the post title, permalink, and timestamp."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "Videos are saved as MP4 files. The extension handles Reddit's DASH/HLS streaming format automatically."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Files save to a Reddit Downloader subfolder inside your browser's default Downloads directory, organized by source type."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "What if I scroll and see more content?",
+        "answer": "Click Rescan. The extension merges newly visible content with what it already found. Use Shift+Click on Rescan for a complete page refresh."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. All processing happens locally in your browser. Authentication uses secure OTP — no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "reddit downloader",
+      "download reddit video",
+      "reddit video downloader",
+      "save reddit videos"
+    ],
+    "longTailKeywords": [
+      "how to download reddit videos",
+      "reddit video downloader chrome extension",
+      "download reddit video with audio",
+      "save reddit images to computer",
+      "reddit post text export",
+      "download v.redd.it videos"
+    ],
+    "seoTitle": "Reddit Downloader — Save Videos, Images & Text | SERP",
+    "metaDescription": "Download videos, images & text from Reddit.com with one click. Handles v.redd.it streams. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/reddit-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download Reddit Videos & More",
+    "googleAdsDescription": "Save Reddit videos, images & text. Handles v.redd.it streams. Bulk download. 3 free included.",
+    "socialMediaHook": "Can't save that Reddit video? This extension scans the page, finds every video, image, and text post, and lets you download them all.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Multi-asset detection (video + image + text) in one extension. Handles v.redd.it DASH/HLS streams that generic tools miss. Bulk download, tabbed browser, incremental scanning. No desktop software or CLI required.",
+    "adAngles": [
+      {
+        "angle": "Multi-Asset",
+        "copy": "Videos. Images. Text. One extension downloads them all from Reddit."
+      },
+      {
+        "angle": "v.redd.it Handling",
+        "copy": "Reddit videos use DASH streaming. This extension converts them to MP4 automatically."
+      },
+      {
+        "angle": "Bulk Download",
+        "copy": "Scroll, scan, download everything visible. One click."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it now."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 video output (from DASH/HLS), JPG/PNG/WebP/GIF/AVIF images, TXT text export. Multiple quality levels detected from v.redd.it URLs.",
+    "limitationsAndDisclaimers": "Videos must be visible on the page for detection. Quality depends on source. Requires email sign-in for trial. Internet connection required. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "M3U8 Downloader",
+      "Facebook Downloader",
+      "Instagram Downloader",
+      "Twitter X Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Videos from Reddit (Step-by-Step Guide)",
+      "Reddit Downloader: Save Videos, Images & Text with One Click",
+      "How to Save Reddit Videos with Audio — No Software Required",
+      "Best Reddit Download Extensions Compared",
+      "Download Reddit Videos, Images & Text Posts — Chrome & Firefox"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from Reddit is tricky (DASH streaming, separate audio/video, multiple CDN hosts)"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Browse Reddit",
+        "description": "Navigate to any subreddit, post, or feed"
+      },
+      {
+        "section": "Step 4: Scan",
+        "description": "Click the extension icon to detect content"
+      },
+      {
+        "section": "Step 5: Download",
+        "description": "Use tabs, individual download, or bulk download"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Scroll and Rescan to discover more. Shift+Click Rescan for fresh scan. Downloads organized in Reddit Downloader/ folder."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Content must be visible. Refresh if newly loaded. Check extension is enabled."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing Videos tab with detected Reddit videos and download buttons",
+      "Extension popup showing Images tab with image previews",
+      "Extension popup showing Text tab with post text excerpts",
+      "Stats grid showing counts of detected videos, images, and text posts",
+      "Email sign-in / OTP verification screen"
+    ],
+    "iconLogoVariants": "Default icon: 16, 32, 48, 128px.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1a1a1b), popup screenshot, Reddit orange accent (#ff4500)",
+    "gifDemoDescription": "10-second loop: Reddit feed → click extension icon → popup shows stats (3 videos, 5 images, 2 text) → switch tabs → click Download Visible → assets downloading"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Videos, Images & Text from Reddit — One Click",
+      "subheadline": "Scans any Reddit page. Detects v.redd.it videos, full-resolution images, and post text. Bulk download or pick individually.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Multi-Asset Detection",
+        "description": "Finds videos, images, and text posts on any Reddit page. Handles v.redd.it DASH/HLS streams, i.redd.it images, and post body text."
+      },
+      {
+        "title": "Tabbed Browser",
+        "description": "Switch between Videos, Images, and Text tabs. See counts, previews, and metadata for each asset."
+      },
+      {
+        "title": "Bulk Download",
+        "description": "Hit Download Visible to download everything in the active tab. Scroll and rescan to discover more."
+      },
+      {
+        "title": "Smart Scanning",
+        "description": "Incremental merge scanning picks up new content as you scroll. Shift+Click for a complete refresh."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "Auto-saves to organized Downloads/Reddit Downloader/ folder",
+      "Automatic update notifications"
+    ],
+    "footerCta": {
+      "headline": "Ready to start downloading from Reddit?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, minimal, professional. Avoid inflammatory or controversial language.",
+    "bannedWords": [
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack",
+      "steal",
+      "rip"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download."
+    ],
+    "brandColorHex": "#ff4500",
+    "brandBackgroundHex": "#1a1a1b",
+    "targetPlatformBranding": "Use \"Reddit\" (capital R). Reference as \"Reddit.com\" for the website. Do not use the Reddit alien/Snoo logo."
+  }
+}

@@ -1,0 +1,588 @@
+{
+  "extension": "coomer-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP Coomer Downloader",
+    "slug": "coomer-downloader",
+    "geckoId": "coomer-downloader@serpapps.com",
+    "category": "Media Downloader (Multi-Format)",
+    "targetSites": [
+      "coomer.su",
+      "coomer.st",
+      "coomer.party"
+    ],
+    "targetSiteMatches": [
+      "https://coomer.st/*",
+      "https://*.coomer.st/*",
+      "https://coomer.party/*",
+      "https://*.coomer.party/*",
+      "https://coomer.su/*",
+      "https://*.coomer.su/*"
+    ],
+    "description": "Download Coomer videos, images, GIFs, and post text from visible posts"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/coomer-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": null,
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "coomer-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/coomer-downloader",
+    "productPage": "https://serp.ly/coomer-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Direct media download (chrome.downloads)",
+      "Blob fetch fallback (fetchMediaBlob -> object URL)",
+      "In-page anchor fallback (downloadAssetInPage)",
+      "Text as data URL (text/plain charset=utf-8)"
+    ],
+    "mediaTypes": {
+      "video": [
+        "mp4",
+        "m4v",
+        "mov",
+        "webm",
+        "mkv",
+        "avi",
+        "wmv"
+      ],
+      "image": [
+        "jpg",
+        "jpeg",
+        "png",
+        "gif",
+        "webp",
+        "avif",
+        "bmp"
+      ],
+      "text": [
+        "txt"
+      ]
+    },
+    "qualitySelection": false,
+    "qualityMode": "Downloads original quality from Coomer API — no quality picker",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": true,
+    "bulkDownloadMode": "Scans all visible posts on creator page (up to 60 post IDs), extracts all media and text",
+    "inPagePlayerButton": true,
+    "playerButtonTargets": [
+      "#player",
+      ".mainPlayerDiv"
+    ],
+    "contextMenu": false,
+    "contextMenuId": null,
+    "contextMenuTitle": null,
+    "contextMenuContexts": null,
+    "autoSave": true,
+    "downloadFolder": "Coomer Downloader/",
+    "downloadFolderPattern": "Coomer Downloader/{author}/{date - title}.{ext}",
+    "desktopNotifications": true,
+    "mediaDetection": "API-based: Coomer API /api/v1/{service}/user/{username}/post/{postId}",
+    "concurrency": 5
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "tabs",
+      "scripting",
+      "notifications"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://coomer.st/*",
+      "https://*.coomer.st/*",
+      "https://coomer.party/*",
+      "https://*.coomer.party/*",
+      "https://coomer.su/*",
+      "https://*.coomer.su/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "content.js"
+      ],
+      "matches": [
+        "https://coomer.st/*",
+        "https://*.coomer.st/*",
+        "https://coomer.party/*",
+        "https://*.coomer.party/*",
+        "https://coomer.su/*",
+        "https://*.coomer.su/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "Media streaming support"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (318 KB)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true
+    },
+    "pageInjection": {
+      "file": "inject.js",
+      "purpose": "Page-context XHR/fetch monitor"
+    },
+    "externalAPIs": [
+      "Coomer API (coomer.su/api/v1/)",
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "coomer-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/coomer-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/coomer-downloader/releases/latest"
+    },
+    "csp": "script-src 'self'; object-src 'self';",
+    "dnrRules": []
+  },
+  "apiBasedMediaExtraction": {
+    "domainDetection": "domainMatchesCoomer() — checks hostname ends with coomer.st, coomer.party, or coomer.su",
+    "routeParsing": "getRouteContext() — extracts service, username, postId from /{service}/user/{username}/post/{postId}",
+    "postListApi": "{origin}/api/v1/{service}/user/{username}/posts?o={offset}",
+    "postDetailApi": "{origin}/api/v1/{service}/user/{username}/post/{postId}",
+    "postIdSources": [
+      "URL path (single post page)",
+      "DOM links matching /post/(\\d+)",
+      "API post listing"
+    ],
+    "maxPostIds": 60,
+    "concurrency": 5,
+    "assetTypes": [
+      "video",
+      "image",
+      "text"
+    ],
+    "videoExtensions": [
+      "mp4",
+      "m4v",
+      "mov",
+      "webm",
+      "mkv",
+      "avi",
+      "wmv"
+    ],
+    "imageExtensions": [
+      "jpg",
+      "jpeg",
+      "png",
+      "gif",
+      "webp",
+      "avif",
+      "bmp"
+    ],
+    "textExtraction": "HTML stripped from post.content or post.substring via stripHtml()",
+    "mediaUrlBuilder": "buildMediaUrl(server, path, name, origin) — constructs {server}/data{path}?f={name}",
+    "fallbackServers": [
+      "n4.coomer.party",
+      "n4.coomer.su",
+      "n4.coomer.st"
+    ],
+    "mediaSources": [
+      "Post file",
+      "Post attachments",
+      "Detail attachments",
+      "Detail videos",
+      "Detail previews"
+    ],
+    "deduplication": "By {type}:{url} for media, text:{postId}:{text} for text"
+  },
+  "assetObjectStructure": {
+    "id": "string (type:postId:path)",
+    "type": "video | image | text",
+    "title": "string",
+    "url": "string (media URL) | null (text type)",
+    "text": "string (text type only)",
+    "extension": "string",
+    "source": "Post file | Post attachment | Attachment | Video attachment | Post content",
+    "author": "string (username)",
+    "postId": "string",
+    "permalink": "string (normalized post URL)",
+    "pageUrl": "string (current page URL)",
+    "published": "string | null"
+  },
+  "downloadFlow": {
+    "authGate": "ensureDownloadAccess() — checks activation status and trial remaining",
+    "textDownloads": "startTextDownload() — builds text document, encodes as data URL, triggers chrome.downloads.download()",
+    "mediaDownloads": "startMediaDownload() — 1) Direct chrome.downloads.download(), 2) Fallback: fetchMediaBlob() -> object URL, 3) Fallback: delegate to content script downloadAssetInPage",
+    "textDocumentFormat": "Title, separator line, post URL, text content, capture URL, timestamp",
+    "filenamePattern": "Coomer Downloader/{author}/{date - title}.{ext}",
+    "datePrefix": "First 10 chars of published field (YYYY-MM-DD)",
+    "conflictAction": "uniquify"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Coomer API integration, post scanning, media/image/text asset extraction"
+    },
+    {
+      "component": "Player Button",
+      "files": [
+        "player-button.js"
+      ],
+      "purpose": "In-page download button on video player"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth gating, blob fetch fallback, text document generation, notifications"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "Multi-tab UI (Videos/Images/Text), asset list, bulk download"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "Media streaming support"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js"
+      ],
+      "purpose": "OTP login, entitlements, trial"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager.js"
+      ],
+      "purpose": "In-page download progress panel"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-context XHR/fetch monitor"
+    }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (slides from -400px to 20px)",
+    "panelId": "coomer-download-manager",
+    "cardWidth": "380px",
+    "maxHeight": "80vh",
+    "zIndex": 10000,
+    "border": "2px solid var(--brand-accent)",
+    "borderRadius": "10px",
+    "font": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+    "autoHideSeconds": 3,
+    "features": [
+      "Minimize/close buttons",
+      "Per-download progress bars",
+      "Speed display",
+      "Cancel buttons"
+    ]
+  },
+  "playerButtonConfig": {
+    "containerTargets": [
+      "#player",
+      ".mainPlayerDiv"
+    ],
+    "buttonText": "Download with down arrow icon",
+    "visibilityGate": "Only visible if isActivated = true",
+    "reactive": "Watches chrome.storage.onChanged for activation updates"
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/popup-enhanced.css (7.9 KB)",
+      "styles/styles.css (8.8 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Header with SERP Labs kicker",
+      "Trial banner",
+      "Activation section",
+      "Stats grid (Videos / Images-GIFs / Text Posts)",
+      "Tab bar (Videos / Images / Text)",
+      "Download Visible button",
+      "Asset list",
+      "Status footer"
+    ],
+    "tabs": [
+      "videos",
+      "images",
+      "texts"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "sizeKB": 318,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "sizeKB": 4.3,
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "sizeKB": 3.3,
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    },
+    {
+      "module": "YouTube",
+      "path": "modules/youtube/",
+      "purpose": "YouTube utilities"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/coomer-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/coomer-downloader/",
+    "approximateBuildSizeMB": 1.12,
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "coomer-downloader.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Chrome",
+        "file": "coomer-downloader-chrome.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "coomer-downloader-chrome-store-sanitized.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Brave",
+        "file": "coomer-downloader-brave.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Edge",
+        "file": "coomer-downloader-edge.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Opera",
+        "file": "coomer-downloader-opera.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Whale",
+        "file": "coomer-downloader-whale.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Yandex",
+        "file": "coomer-downloader-yandex.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "coomer-downloader-firefox.zip",
+        "sizeMB": 1.12
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "coomer-downloader-firefox-unpacked.xpi",
+        "sizeMB": 1.12
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": null,
+    "ghLicenseId": null,
+    "licenseCheckWorker": null,
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_TfxYLMxlfjtFuJ",
+    "stripeProductName": "Coomer Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [coomer-downloader monthly]",
+    "stripeOneTimePrice": "USD 17.00/one_time",
+    "stripePriceIds": [
+      "price_1SibdVDP7AOTRcvmnmxmy66K",
+      "price_1SymsrDP7AOTRcvmvMTyqcUy"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#0ea5e9",
+    "brandAccentHover": "#0b73b9",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  },
+  "keyDifferentiator": "Unlike single-format video downloaders, Coomer Downloader extracts all media types from creator posts: videos, images, GIFs, and text content. It uses the Coomer API to fetch post data programmatically, then builds download URLs from attachment metadata. The popup organizes assets into tabbed categories (Videos / Images-GIFs / Text Posts) with per-category counts and a Download Visible bulk action. Text posts are saved as formatted .txt documents with metadata headers. All files are organized into Coomer Downloader/{author}/{date - title}.ext folder structure."
+}

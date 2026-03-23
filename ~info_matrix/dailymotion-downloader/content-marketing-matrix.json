@@ -1,0 +1,262 @@
+{
+  "extension": "dailymotion-downloader",
+  "productPositioning": {
+    "headline": "Download Dailymotion Videos — Any Quality, Saved as MP4",
+    "elevatorPitch": "Video Downloader for Dailymotion is a browser extension that saves videos from Dailymotion.com to your computer. Open any video page, click the extension icon, pick your quality, and it downloads as a standard MP4 file. Handles HLS streaming automatically. No extra software needed. 3 free downloads included.",
+    "valueProposition": "Purpose-built for Dailymotion with direct metadata API integration. Detects all available stream qualities, expands HLS master playlists to individual resolutions, and converts HLS segments to MP4 in your browser. One-click download from the popup or right-click context menu.",
+    "targetAudience": "Dailymotion users who want to save videos for offline viewing. Content creators who need to archive their own uploads. Non-technical users who want a simple, reliable download solution without desktop software.",
+    "useCases": [
+      "Save a Dailymotion video for offline viewing",
+      "Download in your preferred quality from all available resolutions",
+      "Archive your own uploaded content",
+      "Right-click any video page to download via context menu",
+      "Build a personal video library organized by folder"
+    ],
+    "painPointsAddressed": [
+      "Dailymotion uses HLS streaming — videos cannot be saved with right-click",
+      "Quality options are hidden behind the player API and not directly accessible",
+      "Generic downloaders often fail to detect Dailymotion's streaming format",
+      "Users do not want to install desktop applications or use command-line tools",
+      "No easy way to choose specific quality levels on Dailymotion"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download videos from Dailymotion.com. Detects all qualities, converts HLS to MP4. Choose resolution. 3 free downloads included.",
+    "changelog": "v4.0.1 — Dailymotion metadata API integration, HLS master playlist expansion, quality selection popup, context menu download, updated auth.",
+    "fullDescription": "Video Downloader for Dailymotion makes it easy to save videos from Dailymotion.com to your computer.\n\nHow it works: Go to any video page on Dailymotion, click the extension icon in your toolbar, and the extension automatically detects the video. It fetches all available quality options directly from Dailymotion's player API, shows them in a clean popup, and lets you download as a standard MP4 file.\n\nIt handles HLS streaming and quality detection automatically — no external tools, no command line, no technical knowledge required. Videos save directly to your Downloads folder in an organized Dailymotion subfolder.\n\nKey features:\n- Automatic video detection from Dailymotion's player metadata API\n- All available quality levels displayed with resolution and format info\n- Converts HLS streams to standard MP4 files in your browser\n- Quality selection from all available resolutions (e.g. 1080p, 720p, 480p, 360p, 240p)\n- Right-click context menu for quick downloads\n- Video info card with thumbnail, title, duration, and ID\n- Dark-themed UI with sky blue accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to Dailymotion.com and open any video\n3. Click the extension icon in your toolbar\n4. Select quality and download — saved as MP4\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Automatic video detection using Dailymotion's player metadata API",
+      "All available quality levels listed with resolution, type, and source",
+      "Converts HLS streams to downloadable MP4 files in-browser",
+      "Quality selector sorted by resolution — highest quality first",
+      "Right-click context menu — Download Dailymotion video",
+      "Video info card with thumbnail, title, duration, and video ID",
+      "Auto-saves to organized Dailymotion/ subfolder in Downloads",
+      "Dark UI with sky blue accents — clean and professional",
+      "3 free trial downloads — no credit card required",
+      "Works on mainstream video content — family-friendly extension"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add Video Downloader for Dailymotion to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Browse",
+        "description": "Navigate to Dailymotion.com and open any video page"
+      },
+      {
+        "step": 3,
+        "title": "Click",
+        "description": "Use the extension popup or right-click context menu"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "Pick your quality and hit Download — video saves as MP4 to your Downloads/Dailymotion folder"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I download a video?",
+        "answer": "Go to any video page on Dailymotion.com. Click the extension icon in your toolbar, wait for the scan to complete, then select your preferred quality and click Download."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "The extension detects all qualities available for each video — typically 1080p, 720p, 480p, 360p, and 240p. The exact options depend on what the uploader provided. Formats are sorted by quality (highest first)."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Videos automatically save to a Dailymotion subfolder inside your browser's default Downloads directory."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Why isn't the extension finding my video?",
+        "answer": "Make sure you are on a Dailymotion video page (the URL should contain /video/). Click Rescan in the popup after the page has fully loaded. If issues persist, refresh the page and try again."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. Video processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored. No data is sent to third-party servers."
+      },
+      {
+        "question": "Does this work with embedded Dailymotion videos?",
+        "answer": "The extension works on Dailymotion.com video pages. For embedded videos on other sites, navigate to the original Dailymotion video page first."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "dailymotion downloader",
+      "download dailymotion",
+      "dailymotion video download",
+      "save dailymotion videos"
+    ],
+    "longTailKeywords": [
+      "how to download videos from dailymotion",
+      "dailymotion downloader chrome extension",
+      "download dailymotion to mp4",
+      "save dailymotion videos browser",
+      "dailymotion video downloader extension"
+    ],
+    "seoTitle": "Dailymotion Downloader — Save Videos as MP4 | SERP",
+    "metaDescription": "Download videos from Dailymotion.com with one click. Detects all qualities, converts HLS to MP4. Chrome, Firefox, Edge. 3 free downloads included.",
+    "urlSlug": "/dailymotion-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download Dailymotion Videos",
+    "googleAdsDescription": "Save Dailymotion videos as MP4. All quality levels. HLS conversion. 3 free downloads included.",
+    "socialMediaHook": "Want to save videos from Dailymotion? This extension detects all quality options and downloads them as MP4. One click from your toolbar.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Direct Dailymotion metadata API integration detects qualities that generic tools miss. HLS-to-MP4 conversion happens in-browser. Context menu, organized auto-save folder, and quality selector built in.",
+    "adAngles": [
+      {
+        "angle": "Simplicity",
+        "copy": "Click the icon. Pick your quality. Download. Done."
+      },
+      {
+        "angle": "Quality Choice",
+        "copy": "Every resolution Dailymotion offers — 1080p, 720p, 480p, 360p — all in one popup."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No desktop software. No command line. Just a browser extension."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it now."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Multiple quality levels detected from Dailymotion's player API (typically 1080p, 720p, 480p, 360p, 240p). HLS and direct HTTP supported.",
+    "limitationsAndDisclaimers": "Must be on a Dailymotion video page (URL with /video/). Quality depends on what the uploader provided. Requires email sign-in for trial. Internet connection required. Users responsible for download rights and compliance with Dailymotion's terms of service.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "M3U8 Downloader",
+      "YouTube Downloader",
+      "Vimeo Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Videos from Dailymotion (Step-by-Step Guide)",
+      "Dailymotion Downloader: Save Videos in Any Quality with One Click",
+      "How to Save Dailymotion Videos as MP4 — No Software Required",
+      "Best Dailymotion Download Extensions for Chrome and Firefox",
+      "Download Dailymotion Videos in 1080p — Browser Extension Guide"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from Dailymotion requires a specialized tool (HLS streaming, no right-click save)"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store or GitHub release"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Find Your Video",
+        "description": "Navigate to Dailymotion.com and open a video page"
+      },
+      {
+        "section": "Step 4: Download",
+        "description": "Click extension icon, scan, select quality, download"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Auto-saves to Dailymotion/ folder. Use context menu for fastest workflow. Highest quality is pre-selected by default."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Ensure URL contains /video/. Click Rescan. Refresh page if needed. Check extension is enabled."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected video with quality selector and download button",
+      "Format list with multiple quality options (1080p, 720p, 480p, etc.)",
+      "Right-click context menu showing Download Dailymotion video",
+      "Email sign-in / OTP verification screen",
+      "Download complete status in popup footer"
+    ],
+    "iconLogoVariants": "Default icon: 16, 32, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1b1b1b), popup screenshot, sky blue accent (#0ea5e9)",
+    "gifDemoDescription": "8-second loop: Dailymotion video page → click extension icon → popup scans → formats listed → select quality → download starts → status shows complete"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Videos from Dailymotion — Any Quality, Saved as MP4",
+      "subheadline": "Direct metadata API integration. All available resolutions. HLS to MP4 conversion. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "All Quality Options",
+        "description": "Detects every resolution Dailymotion offers for each video. Pick 1080p, 720p, 480p, or any available quality."
+      },
+      {
+        "title": "Automatic HLS Conversion",
+        "description": "Dailymotion uses HLS streaming. This extension converts it to standard MP4 automatically in your browser."
+      },
+      {
+        "title": "One-Click Download",
+        "description": "Click the extension icon or right-click the page. Select quality and download. Saved to an organized Dailymotion folder."
+      },
+      {
+        "title": "Video Info Card",
+        "description": "See the video title, thumbnail, duration, and ID before downloading. Know exactly what you are saving."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "Auto-saves to organized Downloads/Dailymotion/ folder",
+      "Automatic update notifications",
+      "Mainstream video platform — family-friendly content"
+    ],
+    "footerCta": {
+      "headline": "Ready to start downloading?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Professional, straightforward, helpful. Appropriate for a mainstream video platform. Emphasize ease of use and reliability.",
+    "bannedWords": [
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack",
+      "rip",
+      "steal"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download. Please comply with Dailymotion's terms of service."
+    ],
+    "brandColorHex": "#0ea5e9",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"Dailymotion\" with capital D. Reference as \"Dailymotion.com\" for the website. The extension name is \"Video Downloader for Dailymotion\"."
+  }
+}

@@ -1,0 +1,601 @@
+{
+  "extension": "tiktok-downloader",
+  "coreIdentity": {
+    "extensionName": "Video Downloader for TikTok",
+    "slug": "tiktok-downloader",
+    "geckoId": "tiktok-downloader@serpapps.com",
+    "category": "Video Downloader (Social Media)",
+    "targetSites": [
+      "tiktok.com",
+      "tiktokcdn.com",
+      "tiktokv.com",
+      "byteoversea.com",
+      "musical.ly"
+    ],
+    "targetSiteMatches": [
+      "https://www.tiktok.com/*",
+      "https://*.tiktok.com/*"
+    ],
+    "description": "Download TikTok videos directly to your computer"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/tiktok-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": "2026-03-04T17:34:17.851Z",
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "tiktok-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/tiktok-video-downloader",
+    "productPage": "https://serp.ly/tiktok-video-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Direct MP4 (fetch + data URL download)",
+      "Page-initiated download fallback",
+      "DNR Referer injection"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from bitrateInfo multi-quality in embedded JSON (SIGI_STATE, UNIVERSAL_DATA, NEXT_DATA), playAddr, downloadAddr",
+    "qualitySorting": "By preference value descending",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": false,
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": false,
+    "inPagePlayerButton": false,
+    "downloadOverlays": true,
+    "overlayTargets": [
+      "[data-e2e=\"recommend-list-item-container\"]",
+      "[data-e2e=\"user-post-item\"]",
+      "[data-e2e=\"music-item\"]",
+      ".css-fxdm8v-DivItemContainer.e1ymawm01"
+    ],
+    "singleVideoOverlay": true,
+    "contextMenu": false,
+    "autoSave": false,
+    "saveAsDialog": true,
+    "desktopNotifications": false,
+    "videoDetection": "Multi-strategy: SIGI_STATE, __UNIVERSAL_DATA_FOR_REHYDRATION__, __NEXT_DATA__, HTML5 video, script regex, network cache, fetch/XHR interception, Performance API, React Fiber extraction, inject.js page-world hooks"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "cookies",
+      "declarativeNetRequestWithHostAccess"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://www.tiktok.com/*",
+      "https://*.tiktok.com/*",
+      "https://*.tiktokcdn.com/*",
+      "https://*.tiktokv.com/*",
+      "https://*.byteoversea.com/*",
+      "https://*.musical.ly/*",
+      "https://unpkg.com/*",
+      "https://api.gumroad.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "content.js"
+      ],
+      "matches": [
+        "https://www.tiktok.com/*",
+        "https://*.tiktok.com/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_start"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": null,
+    "usesFFmpeg": false,
+    "usesMediaBunny": false,
+    "hlsLibrary": null,
+    "hlsToMp4Transmuxer": null,
+    "dashToMp4": null,
+    "mp4Box": null,
+    "reencoder": null,
+    "networkUtils": null,
+    "indexedDB": {
+      "enabled": true,
+      "dbName": "TikTokDownloaderDB",
+      "storeName": "fileStore",
+      "version": 1
+    },
+    "pageInjection": {
+      "file": "inject.js",
+      "purpose": "Page-world Response/XHR hooks to capture feed JSON, page-context download handler",
+      "messageTypes": [
+        "TT_FEED_ITEMS",
+        "TT_PAGE_DOWNLOAD",
+        "TT_PAGE_BLOB_DOWNLOAD",
+        "TT_PAGE_DOWNLOAD_DONE"
+      ]
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "Gumroad API (api.gumroad.com)",
+      "TikTok Web API (www.tiktok.com/api/item/detail/, m.tiktok.com/api/item/detail/)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "tiktok-video-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/tiktok-video-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/tiktok-video-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": "Dynamic — temporary Referer rules injected per-download to force Referer: https://www.tiktok.com/ on CDN hosts",
+    "webAccessibleResources": [
+      "inject.js",
+      "indexed-db.js"
+    ]
+  },
+  "videoDetectionAndExtraction": {
+    "videoIdPatterns": [
+      "/video/(\\d+)",
+      "data.id",
+      "data.aweme_id",
+      "data.awemeId",
+      "data.itemId",
+      "data.item_id",
+      "data.video.id",
+      "data.video.vid"
+    ],
+    "titleSources": [
+      "meta[property=\"og:title\"]",
+      "meta[name=\"twitter:title\"]",
+      "[data-e2e=\"browse-video-desc\"]",
+      "[data-e2e=\"video-desc\"]",
+      "title",
+      "h1",
+      "videoData.desc"
+    ],
+    "thumbnailSources": [
+      "og:image",
+      "twitter:image",
+      "og:image:secure_url",
+      "twitter:image:src",
+      "video[poster]",
+      "video.cover.url_list",
+      "video.originCover.url_list",
+      "video.dynamicCover.url_list"
+    ],
+    "durationSources": [
+      "<video> element .duration",
+      "videoData.video.duration"
+    ],
+    "extraMetadata": {
+      "author": "[data-e2e=\"video-author-uniqueid\"]",
+      "description": "[data-e2e=\"video-desc\"], [data-e2e=\"browse-video-desc\"]",
+      "likes": "[data-e2e=\"like-count\"], [data-e2e=\"browse-like-count\"]",
+      "feedIndex": "data-scroll-index attribute"
+    },
+    "extractionStrategies": [
+      "SIGI_STATE / sigi-persisted-data (embedded JSON)",
+      "__UNIVERSAL_DATA_FOR_REHYDRATION__ (embedded JSON)",
+      "__NEXT_DATA__ (embedded JSON)",
+      "HTML5 video element (non-blob URLs)",
+      "Network cache (window.__tiktokVideoUrl)",
+      "Script tag regex for MP4/CDN URLs"
+    ],
+    "backgroundExtraction": [
+      "Web page fetch + embedded JSON parse (universal, sigi, next)",
+      "TikTok API fallback (/api/item/detail/)"
+    ],
+    "scriptUrlRegexPatterns": [
+      "/https?:\\/\\/[^\\s\"']+\\.mp4[^\\s\"']*/gi",
+      "/https?:\\/\\/[^\\s\"']*tiktok[^\\s\"']*\\.mp4[^\\s\"']*/gi",
+      "/https?:\\/\\/[^\\s\"']*muscdn[^\\s\"']*\\.mp4[^\\s\"']*/gi",
+      "/https?:\\/\\/[^\\s\"']*byteoversea[^\\s\"']*\\.mp4[^\\s\"']*/gi",
+      "/https?:\\/\\/[^\\s\"']*tiktokcdn[^\\s\"']*\\.mp4[^\\s\"']*/gi",
+      "/https?:\\/\\/[^\\s\"']*tiktokv\\.com[^\\s\"']*/gi",
+      "/https?:\\/\\/v\\d+-webapp[^\\s\"']*tiktok[^\\s\"']*/gi"
+    ],
+    "feedApiPatterns": [
+      "/api/(preload|recommend|post|aweme|item|feed|user|search|browse|music|challenge)/(item|item_list|detail|list|feed|aweme|posts?)"
+    ],
+    "injectMessageTypes": [
+      "TT_FEED_ITEMS",
+      "TT_PAGE_DOWNLOAD",
+      "TT_PAGE_BLOB_DOWNLOAD"
+    ]
+  },
+  "formatObjectStructure": {
+    "url": "string",
+    "format_id": "string (main | download | GearName | play_addr | download_addr | direct_from_content | content_format)",
+    "format_note": "string | null",
+    "quality": "string | null",
+    "width": "number | null",
+    "height": "number | null",
+    "filesize": "number | null",
+    "bitrate": "number | null",
+    "preference": "number",
+    "cookies": "object | null",
+    "http_headers": "object | null"
+  },
+  "cookieHandling": {
+    "cookieSource": "Browser cookie store via chrome.cookies.getAll for .tiktok.com and www.tiktok.com",
+    "priorityCookies": [
+      "ttwid",
+      "sid_tt",
+      "msToken",
+      "tt_csrf_token",
+      "passport_csrf_token",
+      "s_v_web_id",
+      "tt_webid",
+      "odin_tt",
+      "cmpl_token",
+      "tt_webid_v2"
+    ],
+    "htmlCookieExtraction": "tt_chain_token from inline scripts and document.cookie assignments",
+    "referer": "https://www.tiktok.com/",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+    "origin": "https://www.tiktok.com"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Multi-strategy video detection, feed card overlay system, single video overlay, fetch/XHR interception, React Fiber extraction, SPA navigation monitoring"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration with TikTok auth/cookies, web extraction fallback, API fallback, DNR Referer rules, activation gating"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js",
+        "popup-enhanced.js"
+      ],
+      "purpose": "UI, video info display, overlay toggle, activation flow"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js",
+        "auth/auth-config.js",
+        "auth/auth-api.js",
+        "auth/auth-storage.js",
+        "auth/auth-telemetry.js",
+        "auth/auth-token.js"
+      ],
+      "purpose": "OTP login, entitlements, trial management"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging with level gating and console patching"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors (TikTok red/cyan), endpoints, flags, CSS variable injection"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release version checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-world Response/XHR hooks, page-context download handler"
+    },
+    {
+      "component": "IndexedDB",
+      "files": [
+        "indexed-db.js"
+      ],
+      "purpose": "Key-value store for background worker"
+    }
+  ],
+  "downloadOverlaySystem": {
+    "feedCardOverlays": true,
+    "singleVideoOverlays": true,
+    "overlayClass": ".tiktok-download-overlay",
+    "singleVideoOverlayClass": ".single-video-overlay",
+    "overlayToggleKey": "tiktokOverlayEnabled",
+    "overlayToggleStorage": "chrome.storage.sync",
+    "videoContainerSelectors": [
+      "[data-e2e=\"recommend-list-item-container\"]",
+      "[data-e2e=\"user-post-item\"]",
+      "[data-e2e=\"music-item\"]",
+      ".css-fxdm8v-DivItemContainer.e1ymawm01"
+    ],
+    "singleVideoContainerSelectors": [
+      "[data-e2e=\"video-detail-container\"]",
+      "[data-e2e=\"single-video-feed\"]"
+    ],
+    "intersectionObserver": {
+      "rootMargin": "100px",
+      "threshold": 0.1
+    },
+    "mutationObserver": true,
+    "spaNavigation": [
+      "URL polling (1s)",
+      "history.pushState override",
+      "history.replaceState override",
+      "hashchange",
+      "popstate"
+    ],
+    "hardRefresh": "On navigation from user/category page to video/photo page",
+    "clickDetection": "Capture-phase click listener for proactive overlay hiding",
+    "debugPanel": "Alt+Shift+L toggles feed DOM tracker panel",
+    "reactFiberExtraction": true
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/styles.css (17.7 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup-enhanced.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Header",
+      "Help text display",
+      "Boot splash",
+      "Activation section (email + license key)",
+      "Main content (status, overlay toggle)",
+      "Footer"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "Auth Config",
+      "path": "auth/auth-config.js",
+      "purpose": "Auth endpoint and entitlement configuration"
+    },
+    {
+      "module": "Auth API",
+      "path": "auth/auth-api.js",
+      "purpose": "OTP request, login, entitlement check, trial status/consume"
+    },
+    {
+      "module": "Auth Storage",
+      "path": "auth/auth-storage.js",
+      "purpose": "Device ID generation, stored auth reading"
+    },
+    {
+      "module": "Auth Telemetry",
+      "path": "auth/auth-telemetry.js",
+      "purpose": "Auth event logging and dump"
+    },
+    {
+      "module": "Auth Token",
+      "path": "auth/auth-token.js",
+      "purpose": "Entitlement name resolution and checking"
+    },
+    {
+      "module": "IndexedDB",
+      "path": "indexed-db.js",
+      "purpose": "Key-value store (set, get, remove) for background worker"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/tiktok-video-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/tiktok-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "tiktok-downloader.zip",
+        "sizeMB": 0.71
+      },
+      {
+        "platform": "Chrome",
+        "file": "tiktok-downloader-chrome.zip",
+        "sizeMB": 0.72
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "tiktok-downloader-chrome-store-sanitized.zip",
+        "sizeMB": 0.72
+      },
+      {
+        "platform": "Brave",
+        "file": "tiktok-downloader-brave.zip",
+        "sizeMB": 0.72
+      },
+      {
+        "platform": "Edge",
+        "file": "tiktok-downloader-edge.zip",
+        "sizeMB": 0.72
+      },
+      {
+        "platform": "Opera",
+        "file": "tiktok-downloader-opera.zip",
+        "sizeMB": 0.72
+      },
+      {
+        "platform": "Whale",
+        "file": "tiktok-downloader-whale.zip",
+        "sizeMB": 0.72
+      },
+      {
+        "platform": "Yandex",
+        "file": "tiktok-downloader-yandex.zip",
+        "sizeMB": 0.72
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "tiktok-downloader-firefox.zip",
+        "sizeMB": 0.75
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "tiktok-downloader-firefox-unpacked.xpi",
+        "sizeMB": 0.73
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "i-IoFAg7PcsSLBpn6ydXFg==",
+    "ghLicenseId": "DR1MlJ8MWHfiUSKrlqzV",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_TadNHfVFiv2Dd6",
+    "stripeProductName": "Tiktok Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [tiktok-downloader-monthly-9]",
+    "stripeOneTimePrice": "USD 17.00/one_time",
+    "stripePriceIds": [
+      "price_1SdS6yDP7AOTRcvm66nWvCXX",
+      "price_1T6w18DP7AOTRcvmE2Adn1Cl"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < info(20) < warn(30) < error(40) < silent(90)",
+    "contentScriptPrefix": "[TTD]",
+    "loggerSingleton": "TikTokLogger / __TIKTOK_LOGGER_SINGLETON__"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "32x32",
+      "file": "icons/icon32.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#FF3B5C",
+    "brandAccentHover": "#E42B4A",
+    "brandAccentAlt": "#25F4EE",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "bgLight": "#000000",
+    "bgPanel": "#080808",
+    "borderDark": "#333",
+    "borderCard": "#1A1A1A",
+    "borderInput": "#262626",
+    "inputBorder": "#555",
+    "textPrimary": "#FFFFFF",
+    "textMuted": "#9A9CA6",
+    "textSubtle": "#cccccc",
+    "textSecondary": "#E5E5E5",
+    "textMetadata": "#A8ADB8",
+    "textMetadataStrong": "#F3F5F9",
+    "success": "#25F4EE",
+    "successAlt": "#25F4EE",
+    "successHover": "#1BC9C2",
+    "error": "#FF3B5C",
+    "info": "#25F4EE",
+    "warning": "#F97316",
+    "brandGradientStart": "#FF3B5C",
+    "brandGradientEnd": "#25F4EE",
+    "brandAccentFocusRing": "rgba(255, 59, 92, 0.35)",
+    "buttonDanger": "#FF3B5C",
+    "buttonDangerHover": "#E0283F",
+    "neutralDark": "#121212",
+    "neutralMid": "#35373C",
+    "surfaceSubtle": "#101010",
+    "surfaceHelp": "#111820",
+    "statusErrorBg": "rgba(255, 59, 92, 0.12)",
+    "statusErrorText": "#FF8597",
+    "statusInfoBg": "rgba(37, 244, 238, 0.12)",
+    "statusInfoText": "#6BE8F7",
+    "statusSuccessBg": "rgba(37, 244, 238, 0.16)",
+    "statusSuccessText": "#25F4EE",
+    "statusWarningBg": "rgba(255, 186, 102, 0.16)",
+    "statusWarningText": "#FBBC66",
+    "thumbnailGradientStart": "#FF3B5C",
+    "thumbnailGradientEnd": "#25F4EE",
+    "toggleThumb": "#FFFFFF",
+    "toggleTrack": "rgba(255, 59, 92, 0.3)",
+    "helpButtonBg": "rgba(255, 59, 92, 0.14)",
+    "helpButtonHoverBg": "rgba(37, 244, 238, 0.2)",
+    "borderHelp": "rgba(37, 244, 238, 0.35)",
+    "textHelp": "#6BE8F7",
+    "textOnDark": "#FFFFFF",
+    "textOnMuted": "#CFD3DC",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

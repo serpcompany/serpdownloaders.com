@@ -1,0 +1,657 @@
+{
+  "extension": "clientclub-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP ClientClub Downloader",
+    "slug": "clientclub-downloader",
+    "geckoId": "clientclub-downloader@serpapps.com",
+    "category": "Video Downloader (Multi-Platform / Client Portal)",
+    "targetSites": [
+      "GoHighLevel client portals",
+      "Tella.tv",
+      "Loom.com",
+      "Vimeo.com",
+      "YouTube.com",
+      "Wistia.com",
+      "ClientClub-powered sites"
+    ],
+    "targetSiteMatches": [
+      "*://*/*"
+    ],
+    "excludeMatches": [
+      "https://www.skool.com/*",
+      "https://*.skool.com/*",
+      "https://stream.video.skool.com/*",
+      "https://*.video.skool.com/*",
+      "https://kajabi.com/*",
+      "https://*.kajabi.com/*",
+      "https://*.mykajabi.com/*",
+      "https://*.kax16.com/*",
+      "https://*.kxcdn.com/*",
+      "https://circle.so/*",
+      "https://*.circle.so/*",
+      "https://circle.com/*",
+      "https://*.circle.com/*",
+      "https://www.youtube.com/*",
+      "https://*.youtube.com/*",
+      "https://youtu.be/*"
+    ],
+    "description": "Download videos from ClientClub. Supports downloading Loom, YouTube, Vimeo, Wistia embeds where available."
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/clientclub-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": "2026-03-04T17:04:23.853Z",
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "clientclub-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/clientclub-downloader",
+    "productPage": "https://serp.ly/clientclub-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Multi-handler routing (Loom, Vimeo, YouTube, Wistia, GoHighLevel, Circle)",
+      "Direct MP4 (offscreen streaming)",
+      "HLS Stitching (m3u8 segment to MP4 transmux)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Per-handler quality extraction from embedded player APIs",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "downloadManagerType": "Modular (config, state, UI, task registry, integration helper)",
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": false,
+    "inPagePlayerButton": false,
+    "contextMenu": true,
+    "contextMenuId": "download-clientclub-video",
+    "contextMenuTitle": "Download ClientClub Video",
+    "contextMenuContexts": [
+      "page",
+      "video"
+    ],
+    "autoSave": true,
+    "downloadFolder": "ClientClub Downloader/",
+    "desktopNotifications": true,
+    "notificationTitle": "ClientClub Download Complete",
+    "videoDetection": "Multi-platform detector pattern: Loom, Vimeo, YouTube, Wistia, GoHighLevel, Circle detectors scan iframes and embeds",
+    "clientClubDetection": {
+      "metaTag": "meta[name='x-cp-build-version']",
+      "elementId": "clientportal-siteCustomHeader",
+      "assetCheck": "script[src*='clientclub.net'], link[href*='clientclub.net']",
+      "hostnameAllowlist": [
+        "*.clientclub.net",
+        "*.mykajabi.com",
+        "*.gohighlevel.com"
+      ]
+    },
+    "blockedDomains": [
+      "*.skool.com",
+      "*.circle.so",
+      "*.circle.com",
+      "*.youtube.com",
+      "youtu.be",
+      "*.kajabi.com",
+      "*.mykajabi.com"
+    ],
+    "maxConcurrentDownloads": 3
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "tabs",
+      "scripting",
+      "offscreen",
+      "cookies",
+      "declarativeNetRequestWithHostAccess"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://vimeo.com/*",
+      "https://*.vimeo.com/*",
+      "https://*.vimeocdn.com/*",
+      "https://*.cloudfront.net/*",
+      "https://unpkg.com/*",
+      "https://api.gumroad.com/*",
+      "https://player.vimeo.com/*",
+      "https://www.loom.com/*",
+      "https://*.loom.com/*",
+      "https://*.loomcdn.com/*",
+      "https://www.youtube.com/*",
+      "https://*.youtube.com/*",
+      "https://youtu.be/*",
+      "https://*.googlevideo.com/*",
+      "https://*.googleapis.com/*",
+      "https://wistia.com/*",
+      "https://*.wistia.com/*",
+      "https://wistia.net/*",
+      "https://*.wistia.net/*",
+      "https://fast.wistia.net/*",
+      "https://fast.wistia.com/*",
+      "https://*.b-cdn.net/*",
+      "https://*.kajabi.com/*",
+      "https://kajabi.com/*",
+      "https://*.mykajabi.com/*",
+      "https://*.kax16.com/*",
+      "https://*.kxcdn.com/*",
+      "https://content.apisystem.tech/*",
+      "https://highleveltechie.com/*",
+      "https://*.highleveltechie.com/*",
+      "*://*/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "content-enhanced-modular.js"
+      ],
+      "matches": [
+        "*://*/*"
+      ],
+      "excludeMatches": [
+        "https://www.skool.com/*",
+        "https://*.skool.com/*",
+        "https://stream.video.skool.com/*",
+        "https://*.video.skool.com/*",
+        "https://kajabi.com/*",
+        "https://*.kajabi.com/*",
+        "https://*.mykajabi.com/*",
+        "https://*.kax16.com/*",
+        "https://*.kxcdn.com/*",
+        "https://circle.so/*",
+        "https://*.circle.so/*",
+        "https://circle.com/*",
+        "https://*.circle.com/*",
+        "https://www.youtube.com/*",
+        "https://*.youtube.com/*",
+        "https://youtu.be/*"
+      ],
+      "allFrames": true,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen-faststream.html",
+      "js": "offscreen-faststream-legacy.js",
+      "purpose": "MP4 streaming download + HLS segment transmuxing"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "youtubeModule": "modules/youtube/",
+    "indexedDB": {
+      "enabled": true,
+      "file": "indexed-db.js"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "Gumroad API (api.gumroad.com)",
+      "GoHighLevel License Worker (ghl-check-license-worker-v2.farleythecoder.workers.dev)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "clientclub-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/clientclub-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/clientclub-downloader/releases/latest"
+    },
+    "csp": "script-src 'self'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+  },
+  "clientClubDetectionAndGating": {
+    "gatingLogic": "Content script checks for ClientClub markers before activating; exits silently on non-ClientClub pages",
+    "metaTag": "meta[name='x-cp-build-version']",
+    "elementId": "clientportal-siteCustomHeader",
+    "assetCheck": "script[src*='clientclub.net'], link[href*='clientclub.net']",
+    "hostnameAllowlist": [
+      "*.clientclub.net",
+      "*.mykajabi.com",
+      "*.gohighlevel.com"
+    ],
+    "backgroundTabTracking": "activeClientClubTabs Set tracks tabs that passed gating",
+    "backgroundValidation": "isClientClubActiveTab() re-checks via chrome.scripting.executeScript for DOM markers",
+    "overlayCleaning": "Aggressively removes [data-clientclub-overlay] elements on non-ClientClub pages",
+    "failSafe": "On gating error, defaults to disabled (overlays removed, listeners no-op)",
+    "diagnosticMessage": "GATING_DIAGNOSTIC"
+  },
+  "multiPlatformVideoDetection": [
+    {
+      "platform": "Loom",
+      "detector": "detectors/loom-detector.js",
+      "handler": "handlers/loom-handler.js",
+      "method": "Loom embed iframe detection"
+    },
+    {
+      "platform": "Vimeo",
+      "detector": "detectors/vimeo-detector.js",
+      "handler": "handlers/vimeo-handler.js",
+      "method": "Vimeo player iframe and API"
+    },
+    {
+      "platform": "YouTube",
+      "detector": "detectors/youtube-detector.js",
+      "handler": "handlers/youtube-handler.js",
+      "method": "YouTube embed detection"
+    },
+    {
+      "platform": "Wistia",
+      "detector": "detectors/wistia-detector.js",
+      "handler": "handlers/wistia-handler.js",
+      "method": "Wistia player embed detection"
+    },
+    {
+      "platform": "GoHighLevel",
+      "detector": "detectors/gohighlevel-detector.js",
+      "handler": "handlers/gohighlevel-handler.js",
+      "method": "GoHighLevel/ClientClub native video"
+    },
+    {
+      "platform": "Circle",
+      "detector": "detectors/circle-detector.js",
+      "handler": "handlers/circle-handler.js",
+      "method": "Circle.so embed detection"
+    },
+    {
+      "platform": "Generic Video",
+      "detector": "detectors/video-detector.js",
+      "handler": null,
+      "method": "HTML5 video element scanning"
+    }
+  ],
+  "blockedDomainPatterns": [
+    {
+      "pattern": "/(^|\\.)skool\\.com$/i",
+      "reason": "Has dedicated Skool Downloader extension"
+    },
+    {
+      "pattern": "/(^|\\.)video\\.skool\\.com$/i",
+      "reason": "Skool video subdomain"
+    },
+    {
+      "pattern": "/(^|\\.)circle\\.so$/i",
+      "reason": "Has dedicated Circle Downloader extension"
+    },
+    {
+      "pattern": "/(^|\\.)circle\\.com$/i",
+      "reason": "Circle alternate domain"
+    }
+  ],
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content-enhanced-modular.js"
+      ],
+      "purpose": "Unified multi-platform video detector with ClientClub/HighLevel gating"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, handler routing, auth gating, offscreen management, context menu"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup-enhanced.js"
+      ],
+      "purpose": "UI, quality selector, auth flow, video password support"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen-faststream.html",
+        "offscreen-faststream-legacy.js"
+      ],
+      "purpose": "MP4 streaming + HLS transmux"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth/",
+        "auth.js",
+        "auth-ui.js"
+      ],
+      "purpose": "OTP login, entitlements, trial"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager/download-manager.js",
+        "download-manager/download-manager-config.js",
+        "download-manager/download-manager-state.js",
+        "download-manager/download-manager-ui.js",
+        "download-manager/download-task-registry.js",
+        "download-manager/integration-helper.js"
+      ],
+      "purpose": "Modular in-page download progress panel with concurrent task management"
+    },
+    {
+      "component": "Detectors",
+      "files": [
+        "detectors/video-detector.js",
+        "detectors/loom-detector.js",
+        "detectors/vimeo-detector.js",
+        "detectors/youtube-detector.js",
+        "detectors/wistia-detector.js",
+        "detectors/gohighlevel-detector.js",
+        "detectors/circle-detector.js",
+        "detectors/skool-detector.js"
+      ],
+      "purpose": "Platform-specific video detection"
+    },
+    {
+      "component": "Handlers",
+      "files": [
+        "handlers/loom-handler.js",
+        "handlers/vimeo-handler.js",
+        "handlers/youtube-handler.js",
+        "handlers/wistia-handler.js",
+        "handlers/gohighlevel-handler.js",
+        "handlers/circle-handler.js",
+        "handlers/skool-handler.js"
+      ],
+      "purpose": "Platform-specific download handling"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup customizations"
+    }
+  ],
+  "downloadManagerPanel": {
+    "architecture": "Modular (config, state, UI, task registry, integration helper)",
+    "maxConcurrentDownloads": 3,
+    "panelId": "clientclub-download-manager",
+    "zIndex": 10000,
+    "border": "2px solid var(--brand-accent)",
+    "font": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+    "features": [
+      "Minimize/close buttons",
+      "Per-download progress bars",
+      "Speed display",
+      "Cancel buttons",
+      "Concurrent download queue"
+    ]
+  },
+  "contextMenu": {
+    "menuId": "download-clientclub-video",
+    "title": "Download ClientClub Video",
+    "contexts": [
+      "page",
+      "video"
+    ]
+  },
+  "popupUI": {
+    "title": "Video Downloader for ClientClub",
+    "stylesheets": [
+      "styles/styles.css (9.7 KB)",
+      "styles/popup-enhanced.css (11.0 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "auth.js (module)",
+      "popup-enhanced.js (module)",
+      "auth-ui.js",
+      "trial-banner.js",
+      "popup-ui-overrides.js",
+      "update-notifier.js"
+    ],
+    "sections": [
+      "Header with help button",
+      "Quick tips banner",
+      "Activation section",
+      "Boot splash/loading",
+      "Video info card",
+      "Password section",
+      "Quality selector",
+      "Download button",
+      "Progress bar"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "YouTube",
+      "path": "modules/youtube/",
+      "purpose": "YouTube-specific extraction"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build.js",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/clientclub-downloader",
+    "hasWorktree": true,
+    "worktreePath": "clientclub-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "clientclub-downloader.zip",
+        "sizeMB": 1.36
+      },
+      {
+        "platform": "Chrome",
+        "file": "clientclub-downloader-chrome.zip",
+        "sizeMB": 1.29
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "clientclub-downloader-chrome-store-sanitized.zip",
+        "sizeMB": 1.27
+      },
+      {
+        "platform": "Brave",
+        "file": "clientclub-downloader-brave.zip",
+        "sizeMB": 1.29
+      },
+      {
+        "platform": "Edge",
+        "file": "clientclub-downloader-edge.zip",
+        "sizeMB": 1.29
+      },
+      {
+        "platform": "Opera",
+        "file": "clientclub-downloader-opera.zip",
+        "sizeMB": 1.29
+      },
+      {
+        "platform": "Whale",
+        "file": "clientclub-downloader-whale.zip",
+        "sizeMB": 1.29
+      },
+      {
+        "platform": "Yandex",
+        "file": "clientclub-downloader-yandex.zip",
+        "sizeMB": 1.29
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "clientclub-downloader-firefox.zip",
+        "sizeMB": 1.35
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "clientclub-downloader-firefox-unpacked.xpi",
+        "sizeMB": 1.28
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "DZSfWhkbzpWRm8Rbtt5qMg==",
+    "ghLicenseId": "JDgGQZJ2U0Grs6br5XRn",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_TadNlOW6v3RoQQ",
+    "stripeProductName": "Clientclub Downloader",
+    "stripeMonthlyPrice": "USD 17.00/month [Subscription - Clientclub Downloader]",
+    "stripeOneTimePrice": "USD 17.00/one_time",
+    "stripePriceIds": [
+      "price_1SdS6iDP7AOTRcvmOpHS4e4P",
+      "price_1SrVAQDP7AOTRcvmiWtH6pyJ"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#0E55ED",
+    "brandAccentHover": "#205bd8ff",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

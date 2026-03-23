@@ -1,0 +1,272 @@
+{
+  "extension": "udemy-downloader",
+  "productPositioning": {
+    "headline": "Download Udemy Course Videos — Save Lectures Offline, Any Quality",
+    "elevatorPitch": "Video Downloader for Udemy is a browser extension that saves Udemy course videos to your computer. Navigate to a lecture, click the download button on the player or the extension icon, and the video saves as MP4. Supports bulk downloading of entire courses. Uses Udemy's own API for reliable, high-quality downloads. 3 free downloads included.",
+    "valueProposition": "Purpose-built for Udemy with direct API integration for reliable video extraction. Detects lecture content from multiple sources (API download URLs, HLS streams, DASH manifests). Supports bulk course downloads with per-lecture selection. Handles DRM-free content with automatic quality selection up to 4K. No external software required.",
+    "targetAudience": "Udemy students who want to save course videos for offline study. Learners with limited internet access. Professionals who want to reference training materials without streaming. Non-technical users who want a simple download solution for their purchased courses.",
+    "useCases": [
+      "Save a Udemy lecture for offline study",
+      "Download an entire course section for travel or commute",
+      "Keep course materials after subscription expires",
+      "Study at your own pace without buffering",
+      "Use the in-page player button for one-click lecture downloads"
+    ],
+    "painPointsAddressed": [
+      "Udemy videos use HLS/DASH streaming with DRM — can't right-click and save",
+      "No built-in offline download for desktop browsers",
+      "Udemy mobile app offline mode is restrictive and time-limited",
+      "Generic downloaders can't authenticate with Udemy's API",
+      "Manually downloading each lecture in a course is tedious without bulk support"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download Udemy course videos as MP4. Bulk download entire courses. Auto-detects lectures. Quality selection. 3 free downloads.",
+    "changelog": "v4.0.1 — Udemy API integration, bulk course download, in-page download button, OTP authentication, DASH/HLS processing with ffmpeg.wasm.",
+    "fullDescription": "Video Downloader for Udemy makes it easy to save Udemy course videos to your computer for offline study.\n\nHow it works: Log in to Udemy, navigate to any lecture in a course you're enrolled in, and click the download button on the player or the extension icon. The extension uses Udemy's own API to fetch the video in the best available quality and downloads it as a standard MP4 file.\n\nIt handles HLS streaming, DASH manifests, and direct video URLs automatically. For DASH streams with separate audio and video, the extension uses ffmpeg.wasm to merge them seamlessly in your browser. No external tools, no command line, no technical knowledge required.\n\nKey features:\n- Direct Udemy API integration for reliable, high-quality downloads\n- Bulk download entire courses — select lectures with checkboxes and download all\n- In-page download button right on the video player\n- Automatic quality selection up to 4K (2160p, 1080p, 720p, 480p)\n- HLS and DASH stream processing with ffmpeg.wasm audio/video merging\n- Download progress tracking\n- DRM detection with clear error messaging\n- Download history with search, filter, and export\n- Configurable settings (quality, naming format, download folder)\n- Dark-themed UI with sky blue accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Log in to Udemy in your browser\n3. Navigate to a course lecture\n4. Click the download button on the player or the extension icon\n5. Select lectures and download — saved as MP4\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Direct Udemy API integration — reliable video URL extraction from your enrolled courses",
+      "Bulk download entire courses — lecture list with checkboxes and Download All",
+      "In-page download button built right into the video player controls",
+      "Automatic best-quality selection up to 4K resolution",
+      "HLS and DASH stream processing with in-browser ffmpeg.wasm merging",
+      "Download history with search, filter, sort, and JSON export",
+      "Configurable settings — quality, file naming, download folder, notifications",
+      "DRM detection with clear messaging when content is protected",
+      "Options page for download preferences and advanced settings",
+      "3 free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add Video Downloader for Udemy to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Log In",
+        "description": "Sign in to your Udemy account in the browser"
+      },
+      {
+        "step": 3,
+        "title": "Navigate",
+        "description": "Go to any lecture in a course you're enrolled in"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "Click the in-page button, extension popup, or select multiple lectures for bulk download — videos save as MP4"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I download a video?",
+        "answer": "Log in to Udemy, navigate to a lecture page in a course you're enrolled in, then click the download button on the player or the extension icon. The video will download as MP4."
+      },
+      {
+        "question": "Can I download an entire course at once?",
+        "answer": "Yes. The extension lists all lectures in the course with checkboxes. Select the lectures you want and click \"Download All\" to queue them."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "The extension automatically selects the best available quality from Udemy's servers — up to 4K (2160p). Available resolutions depend on what Udemy provides for each lecture."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player. For DASH streams, audio and video are automatically merged using ffmpeg.wasm."
+      },
+      {
+        "question": "Do I need to be enrolled in the course?",
+        "answer": "Yes. The extension uses your Udemy login session to access course videos. You must be enrolled (free or paid) in the course to download its lectures."
+      },
+      {
+        "question": "Why does it say \"DRM protected\"?",
+        "answer": "Some Udemy courses use DRM (Digital Rights Management) to prevent downloads. These videos cannot be downloaded by any browser extension. The extension will notify you when this is the case."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Videos are saved via your browser's save-as dialog. You can configure a default download folder name in the extension settings."
+      },
+      {
+        "question": "Is my Udemy account safe?",
+        "answer": "Yes. The extension reads your existing Udemy login cookies to authenticate API requests — it never stores or transmits your Udemy credentials. SERP activation uses secure OTP — no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "udemy downloader",
+      "download udemy videos",
+      "udemy video download",
+      "save udemy courses"
+    ],
+    "longTailKeywords": [
+      "how to download udemy videos to computer",
+      "udemy course downloader chrome extension",
+      "download udemy lectures as mp4",
+      "save udemy course videos offline browser"
+    ],
+    "seoTitle": "Udemy Downloader — Save Course Videos as MP4 | SERP",
+    "metaDescription": "Download Udemy course videos with one click. Bulk download lectures, auto-detects quality up to 4K. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/udemy-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download Udemy Course Videos",
+    "googleAdsDescription": "Save Udemy lectures as MP4. Bulk download courses. Quality up to 4K. 3 free downloads included.",
+    "socialMediaHook": "Bought a Udemy course but can't watch offline? This extension adds a download button right on the player. Save lectures as MP4 for offline study.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Direct Udemy API integration detects videos that generic tools miss. Bulk course download, ffmpeg.wasm audio/video merging, in-page player button, download history, and configurable quality settings.",
+    "adAngles": [
+      {
+        "angle": "Offline Study",
+        "copy": "Download your Udemy lectures. Study anywhere, anytime — no internet needed."
+      },
+      {
+        "angle": "Bulk Download",
+        "copy": "Download entire Udemy courses with one click. Select lectures, hit Download All."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No desktop software. No command line. Just a browser extension for Udemy."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it now."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Quality up to 4K (2160p). HLS and DASH streams processed automatically. ffmpeg.wasm for audio/video merge.",
+    "limitationsAndDisclaimers": "Must be logged in to Udemy. Must be enrolled in the course. DRM-protected courses cannot be downloaded. Quality depends on source. Requires email sign-in for trial. Internet connection required for initial download. Users responsible for respecting content rights and Udemy terms.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "M3U8 Downloader",
+      "Loom Downloader",
+      "Kajabi Downloader",
+      "Thinkific Downloader",
+      "Mindvalley Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Udemy Course Videos to Your Computer (Step-by-Step Guide)",
+      "Udemy Video Downloader: Save Lectures Offline with One Click",
+      "How to Save Udemy Courses as MP4 — No Software Required",
+      "Best Udemy Download Extensions Compared",
+      "Download Udemy Videos in Any Quality — Chrome & Firefox"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from Udemy is tricky and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Active Udemy account with enrolled courses. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store or GitHub release"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification for SERP activation"
+      },
+      {
+        "section": "Step 3: Log In to Udemy",
+        "description": "Ensure your Udemy session is active in the browser"
+      },
+      {
+        "section": "Step 4: Navigate",
+        "description": "Go to a lecture page in your enrolled course"
+      },
+      {
+        "section": "Step 5: Download",
+        "description": "In-page button, popup, or bulk download via course list"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Use bulk download for entire sections. Check settings for quality preferences. Export download history as JSON."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Ensure Udemy login is active. Refresh page if lecture not detected. DRM courses are not downloadable. Check enrolled status."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected Udemy lecture with course info and download button",
+      "In-page download button on the Udemy video player control bar",
+      "Bulk download view with course lecture list and checkboxes",
+      "Email sign-in / OTP verification screen",
+      "Options/settings page with quality and download preferences"
+    ],
+    "iconLogoVariants": "Default icon: 16, 32, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1b1b1b), popup screenshot on Udemy course page, sky blue accent (#0ea5e9)",
+    "gifDemoDescription": "10-second loop: Udemy course page -> navigate to lecture -> player button appears -> click -> extension popup with lecture info -> download starts -> progress bar -> complete"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Udemy Course Videos — Save Lectures Offline, Any Quality",
+      "subheadline": "Direct Udemy API integration. Bulk course downloads. HLS and DASH processing. Up to 4K quality. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Udemy API Integration",
+        "description": "Uses Udemy's own API to extract video URLs from your enrolled courses. Reliable, fast, high-quality."
+      },
+      {
+        "title": "Bulk Course Download",
+        "description": "View all lectures in a course, select with checkboxes, and download them all. No manual clicking per lecture."
+      },
+      {
+        "title": "Quality Up to 4K",
+        "description": "Automatically selects the best available quality. Supports 2160p, 1080p, 720p, 480p, and lower."
+      },
+      {
+        "title": "In-Browser Processing",
+        "description": "HLS and DASH streams processed entirely in your browser using ffmpeg.wasm. Audio and video merged automatically."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "Uses your existing Udemy session — never stores Udemy credentials",
+      "All video processing happens locally in your browser",
+      "Configurable download settings and history tracking",
+      "Automatic update notifications"
+    ],
+    "footerCta": {
+      "headline": "Ready to study offline?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, educational, professional. Focus on learning and productivity benefits. Avoid piracy framing.",
+    "bannedWords": [
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack",
+      "free courses",
+      "steal",
+      "rip"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content from courses you are enrolled in. Please respect Udemy's terms of service and content creators' rights."
+    ],
+    "brandColorHex": "#0ea5e9",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"Udemy\" with capital U. Reference as \"Udemy.com\" for the website. Reference courses/lectures terminology consistent with Udemy's platform."
+  }
+}

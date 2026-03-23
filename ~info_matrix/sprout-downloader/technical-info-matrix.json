@@ -1,0 +1,617 @@
+{
+  "extension": "sprout-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP SproutVideo Downloader",
+    "slug": "sprout-downloader",
+    "geckoId": "sprout-downloader@serpapps.com",
+    "category": "Video Downloader (Professional / Business)",
+    "targetSites": [
+      "sproutvideo.com",
+      "videos.sproutvideo.com",
+      "images.sproutvideo.com",
+      "*.vids.io",
+      "*.cloudfront.net"
+    ],
+    "targetSiteMatches": [
+      "https://*.sproutvideo.com/*",
+      "https://videos.sproutvideo.com/*",
+      "https://images.sproutvideo.com/*",
+      "https://*.vids.io/*",
+      "https://*.cloudfront.net/*"
+    ],
+    "description": "Download SproutVideo videos directly to your computer"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/sprout-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": "2026-02-26T13:18:36.185Z",
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": null,
+    "storeSanitizedFile": null,
+    "githubReleasesRepo": "serpapps/sprout-video-downloader",
+    "productPage": "https://serp.ly/sprout-video-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Direct MP4 (offscreen streaming)",
+      "HLS Stitching (authenticated m3u8 with policy signatures)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from SproutVideo base64-encoded player data, direct download entries, HLS manifests",
+    "qualitySorting": "Direct downloads preferred over HLS; sorted by quality descending, then height, then bitrate",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "downloadManagerType": "In-page download manager with task registry and inline overlay",
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": false,
+    "inPageOverlayButton": true,
+    "overlayButtonTargets": [
+      ".sproutvideo-player",
+      ".sproutvideo-video-wrapper",
+      ".sprout-player",
+      ".sprout-video",
+      ".video-container",
+      ".videoWrapper",
+      "iframe[src*='videos.sproutvideo.com/embed']",
+      "iframe[src*='vids.io']",
+      "video"
+    ],
+    "contextMenu": false,
+    "autoSave": true,
+    "desktopNotifications": false,
+    "videoDetection": "Automatic — embed URL parsing, iframe scanning, base64 player data decoding, direct video URL detection, script content analysis",
+    "passwordProtectedVideos": true,
+    "multipleVideoSelection": true
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "tabs",
+      "scripting",
+      "offscreen"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://*.sproutvideo.com/*",
+      "https://videos.sproutvideo.com/*",
+      "https://images.sproutvideo.com/*",
+      "https://*.vids.io/*",
+      "https://*.cloudfront.net/*"
+    ],
+    "contentScripts": [
+      {
+        "files": [
+          "site-config.js",
+          "logger.js",
+          "download-manager/inline-manager.js"
+        ],
+        "matches": [
+          "<all_urls>"
+        ],
+        "runAt": "document_start"
+      },
+      {
+        "files": [
+          "site-config.js",
+          "logger.js",
+          "content-enhanced.js"
+        ],
+        "matches": [
+          "https://*.sproutvideo.com/*",
+          "https://videos.sproutvideo.com/*",
+          "https://*.vids.io/*",
+          "https://*/*"
+        ],
+        "runAt": "document_idle"
+      }
+    ],
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocuments": [
+      {
+        "html": "offscreen.html",
+        "purpose": "Standard offscreen download"
+      },
+      {
+        "html": "offscreen-faststream.html",
+        "js": "offscreen-faststream-legacy.js",
+        "purpose": "FastStream download pipeline"
+      }
+    ],
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true,
+      "file": "indexed-db.js",
+      "webAccessible": true
+    },
+    "fastStream": {
+      "enabled": true,
+      "preferred": true,
+      "html": "offscreen-faststream.html",
+      "js": "offscreen-faststream-legacy.js"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "SproutVideo embed/video APIs (videos.sproutvideo.com, *.vids.io)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "sprout-video-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/sprout-video-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/sprout-video-downloader/releases/latest"
+    },
+    "csp": "script-src 'self'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';",
+    "dnrRules": []
+  },
+  "videoDetectionAndExtraction": {
+    "videoIdPatterns": [
+      "videos\\.sproutvideo\\.com/embed/([a-f0-9]{18})",
+      "[\\w-]+\\.vids\\.io/videos/([a-f0-9]{18})",
+      "(?:embed/|videos/)([a-f0-9]{18})"
+    ],
+    "titleSources": [
+      "playerData.title",
+      "meta[property=\"og:title\"]",
+      "meta[name=\"twitter:title\"]",
+      "h1",
+      "<title>"
+    ],
+    "thumbnailSources": [
+      "playerData.posterframe_url",
+      "meta[property=\"og:image\"]",
+      "meta[name=\"twitter:image\"]",
+      "img[alt*=\"thumbnail\"]",
+      "img[alt*=\"video\"]",
+      ".sprout-video img",
+      "video[poster]"
+    ],
+    "durationSources": [
+      "playerData.duration"
+    ],
+    "playerDataExtraction": {
+      "method": "Base64-encoded variables (dat, playerInfo, videoInfo) decoded from script content",
+      "frameExtraction": "chrome.scripting.executeScript across all frames, MAIN world preferred",
+      "fields": [
+        "videoUid",
+        "title",
+        "duration",
+        "posterframe_url",
+        "hls",
+        "signatures",
+        "base",
+        "s3_user_hash",
+        "s3_video_hash",
+        "downloads"
+      ]
+    },
+    "directVideoDetection": {
+      "selectors": [
+        "video[src]",
+        "video[data-src]",
+        "video source[src]"
+      ],
+      "urlPatterns": [
+        "cloudfront.net",
+        "sproutvideo",
+        ".mp4"
+      ],
+      "excludes": [
+        "blob: URLs"
+      ]
+    },
+    "embedDataFields": [
+      "videoUid",
+      "title",
+      "duration",
+      "posterframe_url",
+      "hls",
+      "signatures",
+      "base",
+      "s3_user_hash",
+      "s3_video_hash",
+      "downloads"
+    ]
+  },
+  "formatObjectStructure": {
+    "format_id": "string (hls | source | uhd | sd | hd | etc.)",
+    "url": "string",
+    "ext": "mp4",
+    "protocol": "m3u8_native | https",
+    "format_note": "string (HLS (Authenticated) | SOURCE | UHD | etc.)",
+    "quality": "number (2=source, 1=hls/uhd, 0=other)",
+    "_fragmentQuery": "string (HLS fragment auth query, HLS only)",
+    "_keyQuery": "string (HLS key auth query, HLS only)"
+  },
+  "hlsProcessingSpecs": {
+    "urlConstruction": "https://{base}.videos.sproutvideo.com/{s3_user_hash}/{s3_video_hash}/video/index.m3u8?{manifestQuery}",
+    "authentication": "Policy-based signatures from playerData.signatures — separate queries for manifests (m), fragments (t), and keys (k)",
+    "policyQueryBuilder": "buildPolicyQuery(playerData, type)",
+    "formatSorting": "Direct downloads preferred over HLS; sorted by quality descending, then height, then bitrate"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content-enhanced.js"
+      ],
+      "purpose": "SproutVideo detection, embed URL parsing, iframe scanning, base64 player data decoding, metadata extraction, overlay button injection"
+    },
+    {
+      "component": "Inline Manager",
+      "files": [
+        "download-manager/inline-manager.js"
+      ],
+      "purpose": "Early-load download manager for in-page download UI"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth gating, offscreen management, player data frame extraction, HLS URL construction"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup-enhanced.js"
+      ],
+      "purpose": "UI, quality selector, auth flow, password entry, multi-video selection"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html"
+      ],
+      "purpose": "Standard offscreen download"
+    },
+    {
+      "component": "FastStream Offscreen",
+      "files": [
+        "offscreen-faststream.html",
+        "offscreen-faststream-legacy.js"
+      ],
+      "purpose": "FastStream download pipeline"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js"
+      ],
+      "purpose": "OTP login, entitlements, trial"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager/download-manager.js",
+        "download-manager/download-manager-config.js",
+        "download-manager/download-manager-state.js",
+        "download-manager/download-manager-ui.js",
+        "download-manager/download-task-registry.js",
+        "download-manager/inline-manager.js",
+        "download-manager/integration-helper.js"
+      ],
+      "purpose": "In-page download progress panel with task registry"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, feature flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup customizations"
+    },
+    {
+      "component": "IndexedDB",
+      "files": [
+        "indexed-db.js"
+      ],
+      "purpose": "Key-value store for segment caching"
+    }
+  ],
+  "downloadManager": {
+    "taskRegistry": "DownloadTaskRegistry with configurable max concurrent downloads (default: 3)",
+    "statePersistence": "chrome.storage.local with key downloadManagerGlobalState",
+    "syncThrottleMs": 400,
+    "entryPruningMinutes": 5,
+    "stateSanitization": "All download entries validated and clamped (progress 0-100, required fields defaulted)",
+    "files": [
+      "download-manager/download-manager.js",
+      "download-manager/download-manager-config.js",
+      "download-manager/download-manager-state.js",
+      "download-manager/download-manager-ui.js",
+      "download-manager/download-task-registry.js",
+      "download-manager/inline-manager.js",
+      "download-manager/integration-helper.js"
+    ]
+  },
+  "overlayButtonConfig": {
+    "containerTargets": [
+      ".sproutvideo-player",
+      ".sproutvideo-video-wrapper",
+      ".sprout-player",
+      ".sprout-video",
+      ".video-container",
+      ".videoWrapper",
+      "iframe[src*='videos.sproutvideo.com/embed']",
+      "iframe[src*='vids.io']",
+      "video"
+    ],
+    "wrapperSelectors": [
+      ".sproutvideo-player",
+      ".sprout-video",
+      ".sproutvideo-video-wrapper",
+      ".sprout-player",
+      ".svp-player",
+      ".video-container",
+      ".videoWrapper",
+      ".embed-responsive",
+      ".videoWrapper-16x9"
+    ],
+    "buttonText": "Download",
+    "buttonPosition": "absolute, top: 12px, right: 12px",
+    "buttonAttribute": "data-sprout-download-button",
+    "visibilityGate": "isActivated AND ENABLE_DOWNLOAD_MANAGER AND ENABLE_DOWNLOAD_OVERLAY",
+    "reactive": "chrome.storage.onChanged for activation updates"
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/styles.css (10.5 KB)",
+      "styles/popup-enhanced.css (14.8 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup-enhanced.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "popup-ui-overrides.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Help text banner",
+      "Header",
+      "Boot splash (loading)",
+      "Activation section (email + license key)",
+      "Embed detected notice",
+      "Video selection (multi-video)",
+      "Password section",
+      "Status",
+      "Video info card (thumbnail + title)",
+      "Quality selector",
+      "Download button",
+      "Error display"
+    ]
+  },
+  "featureFlags": {
+    "ENABLE_DOWNLOAD_MANAGER": {
+      "default": true,
+      "purpose": "Enable in-page download manager panel"
+    },
+    "ENABLE_DOWNLOAD_OVERLAY": {
+      "default": true,
+      "purpose": "Enable overlay download buttons on video players"
+    },
+    "PREFER_FASTSTREAM": {
+      "default": true,
+      "purpose": "Prefer FastStream download pipeline over standard offscreen"
+    }
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "YouTube",
+      "path": "modules/youtube/",
+      "purpose": "YouTube utility module"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    }
+  ],
+  "webAccessibleResources": [
+    {
+      "resource": "offscreen-faststream.html",
+      "purpose": "FastStream offscreen document"
+    },
+    {
+      "resource": "offscreen-faststream-legacy.js",
+      "purpose": "FastStream legacy download script"
+    },
+    {
+      "resource": "indexed-db.js",
+      "purpose": "IndexedDB key-value helper"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build.js",
+    "buildLogLevel": "error",
+    "githubRelease": true,
+    "githubRepo": "serpapps/sprout-video-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/sprout-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "sprout-downloader.zip",
+        "sizeMB": 1.29
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "4mxgY8SYSG1LeWAGjt0OuA==",
+    "ghLicenseId": "4w1yiRAd3xeBdrKVXToA",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_TadNhJ7zdF84uR",
+    "stripeProductName": "Sprout Video Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [sprout-video-downloader $9/mo 2026-02-09]",
+    "stripeOneTimePrice": "USD 17.00/one_time",
+    "stripePriceIds": [
+      "price_1SdS6xDP7AOTRcvmIZf2eWTA",
+      "price_1Syyp8DP7AOTRcvmuBqLMYgk"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logGlobal": "SPROUT_LOG_LEVEL",
+    "logHierarchy": "debug < log < warn < error < none"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#00ce7c",
+    "brandAccentHover": "#00b36a",
+    "bgDark": "#172126",
+    "bgDarker": "#111a1e",
+    "borderDark": "#1f2d33",
+    "inputBorder": "#28414a",
+    "textPrimary": "#ffffff",
+    "textMuted": "#98afb7",
+    "textSubtle": "#c4d6dd",
+    "success": "#31d158",
+    "error": "#ff5c5c",
+    "info": "#23a6f0",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e6edf0",
+    "lightMutedText": "#617380",
+    "lightPanelBg": "#f4f8f9",
+    "lightMutedText2": "#8da1ac",
+    "darkTextStrong": "#102229"
+  }
+}

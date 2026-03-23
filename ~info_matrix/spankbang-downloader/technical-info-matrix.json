@@ -1,0 +1,553 @@
+{
+  "extension": "spankbang-downloader",
+  "coreIdentity": {
+    "extensionName": "Video Downloader for SpankBang",
+    "slug": "spankbang-downloader",
+    "geckoId": "spankbang-downloader@serpapps.com",
+    "category": "Video Downloader (Adult)",
+    "targetSites": [
+      "spankbang.com",
+      "m.spankbang.com"
+    ],
+    "targetSiteMatches": [
+      "https://spankbang.com/*",
+      "https://*.spankbang.com/*",
+      "https://m.spankbang.com/*"
+    ],
+    "description": "Download SpankBang videos"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/spankbang-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": null,
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "spankbang-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/spankbang-video-downloader",
+    "productPage": "https://serp.ly/spankbang-video-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Direct MP4 (offscreen streaming)",
+      "HLS Stitching (m3u8 segment to MP4 transmux)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from stream_url_* page variables and SpankBang API (/api/videos/stream)",
+    "qualitySorting": "By height descending",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": false,
+    "inPagePlayerButton": true,
+    "playerButtonTargets": [
+      "#player_wrapper_outer",
+      "#video_container",
+      "#main_video_player",
+      ".player"
+    ],
+    "contextMenu": true,
+    "contextMenuId": "download-spankbang-video",
+    "contextMenuTitle": "Download SpankBang Video",
+    "contextMenuContexts": [
+      "page",
+      "video"
+    ],
+    "autoSave": true,
+    "downloadFolder": "Downloads/",
+    "desktopNotifications": true,
+    "notificationTitle": "SpankBang Download Complete",
+    "videoDetection": "Automatic — inject.js script-tag parsing for stream_url_* variables, SpankBang API via data-streamkey, XHR/fetch monitoring, window.initials fallback"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "offscreen"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://spankbang.com/*",
+      "https://*.spankbang.com/*",
+      "https://m.spankbang.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "download-manager.js",
+        "content.js",
+        "player-button.js"
+      ],
+      "matches": [
+        "https://spankbang.com/*",
+        "https://*.spankbang.com/*",
+        "https://m.spankbang.com/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "MP4 streaming download + HLS segment transmuxing"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (319 KB)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true
+    },
+    "pageInjection": {
+      "file": "inject.js",
+      "purpose": "Page-context script-tag parsing for stream_url_* variables, XHR/fetch monitor, window.initials detection",
+      "messageType": "SPANKBANG_PAGE_DATA"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "SpankBang API (spankbang.com/api/videos/stream)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "spankbang-video-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/spankbang-video-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/spankbang-video-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": []
+  },
+  "videoDetectionAndExtraction": {
+    "videoIdPatterns": [
+      "/([a-z0-9]+)/(?:video|play|embed)"
+    ],
+    "titleSources": [
+      "h1[title] attribute",
+      "document.title (stripped of ' - SpankBang' suffix)"
+    ],
+    "thumbnailSources": [
+      "meta[property=\"og:image\"]"
+    ],
+    "durationSources": [],
+    "extraMetadata": {
+      "uploader": "field (populated if available)",
+      "uploader_id": "field (populated if available)",
+      "views": "field (populated if available)",
+      "description": "field (populated if available)"
+    },
+    "formatSources": [
+      "stream_url_* page variables (script-tag regex in inject.js)",
+      "SpankBang API via data-streamkey POST to /api/videos/stream",
+      "window.initials legacy fallback",
+      "xplayerSettings legacy fallback"
+    ],
+    "streamUrlRegex": "/stream_url_([^\\s=]+)\\s*=\\s*([\"'])((?:(?!\\2).)+)\\2/g",
+    "formatTypeDetection": "URL-based: .m3u8 = HLS, .mpd = DASH, otherwise MP4",
+    "mediaRequestPatterns": [
+      "spankbang",
+      "media",
+      "video"
+    ],
+    "injectMessageType": "SPANKBANG_PAGE_DATA"
+  },
+  "formatObjectStructure": {
+    "url": "string",
+    "quality": "string (e.g. '1080p (MP4)' or '720p (HLS)')",
+    "format": "mp4 | hls",
+    "ext": "mp4 | hls",
+    "height": "number | null",
+    "id": "string (e.g. 'stream-240p')",
+    "type": "mp4 | hls"
+  },
+  "hlsProcessingSpecs": {
+    "converter": "SimpleHLS2MP4Converter",
+    "maxSegmentRetries": 3,
+    "backoffBaseMs": 500,
+    "stallTimeoutMs": 30000,
+    "absoluteTimeoutMs": null,
+    "referer": "https://spankbang.com/",
+    "m3u8Parsing": "Recursive — selects highest bandwidth variant from master playlist, then extracts segment URLs"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Video detection, metadata extraction (title, ID, thumbnail, streamData), message handling for download progress"
+    },
+    {
+      "component": "Player Button",
+      "files": [
+        "player-button.js"
+      ],
+      "purpose": "In-page download button with quality popover"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth, offscreen, context menu, SpankBang format extraction"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "UI, quality selector, auth flow"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "MP4 streaming + HLS transmux"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js"
+      ],
+      "purpose": "OTP login, entitlements, trial"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager.js"
+      ],
+      "purpose": "In-page download progress panel"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-context script-tag parsing for stream_url_* variables, XHR/fetch monitor, window.initials detection"
+    }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (slides from -400px to 20px)",
+    "panelId": "spankbang-download-manager",
+    "cardWidth": "380px",
+    "maxHeight": "80vh",
+    "zIndex": 10000,
+    "border": "2px solid var(--brand-accent)",
+    "borderRadius": "10px",
+    "font": "sans-serif",
+    "autoHideSeconds": 3,
+    "features": [
+      "Minimize/close buttons",
+      "Per-download progress bars",
+      "Speed display",
+      "Cancel buttons"
+    ]
+  },
+  "playerButtonConfig": {
+    "containerTargets": [
+      "#player_wrapper_outer",
+      "#video_container",
+      "#main_video_player",
+      ".player"
+    ],
+    "buttonClass": "sb-download-button",
+    "buttonText": "Download",
+    "qualityPopoverClass": "sb-quality-popover",
+    "qualitySorting": "By height descending",
+    "visibilityGate": "isActivated = true",
+    "reactive": true,
+    "cssFile": "styles/player-button.css",
+    "cssId": "sb-player-button-css"
+  },
+  "contextMenu": {
+    "menuId": "download-spankbang-video",
+    "title": "Download SpankBang Video",
+    "contexts": [
+      "page",
+      "video"
+    ],
+    "documentUrlPatterns": [
+      "https://spankbang.com/*",
+      "https://*.spankbang.com/*",
+      "https://m.spankbang.com/*"
+    ]
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/popup-enhanced.css (8.8 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Header",
+      "Quick help banner",
+      "Boot splash",
+      "Activation section",
+      "Loading spinner",
+      "Error state",
+      "Video info card",
+      "Quality selector",
+      "Download button"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "sizeKB": 319,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "sizeKB": 4.3,
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "sizeKB": 3.5,
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    },
+    {
+      "module": "YouTube",
+      "path": "modules/youtube/",
+      "purpose": "YouTube utilities (shared module)"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build.js",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/spankbang-video-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/spankbang-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "spankbang-downloader.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Chrome",
+        "file": "spankbang-downloader-chrome.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "spankbang-downloader-chrome-store-sanitized.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Brave",
+        "file": "spankbang-downloader-brave.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Edge",
+        "file": "spankbang-downloader-edge.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Opera",
+        "file": "spankbang-downloader-opera.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Whale",
+        "file": "spankbang-downloader-whale.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Yandex",
+        "file": "spankbang-downloader-yandex.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "spankbang-downloader-firefox.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "spankbang-downloader-firefox-unpacked.xpi",
+        "sizeMB": null
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "test-key",
+    "ghLicenseId": "5XEK0lEfOvfcrUCB42LX",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_TadN7H1LOqXnXr",
+    "stripeProductName": "SpankBang Video Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [spankbang-video-downloader monthly]",
+    "stripeOneTimePrice": "USD 17.00/one_time",
+    "stripePriceIds": [
+      "price_1SdS6wDP7AOTRcvmDlTobsJZ",
+      "price_1Symt5DP7AOTRcvmBpriHS80"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#c0392b",
+    "brandAccentHover": "#a83226",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

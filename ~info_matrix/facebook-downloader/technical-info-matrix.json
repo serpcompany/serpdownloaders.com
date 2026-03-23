@@ -1,0 +1,552 @@
+{
+  "extension": "facebook-downloader",
+  "coreIdentity": {
+    "extensionName": "Facebook Downloader by SERP",
+    "slug": "facebook-downloader",
+    "geckoId": "facebook-downloader@serpapps.com",
+    "category": "Video/Image/Text Downloader (Social Media)",
+    "targetSites": [
+      "facebook.com"
+    ],
+    "targetSiteMatches": [
+      "https://facebook.com/*",
+      "https://www.facebook.com/*",
+      "https://m.facebook.com/*",
+      "https://*.facebook.com/*"
+    ],
+    "description": "Download Facebook videos, images, and post text from visible posts."
+  },
+  "versionAndStatus": {
+    "manifestVersion": "3.0.0",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/facebook-downloader",
+    "lastUpdated": "2026-03-06",
+    "buildDate": null,
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": null,
+    "storeSanitizedFile": null,
+    "githubReleasesRepo": "serpapps/facebook-downloader",
+    "productPage": "https://serp.ly/facebook-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Direct URL download (chrome.downloads.download)",
+      "Authenticated blob fetch fallback (fetchMediaBlob)",
+      "Page-side fetch + anchor click fallback (downloadAssetInPage)"
+    ],
+    "assetTypes": [
+      "video",
+      "image",
+      "text"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from inline script data keys (playable_url_quality_hd, browser_native_hd_url, playable_url, browser_native_sd_url, progressive_url), URL resolution patterns, DOM video sources",
+    "qualitySorting": "By score descending (key score + resolution + format bonuses)",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": true,
+    "bulkDownloadMode": "Download Visible — downloads all assets of the active tab type (videos, images, or text)",
+    "inPageOverlayButtons": true,
+    "overlayButtonTypes": [
+      "Per-video 'Download video' button (top-right of video wrapper)",
+      "Per-image down-arrow icon button (bottom-right of image wrapper)",
+      "Post-level 'Download image(s)' button",
+      "Post-level 'Save text' button"
+    ],
+    "contextMenu": false,
+    "autoSave": true,
+    "downloadFolder": "Facebook Downloader/{source}/{title}.{ext}",
+    "desktopNotifications": false,
+    "videoDetection": "Multi-source: DOM <video> elements, inline script data (playable_url key family), feed permalink traversal, regex MP4 URL extraction, MutationObserver for dynamic feed",
+    "imageDetection": "DOM <img> elements filtered by fbcdn.net/fbsbx.com/scontent/cdninstagram.com hosts, minimum 180x180px, excludes icons/emoji",
+    "textDetection": "Post message extraction from data-ad-preview, dir=auto elements, with See more auto-expansion"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "tabs",
+      "scripting",
+      "cookies",
+      "declarativeNetRequest"
+    ],
+    "hostPermissions": [
+      "https://auth.serp.co/*",
+      "https://facebook.com/*",
+      "https://www.facebook.com/*",
+      "https://m.facebook.com/*",
+      "https://*.facebook.com/*",
+      "https://*.fbcdn.net/*",
+      "https://*.fbsbx.com/*",
+      "https://*.cdninstagram.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "content-enhanced-modular.js"
+      ],
+      "css": [
+        "styles/overlay-buttons.css"
+      ],
+      "matches": [
+        "https://facebook.com/*",
+        "https://www.facebook.com/*",
+        "https://m.facebook.com/*",
+        "https://*.facebook.com/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": [
+        "indexed-db.js",
+        "offscreen-faststream-legacy.js"
+      ],
+      "purpose": "FastStream HLS processing with fMP4 support"
+    },
+    "webAccessibleResources": [
+      "offscreen-faststream.html",
+      "offscreen-faststream-legacy.js"
+    ],
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/ (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (319 KB)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true,
+      "dbName": "LoomDownloaderDB",
+      "storeName": "fileStore"
+    },
+    "pageInjection": null,
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)"
+    ],
+    "updateCheck": {
+      "enabled": false
+    },
+    "csp": "script-src 'self'; object-src 'self';",
+    "dnrRules": [
+      {
+        "id": 42001,
+        "condition": "requestDomains: fbcdn.net, fbsbx.com, cdninstagram.com",
+        "action": "Set Origin + Referer to https://www.facebook.com/"
+      },
+      {
+        "id": 42002,
+        "condition": "urlFilter: ||scontent.",
+        "action": "Set Origin + Referer to https://www.facebook.com/"
+      },
+      {
+        "id": 42003,
+        "condition": "requestDomains: facebook.com",
+        "action": "Set Origin + Referer to https://www.facebook.com/"
+      }
+    ]
+  },
+  "videoDetectionAndExtraction": {
+    "mediaHostDetection": "/(fbcdn\\.net|fbsbx\\.com|scontent\\.|cdninstagram\\.com)/i",
+    "videoUrlKeyScoring": {
+      "playable_url_quality_hd": 180,
+      "browser_native_hd_url": 170,
+      "playable_url": 155,
+      "browser_native_sd_url": 150,
+      "progressive_url": 140,
+      "dom_video": 70,
+      "regex_media_url": 35,
+      "playable_url_dash": 20,
+      "hls_playlist_url": -140,
+      "dash_manifest_url": -170
+    },
+    "inlineKeyPattern": "/\"(playable_url_quality_hd|playable_url|playable_url_dash|browser_native_hd_url|browser_native_sd_url|progressive_url|hls_playlist_url|dash_manifest_url)\"\\s*:\\s*\"([^\"]+)\"/gi",
+    "mediaUrlRegex": "/https?:\\\\/\\\\/[^\"'\\s<>]+?\\.(?:mp4)[^\"'\\s<>]*/gi",
+    "videoIdPattern": "/video_id[^0-9]{0,32}(\\d{5,})/gi",
+    "permalinkPatterns": [
+      "/reel/{id}",
+      "/reels/{id}",
+      "/videos/{id}",
+      "/watch/?v={id}",
+      "/share/v/{id}",
+      "/share/r/{id}",
+      "/posts/{id}",
+      "/groups/{id}/posts/{id}",
+      "story_fbid={id}"
+    ],
+    "titleSources": [
+      "h2, h3, h4 (author name in post root)",
+      "document.title"
+    ],
+    "thumbnailSources": [
+      "<video poster>",
+      "Largest landscape-ratio <img> in post root"
+    ],
+    "resolutionParsing": "/(?:_|-)(\\ d{3,4})p(?:[_\\-.]|$)/i",
+    "postRootSelectors": [
+      "[role='article']",
+      "[data-pagelet*='FeedUnit']",
+      "div[aria-posinset]"
+    ],
+    "formatSources": [
+      "DOM <video> elements (currentSrc, src, <source> tags)",
+      "Inline script keys (playable_url family)",
+      "Regex MP4 URL extraction from <script> tags",
+      "Feed permalink traversal with video ID linkage"
+    ],
+    "scriptTargetKeywords": [
+      "videoDeliveryResponseResult",
+      "dash_manifests",
+      "playable_url",
+      "video_sd_url",
+      "video_hd_url"
+    ],
+    "iconExclusion": "/\\/emoji\\.php|\\/rsrc\\.php|\\/safe_image\\.php/i",
+    "trackingParamExclusion": "/^(?:__cft__|__tn__|__xts__|fbclid|mibextid|notif_id|notif_t|ref|refsrc|acontext)$/i"
+  },
+  "formatObjectStructure": {
+    "id": "string",
+    "type": "video | image | text",
+    "title": "string",
+    "url": "string | null",
+    "poster": "string | null",
+    "permalink": "string | null",
+    "quality": "string | null (e.g. '720p')",
+    "score": "number",
+    "source": "string (e.g. 'DOM video', 'Inline playable_url', 'Feed permalink')",
+    "pageUrl": "string"
+  },
+  "downloadFallbackChain": [
+    {
+      "step": 1,
+      "method": "Direct chrome.downloads.download() with media URL",
+      "trigger": "Primary path"
+    },
+    {
+      "step": 2,
+      "method": "Authenticated blob fetch (fetchMediaBlob) -> blob download",
+      "trigger": "Direct download fails"
+    },
+    {
+      "step": 3,
+      "method": "Page-side fetch + <a> click download (downloadAssetInPage)",
+      "trigger": "Blob fetch fails"
+    },
+    {
+      "step": 4,
+      "method": "Permalink tab resolution -> retry from step 1",
+      "trigger": "No direct URL available for video"
+    }
+  ],
+  "permalinkResolutionStrategy": [
+    {
+      "step": 1,
+      "method": "In-page resolveVideoAssetByPermalink",
+      "description": "Matches cached assets by permalink"
+    },
+    {
+      "step": 2,
+      "method": "In-page resolvePrimaryVisibleVideoAsset",
+      "description": "Picks largest visible video element"
+    },
+    {
+      "step": 3,
+      "method": "Background resolveVideoViaPermalinkTab",
+      "description": "Opens permalink in hidden tab, injects content script, extracts assets"
+    }
+  ],
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content-enhanced-modular.js"
+      ],
+      "purpose": "Multi-source video/image/text extraction, inline overlay buttons, feed MutationObserver, asset caching, permalink resolution"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth gating, DNR header rules, blob fallback, permalink tab resolution, download retry logic"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup-enhanced.js"
+      ],
+      "purpose": "Tabbed UI (Videos/Images/Text), asset grid with counts, bulk download, rescan"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen-faststream-legacy.js",
+        "indexed-db.js"
+      ],
+      "purpose": "FastStream HLS processing with fMP4 support"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth/auth-config.js",
+        "auth/auth-api.js",
+        "auth/auth-storage.js",
+        "auth/auth-token.js",
+        "auth/auth-telemetry.js"
+      ],
+      "purpose": "OTP login, entitlement checks, trial management"
+    },
+    {
+      "component": "Auth UI",
+      "files": [
+        "auth-ui.js"
+      ],
+      "purpose": "OTP activation form rendering in popup"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager/download-manager.js",
+        "download-manager/download-manager-config.js",
+        "download-manager/download-manager-state.js",
+        "download-manager/download-manager-ui.js",
+        "download-manager/download-task-registry.js",
+        "download-manager/integration-helper.js"
+      ],
+      "purpose": "Modular download management system"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging with level control, console patching, prefix FACEBOOK"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, auth endpoints, feature flags, CSS variable injection"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Free trial remaining badge in popup"
+    },
+    {
+      "component": "IndexedDB",
+      "files": [
+        "indexed-db.js"
+      ],
+      "purpose": "Key-value store for offscreen file caching"
+    },
+    {
+      "component": "Overlay CSS",
+      "files": [
+        "styles/overlay-buttons.css"
+      ],
+      "purpose": "Inline download button styling"
+    }
+  ],
+  "popupUI": {
+    "stylesheets": [
+      "styles/popup-enhanced.css (7.9 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup-enhanced.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)"
+    ],
+    "tabs": [
+      "Videos",
+      "Images",
+      "Text"
+    ],
+    "sections": [
+      "Boot splash",
+      "Header (SERP Labs / Facebook Downloader)",
+      "Trial banner",
+      "Activation section",
+      "Stats grid (Videos/Images/Text counts)",
+      "Tab buttons",
+      "Download Visible button",
+      "Asset list",
+      "Status footer"
+    ]
+  },
+  "buildAndRelease": {
+    "buildTool": "build.js",
+    "watermarked": null,
+    "githubRelease": true,
+    "githubRepo": "serpapps/facebook-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/facebook-downloader/",
+    "platformBuilds": []
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": null,
+    "ghLicenseId": null,
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_TxZnTCI57ZLwsn",
+    "stripeProductName": "Facebook Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [facebook-downloader-9-mo]",
+    "stripeOneTimePrice": null,
+    "stripePriceIds": [
+      "price_1Szee5DP7AOTRcvmUxSKMqkE"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logPrefix": "FACEBOOK",
+    "logHierarchy": "debug(10) < info(20) < warn(30) < error(40) < silent(90)",
+    "authTelemetry": true
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "32x32",
+      "file": "icons/icon32.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#0A8FDC",
+    "brandAccentHover": "#066BA5",
+    "bgDark": "#0F1626",
+    "bgDarker": "#131D33",
+    "borderDark": "#2B3A5F",
+    "inputBorder": "#3A4E7E",
+    "textPrimary": "#F8FBFF",
+    "textMuted": "#93A7CC",
+    "textSubtle": "#B7C5E3",
+    "success": "#1FBF75",
+    "error": "#EB5757",
+    "info": "#2D9CDB",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#17243D"
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "YouTube",
+      "path": "modules/youtube/",
+      "purpose": "YouTube utilities (shared module)"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "sizeKB": 319,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "sizeKB": 4.3,
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "sizeKB": 3.5,
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "sizeKB": 1.2,
+      "purpose": "i18n support"
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "extension": "xvideos-downloader",
+  "productPositioning": {
+    "headline": "Download XVideos Videos -- One Click, Any Quality",
+    "elevatorPitch": "Video Downloader for XVideos is a browser extension that saves videos from XVideos.com to your computer. Play a video, click the download button on the player or the extension icon, pick your quality, and it saves as MP4. No extra software needed. 3 free downloads included.",
+    "valueProposition": "Purpose-built for XVideos with setVideo* pattern extraction, HLS manifest parsing, and multi-domain support (xvideos.com, xvideos.es, xvideos2.com). In-page download button, automatic HLS-to-MP4 conversion, and organized auto-save. Everything happens in your browser -- no external tools required.",
+    "targetAudience": "XVideos users who want to save videos for offline viewing. Non-technical users who want a simple, reliable download solution that works across all XVideos domains.",
+    "useCases": [
+      "Save a video from XVideos for offline viewing",
+      "Download in your preferred quality (low, high, or HLS)",
+      "Build a personal library",
+      "Use the in-page player button for one-click downloads without the popup",
+      "Right-click any video to download via context menu"
+    ],
+    "painPointsAddressed": [
+      "XVideos uses HLS streaming -- can't right-click and save",
+      "Multiple video sources (setVideo* patterns, FLV, HLS) make extraction complex",
+      "XVideos has multiple domains (xvideos.com, xvideos.es, xvideos2.com)",
+      "Generic downloaders often miss XVideos-specific stream formats",
+      "Users don't want desktop apps or command-line tools",
+      "No easy quality selection on streaming sites"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download videos from XVideos.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
+    "changelog": "v4.0.1 -- setVideo* pattern extraction, in-page download button, download manager with progress tracking, multi-domain support.",
+    "fullDescription": "Video Downloader for XVideos makes it easy to save videos from XVideos.com to your computer.\n\nHow it works: Go to any video page on XVideos, press play, and either click the download button on the player or the extension icon in your toolbar. The extension detects the video stream from XVideos-specific patterns, shows available quality options, and downloads it as a standard MP4 file.\n\nIt handles HLS streaming, setVideo* extraction, and multi-domain detection automatically -- no external tools, no command line, no technical knowledge required. Videos save directly to your Downloads folder in an organized XVideos subfolder.\n\nKey features:\n- Automatic video detection from XVideos setVideo* patterns and HLS manifests\n- In-page download button right on the video player\n- Converts HLS streams to standard MP4 files in your browser\n- Quality selection from all available resolutions\n- Real-time download progress with speed indicators\n- Right-click context menu for quick downloads\n- Desktop notifications when downloads complete\n- Works on xvideos.com, xvideos.es, and xvideos2.com\n- Dark-themed UI with XVideos red accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to XVideos.com and play a video\n3. Click the download button on the player or the extension icon\n4. Select quality and download -- saved as MP4\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "XVideos-specific video detection -- setVideo* pattern extraction, HLS manifest parsing, FLV URL detection",
+      "In-page download button built right into the video player",
+      "Converts HLS streams to downloadable MP4 files in-browser",
+      "Quality selector with all available resolutions sorted by quality",
+      "Real-time progress bar with download speed and file size",
+      "Right-click context menu -- Download XVideos Video",
+      "Desktop notifications when downloads complete",
+      "Auto-saves to organized XVideos/ subfolder in Downloads",
+      "Multi-domain support -- xvideos.com, xvideos.es, xvideos2.com",
+      "Dark UI with XVideos red accents -- clean and unobtrusive",
+      "3 free trial downloads -- no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add Video Downloader for XVideos to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Play",
+        "description": "Navigate to XVideos.com and start playing any video"
+      },
+      {
+        "step": 3,
+        "title": "Click",
+        "description": "Use the in-page download button on the player, the extension popup, or right-click context menu"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "Pick your quality and hit Download -- video saves as MP4 to your Downloads/XVideos folder"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I download a video?",
+        "answer": "Go to any video page on XVideos.com and press play. Then click the download button on the player, click the extension icon, or right-click and select \"Download XVideos Video.\""
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "The extension detects all available qualities from the source -- typically Low (240p), High (480p), and HLS variants at various resolutions. Formats are sorted by quality (highest first), with MP4 preferred over HLS."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player. HLS streams are automatically converted to MP4."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Videos automatically save to an XVideos subfolder inside your browser's default Downloads directory."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes -- supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Does this work on xvideos.es and xvideos2.com?",
+        "answer": "Yes -- the extension supports all XVideos domains including xvideos.com, xvideos.es, and xvideos2.com."
+      },
+      {
+        "question": "Why isn't the extension finding my video?",
+        "answer": "Press play on the video first. The extension needs the stream to start before detection works. If issues persist, refresh the page."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. Video processing happens entirely in your browser. Authentication uses secure OTP -- no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "xvideos downloader",
+      "download xvideos",
+      "xvideos video download",
+      "save xvideos videos"
+    ],
+    "longTailKeywords": [
+      "how to download videos from xvideos",
+      "xvideos downloader chrome extension",
+      "download xvideos to mp4",
+      "save xvideos videos browser",
+      "xvideos video downloader extension"
+    ],
+    "seoTitle": "XVideos Downloader -- Save Videos as MP4 | SERP",
+    "metaDescription": "Download videos from XVideos.com with one click. Auto-detects HLS streams, converts to MP4. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/xvideos-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download XVideos Videos",
+    "googleAdsDescription": "Save XVideos videos as MP4. In-page button. Quality selection. 3 free downloads included.",
+    "socialMediaHook": "Can't save videos from XVideos? This extension adds a download button right on the player. One click, MP4, done.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "XVideos-specific setVideo* extraction catches streams that generic tools miss. Multi-domain support (xvideos.com, .es, xvideos2.com), in-page player button, context menu, desktop notifications, and organized auto-save folder.",
+    "adAngles": [
+      {
+        "angle": "Simplicity",
+        "copy": "Download button. Right on the player. Click it. Done."
+      },
+      {
+        "angle": "Reliability",
+        "copy": "Built specifically for XVideos -- detects every stream format the site uses."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No desktop software. No command line. Just a browser extension."
+      },
+      {
+        "angle": "Multi-Domain",
+        "copy": "Works on xvideos.com, xvideos.es, and xvideos2.com."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it now."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Low (240p), High (480p), and HLS multi-resolution detected from source. FLV and direct MP4 supported.",
+    "limitationsAndDisclaimers": "Must press play before detection. Quality depends on source. Requires email sign-in for trial. Internet connection required. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "M3U8 Downloader",
+      "XHamster Downloader",
+      "PornHub Downloader",
+      "XNXX Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Videos from XVideos (Step-by-Step Guide)",
+      "XVideos Downloader: Save Videos with One Click",
+      "How to Save XVideos Videos as MP4 -- No Software Required",
+      "Best XVideos Download Extensions Compared",
+      "Download XVideos Videos in Any Quality -- Chrome & Firefox"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from XVideos is tricky and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Find Your Video",
+        "description": "Navigate to XVideos.com and play a video"
+      },
+      {
+        "section": "Step 4: Download",
+        "description": "In-page button, popup, or right-click context menu"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Auto-saves to XVideos/ folder. Desktop notifications on complete. Use context menu for fastest workflow. Works on all XVideos domains."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Press play first. Refresh if needed. Check extension is enabled."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected video with quality selector and download button",
+      "In-page download button on the XVideos video player",
+      "Download manager panel with active download progress",
+      "Right-click context menu showing Download XVideos Video",
+      "Email sign-in / OTP verification screen"
+    ],
+    "iconLogoVariants": "Default icon: 16, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 -- dark background (#1b1b1b), popup screenshot, XVideos red accent (#de2600)",
+    "gifDemoDescription": "8-second loop: video page on XVideos -> play -> player button appears -> click -> download manager slides in -> progress -> complete notification"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Videos from XVideos -- One Click, Any Quality",
+      "subheadline": "Download button on the player. XVideos-specific video detection. HLS to MP4 conversion. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "In-Page Download Button",
+        "description": "Appears right on the video player. Click and save -- no popup needed."
+      },
+      {
+        "title": "XVideos-Specific Detection",
+        "description": "Finds videos from setVideo* patterns, HLS manifests, and FLV URLs. Works on xvideos.com, xvideos.es, and xvideos2.com."
+      },
+      {
+        "title": "Quality Selection",
+        "description": "All available resolutions sorted by quality. MP4 preferred, HLS converted automatically."
+      },
+      {
+        "title": "Download Manager",
+        "description": "Real-time progress, speed, cancel. Desktop notification when complete."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in -- no passwords stored",
+      "All processing happens locally in your browser",
+      "Auto-saves to organized Downloads/XVideos/ folder",
+      "Automatic update notifications",
+      "Supports all XVideos domains (xvideos.com, xvideos.es, xvideos2.com)"
+    ],
+    "footerCta": {
+      "headline": "Ready to start downloading?",
+      "button": "Install Free -- 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, minimal, professional. Avoid explicit language in marketing copy.",
+    "bannedWords": [
+      "free porn",
+      "watch free",
+      "stream free",
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download."
+    ],
+    "brandColorHex": "#de2600",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"XVideos\" with capital X and V. Reference as \"XVideos.com\" for the website."
+  }
+}

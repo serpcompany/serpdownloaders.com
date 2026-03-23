@@ -1,0 +1,272 @@
+{
+  "extension": "camscom-downloader",
+  "productPositioning": {
+    "headline": "Download CamsCom Streams — Live Capture and VOD, Any Quality",
+    "elevatorPitch": "SERP CamsCom Downloader is a browser extension that records live streams and downloads videos from Cams.com. Open a model page, pick your quality, hit Start to capture a live stream or Download for a recorded video — it saves as MP4. No extra software needed. 3 free downloads included.",
+    "valueProposition": "Purpose-built for Cams.com with live stream capture (LL-HLS recording), VOD downloads, Mouflon DRM decryption, multi-CDN host probing, and automatic HLS-to-MP4 conversion. Everything happens in your browser — no external tools required.",
+    "targetAudience": "Cams.com users who want to save live streams or recorded videos for offline viewing. Non-technical users who want a simple, reliable capture and download solution.",
+    "useCases": [
+      "Record a live stream from Cams.com for later viewing",
+      "Download recorded VOD content from model pages",
+      "Download in your preferred quality from multiple resolutions",
+      "Use the in-page player button for one-click captures without the popup",
+      "Right-click any stream to capture via context menu"
+    ],
+    "painPointsAddressed": [
+      "Cams.com uses LL-HLS streaming with Mouflon DRM obfuscation — can't right-click and save",
+      "Live streams are ephemeral and disappear after broadcast ends",
+      "Multiple CDN hosts and encrypted segment filenames make capture complex",
+      "Generic downloaders can't handle the Mouflon manifest obfuscation",
+      "Users don't want desktop apps or command-line tools for live stream recording"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Record live streams and download videos from Cams.com. Live capture, HLS to MP4, quality selection. 3 free downloads included.",
+    "changelog": "v4.0.1 — Live stream capture, VOD downloads, Mouflon DRM support, multi-CDN probing, in-page download button, download manager with live elapsed time.",
+    "fullDescription": "SERP CamsCom Downloader makes it easy to record live streams and download videos from Cams.com.\n\nHow it works: Go to any model page on Cams.com. For live streams, click Start to begin capturing — the extension records the HLS stream in real-time and converts it to MP4 when you click Stop. For recorded videos, select your quality and click Download.\n\nIt handles LL-HLS streaming, Mouflon DRM decryption, and multi-CDN host probing automatically — no external tools, no command line, no technical knowledge required. Videos save directly to your Downloads folder in an organized CAMSCOM subfolder.\n\nKey features:\n- Live stream capture with Start/Stop controls and elapsed time tracking\n- VOD video downloads from model pages\n- Handles Mouflon HLS obfuscation automatically\n- In-page download button right on the video player\n- Quality selection from all available resolutions and frame rates\n- Real-time download progress with segment counting\n- Right-click context menu for quick captures\n- Dark-themed UI with coral/pink accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to Cams.com and open a model page\n3. Click the download button on the player or the extension icon\n4. For live: Start/Stop capture. For VOD: Select quality and download — saved as MP4\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Live stream capture — Start/Stop recording with real-time elapsed time tracking",
+      "VOD downloads from recorded video pages with quality selection",
+      "Handles Mouflon HLS manifest obfuscation automatically",
+      "In-page download button built right into the video player",
+      "Multi-CDN host probing across doppiocdn, stripcdn, and cams.com CDNs",
+      "Quality selector with all available resolutions and frame rates",
+      "Real-time progress with segment counting and download speed",
+      "Right-click context menu — Download CamsCom Stream",
+      "Auto-saves to organized CAMSCOM/ subfolder in Downloads",
+      "Dark UI with coral/pink accents — clean and unobtrusive",
+      "3 free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP CamsCom Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Browse",
+        "description": "Navigate to Cams.com and open any model page"
+      },
+      {
+        "step": 3,
+        "title": "Click",
+        "description": "Use the in-page download button, the extension popup, or right-click context menu"
+      },
+      {
+        "step": 4,
+        "title": "Capture",
+        "description": "For live streams, click Start to capture and Stop when done. For VODs, pick quality and hit Download — saves as MP4 to Downloads/CAMSCOM/"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I record a live stream?",
+        "answer": "Go to any live model page on Cams.com. Open the extension popup or click the in-page download button. Select your quality and click Start. The extension records the stream in real-time. Click Stop when you're done — the recording saves as MP4."
+      },
+      {
+        "question": "How do I download a recorded video?",
+        "answer": "Navigate to a model's video page (/{model}/videos/{id}). The extension detects the VOD automatically. Select your quality and click Download."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "The extension parses the HLS master manifest and shows all available variants — typically multiple resolutions with frame rates (e.g., 1080p, 720p @ 60fps). Formats are sorted by quality (highest first)."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Videos automatically save to a CAMSCOM subfolder inside your browser's default Downloads directory."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Why does it say the model is offline?",
+        "answer": "The model must be currently live for stream capture. For offline models, check their video page for recorded VOD content."
+      },
+      {
+        "question": "Why does it say 'private show'?",
+        "answer": "The extension cannot capture private shows. Wait for the model to return to public broadcast."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. All stream processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "cams.com downloader",
+      "download cams.com",
+      "cams.com video download",
+      "record cams.com streams",
+      "camscom downloader"
+    ],
+    "longTailKeywords": [
+      "how to download videos from cams.com",
+      "cams.com stream recorder chrome extension",
+      "download cams.com to mp4",
+      "record cams.com live streams browser",
+      "cams.com live capture extension"
+    ],
+    "seoTitle": "CamsCom Downloader — Record Streams & Save Videos as MP4 | SERP",
+    "metaDescription": "Record live streams and download videos from Cams.com with one click. Live capture, HLS to MP4, quality selection. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/camscom-video-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Record CamsCom Live Streams",
+    "googleAdsDescription": "Capture Cams.com streams as MP4. Live recording with Start/Stop. Quality selection. 3 free downloads included.",
+    "socialMediaHook": "Want to save live streams from Cams.com? This extension adds a capture button right on the player. Start, Stop, MP4.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Handles Mouflon DRM obfuscation that blocks generic downloaders. Live stream capture with LL-HLS support, multi-CDN probing, in-page player button, and organized auto-save folder.",
+    "adAngles": [
+      {
+        "angle": "Live Capture",
+        "copy": "Record live streams from Cams.com. Start when ready, stop when done. Saved as MP4."
+      },
+      {
+        "angle": "DRM Handling",
+        "copy": "Handles Mouflon-encrypted streams automatically. No other downloader does this."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No desktop software. No command line. Just a browser extension."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it now."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Multiple quality levels from HLS master manifest (resolution + frame rate variants). Live stream capture and VOD download both supported.",
+    "limitationsAndDisclaimers": "Model must be live for stream capture. Cannot capture private shows. Quality depends on source. Requires email sign-in for trial. Internet connection required. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "M3U8 Downloader",
+      "Chaturbate Downloader",
+      "Stripchat Downloader",
+      "BongaCams Downloader",
+      "CamSoda Downloader",
+      "MyFreeCams Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Record Live Streams from Cams.com (Step-by-Step Guide)",
+      "CamsCom Downloader: Capture Streams with One Click",
+      "How to Save Cams.com Videos as MP4 — No Software Required",
+      "Best Cams.com Stream Recording Extensions Compared",
+      "Record Cams.com Streams in Any Quality — Chrome & Firefox"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why recording from Cams.com is tricky (LL-HLS, Mouflon DRM) and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Find a Stream",
+        "description": "Navigate to Cams.com and open a model page"
+      },
+      {
+        "section": "Step 4: Capture",
+        "description": "For live: Start/Stop capture. For VOD: Select quality and download."
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Auto-saves to CAMSCOM/ folder. Use context menu for quick access. Check elapsed time in download manager."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Model must be live for capture. Private shows blocked. Refresh if no formats appear."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected live stream with quality selector and Start button",
+      "Extension popup showing active live capture with elapsed time and Stop button",
+      "In-page download button on the video player",
+      "Download manager panel with live capture progress and segment count",
+      "Right-click context menu showing Download CamsCom Stream",
+      "Email sign-in / OTP verification screen"
+    ],
+    "iconLogoVariants": "Default icon: 16, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1b1b1b), popup screenshot, coral/pink accent (#ff4f70)",
+    "gifDemoDescription": "10-second loop: model page → click Start → download manager slides in with live elapsed time → segments incrementing → click Stop → MP4 saved"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Record Live Streams from Cams.com — Capture Any Quality",
+      "subheadline": "Live stream capture with Start/Stop. VOD downloads. Mouflon DRM handled automatically. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Live Stream Capture",
+        "description": "Record live broadcasts in real-time. Click Start, watch the segment count grow, click Stop — saved as MP4."
+      },
+      {
+        "title": "VOD Downloads",
+        "description": "Download recorded videos from model pages. Select quality, click Download — done."
+      },
+      {
+        "title": "Mouflon DRM Support",
+        "description": "Automatically decrypts Mouflon-obfuscated HLS manifests. Works where generic downloaders fail."
+      },
+      {
+        "title": "Multi-CDN Probing",
+        "description": "Searches across doppiocdn, stripcdn, camshls, and camscdn hosts to find the best stream source."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "Auto-saves to organized Downloads/CAMSCOM/ folder",
+      "Automatic update notifications"
+    ],
+    "footerCta": {
+      "headline": "Ready to start recording?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, minimal, professional. Avoid explicit language in marketing copy.",
+    "bannedWords": [
+      "free porn",
+      "watch free",
+      "stream free",
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download."
+    ],
+    "brandColorHex": "#ff4f70",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"CamsCom\" or \"Cams.com\" as the site name. Reference as \"Cams.com\" for the website."
+  }
+}

@@ -1,0 +1,588 @@
+{
+  "extension": "hentaihaven-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP HentaiHaven DL",
+    "slug": "hentaihaven-downloader",
+    "geckoId": "hentaihaven-downloader@serpapps.com",
+    "category": "Video Downloader (Adult / Anime)",
+    "targetSites": [
+      "hentaihaven.xxx"
+    ],
+    "targetSiteMatches": [
+      "https://hentaihaven.xxx/*",
+      "https://*.hentaihaven.xxx/*"
+    ],
+    "description": "Download HentaiHaven videos"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/hentaihaven-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": null,
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "hentaihaven-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/hentaihaven-downloader",
+    "productPage": "https://serp.ly/hentaihaven-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Direct MP4 (offscreen streaming)",
+      "HLS Stitching (m3u8 segment to MP4 transmux)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from flashvars mediaDefinitions, HTML5 video/source, script regex, Performance API resource entries, player iframe m3u8 URLs",
+    "qualitySorting": "By height descending, MP4 before HLS",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": false,
+    "inPagePlayerButton": true,
+    "playerButtonTargets": [
+      "#player",
+      ".mainPlayerDiv",
+      ".player_logic_item",
+      ".player-logic-master",
+      ".chapter-video-frame",
+      "player-logic iframe parent"
+    ],
+    "contextMenu": true,
+    "contextMenuId": "download-hentaihaven-video",
+    "contextMenuTitle": "Download HentaiHaven Video",
+    "contextMenuContexts": [
+      "page",
+      "video"
+    ],
+    "autoSave": true,
+    "downloadFolder": "HentaiHaven/",
+    "desktopNotifications": true,
+    "notificationTitle": "Download Complete",
+    "videoDetection": "Multi-source: flashvars, HTML5 video, script regex, Performance API resource entries, player iframe m3u8 collection, inject.js XHR/fetch monitor"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "offscreen"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://hentaihaven.xxx/*",
+      "https://*.hentaihaven.xxx/*",
+      "https://*.octopusmanifest.org/*",
+      "https://*.anpustream.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "download-manager.js",
+        "content.js",
+        "player-button.js"
+      ],
+      "matches": [
+        "https://hentaihaven.xxx/*",
+        "https://*.hentaihaven.xxx/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "MP4 streaming download + HLS segment transmuxing"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (319 KB)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true
+    },
+    "pageInjection": {
+      "file": "inject.js",
+      "purpose": "Page-context XHR/fetch monitor, extracts media URLs",
+      "messageType": "PORNHUB_PAGE_DATA"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "hentaihaven-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/hentaihaven-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/hentaihaven-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": []
+  },
+  "videoDetectionAndExtraction": {
+    "videoIdPatterns": [
+      "/watch/([^/]+)/episode-(\\d+)/?",
+      "/watch/([^/]+)/?",
+      "viewkey=([a-zA-Z0-9]+)",
+      "fallback path segment join"
+    ],
+    "titleSources": [
+      "h1",
+      "h1.title",
+      "[data-video-title]",
+      "meta[property=\"og:title\"]"
+    ],
+    "thumbnailSources": [
+      "og:image"
+    ],
+    "durationSources": [
+      "<video> element",
+      "flashvars.video_duration",
+      "flashvars.videoDuration"
+    ],
+    "extraMetadata": {
+      "views": ".count",
+      "likes": ".votesUp",
+      "dislikes": ".votesDown",
+      "tags": [
+        ".tagsWrapper a",
+        ".entry-tags a",
+        ".single-tags a",
+        ".tags a"
+      ],
+      "categories": [
+        ".categoriesWrapper a",
+        ".entry-category a",
+        ".genre-list a"
+      ]
+    },
+    "formatSources": [
+      "flashvars_* mediaDefinitions",
+      "HTML5 <video>/<source>",
+      "Script regex for mp4/m3u8 URLs",
+      "Performance API resource entries from player iframe",
+      "Player iframe m3u8 URL collection (VP9 + AAC variant expansion)"
+    ],
+    "scriptUrlRegex": "/https?:\\\\?\\/\\\\?\\/[^\"'\\\\\\s]+?\\.(?:m3u8|mp4)(?:\\\\?[^\"'\\\\\\s]*)?/gi",
+    "playerIframeDetection": [
+      "iframe[src*=\"/wp-content/plugins/player-logic/player.php\"]",
+      "iframe[src*=\"player-logic/player.php\"]"
+    ],
+    "m3u8VariantExpansion": {
+      "vp9QualityVariants": "vp9_*p/video.m3u8 expanded to playlist_vp9.m3u8 and playlist.m3u8",
+      "audioAacVariants": "audio/aac.m3u8 expanded to playlist_vp9.m3u8 and playlist.m3u8"
+    },
+    "mediaRequestPatterns": [
+      "/video/get_media",
+      "mediaDefinitions",
+      ".m3u8",
+      ".mp4"
+    ],
+    "injectMessageType": "PORNHUB_PAGE_DATA"
+  },
+  "formatObjectStructure": {
+    "format_id": "string",
+    "ext": "m3u8 | mp4",
+    "format_type": "hls | mp4",
+    "quality": "number | null",
+    "url": "string",
+    "protocol": "m3u8 | https",
+    "filesize": null,
+    "tbr": null,
+    "width": null,
+    "height": "number | null"
+  },
+  "hlsProcessingSpecs": {
+    "converter": "SimpleHLS2MP4Converter",
+    "maxSegmentRetries": 3,
+    "backoffBaseMs": 500,
+    "stallTimeoutMs": 30000,
+    "absoluteTimeoutMs": null,
+    "referer": "https://hentaihaven.xxx/",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "origin": "https://hentaihaven.xxx"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Video detection, format extraction, flashvars parsing, metadata scraping, player iframe m3u8 collection"
+    },
+    {
+      "component": "Player Button",
+      "files": [
+        "player-button.js"
+      ],
+      "purpose": "In-page download button with quality popover"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth, offscreen, context menu, notifications"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "UI, quality selector, auth flow"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "MP4 streaming + HLS transmux"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js"
+      ],
+      "purpose": "OTP login, entitlements, trial"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager.js"
+      ],
+      "purpose": "In-page download progress panel"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-context XHR/fetch monitor"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup customizations"
+    }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (slides from -400px to 20px)",
+    "panelId": "hentaihaven-download-manager",
+    "cardWidth": "380px",
+    "maxHeight": "80vh",
+    "zIndex": 10000,
+    "border": "2px solid var(--brand-accent)",
+    "borderRadius": "10px",
+    "font": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+    "autoHideSeconds": 3,
+    "features": [
+      "Minimize/close buttons",
+      "Per-download progress bars",
+      "Speed display",
+      "Cancel buttons"
+    ]
+  },
+  "playerButtonConfig": {
+    "containerTargets": [
+      "#player",
+      ".mainPlayerDiv",
+      ".player_logic_item",
+      ".player-logic-master",
+      ".chapter-video-frame",
+      "player-logic iframe parent"
+    ],
+    "buttonText": "Download with down-arrow icon",
+    "qualityPopover": true,
+    "visibilityGate": "isActivated = true",
+    "reactive": "Watches chrome.storage.onChanged for activation updates"
+  },
+  "contextMenu": {
+    "menuId": "download-hentaihaven-video",
+    "title": "Download HentaiHaven Video",
+    "contexts": [
+      "page",
+      "video"
+    ],
+    "documentUrlPatterns": [
+      "https://hentaihaven.xxx/*",
+      "https://*.hentaihaven.xxx/*"
+    ]
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/styles.css (8.8 KB)",
+      "styles/popup-enhanced.css (15.8 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "auth.js (module)",
+      "popup.js (module)",
+      "auth-ui.js",
+      "trial-banner.js",
+      "popup-ui-overrides.js",
+      "update-notifier.js"
+    ],
+    "sections": [
+      "Header",
+      "Activation section",
+      "Loading spinner",
+      "Error state",
+      "Video info card",
+      "Quality selector",
+      "Download button",
+      "Progress bar"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "YouTube",
+      "path": "modules/youtube/",
+      "purpose": "YouTube client/signature/UMP utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "sizeKB": 319,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "sizeKB": 4.3,
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "sizeKB": 3.5,
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/hentaihaven-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/hentaihaven-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "hentaihaven-downloader.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Chrome",
+        "file": "hentaihaven-downloader-chrome.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "hentaihaven-downloader-chrome-store-sanitized.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Brave",
+        "file": "hentaihaven-downloader-brave.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Edge",
+        "file": "hentaihaven-downloader-edge.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Opera",
+        "file": "hentaihaven-downloader-opera.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Whale",
+        "file": "hentaihaven-downloader-whale.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Yandex",
+        "file": "hentaihaven-downloader-yandex.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "hentaihaven-downloader-firefox.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "hentaihaven-downloader-firefox-unpacked.xpi",
+        "sizeMB": null
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": null,
+    "ghLicenseId": null,
+    "licenseCheckWorker": null,
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_TfxY3zIXUeBi79",
+    "stripeProductName": "HentaiHaven Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [hentaihaven-downloader monthly]",
+    "stripeOneTimePrice": "USD 17.00/one_time",
+    "stripePriceIds": [
+      "price_1SibdXDP7AOTRcvm2gatgSXD",
+      "price_1SymsvDP7AOTRcvmCOIRYygN"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#b10b17",
+    "brandAccentHover": "#8e0812",
+    "bgDark": "#0f0f10",
+    "bgDarker": "#1a1a1c",
+    "borderDark": "#2f2f33",
+    "inputBorder": "#4a4a50",
+    "textPrimary": "#ffffff",
+    "textMuted": "#a6a6ad",
+    "textSubtle": "#d0d0d6",
+    "success": "#50b86a",
+    "error": "#f25f5c",
+    "info": "#f59e0b",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

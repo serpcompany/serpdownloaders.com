@@ -1,0 +1,10 @@
+{
+  "name": "serpdownloaders.com",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SERP Downloaders product pages — built from info matrix data",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "deploy": "node scripts/deploy.mjs"
+  }
+}

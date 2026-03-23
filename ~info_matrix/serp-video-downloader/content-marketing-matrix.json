@@ -1,0 +1,279 @@
+{
+  "extension": "serp-video-downloader",
+  "productPositioning": {
+    "headline": "Download Videos from Any Site — MP4, HLS, DASH, and More",
+    "elevatorPitch": "SERP Video Downloader is a universal browser extension that captures and saves videos from virtually any website. It detects MP4, HLS (m3u8), and DASH (mpd) streams automatically, plus has dedicated support for YouTube, Vimeo, Loom, Wistia, Sprout, and Skool. Click the extension icon, pick your quality, and download as MP4. No desktop software needed. 3 free downloads included.",
+    "valueProposition": "One extension that works everywhere. Multi-platform video detection covers YouTube, Vimeo, Loom, Wistia, Sprout, Skool, and any site with HTML5 video, HLS, or DASH streams. Automatic HLS-to-MP4 conversion, quality selection, and an in-page download manager with progress tracking. Everything runs in your browser.",
+    "targetAudience": "Content creators, educators, students, and professionals who need to save videos from various platforms for offline viewing, presentations, or archiving. Anyone frustrated by site-specific downloaders who wants a single tool that works across the web.",
+    "useCases": [
+      "Save a Loom recording for a meeting recap",
+      "Download Vimeo course videos for offline study",
+      "Archive Wistia-hosted product demos",
+      "Save Skool community videos",
+      "Download any embedded video from blogs, news sites, or social platforms",
+      "Capture HLS or DASH streams that generic tools miss"
+    ],
+    "painPointsAddressed": [
+      "Modern sites use HLS/DASH streaming — right-click save doesn't work",
+      "Each platform requires a different downloader",
+      "Generic tools miss embedded or platform-specific video players",
+      "Users don't want command-line tools or desktop software",
+      "No easy way to select quality when downloading streaming video"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download videos from any site. Supports MP4, HLS, DASH, YouTube, Vimeo, Loom, Wistia, Skool, and more. 3 free downloads.",
+    "changelog": "v4.0.1 — Universal multi-platform video detection, modular detectors for YouTube/Vimeo/Loom/Wistia/Sprout/Skool, in-page download manager with cross-tab sync, auto-download best quality, side panel support.",
+    "fullDescription": "SERP Video Downloader makes it easy to save videos from virtually any website to your computer.\n\nHow it works: Visit any page with a video, click the extension icon or open the side panel, and SERP Video Downloader automatically detects all available videos. If multiple videos are found, pick the one you want from the candidate list. Select your preferred quality and hit Download — the video saves as a standard MP4 file.\n\nIt handles HLS (m3u8) streaming, DASH (mpd) manifests, and direct MP4 links automatically. Dedicated detectors for YouTube, Vimeo, Loom, Wistia, SproutVideo, and Skool provide deep integration with those platforms. For all other sites, the generic detector scans HTML5 video elements, source tags, and network requests to find every available stream.\n\nKey features:\n- Universal video detection — works on any website with video content\n- Dedicated support for YouTube, Vimeo, Loom, Wistia, Sprout, and Skool\n- Converts HLS and DASH streams to standard MP4 files in your browser\n- Quality selection from all available resolutions\n- Multi-video detection — finds all videos on a page and lets you choose\n- In-page download manager with real-time progress and speed display\n- Side panel mode for a persistent download interface\n- Auto-downloads best quality for single-video pages\n- Dark-themed UI with sky blue accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Visit any page with a video\n3. Click the extension icon or open the side panel\n4. Select a video (if multiple found), pick quality, and download\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Universal video detection — works on any website with HTML5 video, HLS, or DASH streams",
+      "Dedicated platform detectors for YouTube, Vimeo, Loom, Wistia, Sprout, and Skool",
+      "Converts HLS (m3u8) and DASH (mpd) streams to downloadable MP4 files in-browser",
+      "Quality selector with all available resolutions sorted by quality",
+      "Multi-video candidate detection — finds every video on a page",
+      "In-page download manager with progress bars, speed display, and cross-tab sync",
+      "Side panel mode for persistent access while browsing",
+      "Auto-downloads best quality when only one video is detected",
+      "Dark UI with sky blue accents — clean and professional",
+      "3 free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP Video Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Visit",
+        "description": "Navigate to any page with video content"
+      },
+      {
+        "step": 3,
+        "title": "Detect",
+        "description": "Click the extension icon — videos are automatically found from multiple sources"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "Pick your video, choose quality, hit Download — saved as MP4"
+      }
+    ],
+    "faq": [
+      {
+        "question": "What sites does this work on?",
+        "answer": "It works on virtually any website. Dedicated support for YouTube, Vimeo, Loom, Wistia, SproutVideo, and Skool, plus generic detection for any site with HTML5 video, HLS, or DASH streams."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "The extension detects all available qualities from the source. Formats are sorted by quality (highest first), with combined audio+video streams preferred. MP4 format is prioritized."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player. HLS and DASH streams are automatically converted to MP4."
+      },
+      {
+        "question": "What if there are multiple videos on a page?",
+        "answer": "The extension detects all videos and shows a dropdown selector so you can choose which one to download."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Can I use my license from another SERP downloader?",
+        "answer": "Yes. Licenses from the SERP Downloaders Bundle, SERP Video Downloaders Bundle, or any individual SERP downloader (Vimeo, YouTube, Loom, Wistia, Skool, M3U8, and more) are accepted."
+      },
+      {
+        "question": "Why isn't the extension finding my video?",
+        "answer": "Make sure the video has started playing or loading on the page. Some sites require the video to begin before streams are available. Refresh the page and try again if needed."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. All video processing happens entirely in your browser. Authentication uses secure OTP email verification — no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "video downloader",
+      "download video from any site",
+      "universal video downloader",
+      "HLS downloader",
+      "DASH downloader",
+      "m3u8 downloader"
+    ],
+    "longTailKeywords": [
+      "how to download videos from any website",
+      "download HLS stream as MP4",
+      "universal video downloader chrome extension",
+      "download Vimeo Loom Wistia videos",
+      "save streaming video browser extension"
+    ],
+    "seoTitle": "Video Downloader — Save Videos from Any Site as MP4 | SERP",
+    "metaDescription": "Download videos from any website. Supports YouTube, Vimeo, Loom, Wistia, HLS, DASH. Converts to MP4. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/serp-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download Video from Any Site",
+    "googleAdsDescription": "Universal video downloader. YouTube, Vimeo, Loom, HLS, DASH to MP4. 3 free downloads included.",
+    "socialMediaHook": "One extension to download videos from any website. YouTube, Vimeo, Loom, Wistia, Skool, or any HLS/DASH stream. Click, pick quality, done.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Unlike single-site downloaders, SERP Video Downloader works everywhere. Dedicated platform detectors for YouTube, Vimeo, Loom, Wistia, Sprout, and Skool, plus generic detection that catches HLS, DASH, and MP4 streams on any site. In-page download manager, multi-video detection, and cross-tab sync.",
+    "adAngles": [
+      {
+        "angle": "Universal",
+        "copy": "One extension. Every video site. YouTube, Vimeo, Loom, Wistia, Skool, and more."
+      },
+      {
+        "angle": "Simplicity",
+        "copy": "Click the icon. Pick quality. Download. Works on any site with video."
+      },
+      {
+        "angle": "No More Juggling",
+        "copy": "Stop installing a different extension for every video site. This one does them all."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it on your favorite video site."
+      },
+      {
+        "angle": "Professional",
+        "copy": "Save Loom recordings, Wistia demos, Vimeo courses, and Skool lessons. All in one tool."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Supports MP4, HLS (m3u8), DASH (mpd), WebM, MOV, MKV input. Multiple quality levels detected from source. Platform-specific quality extraction for YouTube, Vimeo, Loom, Wistia.",
+    "limitationsAndDisclaimers": "Video must be loaded/playing before detection works on some sites. Quality depends on what the source provides. Requires email sign-in for trial. Internet connection required. Users responsible for ensuring they have the right to download content.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP M3U8 Downloader",
+      "SERP Vimeo Downloader",
+      "SERP YouTube Downloader",
+      "SERP Loom Downloader",
+      "SERP Wistia Downloader",
+      "SERP Skool Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Videos from Any Website (Universal Guide)",
+      "The Best Universal Video Downloader Extension for Chrome",
+      "Download HLS and DASH Streams as MP4 — No Software Required",
+      "How to Save Loom, Vimeo, and Wistia Videos with One Extension",
+      "SERP Video Downloader: One Tool for Every Video Site"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why a universal video downloader saves time vs. installing platform-specific tools"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store or download from GitHub releases"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification for 3 free downloads"
+      },
+      {
+        "section": "Step 3: Visit a Video Page",
+        "description": "Navigate to any site with video content"
+      },
+      {
+        "section": "Step 4: Detect and Select",
+        "description": "Extension auto-detects videos; choose from candidates if multiple found"
+      },
+      {
+        "section": "Step 5: Download",
+        "description": "Select quality and download as MP4"
+      },
+      {
+        "section": "Platform-Specific Tips",
+        "description": "Notes for YouTube, Vimeo, Loom, Wistia, Sprout, Skool"
+      },
+      {
+        "section": "Using the Download Manager",
+        "description": "In-page progress tracking, speed display, managing multiple downloads"
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Video must be playing/loaded. Refresh if needed. Check extension permissions."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected video with quality selector and download button",
+      "Multi-video candidate selector dropdown with platform labels",
+      "In-page download manager with active download progress",
+      "Side panel mode with video detection active",
+      "Email sign-in / OTP verification screen"
+    ],
+    "iconLogoVariants": "Default icon: 16, 32, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1b1b1b), popup screenshot with multi-video detection, sky blue accent (#0ea5e9)",
+    "gifDemoDescription": "10-second loop: visit page with embedded video -> click extension icon -> video detected -> quality selector shown -> click download -> progress bar fills -> complete"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Videos from Any Website — One Extension, Every Platform",
+      "subheadline": "Universal video detection for YouTube, Vimeo, Loom, Wistia, Skool, and any site with HLS, DASH, or MP4 streams. Quality selection. Auto-download. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Universal Detection",
+        "description": "Works on any website. Dedicated detectors for YouTube, Vimeo, Loom, Wistia, Sprout, and Skool. Generic detection for everything else."
+      },
+      {
+        "title": "Stream Conversion",
+        "description": "Handles HLS (m3u8), DASH (mpd), and direct MP4. Converts streaming formats to standard MP4 automatically."
+      },
+      {
+        "title": "Multi-Video Support",
+        "description": "Detects every video on a page. Pick the one you want from the candidate list."
+      },
+      {
+        "title": "Download Manager",
+        "description": "Real-time progress, speed display, cross-tab sync, cancel and clear. Manage multiple downloads at once."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "Cross-license compatibility with all SERP downloaders",
+      "Automatic update notifications via GitHub releases",
+      "Side panel support for persistent access"
+    ],
+    "footerCta": {
+      "headline": "Ready to download from any site?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Professional, confident, mainstream. Position as a productivity and utility tool. Emphasize versatility and convenience.",
+    "bannedWords": [
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack",
+      "rip",
+      "steal"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download."
+    ],
+    "brandColorHex": "#0ea5e9",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"SERP Video Downloader\" as the full product name. Reference supported platforms by their proper names: YouTube, Vimeo, Loom, Wistia, SproutVideo, Skool."
+  }
+}

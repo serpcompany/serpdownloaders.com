@@ -1,0 +1,565 @@
+{
+  "extension": "eporner-downloader",
+  "coreIdentity": {
+    "extensionName": "Video Downloader for Eporner",
+    "slug": "eporner-downloader",
+    "geckoId": "eporner-downloader@serpapps.com",
+    "category": "Video Downloader (Adult)",
+    "targetSites": [
+      "eporner.com"
+    ],
+    "targetSiteMatches": [
+      "https://eporner.com/*",
+      "https://www.eporner.com/*"
+    ],
+    "description": "Download Eporner videos"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/eporner-downloader",
+    "lastUpdated": "2026-03-05",
+    "buildDate": null,
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "eporner-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/eporner-downloader",
+    "productPage": "https://serp.ly/eporner-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "Direct MP4 (offscreen streaming)",
+      "HLS Stitching (m3u8 segment to MP4 transmux)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from EPorner API (/xhr/video/), HTML5 video/source, inject.js page-context extraction, script regex",
+    "qualitySorting": "By height descending, MP4 before HLS",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": false,
+    "vrSupport": false,
+    "bulkDownload": false,
+    "inPagePlayerButton": true,
+    "playerButtonTargets": [
+      "#EPvideo_html5_api",
+      "video.vjs-tech",
+      "generic <video>",
+      "nearest positioned ancestor"
+    ],
+    "playerButtonUrlGate": "https://www.eporner.com/video",
+    "contextMenu": true,
+    "contextMenuId": "download-eporner-video",
+    "contextMenuTitle": "Download Eporner Video",
+    "contextMenuContexts": [
+      "page",
+      "video"
+    ],
+    "autoSave": true,
+    "downloadFolder": "Eporner/",
+    "desktopNotifications": true,
+    "notificationTitle": "Eporner Download Complete",
+    "videoDetection": "Multi-source: EPorner API (hash-based XHR), HTML5 video, inject.js page-context extraction, script regex, global variable monitoring"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "offscreen"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://eporner.com/*",
+      "https://www.eporner.com/*",
+      "https://*.eporner.com/*",
+      "http://www.eporner.com/*",
+      "https://store.externulls.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "download-manager.js",
+        "content.js",
+        "player-button.js"
+      ],
+      "matches": [
+        "https://eporner.com/*",
+        "https://www.eporner.com/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "MP4 streaming download + HLS segment transmuxing"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (318 KB)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true
+    },
+    "pageInjection": {
+      "file": "inject.js",
+      "purpose": "Page-context global variable extraction, embedded JSON/HLS pattern scanning",
+      "messageType": "EPORNER_PAGE_DATA"
+    },
+    "externalAPIs": [
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)",
+      "EPorner Video API (www.eporner.com/xhr/video/)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "eporner-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/eporner-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/eporner-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": []
+  },
+  "videoDetectionAndExtraction": {
+    "videoIdPatterns": [
+      "/(?:video-|embed/|hd-porn/)([\\w\\-]+)"
+    ],
+    "titleSources": [
+      "meta[property=\"og:title\"]",
+      "document.title (stripped of '- EPORNER...' suffix)"
+    ],
+    "thumbnailSources": [
+      "og:image",
+      "EPorner API file.thumb",
+      "EPorner API fc_facts[].thumb"
+    ],
+    "durationSources": [
+      "meta[name=\"duration\"]",
+      "meta[property=\"og:video:duration\"]",
+      "meta[property=\"video:duration\"]",
+      "meta[itemprop=\"duration\"] (ISO 8601 PT#H#M#S)"
+    ],
+    "extraMetadata": {
+      "epornerApi": "fc_facts, sources, file object"
+    },
+    "formatSources": [
+      "EPorner API /xhr/video/{id}?hash={hash} (primary)",
+      "HTML5 <video>/<source>",
+      "inject.js embedded JSON + HLS patterns",
+      "Script regex for mp4/m3u8 URLs"
+    ],
+    "epornerApiHash": "Hex-to-base36 conversion of 32-char hash from page HTML via hash\\s*[:=]\\s*[\"']([\\da-f]{32})",
+    "epornerApiUrl": "https://www.eporner.com/xhr/video/{videoId}?hash={hash}&device=generic&domain=www.eporner.com&fallback=false",
+    "injectMessageType": "EPORNER_PAGE_DATA",
+    "pageGlobalsMonitored": [
+      "window.eporner",
+      "window.videoData",
+      "window.playerConfig",
+      "window.__INITIAL_DATA__",
+      "window.__NEXT_DATA__",
+      "window.xplayerSettings"
+    ],
+    "injectHlsPatterns": [
+      "[\"']hls[\"']\\s*:\\s*\\{([^}]+)\\}",
+      "videoUrl['\"]\\s*:\\s*['\"]([^'\"]*\\.m3u8[^'\"]*)['\"]",
+      "src['\"]\\s*:\\s*['\"]([^'\"]*\\.m3u8[^'\"]*)['\"]",
+      "\"kind\"\\s*:\\s*\"hls\""
+    ]
+  },
+  "formatObjectStructure": {
+    "format_id": "string (e.g. '720p')",
+    "ext": "m3u8 | mp4",
+    "format_type": "hls | mp4",
+    "quality": "number | null",
+    "url": "string",
+    "protocol": "m3u8_native | https",
+    "filesize": null,
+    "tbr": "number | null",
+    "width": "number | null",
+    "height": "number | null"
+  },
+  "hlsProcessingSpecs": {
+    "converter": "SimpleHLS2MP4Converter",
+    "maxSegmentRetries": 3,
+    "backoffBaseMs": 500,
+    "stallTimeoutMs": 30000,
+    "absoluteTimeoutMs": null,
+    "referer": "https://www.eporner.com/",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "origin": "https://www.eporner.com"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Video detection, EPorner API fetch (hash-based), format extraction, metadata scraping"
+    },
+    {
+      "component": "Player Button",
+      "files": [
+        "player-button.js"
+      ],
+      "purpose": "In-page download button with quality popover"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, auth, offscreen, context menu, notifications"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "UI, quality selector, auth flow"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "MP4 streaming + HLS transmux"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth-ui.js"
+      ],
+      "purpose": "OTP login, entitlements, trial"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager.js"
+      ],
+      "purpose": "In-page download progress panel"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-context global variable extraction, embedded JSON/HLS pattern scanning"
+    }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (slides from -400px to 20px)",
+    "panelId": "eporner-download-manager",
+    "cardWidth": "380px",
+    "maxHeight": "80vh",
+    "zIndex": 2147483647,
+    "border": "2px solid var(--brand-accent)",
+    "borderRadius": "10px",
+    "font": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+    "autoHideSeconds": 3,
+    "features": [
+      "Minimize/close buttons",
+      "Per-download progress bars",
+      "Speed display",
+      "Cancel buttons"
+    ]
+  },
+  "playerButtonConfig": {
+    "containerTargets": [
+      "#EPvideo_html5_api",
+      "video.vjs-tech",
+      "generic <video>",
+      "nearest positioned ancestor"
+    ],
+    "urlGate": "https://www.eporner.com/video",
+    "buttonText": "Download with down-arrow icon",
+    "qualityPopover": true,
+    "visibilityGate": "isActivated = true",
+    "reactive": true
+  },
+  "contextMenu": {
+    "menuId": "download-eporner-video",
+    "title": "Download Eporner Video",
+    "contexts": [
+      "page",
+      "video"
+    ],
+    "urlPatterns": [
+      "https://eporner.com/*",
+      "https://www.eporner.com/*"
+    ]
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/styles.css",
+      "styles/popup-enhanced.css (9.5 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Header",
+      "Quick help banner",
+      "Activation section",
+      "Loading spinner",
+      "Error state",
+      "Video info card",
+      "Quality selector",
+      "Download button",
+      "Progress bar"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "sizeKB": 318,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/eporner-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/eporner-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "eporner-downloader.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Chrome",
+        "file": "eporner-downloader-chrome.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "eporner-downloader-chrome-store-sanitized.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Brave",
+        "file": "eporner-downloader-brave.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Edge",
+        "file": "eporner-downloader-edge.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Opera",
+        "file": "eporner-downloader-opera.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Whale",
+        "file": "eporner-downloader-whale.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Yandex",
+        "file": "eporner-downloader-yandex.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "eporner-downloader-firefox.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "eporner-downloader-firefox-unpacked.xpi",
+        "sizeMB": null
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "test-key",
+    "ghLicenseId": "bz1UEWqMZQ5hu0WHvxas",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_TadNxuR2lCIPAg",
+    "stripeProductName": "Eporner Video Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [eporner-video-downloader monthly]",
+    "stripeOneTimePrice": "USD 17.00/one_time",
+    "stripePriceIds": [
+      "price_1SdS6kDP7AOTRcvmCBBlPeHL",
+      "price_1SymssDP7AOTRcvmnnm4BeKh"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "32x32",
+      "file": "icons/icon32.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#ae0000",
+    "brandAccentHover": "#c51a1a",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

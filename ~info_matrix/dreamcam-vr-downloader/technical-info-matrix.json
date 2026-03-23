@@ -1,0 +1,602 @@
+{
+  "extension": "dreamcam-vr-downloader",
+  "coreIdentity": {
+    "extensionName": "SERP DreamCamVR Downloader",
+    "slug": "dreamcam-vr-downloader",
+    "geckoId": "dreamcam-vr-downloader@serpapps.com",
+    "category": "Video Downloader (Adult / VR / Live)",
+    "targetSites": [
+      "dreamcamtrue.com",
+      "dreamcam.com"
+    ],
+    "targetSiteMatches": [
+      "https://dreamcamtrue.com/*",
+      "https://www.dreamcamtrue.com/*",
+      "https://dreamcam.com/*",
+      "https://www.dreamcam.com/*",
+      "https://*.dreamcamtrue.com/*",
+      "https://*.dreamcam.com/*"
+    ],
+    "description": "Download DreamCamVR live streams and recordings"
+  },
+  "versionAndStatus": {
+    "manifestVersion": "4.0.1",
+    "packageVersion": "2.1.0",
+    "manifestSpec": "MV3",
+    "branchName": "legacy/dreamcam-vr-downloader",
+    "lastUpdated": "2026-03-06",
+    "buildDate": null,
+    "developmentStatus": "Active"
+  },
+  "storeAndDistribution": {
+    "chromeWebStoreUrl": null,
+    "firefoxAddonsUrl": null,
+    "edgeAddonsUrl": null,
+    "safariAvailable": false,
+    "chromeStoreStatus": null,
+    "storeSanitizedBuild": true,
+    "storeSanitizedFile": "dreamcam-vr-downloader-chrome-store-sanitized.zip",
+    "githubReleasesRepo": "serpapps/dreamcam-vr-video-downloader",
+    "productPage": "https://serp.ly/dreamcam-vr-video-downloader",
+    "helpCenter": "https://help.serp.co/en/"
+  },
+  "featuresAndCapabilities": {
+    "downloadMethod": [
+      "HLS Stitching (m3u8 segment to MP4 transmux)",
+      "HLS Live Capture (LL-HLS continuous recording)",
+      "Direct MP4 (offscreen streaming for VOD)"
+    ],
+    "qualitySelection": true,
+    "qualityMode": "Parsed from HLS master manifest BANDWIDTH/RESOLUTION/FRAME-RATE, sorted by height descending",
+    "qualitySorting": "By height descending (score = height*10 + bandwidth)",
+    "authRequired": "OTP (email verification via auth.serp.co)",
+    "trialDownloads": 3,
+    "hasDownloadManager": true,
+    "liveStreamSupport": true,
+    "liveCaptureMode": "LL-HLS continuous recording with start/stop controls, segment counting, elapsed timer",
+    "vrSupport": true,
+    "vrMetadata": "VR camera settings (stereoPacking, frameFormat, horizontalAngle), VR badge in popup, VR suffix in filename",
+    "bulkDownload": false,
+    "inPagePlayerButton": true,
+    "playerButtonTargets": [
+      "[data-testid=\"video-player\"]",
+      ".player__video-wrapper",
+      ".video-player__wrapper",
+      ".media-player",
+      "#player-root",
+      ".video-player",
+      "nearest video container"
+    ],
+    "contextMenu": true,
+    "contextMenuId": "download-dreamcam-vr-video",
+    "contextMenuTitle": "Download DreamCamVR Stream",
+    "contextMenuContexts": [
+      "page",
+      "video"
+    ],
+    "autoSave": true,
+    "downloadFolder": "Downloads/",
+    "desktopNotifications": true,
+    "notificationTitle": "DreamCamVR Download Complete",
+    "videoDetection": "Inject.js page-context API adapter (DreamCam broadcast API), background API meta fetch, HLS master manifest discovery across multiple CDN hosts"
+  },
+  "technicalDetails": {
+    "permissions": [
+      "downloads",
+      "activeTab",
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "scripting",
+      "offscreen"
+    ],
+    "hostPermissions": [
+      "https://api.github.com/*",
+      "https://auth.serp.co/*",
+      "https://*/*",
+      "https://dreamcamtrue.com/*",
+      "https://www.dreamcamtrue.com/*",
+      "https://dreamcam.com/*",
+      "https://www.dreamcam.com/*",
+      "https://bss.dreamcamtrue.com/*",
+      "https://*.dreamcamtrue.com/*",
+      "https://*.dreamcam.com/*"
+    ],
+    "contentScripts": {
+      "files": [
+        "site-config.js",
+        "logger.js",
+        "download-manager.js",
+        "content.js",
+        "player-button.js"
+      ],
+      "matches": [
+        "https://dreamcamtrue.com/*",
+        "https://www.dreamcamtrue.com/*",
+        "https://dreamcam.com/*",
+        "https://www.dreamcam.com/*",
+        "https://*.dreamcamtrue.com/*",
+        "https://*.dreamcam.com/*"
+      ],
+      "allFrames": false,
+      "runAt": "document_idle"
+    },
+    "backgroundServiceWorker": {
+      "file": "background-enhanced.js",
+      "type": "module"
+    },
+    "offscreenDocument": {
+      "html": "offscreen.html",
+      "js": "offscreen.js",
+      "purpose": "MP4 streaming download + HLS segment transmuxing + HLS live capture"
+    },
+    "usesFFmpeg": false,
+    "usesMediaBunny": true,
+    "hlsLibrary": "modules/hls/",
+    "hlsToMp4Transmuxer": "modules/hls2mp4/simple-converter.mjs (SimpleHLS2MP4Converter)",
+    "dashToMp4": "modules/dash2mp4/",
+    "mp4Box": "modules/mp4box.mjs (319 KB)",
+    "reencoder": "modules/reencoder/",
+    "networkUtils": "modules/network/",
+    "indexedDB": {
+      "enabled": true
+    },
+    "pageInjection": {
+      "file": "inject.js",
+      "purpose": "Page-context DreamCam broadcast API adapter, HLS URL discovery, state polling",
+      "messageType": "DREAMCAM_VR_PAGE_DATA"
+    },
+    "externalAPIs": [
+      "DreamCam Broadcast API (bss.dreamcamtrue.com/api/clients/v1/broadcasts/models/)",
+      "DreamCam Front API (dreamcamtrue.com/api/front/v2/models/username/*/cam)",
+      "DreamCam Videos API (dreamcamtrue.com/api/front/v2/users/*/videos)",
+      "SERP Auth (auth.serp.co)",
+      "GitHub Releases API (api.github.com)"
+    ],
+    "updateCheck": {
+      "enabled": true,
+      "provider": "github-releases",
+      "repoOwner": "serpapps",
+      "repoName": "dreamcam-vr-video-downloader",
+      "intervalHours": 6,
+      "timeoutSeconds": 8,
+      "releaseApiUrl": "https://api.github.com/repos/serpapps/dreamcam-vr-video-downloader/releases/latest",
+      "releasePageUrl": "https://github.com/serpapps/dreamcam-vr-video-downloader/releases/latest"
+    },
+    "csp": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+    "sandboxCsp": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; child-src 'self';",
+    "dnrRules": []
+  },
+  "videoDetectionAndExtraction": {
+    "siteApi": {
+      "broadcastApi": "https://bss.dreamcamtrue.com/api/clients/v1/broadcasts/models/{username}",
+      "frontMetaApi": "https://dreamcamtrue.com/api/front/v2/models/username/{username}/cam",
+      "videosApi": "https://dreamcamtrue.com/api/front/v2/users/{userId}/videos"
+    },
+    "videoIdPatterns": [
+      "/([^/]+)/videos/(\\d+)(?:/|$)"
+    ],
+    "titleSources": [
+      "inject.js displayName/modelName",
+      "document.title",
+      "meta[property=\"og:title\"]"
+    ],
+    "thumbnailSources": [
+      "inject.js thumbnail",
+      "meta[property=\"og:image\"]",
+      "VOD coverUrl from API"
+    ],
+    "durationSources": [
+      "VOD entry.duration from API"
+    ],
+    "extraMetadata": {
+      "viewerCount": "inject.js viewerCount",
+      "isLive": "inject.js / API isLive flag",
+      "isPrivate": "inject.js / API private show flag",
+      "isVr": "inject.js / API isVr flag",
+      "vrCameraSettings": "API vrCameraSettings (stereoPacking, frameFormat, horizontalAngle)",
+      "broadcastSettings": "API broadcastSettings"
+    },
+    "formatSources": [
+      "HLS master manifest from CDN edge hosts",
+      "DreamCam broadcast API stream URLs",
+      "inject.js page-context HLS URL collection",
+      "VOD videoUrl/trailerUrl from videos API"
+    ],
+    "cdnHosts": [
+      "doppiocdn.com",
+      "doppiocdn.net",
+      "stripcdnm.com",
+      "stripcdnmd.com",
+      "stripcdntmp.com",
+      "sc-cdn.net"
+    ],
+    "masterUrlPattern": "https://edge-hls.{host}/hls/{streamId}/master/{streamId}_auto.m3u8",
+    "bestOnlyUrlPattern": "https://edge-hls.{host}/hls/{streamId}/master/{streamId}.m3u8",
+    "injectMessageType": "DREAMCAM_VR_PAGE_DATA",
+    "injectRequestType": "REQUEST_DREAMCAM_VR_DATA",
+    "injectPollingInterval": 8000,
+    "mouflonDecryption": {
+      "enabled": true,
+      "tagPattern": "#EXT-X-MOUFLON:PSCH:{version}:{pkey}",
+      "fallbackKeys": {
+        "Ook7quaiNgiyuhai": "EQueeGh2kaewa3ch"
+      }
+    }
+  },
+  "formatObjectStructure": {
+    "url": "string",
+    "requestUrl": "string (with query params applied)",
+    "masterUrl": "string",
+    "quality": "string (e.g. '1080p @ 30fps (HLS)', 'Auto (HLS)', 'Source (MP4)', 'Trailer (MP4)')",
+    "format": "hls | mp4",
+    "ext": "m3u8 | mp4",
+    "height": "number | null",
+    "bandwidth": "number | null",
+    "fps": "number | null",
+    "type": "hls | mp4",
+    "extraParams": "object | null"
+  },
+  "hlsProcessingSpecs": {
+    "converter": "SimpleHLS2MP4Converter",
+    "maxSegmentRetries": 3,
+    "backoffBaseMs": 500,
+    "stallTimeoutMs": 30000,
+    "absoluteTimeoutMs": null,
+    "livePollIntervalMs": 1400,
+    "liveIdleLimitWithData": 35,
+    "liveIdleLimitNoData": 12,
+    "liveMaxPlaylistErrors": 8,
+    "liveFirstBatchLimit": 8,
+    "liveTickTailLimit": 4,
+    "llHlsSupport": true,
+    "referer": "https://dreamcamtrue.com/",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "origin": "https://dreamcamtrue.com"
+  },
+  "architecture": [
+    {
+      "component": "Content Script",
+      "files": [
+        "content.js"
+      ],
+      "purpose": "Stream info extraction via inject.js messages, download progress forwarding, active download restoration"
+    },
+    {
+      "component": "Player Button",
+      "files": [
+        "player-button.js"
+      ],
+      "purpose": "In-page download button with quality popover on video player"
+    },
+    {
+      "component": "Service Worker",
+      "files": [
+        "background-enhanced.js"
+      ],
+      "purpose": "Download orchestration, DreamCam API integration, HLS manifest parsing, auth gating, offscreen management, context menu, VR metadata, Mouflon decryption"
+    },
+    {
+      "component": "Popup",
+      "files": [
+        "popup.html",
+        "popup.js"
+      ],
+      "purpose": "UI, quality selector, live capture start/stop, VR badge, auth flow"
+    },
+    {
+      "component": "Offscreen",
+      "files": [
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "purpose": "MP4 streaming + HLS segment transmuxing + HLS live capture"
+    },
+    {
+      "component": "Auth",
+      "files": [
+        "auth.js",
+        "auth/auth-config.js",
+        "auth/auth-api.js",
+        "auth/auth-storage.js",
+        "auth/auth-token.js",
+        "auth/auth-telemetry.js"
+      ],
+      "purpose": "OTP login, entitlement checks, trial management"
+    },
+    {
+      "component": "Auth UI",
+      "files": [
+        "auth-ui.js"
+      ],
+      "purpose": "Popup sign-in/activation UI"
+    },
+    {
+      "component": "Download Manager",
+      "files": [
+        "download-manager.js"
+      ],
+      "purpose": "In-page download progress panel with live capture support"
+    },
+    {
+      "component": "Logger",
+      "files": [
+        "logger.js"
+      ],
+      "purpose": "Structured logging, bg mirroring"
+    },
+    {
+      "component": "Site Config",
+      "files": [
+        "site-config.js"
+      ],
+      "purpose": "Brand colors, endpoints, feature flags"
+    },
+    {
+      "component": "Update Notifier",
+      "files": [
+        "update-notifier.js"
+      ],
+      "purpose": "GitHub release version checks"
+    },
+    {
+      "component": "Trial Banner",
+      "files": [
+        "trial-banner.js"
+      ],
+      "purpose": "Trial remaining badge"
+    },
+    {
+      "component": "Inject",
+      "files": [
+        "inject.js"
+      ],
+      "purpose": "Page-context DreamCam broadcast API adapter, HLS URL discovery, state polling"
+    },
+    {
+      "component": "Popup UI Overrides",
+      "files": [
+        "popup-ui-overrides.js"
+      ],
+      "purpose": "Popup customizations, error message normalization"
+    }
+  ],
+  "downloadManagerPanel": {
+    "position": "Fixed top-right (slides from -400px to 20px)",
+    "panelId": "DREAMCAMVR-download-manager",
+    "cardWidth": "380px",
+    "maxHeight": "80vh",
+    "zIndex": 10000,
+    "border": "2px solid var(--brand-accent)",
+    "borderRadius": "10px",
+    "font": "sans-serif",
+    "autoHideSeconds": 3,
+    "features": [
+      "Minimize/close buttons",
+      "Per-download progress bars",
+      "Speed display",
+      "Cancel buttons",
+      "Live capture segment counting",
+      "Elapsed time display for live captures"
+    ]
+  },
+  "popupUI": {
+    "stylesheets": [
+      "styles/styles.css (8.5 KB)",
+      "styles/popup-enhanced.css (17.8 KB)"
+    ],
+    "scriptLoadOrder": [
+      "site-config.js",
+      "logger.js",
+      "auth.js (module)",
+      "popup.js (defer)",
+      "auth-ui.js (defer)",
+      "trial-banner.js (defer)",
+      "popup-ui-overrides.js (defer)",
+      "update-notifier.js (defer)"
+    ],
+    "sections": [
+      "Quick help banner",
+      "Header",
+      "Activation section",
+      "Loading spinner",
+      "Error state",
+      "Video info card (thumbnail, title, VR badge, duration/LIVE badge)",
+      "Quality selector with VR suffix",
+      "Capture hint (live only)",
+      "Live capture status",
+      "Download/Start/Stop button",
+      "Progress bar"
+    ]
+  },
+  "modulesIncluded": [
+    {
+      "module": "HLS Parser",
+      "path": "modules/hls/",
+      "purpose": "M3U8 playlist parsing"
+    },
+    {
+      "module": "HLS to MP4",
+      "path": "modules/hls2mp4/",
+      "purpose": "HLS segment transmuxing (SimpleHLS2MP4Converter)"
+    },
+    {
+      "module": "DASH to MP4",
+      "path": "modules/dash2mp4/",
+      "purpose": "DASH stream conversion"
+    },
+    {
+      "module": "MediaBunny",
+      "path": "modules/mediabunny/",
+      "purpose": "Audio/video codec handling"
+    },
+    {
+      "module": "Reencoder",
+      "path": "modules/reencoder/",
+      "purpose": "Video re-encoding"
+    },
+    {
+      "module": "Network",
+      "path": "modules/network/",
+      "purpose": "HTTP fetch utilities"
+    },
+    {
+      "module": "Utils",
+      "path": "modules/utils/",
+      "purpose": "General utilities"
+    },
+    {
+      "module": "MP4Box",
+      "path": "modules/mp4box.mjs",
+      "sizeKB": 319,
+      "purpose": "ISOBMFF manipulation"
+    },
+    {
+      "module": "FSBlob",
+      "path": "modules/FSBlob.mjs",
+      "sizeKB": 4.3,
+      "purpose": "Virtual filesystem blob ops"
+    },
+    {
+      "module": "EventEmitter",
+      "path": "modules/eventemitter.mjs",
+      "sizeKB": 3.5,
+      "purpose": "Event dispatch"
+    },
+    {
+      "module": "Localize",
+      "path": "modules/Localize.mjs",
+      "purpose": "i18n support"
+    }
+  ],
+  "buildAndRelease": {
+    "buildTool": "build-crossbrowser-hardened.mjs via esbuild",
+    "watermarked": true,
+    "githubRelease": true,
+    "githubRepo": "serpapps/dreamcam-vr-video-downloader",
+    "hasWorktree": true,
+    "worktreePath": ".worktrees/dreamcam-vr-downloader/",
+    "platformBuilds": [
+      {
+        "platform": "Standard",
+        "file": "dreamcam-vr-downloader.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Chrome",
+        "file": "dreamcam-vr-downloader-chrome.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Chrome Store Sanitized",
+        "file": "dreamcam-vr-downloader-chrome-store-sanitized.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Brave",
+        "file": "dreamcam-vr-downloader-brave.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Edge",
+        "file": "dreamcam-vr-downloader-edge.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Opera",
+        "file": "dreamcam-vr-downloader-opera.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Whale",
+        "file": "dreamcam-vr-downloader-whale.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Yandex",
+        "file": "dreamcam-vr-downloader-yandex.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Firefox ZIP",
+        "file": "dreamcam-vr-downloader-firefox.zip",
+        "sizeMB": null
+      },
+      {
+        "platform": "Firefox XPI",
+        "file": "dreamcam-vr-downloader-firefox-unpacked.xpi",
+        "sizeMB": null
+      }
+    ]
+  },
+  "testingAndHealth": {
+    "working": null,
+    "lastTestedDate": null,
+    "knownIssues": null,
+    "siteApiChanged": null,
+    "userReports": null
+  },
+  "businessAndMonetization": {
+    "pricingModel": "Freemium (3 free downloads, then paid license)",
+    "gumroadProductId": "test-key",
+    "ghLicenseId": "xTBDv7Igej2iWM7JjbSb",
+    "licenseCheckWorker": "https://ghl-check-license-worker-v2.farleythecoder.workers.dev",
+    "installCount": null,
+    "revenuePriority": null,
+    "stripeProductId": "prod_U5nh2InBvEiaze",
+    "stripeProductName": "Dreamcam VR Downloader",
+    "stripeMonthlyPrice": "USD 9.00/month [dreamcam-vr-downloader-monthly-9]",
+    "stripeOneTimePrice": null,
+    "stripePriceIds": [
+      "price_1T7c69DP7AOTRcvmmHoOxHG1"
+    ]
+  },
+  "loggingAndTelemetry": {
+    "logLevel": "debug",
+    "mirrorToBackground": true,
+    "logHierarchy": "debug(10) < log(20) < warn(30) < error(40) < none(100)"
+  },
+  "icons": [
+    {
+      "type": "default",
+      "size": "16x16",
+      "file": "icons/icon16.png"
+    },
+    {
+      "type": "default",
+      "size": "32x32",
+      "file": "icons/icon32.png"
+    },
+    {
+      "type": "default",
+      "size": "48x48",
+      "file": "icons/icon48.png"
+    },
+    {
+      "type": "default",
+      "size": "128x128",
+      "file": "icons/icon128.png"
+    }
+  ],
+  "brandColors": {
+    "brandAccent": "#ff4f70",
+    "brandAccentHover": "#e63d5d",
+    "bgDark": "#1b1b1b",
+    "bgDarker": "#2a2a2a",
+    "borderDark": "#333",
+    "inputBorder": "#555",
+    "textPrimary": "#ffffff",
+    "textMuted": "#999999",
+    "textSubtle": "#cccccc",
+    "success": "#4caf50",
+    "error": "#f44336",
+    "info": "#2196f3",
+    "lightBg": "#ffffff",
+    "lightBorder": "#e9ecef",
+    "lightMutedText": "#6c757d",
+    "lightPanelBg": "#f8f9fa",
+    "lightMutedText2": "#95a5a6",
+    "darkTextStrong": "#2c3e50"
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "extension": "erome-downloader",
+  "productPositioning": {
+    "headline": "Download EroMe Videos & Images — Albums, Any Quality, One Click",
+    "elevatorPitch": "SERP EroMe Downloader is a browser extension that saves videos and images from EroMe.com to your computer. Open any album or video page, and download buttons appear on each media item. Click to save videos as MP4 or images in their original format. No extra software needed. 3 free downloads included.",
+    "valueProposition": "Purpose-built for EroMe with album-aware media detection that finds every video and image on the page. In-page download buttons appear on each media item. HLS streams are converted to MP4 automatically. Images download in full resolution. Everything happens in your browser — no external tools required.",
+    "targetAudience": "EroMe users who want to save album content (videos and images) for offline viewing. Non-technical users who want a simple, reliable download solution for EroMe's album-based content format.",
+    "useCases": [
+      "Save videos from an EroMe album for offline viewing",
+      "Download images from EroMe albums in full resolution",
+      "Download in your preferred video quality",
+      "Use the in-page download button on each media item for direct saves without the popup",
+      "Right-click any video to download via context menu"
+    ],
+    "painPointsAddressed": [
+      "EroMe uses streaming video that can't be right-click saved",
+      "Albums contain multiple videos and images — downloading each manually is tedious",
+      "Generic downloaders don't understand EroMe's album structure",
+      "Users don't want desktop apps or command-line tools",
+      "No easy way to get full-resolution images from EroMe"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download videos and images from EroMe.com. Detects album media, converts HLS to MP4. Choose quality. 3 free downloads included.",
+    "changelog": "v4.0.1 — Album-aware media detection, in-page download buttons for videos and images, download manager with progress tracking, updated auth.",
+    "fullDescription": "SERP EroMe Downloader makes it easy to save videos and images from EroMe.com to your computer.\n\nHow it works: Go to any album or video page on EroMe, and download buttons automatically appear on each video player and image. Click the download button on any media item, or use the extension popup or right-click context menu. The extension detects all media in the album, shows available quality options for videos, and downloads content as standard MP4 files or original-format images.\n\nIt handles HLS streaming and direct video downloads automatically — no external tools, no command line, no technical knowledge required. Videos and images save directly to your Downloads folder in an organized EroMe subfolder.\n\nKey features:\n- Album-aware detection finds every video and image on the page\n- In-page download buttons on each video player and image\n- Converts HLS streams to standard MP4 files in your browser\n- Full-resolution image downloads from albums\n- Quality selection from all available video resolutions\n- Real-time download progress with speed indicators\n- Right-click context menu for quick video downloads\n- Desktop notifications when downloads complete\n- Dark-themed UI with pink/rose accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to EroMe.com and open any album or video page\n3. Click the download button on any video or image\n4. For videos, select quality and download — saved as MP4\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Album-aware media detection — finds every video and image on the page",
+      "In-page download buttons on each video player and image in the album",
+      "Converts HLS streams to downloadable MP4 files in-browser",
+      "Full-resolution image downloads with original file format preserved",
+      "Quality selector with all available video resolutions sorted by quality",
+      "Real-time progress bar with download speed and file size",
+      "Right-click context menu — Download Erome Video",
+      "Desktop notifications when downloads complete",
+      "Auto-saves to organized Erome/ subfolder in Downloads",
+      "Dark UI with pink/rose accents — clean and unobtrusive",
+      "3 free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP EroMe Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Browse",
+        "description": "Navigate to EroMe.com and open any album or video page"
+      },
+      {
+        "step": 3,
+        "title": "Click",
+        "description": "Use the in-page download button on any video or image, the extension popup, or right-click context menu"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "For videos, pick your quality and hit Download — saves as MP4 to your Downloads/Erome folder. Images save directly in their original format."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I download a video?",
+        "answer": "Go to any album or video page on EroMe.com. Download buttons appear on each media item. Click the button on a video to see quality options and download, or right-click and select \"Download Erome Video.\""
+      },
+      {
+        "question": "Can I download images from albums?",
+        "answer": "Yes. The extension detects both videos and images in EroMe albums. Each image gets its own download button. Images are saved in their original format at full resolution."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "The extension detects all available qualities from the source. Formats are sorted by quality (highest first), with MP4 preferred over HLS."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Videos and images automatically save to an Erome subfolder inside your browser's default Downloads directory."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Why isn't the extension finding my video?",
+        "answer": "Make sure you are on an EroMe album or video page. The extension needs the page to fully load before detection works. If issues persist, refresh the page."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. Video and image processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "erome downloader",
+      "download erome",
+      "erome video download",
+      "save erome videos",
+      "erome album downloader"
+    ],
+    "longTailKeywords": [
+      "how to download videos from erome",
+      "erome downloader chrome extension",
+      "download erome album to mp4",
+      "save erome images browser",
+      "erome video downloader extension"
+    ],
+    "seoTitle": "EroMe Downloader — Save Videos & Images as MP4 | SERP",
+    "metaDescription": "Download videos and images from EroMe.com with one click. Album-aware detection, HLS to MP4 conversion. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/erome-video-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download EroMe Videos & Images",
+    "googleAdsDescription": "Save EroMe albums as MP4 and images. In-page buttons. Quality selection. 3 free downloads included.",
+    "socialMediaHook": "Can't save content from EroMe albums? This extension adds download buttons to every video and image. One click, done.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Album-aware detection finds every video and image on the page. In-page buttons on each media item, context menu, desktop notifications, and organized auto-save folder. Generic tools miss album content entirely.",
+    "adAngles": [
+      {
+        "angle": "Album Support",
+        "copy": "Downloads every video and image in the album. Not just one — all of them."
+      },
+      {
+        "angle": "Simplicity",
+        "copy": "Download buttons on every media item. Click and save. That simple."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No desktop software. No command line. Just a browser extension."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it now."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output for videos. Original format for images (JPG, PNG, etc.). Multiple video quality levels detected from source. HLS and direct MP4 supported.",
+    "limitationsAndDisclaimers": "Page must fully load before detection. Video quality depends on source. Requires email sign-in for trial. Internet connection required. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "M3U8 Downloader",
+      "Coomer Downloader",
+      "RedGIFs Downloader",
+      "EroThots Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Videos and Images from EroMe (Step-by-Step Guide)",
+      "EroMe Downloader: Save Album Content with One Click",
+      "How to Save EroMe Videos as MP4 — No Software Required",
+      "Best EroMe Download Extensions Compared",
+      "Download EroMe Albums in Any Quality — Chrome & Firefox"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from EroMe is tricky and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Find Your Content",
+        "description": "Navigate to EroMe.com and open any album or video page"
+      },
+      {
+        "section": "Step 4: Download",
+        "description": "In-page button on each video or image, popup, or right-click context menu"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Auto-saves to Erome/ folder. Desktop notifications on complete. Images save in original format. Use context menu for fastest video workflow."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Let page load fully. Refresh if needed. Check extension is enabled."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected video with quality selector and download button",
+      "In-page download buttons on video players and images within an album",
+      "Quality popover showing available video resolutions",
+      "Download manager panel with active download progress",
+      "Right-click context menu showing Download Erome Video",
+      "Email sign-in / OTP verification screen"
+    ],
+    "iconLogoVariants": "Default icon: 16, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1b1b1b), popup screenshot, pink/rose accent (#ec567c)",
+    "gifDemoDescription": "8-second loop: album page → download buttons visible on videos and images → click video button → quality popover → download → progress → complete notification"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Videos & Images from EroMe — Albums, Any Quality, One Click",
+      "subheadline": "Download buttons on every video and image. Album-aware media detection. HLS to MP4 conversion. Full-resolution image saves. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Album-Aware Detection",
+        "description": "Finds every video and image on the page. Download buttons appear on each media item automatically."
+      },
+      {
+        "title": "Video Quality Selection",
+        "description": "All available resolutions sorted by quality. MP4 preferred, HLS converted automatically."
+      },
+      {
+        "title": "Full-Resolution Images",
+        "description": "Downloads images in their original format and full resolution. No compression or resizing."
+      },
+      {
+        "title": "Download Manager",
+        "description": "Real-time progress, speed, cancel. Desktop notification when complete."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "Auto-saves to organized Downloads/Erome/ folder",
+      "Automatic update notifications"
+    ],
+    "footerCta": {
+      "headline": "Ready to start downloading?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, minimal, professional. Avoid explicit language in marketing copy.",
+    "bannedWords": [
+      "free porn",
+      "watch free",
+      "stream free",
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download."
+    ],
+    "brandColorHex": "#ec567c",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"EroMe\" with capital E and M. Reference as \"EroMe.com\" for the website."
+  }
+}

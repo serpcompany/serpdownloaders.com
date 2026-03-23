@@ -1,0 +1,273 @@
+{
+  "extension": "m3u8-downloader",
+  "productPositioning": {
+    "headline": "Download HLS Streams from Any Website — M3U8 to MP4, One Click",
+    "elevatorPitch": "Video Downloader for M3U8 is a browser extension that captures HLS (M3U8) video streams from any website and saves them as standard MP4 files. It automatically detects media streams in the background as you browse, shows them in a clean popup with quality options, and handles the HLS-to-MP4 conversion entirely in your browser. Works on any site that uses HLS streaming. 3 free downloads included.",
+    "valueProposition": "A universal HLS stream downloader that works at the protocol level. Unlike site-specific tools, M3U8 Downloader captures streams from any website by monitoring network traffic for M3U8 manifests, MP4 files, and other media formats. It resolves multi-variant HLS playlists, fetches segments in parallel, and transmuxes them into a single MP4 file — all inside your browser with no external software.",
+    "targetAudience": "Users who need to download HLS video streams from websites that do not offer a download option. Content creators saving their own published streams. Developers and QA testers capturing video for review. Anyone who encounters M3U8/HLS streaming video and wants a local copy.",
+    "useCases": [
+      "Capture an HLS stream from any website and save as MP4",
+      "Download direct MP4/WebM/MOV videos detected in network traffic",
+      "Save a video from a site that uses adaptive bitrate streaming",
+      "Download media for offline viewing when no download button exists",
+      "Capture streams from platforms where other downloaders fail"
+    ],
+    "painPointsAddressed": [
+      "HLS streams cannot be saved with right-click — they are split into hundreds of small segments",
+      "Site-specific downloaders do not cover every website",
+      "Command-line tools like FFmpeg require technical knowledge",
+      "Desktop download software is bloated and often bundled with adware",
+      "Cross-origin restrictions prevent simple fetch-based downloaders from working on many sites"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download M3U8/HLS video streams from any website. Auto-detects streams, converts to MP4. Works everywhere. 3 free downloads.",
+    "changelog": "v4.0.1 — MV3 service worker, offscreen HLS transmuxing, modular download manager, DNR CORS rule injection, page bridge for authenticated streams.",
+    "fullDescription": "Video Downloader for M3U8 captures HLS video streams from any website and saves them as standard MP4 files.\n\nHow it works: As you browse, the extension monitors network traffic for M3U8 playlists, MP4 files, and other media streams. When a video is detected, the extension icon lights up. Click the icon to see all detected streams, choose your quality, and download. HLS streams are automatically converted to MP4 in your browser — no external tools required.\n\nUnlike site-specific downloaders, M3U8 Downloader works at the protocol level. It does not depend on any one website's HTML structure or API. If a site streams video over HLS, this extension can capture it.\n\nKey features:\n- Automatic stream detection via network monitoring — works on any website\n- Captures M3U8/HLS, MP4, WebM, MOV, M4V, FLV, and audio streams\n- Converts HLS streams to standard MP4 files in your browser\n- Quality selection from all detected streams\n- Real-time download progress with segment tracking\n- Modular download manager with speed display and cancel support\n- Page bridge technology for streams behind authentication\n- Dynamic CORS rule injection for cross-origin streams\n- Highlight icon when streams are detected on the current page\n- Dark-themed UI with sky blue accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Browse to any website with video content and play the video\n3. Look for the highlighted extension icon — it lights up when streams are found\n4. Click the icon, select quality, and download — saved as MP4\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Universal stream detection — monitors all network traffic for M3U8, MP4, WebM, MOV, and more",
+      "Works on any website — protocol-level capture, not tied to a single site",
+      "Converts HLS streams to downloadable MP4 files entirely in-browser",
+      "Quality selector showing all detected streams sorted by resolution",
+      "Real-time progress tracking with segment count and speed display",
+      "Modular download manager panel with cancel, collapse, and clear completed",
+      "Page bridge technology — captures streams behind login walls and authenticated sessions",
+      "Dynamic CORS rules — injects declarativeNetRequest rules to handle cross-origin streams",
+      "Highlight icon — toolbar icon changes when video streams are detected",
+      "Dark UI with sky blue accents — professional and unobtrusive",
+      "3 free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add Video Downloader for M3U8 to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Browse",
+        "description": "Visit any website and play a video — the extension monitors network traffic automatically"
+      },
+      {
+        "step": 3,
+        "title": "Detect",
+        "description": "The extension icon lights up when HLS or media streams are found"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "Click the icon, pick your quality, and hit Download — video saves as MP4"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I download a video?",
+        "answer": "Browse to any website with video content and press play. When the extension icon lights up, click it, select the stream you want, and hit Download."
+      },
+      {
+        "question": "What types of streams can this capture?",
+        "answer": "M3U8/HLS playlists, MP4, WebM, MOV, M4V, FLV, MPG, MP3, AAC, M4S, and TS segments. If it flows through your browser as a media stream, the extension can detect it."
+      },
+      {
+        "question": "Does this work on every website?",
+        "answer": "It works on any site that streams video over HLS or serves media files directly. Some sites are explicitly blocked: YouTube, TikTok, Instagram, VK, and Dailymotion."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files. HLS streams are automatically transmuxed from segments to a single MP4 file."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Videos save to your browser's default Downloads directory."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Why isn't the extension detecting my video?",
+        "answer": "Press play on the video first — the extension monitors network traffic, so the stream must start before it can be detected. If the page uses DRM (Widevine/PlayReady), the stream may be encrypted and cannot be captured. Refresh the page and try again."
+      },
+      {
+        "question": "Can it handle streams behind a login wall?",
+        "answer": "Yes. The page bridge technology injects a fetch proxy into the page context, retaining your cookies and session. This allows the extension to download streams that require authentication."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. All video processing happens entirely in your browser. No video data is sent to any external server. Authentication uses secure OTP — no passwords stored."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "m3u8 downloader",
+      "hls downloader",
+      "download m3u8",
+      "m3u8 to mp4",
+      "hls stream downloader"
+    ],
+    "longTailKeywords": [
+      "how to download m3u8 video",
+      "m3u8 downloader chrome extension",
+      "download hls stream to mp4",
+      "capture hls video browser",
+      "m3u8 video downloader online"
+    ],
+    "seoTitle": "M3U8 Downloader — HLS Stream to MP4 | SERP",
+    "metaDescription": "Download M3U8/HLS video streams from any website. Auto-detects streams, converts to MP4 in-browser. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/m3u8-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download M3U8 HLS Streams",
+    "googleAdsDescription": "Capture HLS video streams from any site. Converts M3U8 to MP4 in your browser. Try 3 free downloads.",
+    "socialMediaHook": "Trying to save a video from a site with no download button? M3U8 Downloader captures HLS streams from any website and converts them to MP4. One click.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Works at the protocol level — captures streams from any site, not just one. Page bridge handles authenticated streams. Dynamic CORS rules solve cross-origin issues that block other tools. No desktop software or command line required.",
+    "adAngles": [
+      {
+        "angle": "Universal",
+        "copy": "Works on any website. Not tied to one platform. If it streams HLS, we capture it."
+      },
+      {
+        "angle": "Technical Simplicity",
+        "copy": "M3U8 to MP4. Automatic. No FFmpeg. No command line. Just a browser extension."
+      },
+      {
+        "angle": "Reliability",
+        "copy": "Page bridge technology captures streams behind login walls. Dynamic CORS rules handle cross-origin restrictions."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Install and try it now."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output. Detects M3U8, MP4, WebM, MOV, M4V, FLV, MPG, MP3, AAC, M4S, TS. HLS streams resolved to highest bandwidth variant.",
+    "limitationsAndDisclaimers": "Must press play before detection. DRM-encrypted streams (Widevine/PlayReady) cannot be captured. YouTube, TikTok, Instagram, VK, and Dailymotion are blocked. Requires email sign-in for trial. Internet connection required during download. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "Facebook Downloader",
+      "Vimeo Downloader",
+      "Dailymotion Downloader",
+      "Wistia Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download M3U8 Streams — Step-by-Step Guide",
+      "M3U8 to MP4: Download HLS Video Streams from Any Website",
+      "Best M3U8 Downloader Extensions for Chrome and Firefox",
+      "How to Capture HLS Streams Without FFmpeg or Command Line",
+      "Download HLS Video from Any Website — No Software Required"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "What is HLS/M3U8 streaming and why you cannot right-click to save these videos"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store or manual install"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Browse and Play",
+        "description": "Navigate to any website with HLS video and start playback"
+      },
+      {
+        "section": "Step 4: Detect",
+        "description": "Wait for the extension icon to highlight — streams are being captured"
+      },
+      {
+        "section": "Step 5: Download",
+        "description": "Click the icon, select quality, hit Download — MP4 saved to your Downloads folder"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "The extension works in the background across all tabs. Look for the highlighted icon. Refresh the page if streams are not detected."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Press play first. DRM-encrypted streams cannot be captured. Check that the extension is enabled. Try refreshing the page."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing detected video streams with quality selector and download button",
+      "Highlighted extension icon indicating streams have been detected on the page",
+      "Download manager panel showing active HLS download with segment progress",
+      "Email sign-in / OTP verification screen",
+      "Multiple streams detected from a single page with different formats and qualities"
+    ],
+    "iconLogoVariants": "Default icon: 16, 32, 48, 64, 96, 128px. Highlight icon: 16, 32, 48, 64, 96, 128px.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1b1b1b), popup screenshot showing detected streams, sky blue accent (#0ea5e9)",
+    "gifDemoDescription": "10-second loop: browse to a website with HLS video, play video, icon highlights, click icon, popup shows detected streams, select quality, download starts, progress bar fills, complete"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download HLS Streams from Any Website — M3U8 to MP4",
+      "subheadline": "Universal stream capture. Automatic HLS-to-MP4 conversion. Works on any site. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Universal Detection",
+        "description": "Monitors network traffic for M3U8, MP4, WebM, and more. Works on any website, not just one platform."
+      },
+      {
+        "title": "HLS to MP4 Conversion",
+        "description": "Resolves multi-variant playlists, fetches segments in parallel, and transmuxes to a single MP4 file — all in your browser."
+      },
+      {
+        "title": "Page Bridge Technology",
+        "description": "Captures streams behind login walls by proxying requests through the page context with your session cookies."
+      },
+      {
+        "title": "Download Manager",
+        "description": "Real-time progress with segment tracking, speed display, cancel support, and cross-tab synchronization."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser — no video data sent externally",
+      "Automatic update notifications via GitHub releases",
+      "Dynamic CORS rules handle cross-origin streams automatically"
+    ],
+    "footerCta": {
+      "headline": "Ready to start downloading?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, technical but accessible, professional. Position as a utility tool for capturing streaming media. Avoid sensationalism.",
+    "bannedWords": [
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack",
+      "hack",
+      "steal",
+      "rip"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download. DRM-protected content cannot be captured."
+    ],
+    "brandColorHex": "#0ea5e9",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"M3U8 Downloader\" or \"Video Downloader for M3U8\" as the product name. Reference \"HLS\" and \"M3U8\" as technical terms. Do not abbreviate to just \"VDL\" in marketing copy."
+  }
+}

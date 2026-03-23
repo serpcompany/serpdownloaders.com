@@ -1,0 +1,284 @@
+{
+  "extension": "justforfans-downloader",
+  "productPositioning": {
+    "headline": "Download JustForFans Content — Videos, Images, and Text Posts",
+    "elevatorPitch": "SERP JustForFans Downloader is a browser extension that saves videos, images, and text posts from JustFor.Fans to your computer. Browse a creator's feed, click \"Download Visible\" to grab everything on screen, or use the per-post download button. Videos save as MP4, images save at full resolution, and text posts are captured too. No extra software needed. 3 free downloads included.",
+    "valueProposition": "Purpose-built for JustForFans with intelligent feed scanning that detects videos, images (including gallery/carousel posts), and text content. Handles HLS streams, DASH encrypted video, and Autograph CDN delivery automatically. In-page download buttons on every post, bulk \"Download Visible\" for batch saving, and automatic HLS-to-MP4 conversion. Everything happens in your browser — no external tools required.",
+    "targetAudience": "JustForFans subscribers who want to save creator content for offline viewing. Non-technical users who want a simple, reliable download solution for subscription platform content.",
+    "useCases": [
+      "Save videos from a creator's JustForFans feed for offline viewing",
+      "Download all visible content from a feed page in one click",
+      "Save images and gallery posts at full resolution",
+      "Capture text posts alongside media",
+      "Download in your preferred video quality",
+      "Use the per-post download button for targeted saves",
+      "Right-click any video to download via context menu"
+    ],
+    "painPointsAddressed": [
+      "JustForFans uses HLS and DASH streaming with DRM — can't right-click and save",
+      "Content is delivered through Autograph CDN with token-based URLs",
+      "Gallery/carousel posts require expansion to access all images",
+      "Generic downloaders don't understand the JustForFans feed structure",
+      "Users don't want desktop apps or command-line tools",
+      "No easy way to batch-download visible content from a feed"
+    ]
+  },
+  "storeListingCopy": {
+    "shortDescription": "Download videos, images, and text from JustFor.Fans. Auto-detects streams, converts HLS to MP4. 3 free downloads included.",
+    "changelog": "v4.0.1 — Feed-aware asset scanning, per-post download buttons, gallery expansion, DASH/DRM support, bulk Download Visible action, updated auth.",
+    "fullDescription": "SERP JustForFans Downloader makes it easy to save content from JustFor.Fans to your computer.\n\nHow it works: Go to any creator's page on JustForFans, scroll through their feed, and click \"Download Visible\" to save all videos, images, and text posts currently on screen. Or use the per-post download button on individual items. The extension scans the feed, detects all media types, and downloads them directly to your computer.\n\nIt handles HLS streaming, DASH encrypted video, Autograph CDN delivery, and gallery/carousel expansion automatically — no external tools, no command line, no technical knowledge required. Videos save as MP4, images save at full resolution, and everything goes to an organized JustForFans subfolder in your Downloads.\n\nKey features:\n- Feed-aware scanning — detects videos, images, gallery posts, and text content\n- Per-post download button on every feed item\n- \"Download Visible\" button for batch downloading all content on screen\n- Converts HLS streams and DASH encrypted video to standard MP4 files\n- Gallery/carousel expansion to capture all images in multi-image posts\n- Quality selection from all available resolutions\n- Real-time download progress with speed indicators\n- Right-click context menu for quick video downloads\n- Desktop notifications when downloads complete\n- Dark-themed UI with sky blue accents\n- 3 free downloads to try before you buy\n\nGetting started:\n1. Install the extension\n2. Go to JustFor.Fans and navigate to a creator's page\n3. Click the extension icon to see detected content (Videos, Images, Text tabs)\n4. Click \"Download Visible\" or use per-post buttons — content saves to your Downloads/JustForFans folder\n\nSign in with your email to unlock 3 free trial downloads. Upgrade to a license for unlimited downloads.\n\nSupports Chrome, Edge, Brave, Opera, Firefox, and more.",
+    "featureBulletPoints": [
+      "Feed-aware scanning — automatically detects videos, images, galleries, and text posts",
+      "Per-post download button on every JustForFans feed item",
+      "\"Download Visible\" bulk action — save all content on screen with one click",
+      "Converts HLS streams and DASH encrypted video to MP4 in-browser",
+      "Gallery/carousel expansion — captures all images in multi-image posts",
+      "Quality selector with all available video resolutions sorted by quality",
+      "Real-time progress bar with download speed and file size",
+      "Right-click context menu — \"Download JustForFans Video\"",
+      "Desktop notifications when downloads complete",
+      "Auto-saves to organized JustForFans/ subfolder in Downloads",
+      "Tabbed popup UI — browse Videos, Images, and Text Posts separately",
+      "Dark UI with sky blue accents — clean and unobtrusive",
+      "3 free trial downloads — no credit card required"
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Install",
+        "description": "Add SERP JustForFans Downloader to your browser"
+      },
+      {
+        "step": 2,
+        "title": "Browse",
+        "description": "Navigate to JustFor.Fans and go to a creator's feed"
+      },
+      {
+        "step": 3,
+        "title": "Scan",
+        "description": "The extension auto-detects videos, images, and text posts on the page"
+      },
+      {
+        "step": 4,
+        "title": "Download",
+        "description": "Click \"Download Visible\" for bulk save, or use per-post buttons — content saves to your Downloads/JustForFans folder"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I download content from JustForFans?",
+        "answer": "Go to any creator's page on JustFor.Fans. Click the extension icon to see detected content organized by type (Videos, Images, Text). Click \"Download Visible\" to save everything, or use the download button on individual posts."
+      },
+      {
+        "question": "What types of content can I download?",
+        "answer": "Videos (saved as MP4), images (full resolution, including gallery/carousel posts), and text posts."
+      },
+      {
+        "question": "What quality options are available?",
+        "answer": "The extension detects all available video qualities from the source. Formats are sorted by quality (highest first), with MP4 preferred over HLS."
+      },
+      {
+        "question": "What format are downloaded videos?",
+        "answer": "All videos are saved as standard MP4 files that play on any device or media player. HLS and DASH streams are converted automatically."
+      },
+      {
+        "question": "Where are my downloads saved?",
+        "answer": "Content automatically saves to a JustForFans subfolder inside your browser's default Downloads directory."
+      },
+      {
+        "question": "How many free downloads do I get?",
+        "answer": "3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads."
+      },
+      {
+        "question": "Does this work on Firefox?",
+        "answer": "Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox."
+      },
+      {
+        "question": "Why isn't the extension finding my content?",
+        "answer": "Scroll through the creator's feed to load content first. The extension scans visible posts on the page. If issues persist, click the \"Rescan\" button or refresh the page."
+      },
+      {
+        "question": "Can I download gallery/carousel posts?",
+        "answer": "Yes. The extension automatically expands gallery and carousel posts to capture all images in multi-image posts."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. All processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored. The extension only accesses JustFor.Fans pages."
+      },
+      {
+        "question": "What if a video uses DRM/encryption?",
+        "answer": "The extension includes DASH decryption support for encrypted streams commonly used on JustForFans. Most protected content can be downloaded."
+      }
+    ]
+  },
+  "seoAndSearch": {
+    "primaryKeywords": [
+      "justforfans downloader",
+      "download justforfans",
+      "justforfans video download",
+      "save justforfans content"
+    ],
+    "longTailKeywords": [
+      "how to download videos from justforfans",
+      "justforfans downloader chrome extension",
+      "download justforfans to mp4",
+      "save justforfans videos browser",
+      "justfor.fans downloader"
+    ],
+    "seoTitle": "JustForFans Downloader — Save Videos & Images | SERP",
+    "metaDescription": "Download videos, images, and posts from JustFor.Fans with one click. HLS and DASH support. Chrome, Firefox, Edge. 3 free downloads.",
+    "urlSlug": "/justforfans-downloader",
+    "schemaMarkupType": "SoftwareApplication"
+  },
+  "adCopyAndCampaigns": {
+    "googleAdsHeadline": "Download JustForFans Content",
+    "googleAdsDescription": "Save JustForFans videos & images. Bulk download. Quality selection. 3 free downloads included.",
+    "socialMediaHook": "Can't save content from JustForFans? This extension adds download buttons to every post. Videos, images, galleries — one click, done.",
+    "cta": "Try 3 Free Downloads",
+    "competitorComparisons": "Feed-aware scanning detects videos, images, and galleries that generic tools miss. Per-post download buttons, bulk \"Download Visible\" action, DASH/DRM decryption, and organized auto-save folder.",
+    "adAngles": [
+      {
+        "angle": "Simplicity",
+        "copy": "Download button on every post. Click it. Done."
+      },
+      {
+        "angle": "Completeness",
+        "copy": "Videos, images, galleries, text — downloads everything from a creator's feed."
+      },
+      {
+        "angle": "No Tools Needed",
+        "copy": "No desktop software. No command line. Just a browser extension."
+      },
+      {
+        "angle": "Free Trial",
+        "copy": "3 free downloads. No credit card. Try it now."
+      },
+      {
+        "angle": "Bulk Save",
+        "copy": "Click 'Download Visible' — saves everything on screen in one shot."
+      }
+    ]
+  },
+  "blogAndArticleContent": {
+    "supportedFormatsAndQualities": "MP4 output for video. Full-resolution images. Multiple quality levels detected from source. HLS, DASH, and direct MP4 supported.",
+    "limitationsAndDisclaimers": "Content must be visible on the page (scroll to load). Quality depends on source. Requires email sign-in for trial. Internet connection required. Valid JustForFans subscription required to access content. Users responsible for download rights.",
+    "socialProof": null,
+    "relatedExtensions": [
+      "SERP Video Downloader",
+      "M3U8 Downloader",
+      "OnlyFans Downloader",
+      "Coomer Downloader",
+      "Erome Downloader"
+    ],
+    "articleTitleIdeas": [
+      "How to Download Videos from JustForFans (Step-by-Step Guide)",
+      "JustForFans Downloader: Save Creator Content with One Click",
+      "How to Save JustForFans Videos as MP4 — No Software Required",
+      "Download JustForFans Images, Videos, and Posts — Complete Guide",
+      "Best JustForFans Download Extensions Compared"
+    ],
+    "tutorialOutline": [
+      {
+        "section": "Introduction",
+        "description": "Why downloading from JustForFans is tricky and how this extension solves it"
+      },
+      {
+        "section": "Prerequisites",
+        "description": "Chrome, Edge, Brave, Firefox, or Opera. Internet connection. Active JustForFans subscription."
+      },
+      {
+        "section": "Step 1: Install",
+        "description": "Add from extension store"
+      },
+      {
+        "section": "Step 2: Sign In",
+        "description": "Email + OTP verification"
+      },
+      {
+        "section": "Step 3: Browse Content",
+        "description": "Navigate to JustFor.Fans and scroll through a creator's feed"
+      },
+      {
+        "section": "Step 4: Download",
+        "description": "Use Download Visible for bulk save, per-post buttons, or right-click context menu"
+      },
+      {
+        "section": "Tips & Tricks",
+        "description": "Auto-saves to JustForFans/ folder. Use tabs to filter by Videos, Images, or Text. Click Rescan after scrolling. Desktop notifications on complete."
+      },
+      {
+        "section": "Troubleshooting",
+        "description": "Scroll to load content first. Click Rescan after scrolling. Check extension is enabled. For DRM issues, try adding to playlist first."
+      }
+    ]
+  },
+  "visualAssets": {
+    "screenshotDescriptions": [
+      "Extension popup showing Videos tab with detected videos and quality options",
+      "Extension popup showing Images tab with gallery thumbnails",
+      "Extension popup showing stats grid (Videos/Images/Text Posts counts)",
+      "Per-post download button on a JustForFans feed item",
+      "Download manager panel with active download progress",
+      "Right-click context menu showing Download JustForFans Video",
+      "Email sign-in / OTP verification screen"
+    ],
+    "iconLogoVariants": "Default icon: 16, 48, 128px. No highlight variant.",
+    "bannerHeroImageSpec": "1280x800 — dark background (#1b1b1b), popup screenshot showing asset tabs, sky blue accent (#0ea5e9)",
+    "gifDemoDescription": "10-second loop: creator feed page -> scroll -> click extension icon -> popup shows Videos/Images/Text tabs with counts -> click Download Visible -> download manager slides in -> progress -> complete notification"
+  },
+  "landingPageContent": {
+    "heroSection": {
+      "headline": "Download Content from JustForFans — Videos, Images, and Posts",
+      "subheadline": "Download buttons on every post. Feed-aware scanning. HLS and DASH to MP4 conversion. Gallery expansion. No software to install.",
+      "ctaButton": "Try 3 Free Downloads"
+    },
+    "featureBlocks": [
+      {
+        "title": "Feed-Aware Scanning",
+        "description": "Automatically detects all content types on a creator's page — videos, images, galleries, and text posts."
+      },
+      {
+        "title": "Per-Post Download Buttons",
+        "description": "Every feed item gets its own download button. Click and save — no popup needed."
+      },
+      {
+        "title": "Bulk Download",
+        "description": "Click \"Download Visible\" to save everything currently on screen. Scroll down, rescan, repeat."
+      },
+      {
+        "title": "HLS & DASH Support",
+        "description": "Handles encrypted streams and DRM. Converts everything to standard MP4 automatically."
+      }
+    ],
+    "trustSignals": [
+      "Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex",
+      "Secure OTP sign-in — no passwords stored",
+      "All processing happens locally in your browser",
+      "Auto-saves to organized Downloads/JustForFans/ folder",
+      "Automatic update notifications",
+      "Handles HLS, DASH, and DRM-protected streams"
+    ],
+    "footerCta": {
+      "headline": "Ready to start downloading?",
+      "button": "Install Free — 3 Downloads Included"
+    }
+  },
+  "toneAndBrand": {
+    "voiceTone": "Direct, minimal, professional. Avoid explicit language in marketing copy. Focus on the content management/archival use case.",
+    "bannedWords": [
+      "free porn",
+      "watch free",
+      "stream free",
+      "piracy",
+      "illegal",
+      "bypass",
+      "crack"
+    ],
+    "requiredDisclaimers": [
+      "Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download. A valid JustForFans subscription is required to access creator content."
+    ],
+    "brandColorHex": "#0ea5e9",
+    "brandBackgroundHex": "#1b1b1b",
+    "targetPlatformBranding": "Use \"JustForFans\" as one word with capital J, F, F. Reference the website as \"JustFor.Fans\" with the period before \"Fans\" when referring to the URL/domain."
+  }
+}
