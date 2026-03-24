@@ -1,5 +1,0 @@
-1:"$Sreact.fragment"
-2:I[897367,["/_next/static/chunks/38a8dbe2c5c26331.js","/_next/static/chunks/41d9c723989d7418.js"],"OutletBoundary"]
-3:"$Sreact.suspense"
-0:{"buildId":"cplDpvP1rWfZzWkd4O64w","rsc":["$","$1","c",{"children":[["$","section",null,{"className":"container mx-auto flex flex-1 px-4 py-16","children":["$","div",null,{"className":"mx-auto w-full max-w-2xl rounded-none border border-border bg-card p-8 shadow-sm","children":[["$","p",null,{"className":"text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground","children":"Account"}],["$","h1",null,{"className":"mt-2 text-3xl font-bold tracking-tight","children":"Unavailable in static demo"}],["$","p",null,{"className":"mt-3 text-muted-foreground","children":"GitHub account pages are disabled for the GitHub Pages build."}]]}]}],[["$","script","script-0",{"src":"/_next/static/chunks/cd671a70ffdb3c17.js","async":true}]],["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
-4:null
