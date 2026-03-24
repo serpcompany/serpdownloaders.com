@@ -1,9 +1,9 @@
 :HL["/_next/static/chunks/208ef4520b99b94c.css","style"]
-:HL["/_next/static/chunks/7211b6a7e66757b8.css","style"]
+:HL["/_next/static/chunks/c7b63ea53069dd1d.css","style"]
 :HL["/_next/static/media/GeistMono_Variable.p.2f937313.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/Geist_Variable-s.p.92592eb2.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://dr.serp.co/badge/serpdownloaders.com?style=serp-dr-v3","image"]
 :HL["https://gist.github.com/user-attachments/assets/b4ad85e1-8eb3-4f57-8a0e-ea451a8b6341","image"]
 :HL["https://gist.github.com/user-attachments/assets/ad68e4ff-85e5-4586-8372-43b8b1400ff8","image"]
 :HL["https://gist.github.com/user-attachments/assets/d57c2a6e-14ec-42e9-8cde-ea014d80cb16","image"]
-0:{"buildId":"RWWN6rdLD7O5VSOJ4jb9z","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"guides","paramType":null,"paramKey":"guides","hasRuntimePrefetch":false,"slots":{"children":{"name":"slug","paramType":"d","paramKey":"how-to-download-password-protected-vimeo-videos-not-embedded-stream","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"cplDpvP1rWfZzWkd4O64w","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"guides","paramType":null,"paramKey":"guides","hasRuntimePrefetch":false,"slots":{"children":{"name":"slug","paramType":"d","paramKey":"how-to-download-password-protected-vimeo-videos-not-embedded-stream","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
