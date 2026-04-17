@@ -16,6 +16,30 @@
     "categories": [
       "video-downloaders"
     ],
+    "content": "## Overview\n\nAdobe Stock Downloader helps you save Adobe Stock assets for offline creative review, reference folders, and research workflows. Open the image page you want, run the extension, and download the asset directly without repetitive manual saving.\n\n## Why It Exists\n\nThis extension is built for people who want a simpler way to download Adobe Stock images into their own offline workflow.",
+    "description": "Download Adobe Stock images.",
+    "name": "Adobe Stock Downloader",
+    "slug": "adobe-stock-downloader",
+    "url": "/products/adobe-stock-downloader",
+    "website": "https://serp.ly/adobe-stock-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "## Overview\n\nAlamy Downloader helps you save stock photos from Alamy for offline creative review, reference folders, and research workflows. Open the asset page you want, run the extension, and download the image directly into your own workflow.\n\n## Why It Exists\n\nThis extension is built for people who want a direct way to extract Alamy stock photos in full resolution without watermarks or extra restrictions.",
+    "description": "Extract Alamy stock photos in full resolution without watermarks or restrictions.",
+    "name": "Alamy Downloader",
+    "slug": "alamy-downloader",
+    "url": "/products/alamy-downloader",
+    "website": "https://serp.ly/alamy-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
     "content": "## Overview\n\nAlphaPorno Downloader is a browser extension that lets you save videos from AlphaPorno.com directly to your computer. Just play a video, click the download button, and choose your quality. Videos are saved as standard MP4 files — no extra software needed. 3 free downloads included.\n\n## Why It Exists\n\nPurpose-built for AlphaPorno with automatic video detection, in-page download button, and HLS-to-MP4 conversion. Downloads happen entirely in your browser — no external tools, no command line, no hassle.\n\n## Offline use cases\n\n- Save a video from AlphaPorno for offline viewing\n- Download in your preferred quality (360p–1080p)\n- Build a personal library of saved content\n- Download without dealing with HLS streams or technical tools\n- Use the in-page button for instant downloads without opening the popup\n\n## FAQ\n\n### How do I download a video?\n\nGo to any video page on AlphaPorno.com and press play. Then either click the download button that appears on the player, or click the extension icon in your toolbar. Select your preferred quality and hit download.\n\n### What quality options are available?\n\nThe extension offers whatever qualities the source video provides — typically 360p, 480p, 720p, and sometimes 1080p. It auto-detects available resolutions.\n\n### What format are downloaded videos?\n\nAll videos are saved as standard MP4 files that play on any device or media player.\n\n### Where are my downloads saved?\n\nVideos are automatically saved to a AlphaPorno subfolder inside your browser's default Downloads directory.\n\n### How many free downloads do I get?\n\nYou get 3 free trial downloads after signing in with your email. After that, purchase a license for unlimited downloads.\n\n### Does this work on Firefox?\n\nYes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox.\n\n### Why isn't the extension finding my video?\n\nMake sure you've pressed play on the video first. The extension needs the stream to start before it can detect it. If issues persist, try refreshing the page.\n\n### Is my data safe?\n\nYes. Video processing happens entirely in your browser — nothing is uploaded. Authentication uses secure OTP (one-time password) — no passwords stored.",
     "description": "Download videos from AlphaPorno.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
     "name": "AlphaPorno Downloader",
@@ -160,6 +184,30 @@
     "categories": [
       "video-downloaders"
     ],
+    "content": "## Overview\n\nCoursera Downloader helps you save course videos for study during travel, unstable connections, and personal backup workflows. Open the lesson you want, start playback if needed, and use the extension to detect and download the media locally.\n\n## Why It Exists\n\nThis extension is built for people who want a dependable way to download complete Coursera courses with videos for offline study.",
+    "description": "Download complete Coursera courses with videos.",
+    "name": "Coursera Downloader",
+    "slug": "coursera-downloader",
+    "url": "/products/coursera-downloader",
+    "website": "https://serp.ly/coursera-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "## Overview\n\nDeviantArt Downloader helps you save artwork from DeviantArt for offline inspiration, local reference folders, and creative research. Open the asset page you want, run the extension, and download the file directly into your own workflow.\n\n## Why It Exists\n\nThis extension is built for people who want a comprehensive DeviantArt downloader for artwork without repetitive manual saving.",
+    "description": "Comprehensive DeviantArt downloader for artwork.",
+    "name": "DeviantArt Downloader",
+    "slug": "deviantart-downloader",
+    "url": "/products/deviantart-downloader",
+    "website": "https://serp.ly/deviantart-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
     "content": "## Overview\n\nDreamCam Downloader is a browser extension that records live streams and downloads recordings from DreamCam (dreamcamtrue.com). Open a model page, click Start to capture the live stream or pick a recording to download. It converts HLS streams to MP4 in your browser — no external software needed. 3 free downloads included.\n\n## Why It Exists\n\nPurpose-built for DreamCam with live stream capture (LL-HLS recording with start/stop), VOD recording download, VR stream support, multi-CDN host resolution, Mouflon manifest decoding, and in-page download button. Everything happens in your browser — no external tools required.\n\n## Offline use cases\n\n- Record a live DreamCam stream as it happens\n- Download model recordings/VODs from video pages\n- Capture VR streams with proper metadata\n- Download in your preferred quality from available HLS variants\n- Use the in-page player button for one-click capture without the popup\n- Right-click any stream page to capture via context menu\n\n## FAQ\n\n### How do I record a live stream?\n\nGo to any live model page on DreamCam. Click the extension icon or the download button on the player. Click \"Start\" to begin recording. Click \"Stop\" when you want to finish — the recording saves as MP4.\n\n### Can I download recorded videos (VODs)?\n\nYes. Navigate to a model's video page (e.g., /username/videos/123). The extension detects it as a recording and offers quality options for direct download.\n\n### What quality options are available?\n\nThe extension parses all available HLS variants from the master manifest — typically multiple resolutions. Formats are sorted by quality (highest first).\n\n### What format are downloaded videos?\n\nAll videos are saved as standard MP4 files that play on any device or media player.\n\n### Where are my downloads saved?\n\nVideos automatically save to a DREAMCAM subfolder inside your browser's default Downloads directory.\n\n### How many free downloads do I get?\n\n3 free trial downloads after signing in with your email. Purchase a license for unlimited captures and downloads.\n\n### Does this support VR streams?\n\nYes. The extension detects VR camera settings (stereo packing, frame format, horizontal angle) and includes VR metadata in the filename for proper playback in VR players.\n\n### Does this work on Firefox?\n\nYes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox.\n\n### Why isn't the extension finding the stream?\n\nMake sure the model is currently live and streaming. If they're offline or in a private show, the extension will show a status message. Refresh the page and try again.\n\n### Is my data safe?\n\nYes. All stream processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored.",
     "description": "Record DreamCam live streams and download recordings. Live capture, HLS to MP4, VR support. 3 free downloads included.",
     "name": "DreamCam Downloader",
@@ -232,6 +280,18 @@
     "categories": [
       "video-downloaders"
     ],
+    "content": "## Overview\n\nGetty Images Downloader helps you save full-resolution Getty Images assets for offline research, creative review, moodboards, and backup workflows. Open the asset page you want, run the extension, and capture the original file without repetitive tab-by-tab saving.\n\n## Why It Exists\n\nThis extension is built for people who need a direct way to download Getty Images editorial and creative content in full resolution.",
+    "description": "Download Getty Images editorial and creative content in full resolution.",
+    "name": "Getty Images Downloader",
+    "slug": "getty-images-downloader",
+    "url": "/products/getty-images-downloader",
+    "website": "https://serp.ly/getty-images-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
     "content": "## Overview\n\nGoHighLevel Downloader is a browser extension that saves videos from GoHighLevel portals, membership areas, and course pages. It detects embedded Loom, Vimeo, YouTube, and Wistia videos as well as GoHighLevel native HLS streams, then downloads them as MP4. No extra software needed. 3 free downloads included.\n\n## Why It Exists\n\nPurpose-built for GoHighLevel users. Automatically detects the GoHighLevel portal environment, identifies embedded video platforms (Loom, Vimeo, Wistia, YouTube) and native HLS streams, and downloads content directly from the source. Multi-handler architecture means it works regardless of which video platform your course creator or agency uses. Everything happens in your browser.\n\n## Offline use cases\n\n- Save a training video from a GoHighLevel membership area for offline study\n- Download course lesson recordings from a GoHighLevel portal before access expires\n- Archive your own uploaded content from your GoHighLevel membership site\n- Save Loom walkthroughs embedded in GoHighLevel course pages\n- Download Vimeo or Wistia training videos from GoHighLevel coaching dashboards\n\n## FAQ\n\n### What GoHighLevel pages does this work with?\n\nAny GoHighLevel-powered portal, membership area, or course page. The extension detects the GoHighLevel environment automatically using DOM markers like x-cp-build-version and clientportal-siteCustomHeader, as well as GoHighLevel/HighLevel hostname patterns.\n\n### What video platforms are supported?\n\nGoHighLevel native HLS video, Loom, Vimeo, Wistia, and YouTube embeds. Each platform has a dedicated detector and handler for reliable extraction.\n\n### How do I download a video?\n\nGo to any lesson or page in your GoHighLevel portal and press play on the video. Then click the extension icon in your toolbar.\n\n### What quality options are available?\n\nThe extension detects all available qualities from the embedded platform or the GoHighLevel HLS manifest. Options depend on what the video host provides -- typically multiple resolutions up to 1080p or higher.\n\n### What format are downloaded videos?\n\nAll videos are saved as standard MP4 files that play on any device or media player. GoHighLevel native HLS streams are automatically converted to MP4 during download.\n\n### Can I download multiple videos at once?\n\nYes -- the extension supports up to 3 concurrent downloads with individual progress tracking.\n\n### How many free downloads do I get?\n\n3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads.\n\n### Does this work on Skool, Circle, or Kajabi?\n\nNo -- Skool, Circle, and Kajabi each have their own dedicated downloader extensions. This extension is specifically for GoHighLevel portals.\n\n### Does this work on Firefox?\n\nYes -- supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox.\n\n### Why isn't the extension finding my video?\n\nMake sure you are on a GoHighLevel portal page. Press play on the video first. The extension needs the stream to start before detection works. If issues persist, refresh the page.\n\n### Does this handle GoHighLevel native video (not just embeds)?\n\nYes. GoHighLevel uses HLS streaming for its native video player (Plyr). The extension discovers the m3u8 manifest, fetches all segments, and stitches them into a downloadable MP4 file.\n\n### Is my data safe?\n\nYes. Video processing happens entirely in your browser. Authentication uses secure OTP -- no passwords stored.",
     "description": "Download videos from GoHighLevel portals and courses. Detects Loom, Vimeo, Wistia, YouTube embeds. 3 free downloads included.",
     "name": "GoHighLevel Downloader",
@@ -268,12 +328,36 @@
     "categories": [
       "video-downloaders"
     ],
+    "content": "## Overview\n\nHulu Downloader helps you save shows and movies from Hulu for offline viewing, review, and personal backup. Open the title you want, start playback if needed, and use the extension to detect the media and download it locally.\n\n## Why It Exists\n\nThis extension is built for people who want to save Hulu shows and movies with subtitles and cleaner offline playback workflows.",
+    "description": "Save Hulu shows and movies with subtitles and commercial-free playback.",
+    "name": "Hulu Downloader",
+    "slug": "hulu-downloader",
+    "url": "/products/hulu-downloader",
+    "website": "https://serp.ly/hulu-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
     "content": "## Overview\n\nInstagram Downloader is a browser extension that saves videos, photos, Reels, Stories, and post text from Instagram to your computer. Browse Instagram normally, and the extension adds download buttons directly on posts. Click to save any media as MP4 or its original image format. No external tools, no copy-pasting links. Free trial included.\n\n## Why It Exists\n\nPurpose-built for Instagram with multi-source video detection (DOM, GraphQL API, CDN monitoring, inline data), in-page download buttons on every post, carousel image support, Reels and Stories download, and automatic text export. Everything happens in your browser — no external tools required.\n\n## Offline use cases\n\n- Save Instagram Reels for offline viewing\n- Download photos from carousel posts\n- Archive your own Instagram content\n- Save post text and captions\n- Download Stories before they expire\n- Bulk-download all visible media on a profile or feed page\n- Save IGTV videos\n\n## FAQ\n\n### How do I download an Instagram Reel?\n\nNavigate to any Reel on Instagram. The extension adds a \"Download video\" button directly on the Reel. Click it and the video saves as MP4. You can also open the extension popup for more options.\n\n### Can I download all images from a carousel post?\n\nYes. Carousel posts show a \"Download images (N)\" button where N is the number of images. Click to download all of them at once. You can also download individual images using the per-image download icon.\n\n### What about Instagram Stories?\n\nThe extension detects Stories from their URL pattern and allows downloading videos and images from visible Stories.\n\n### What formats are downloaded files saved in?\n\nVideos are saved as MP4 files. Images keep their original format (JPEG, PNG, WebP, etc.). Post text is saved as a plain text file with the post URL and timestamp.\n\n### Where are my downloads saved?\n\nMedia saves to an Instagram Downloader subfolder inside your browser's default Downloads directory, organized by source and title.\n\n### How many free downloads do I get?\n\nSign in with your email to get free trial downloads. Purchase a license for unlimited downloads.\n\n### Does this work on Firefox?\n\nYes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox.\n\n### Why is the extension not detecting a video?\n\nMake sure the post or Reel is visible and loaded on the page. Try scrolling to it or refreshing. For feed posts, the video may need to start playing. Use the \"Rescan\" button in the popup if needed.\n\n### Can I download from private accounts?\n\nThe extension works with content visible in your browser. If you are logged in and can see a private account's posts, the extension can detect and download them.\n\n### Is my data safe?\n\nYes. All media processing happens locally in your browser. The extension reads Instagram's public CDN URLs and your own session data. Authentication uses secure OTP — no passwords stored. No data is sent to third-party servers.",
     "description": "Download Instagram videos, Reels, photos & Stories. In-page buttons on every post. Saves as MP4 or original format. Free trial.",
     "name": "Instagram Downloader by SERP",
     "slug": "instagram-downloader",
     "url": "/products/instagram-downloader",
     "website": "https://serp.ly/instagram-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "## Overview\n\nInternet Archive Downloader helps you save books and reference material from Internet Archive for offline reading, research, and long-term access. Open the item you want, run the extension, and capture the downloadable asset into your own local archive.\n\n## Why It Exists\n\nThis extension is built for people doing research, preservation, or reference work who need a direct way to access and download books from Internet Archive.",
+    "description": "Access and download books.",
+    "name": "Internet Archive Downloader",
+    "slug": "internet-archive-downloader",
+    "url": "/products/internet-archive-downloader",
+    "website": "https://serp.ly/internet-archive-downloader"
   },
   {
     "category": "video-downloaders",
@@ -316,6 +400,18 @@
     "categories": [
       "video-downloaders"
     ],
+    "content": "## Overview\n\nLiveJasmin Downloader helps you record live sessions and save replays from LiveJasmin for offline viewing and personal backup. Start the stream or replay you want, run the extension, and capture the session locally without dealing with stream URLs manually.\n\n## Why It Exists\n\nThis extension is built for people who want a cleaner way to record LiveJasmin private shows and cam sessions automatically.",
+    "description": "Record LiveJasmin private shows and cam sessions automatically.",
+    "name": "LiveJasmin Downloader",
+    "slug": "livejasmin-downloader",
+    "url": "/products/livejasmin-downloader",
+    "website": "https://serp.ly/livejasmin-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
     "content": "## Overview\n\nLuxureTV Downloader is a browser extension that saves videos from LuxureTV.com to your computer. Play a video, click the download button on the player or the extension icon, pick your quality, and it saves as MP4. No extra software needed. 3 free downloads included.\n\n## Why It Exists\n\nPurpose-built for LuxureTV with multi-source video detection (flashvars, HTML5 video, Video.js players), in-page download button, and automatic HLS-to-MP4 conversion. Everything happens in your browser — no external tools required.\n\n## Offline use cases\n\n- Save a video from LuxureTV for offline viewing\n- Download in your preferred quality\n- Build a personal library\n- Use the in-page player button for one-click downloads without the popup\n- Right-click any video to download via context menu\n\n## FAQ\n\n### How do I download a video?\n\nGo to any video page on LuxureTV.com and press play. Then click the download button on the player, click the extension icon, or right-click and select \"Download LuxureTV Video.\"\n\n### What quality options are available?\n\nThe extension detects all available qualities from the source — typically multiple resolutions. Formats are sorted by quality (highest first), with MP4 preferred over HLS.\n\n### What format are downloaded videos?\n\nAll videos are saved as standard MP4 files that play on any device or media player.\n\n### Where are my downloads saved?\n\nVideos automatically save to a LuxureTV subfolder inside your browser's default Downloads directory.\n\n### How many free downloads do I get?\n\n3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads.\n\n### Does this work on Firefox?\n\nYes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox.\n\n### Why isn't the extension finding my video?\n\nPress play on the video first. The extension needs the stream to start before detection works. If issues persist, refresh the page.\n\n### Is my data safe?\n\nYes. Video processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored.",
     "description": "Download videos from LuxureTV.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
     "name": "LuxureTV Downloader",
@@ -340,6 +436,18 @@
     "categories": [
       "video-downloaders"
     ],
+    "content": "## Overview\n\nMoodle Downloader helps you save course videos and lesson assets from Moodle for offline study, travel, and backup. Open the course page you need, start playback if needed, and use the extension to capture the lesson media locally.\n\n## Why It Exists\n\nThis extension is built for people who want to back up complete Moodle courses with their resources and activities.",
+    "description": "Backup complete Moodle courses with all resources and activities.",
+    "name": "Moodle Downloader",
+    "slug": "moodle-downloader",
+    "url": "/products/moodle-downloader",
+    "website": "https://serp.ly/moodle-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
     "content": "## Overview\n\nMotherless Downloader is a browser extension that saves videos from Motherless.com to your computer. Play a video, click the download button on the player or the extension icon, pick your quality, and it saves as MP4. No extra software needed. 3 free downloads included.\n\n## Why It Exists\n\nPurpose-built for Motherless with multi-source video detection (flashvars, HTML5 video, inject script monitoring), in-page download button, and automatic HLS-to-MP4 conversion. Everything happens in your browser — no external tools required.\n\n## Offline use cases\n\n- Save a video from Motherless for offline viewing\n- Download in your preferred quality\n- Build a personal library\n- Use the in-page player button for one-click downloads without the popup\n- Right-click any video to download via context menu\n\n## FAQ\n\n### How do I download a video?\n\nGo to any video page on Motherless.com and press play. Then click the download button on the player, click the extension icon, or right-click and select \"Download Motherless Video.\"\n\n### What quality options are available?\n\nThe extension detects all available qualities from the source — typically multiple resolutions. Formats are sorted by quality (highest first), with MP4 preferred over HLS.\n\n### What format are downloaded videos?\n\nAll videos are saved as standard MP4 files that play on any device or media player.\n\n### Where are my downloads saved?\n\nVideos automatically save to a Motherless subfolder inside your browser's default Downloads directory.\n\n### How many free downloads do I get?\n\n3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads.\n\n### Does this work on Firefox?\n\nYes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox.\n\n### Why isn't the extension finding my video?\n\nPress play on the video first. The extension needs the stream to start before detection works. If issues persist, refresh the page.\n\n### Is my data safe?\n\nYes. Video processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored.",
     "description": "Download videos from Motherless.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
     "name": "Motherless Downloader",
@@ -358,6 +466,30 @@
     "slug": "myfreecams-downloader",
     "url": "/products/myfreecams-downloader",
     "website": "https://serp.ly/myfreecams-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "## Overview\n\nNetflix Downloader helps you save shows and movies from Netflix for offline viewing, review, and backup. Open the title you want, start playback if needed, and use the extension to detect and download the media locally.\n\n## Why It Exists\n\nThis extension is built for people who want to download Netflix shows and movies in 4K with multiple audio tracks.",
+    "description": "Download Netflix shows and movies in 4K with multiple audio tracks.",
+    "name": "Netflix Downloader",
+    "slug": "netflix-downloader",
+    "url": "/products/netflix-downloader",
+    "website": "https://serp.ly/netflix-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "## Overview\n\nNicoVideo Downloader helps you save Niconico videos for offline viewing, review, and backup. Open the page you want, start playback if needed, and use the extension to detect and download the media locally.\n\n## Why It Exists\n\nThis extension is built for people who want a direct way to save Niconico videos with comments into their own offline workflow.",
+    "description": "Save Niconico videos with comments.",
+    "name": "NicoVideo Downloader",
+    "slug": "nicovideo-downloader",
+    "url": "/products/nicovideo-downloader",
+    "website": "https://serp.ly/nicovideo-downloader"
   },
   {
     "category": "video-downloaders",
@@ -400,12 +532,60 @@
     "categories": [
       "video-downloaders"
     ],
+    "content": "## Overview\n\nPatreon Downloader helps you save creator videos and gated media from Patreon for offline viewing and organized personal backup. Open the post or lesson you already have access to, run the extension, and download the media locally.\n\n## Why It Exists\n\nThis extension is built for people who want a direct workflow for downloading Patreon videos into their own offline archive.",
+    "description": "Download Patreon videos directly to your local computer for offline viewing and easy backing up of your media.",
+    "name": "Patreon Downloader",
+    "slug": "patreon-downloader",
+    "url": "/products/patreon-downloader",
+    "website": "https://serp.ly/patreon-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "## Overview\n\nPexels Video Downloader helps you save free Pexels videos for offline editing, research, and local asset libraries. Open the video page you want, start playback if needed, and use the extension to capture the media in the best available quality.\n\n## Why It Exists\n\nThis extension is built for people who want a direct way to download free Pexels videos in 4K quality with support for repeated batch workflows.",
+    "description": "Download free Pexels videos in 4K quality with batch support.",
+    "name": "Pexels Video Downloader",
+    "slug": "pexels-video-downloader",
+    "url": "/products/pexels-video-downloader",
+    "website": "https://serp.ly/pexels-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "## Overview\n\nPodia Downloader helps you save Podia course videos for offline study, travel, and backup workflows. Open the lesson you want, start playback if needed, and use the extension to download the media locally.\n\n## Why It Exists\n\nThis extension is built for people who want a direct way to download Podia course videos for convenient offline viewing or safe backups.",
+    "description": "Download Podia course videos for convenient offline viewing or safe backups.",
+    "name": "Podia Downloader",
+    "slug": "podia-downloader",
+    "url": "/products/podia-downloader",
+    "website": "https://serp.ly/podia-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
     "content": "## Overview\n\nPornHub Downloader is a browser extension that saves videos from Pornhub.com to your computer. Play a video, click the download button on the player or the extension icon, pick your quality, and it saves as MP4. Works with Pornhub, Pornhub Premium, and Thumbzilla. No extra software needed. 3 free downloads included.\n\n## Why It Exists\n\nPurpose-built for Pornhub with deep flashvars and mediaDefinitions extraction, HLS master/media playlist parsing, in-page download button, and automatic HLS-to-MP4 conversion. Also covers Pornhub Premium and Thumbzilla. Everything happens in your browser — no external tools required.\n\n## Offline use cases\n\n- Save a video from Pornhub for offline viewing\n- Download in your preferred quality (up to the highest available resolution)\n- Build a personal library\n- Use the in-page player button for one-click downloads without the popup\n- Right-click any video to download via context menu\n- Download from Pornhub Premium or Thumbzilla with the same extension\n\n## FAQ\n\n### How do I download a video?\n\nGo to any video page on Pornhub.com and press play. Then click the download button on the player, click the extension icon, or right-click and select \"Download PornHub Video.\"\n\n### What quality options are available?\n\nThe extension detects all available qualities from Pornhub's mediaDefinitions — typically multiple resolutions up to the highest available. Formats are sorted by quality (highest first), with MP4 preferred over HLS.\n\n### What format are downloaded videos?\n\nAll videos are saved as standard MP4 files that play on any device or media player.\n\n### Where are my downloads saved?\n\nVideos automatically save to a PornHub subfolder inside your browser's default Downloads directory.\n\n### Does this work on Pornhub Premium?\n\nYes — the extension works on Pornhub, Pornhub Premium, and Thumbzilla.\n\n### How many free downloads do I get?\n\n3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads.\n\n### Does this work on Firefox?\n\nYes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox.\n\n### Why isn't the extension finding my video?\n\nPress play on the video first. The extension needs the stream to start before detection works. If issues persist, refresh the page and try again.\n\n### Is my data safe?\n\nYes. Video processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored.",
     "description": "Download videos from Pornhub.com. Auto-detects flashvars and HLS streams, converts to MP4. Choose quality. 3 free downloads.",
     "name": "PornHub Downloader",
     "slug": "pornhub-downloader",
     "url": "/products/pornhub-downloader",
     "website": "https://serp.ly/pornhub-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "## Overview\n\nRawpixel Downloader helps you save Rawpixel assets for offline creative work, local reference folders, and moodboard building. Open the asset page you want, run the extension, and download the image directly into your own workflow.\n\n## Why It Exists\n\nThis extension is built for people who need a cleaner way to extract Rawpixel premium PNGs without repetitive manual saving.",
+    "description": "Extract Rawpixel premium PNGs.",
+    "name": "Rawpixel Downloader",
+    "slug": "rawpixel-downloader",
+    "url": "/products/rawpixel-downloader",
+    "website": "https://serp.ly/rawpixel-downloader"
   },
   {
     "category": "video-downloaders",
@@ -436,6 +616,18 @@
     "categories": [
       "video-downloaders"
     ],
+    "content": "## Overview\n\nRedTube Video Downloader helps you save RedTube videos for offline viewing, review, and backup. Open the page you want, start playback if needed, and use the extension to detect and download the media locally in the best available quality.\n\n## Why It Exists\n\nThis extension is built for people who want a direct workflow for downloading RedTube videos in multiple qualities with premium-content support.",
+    "description": "Download RedTube videos in multiple qualities with premium content access.",
+    "name": "RedTube Video Downloader",
+    "slug": "redtube-video-downloader",
+    "url": "/products/redtube-video-downloader",
+    "website": "https://serp.ly/redtube-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
     "content": "## Overview\n\nSexChatHU Downloader is a browser extension that records live streams and downloads recordings from SexChatHU.com. Open a model's page, click the download button or the extension icon, pick your quality, and start capturing. Streams save as MP4 files. VR streams supported. 3 free downloads included.\n\n## Why It Exists\n\nPurpose-built for SexChatHU with API-driven stream detection (room list + chat API + CDN probing), live capture with start/stop controls, VR stream support, and automatic HLS-to-MP4 conversion. Everything happens in your browser — no external tools required.\n\n## Offline use cases\n\n- Record a live stream from SexChatHU for offline viewing\n- Download recorded videos (VOD) in your preferred quality\n- Capture VR streams with proper metadata\n- Use the in-page player button for one-click captures without the popup\n- Right-click to download via context menu\n\n## FAQ\n\n### How do I record a live stream?\n\nGo to any model's page on SexChatHU while they are live. Click the download button on the player or the extension icon. Select your quality and click Start. Click Stop when you want to finish — the stream saves as MP4.\n\n### Can I download recorded videos (VOD)?\n\nYes — navigate to a model's video page and the extension will detect the recording. Select quality and click Download.\n\n### What quality options are available?\n\nThe extension detects all available qualities from the HLS master playlist — typically multiple resolutions. Formats are sorted by quality (highest first).\n\n### What format are downloaded videos?\n\nAll videos are saved as standard MP4 files that play on any device or media player.\n\n### Does it support VR streams?\n\nYes — VR streams are detected automatically with camera metadata (stereoPacking, frameFormat, angle). The VR info is shown in the UI and appended to the filename.\n\n### Where are my downloads saved?\n\nVideos automatically save to a SEXCHATHU subfolder inside your browser's default Downloads directory.\n\n### How many free downloads do I get?\n\n3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads.\n\n### Does this work on Firefox?\n\nYes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox.\n\n### Why isn't the extension finding the stream?\n\nMake sure the model is currently live and streaming publicly. If the model is offline or in a private show, the extension will display a status message. Refresh the page if issues persist.\n\n### Is my data safe?\n\nYes. Video processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored.",
     "description": "Download streams from SexChatHU. Live capture, VR support, HLS to MP4 conversion. Choose quality. 3 free downloads included.",
     "name": "SexChatHU Downloader",
@@ -448,12 +640,60 @@
     "categories": [
       "video-downloaders"
     ],
+    "content": "## Overview\n\nSkillshare Downloader helps you save Skillshare classes, lesson videos, and study assets for offline learning and backup. Open the class you want, start playback if needed, and use the extension to download the media locally.\n\n## Why It Exists\n\nThis extension is built for people who want to save complete Skillshare classes with projects and resources for offline study.",
+    "description": "Save complete Skillshare classes with projects and resources.",
+    "name": "Skillshare Downloader",
+    "slug": "skillshare-downloader",
+    "url": "/products/skillshare-downloader",
+    "website": "https://serp.ly/skillshare-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
     "content": "## Overview\n\nSkool Downloader is a browser extension that saves videos from Skool.com to your computer. It automatically detects videos in classrooms, community posts, about pages, and course modules -- whether they are hosted on Loom, Vimeo, YouTube, Wistia, or Skool's native player. Open a lesson, play the video, click the extension icon, pick your quality, and it saves as MP4. No extra software needed. 3 free downloads included.\n\n## Why It Exists\n\nPurpose-built for Skool with multi-platform video detection that recognizes Loom, Vimeo, YouTube, Wistia, and Skool's native Mux-based player. Extracts videos from Next.js page data, embedded iframes, and native video elements. HLS-to-MP4 conversion happens in your browser -- no external tools, no command-line knowledge required. Concurrent download queue with real-time progress tracking.\n\n## Offline use cases\n\n- Save a Skool classroom lesson video for offline study\n- Download community post videos for later review\n- Archive course module content you have purchased access to\n- Download Loom walkthroughs embedded in Skool posts\n- Save Vimeo or YouTube videos embedded in Skool course pages\n- Download Wistia-hosted training content within Skool\n- Choose your preferred quality before downloading\n\n## FAQ\n\n### How do I download a video from Skool?\n\nOpen any Skool classroom, community post, or course page with a video. Press play on the video, then click the Skool Downloader icon in your toolbar. Select your preferred quality and click Download.\n\n### What video platforms does this support?\n\nThe extension detects videos from Skool's native player (Mux-based), Loom, Vimeo, YouTube, and Wistia -- all of which are commonly used within Skool communities and courses.\n\n### What quality options are available?\n\nQuality options depend on the video platform and source. The extension shows all available resolutions from the original video.\n\n### What format are downloaded videos?\n\nAll videos are saved as standard MP4 files that play on any device or media player.\n\n### Can I download videos from Skool courses I have purchased?\n\nYes. If you have access to a Skool classroom or course and can play the video in your browser, the extension can detect and download it.\n\n### How many free downloads do I get?\n\n3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads.\n\n### Does this work on Firefox?\n\nYes -- supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox.\n\n### Why isn't the extension finding my video?\n\nPress play on the video first. The extension needs the stream to start before detection works. If the video is embedded from an external platform, make sure the embed has loaded fully. Refresh the page if issues persist.\n\n### Is my data safe?\n\nYes. Video processing happens entirely in your browser. Authentication uses secure OTP -- no passwords stored. No video data is sent to external servers.\n\n### Does this work with password-protected Skool communities?\n\nThe extension works with any Skool community or course you can access in your browser. If you can see and play the video, you can download it.",
     "description": "Download videos from Skool.com classrooms and courses. Detects Loom, Vimeo, YouTube, Wistia, and native. MP4. 3 free downloads.",
     "name": "Skool Downloader",
     "slug": "skool-downloader",
     "url": "/products/skool-downloader",
     "website": "https://serp.ly/skool-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "## Overview\n\nSkool Video Downloader helps you save Skool classroom videos for offline study, travel, and backup. Open the lesson you want, start playback if needed, and use the extension to download the media locally.\n\n## Why It Exists\n\nThis extension is built for people who want to download videos from their Skool classroom and keep a local backup of the lessons they rely on.",
+    "description": "Download videos from your Skool classroom and back up your work for offline access.",
+    "name": "Skool Video Downloader",
+    "slug": "skool-video-downloader",
+    "url": "/products/skool-video-downloader",
+    "website": "https://serp.ly/skool-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "## Overview\n\nSnapchat Video Downloader helps you save Snapchat stories and videos for offline viewing, review, and backup. Open the page you want, start playback if needed, and use the extension to detect and download the media locally.\n\n## Why It Exists\n\nThis extension is built for people who want a direct way to save Snapchat stories and videos for offline access.",
+    "description": "Save Snapchat stories and videos for offline access.",
+    "name": "Snapchat Video Downloader",
+    "slug": "snapchat-video-downloader",
+    "url": "/products/snapchat-video-downloader",
+    "website": "https://serp.ly/snapchat-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "## Overview\n\nSoundgasm Downloader helps you save Soundgasm audio posts, playlists, and spoken-word uploads for offline listening, research, and backup. Open the track or collection you want, start playback if needed, and use the extension to capture the audio locally.\n\n## Why It Exists\n\nThis extension is built for people who want a direct way to download Soundgasm audio content without reconstructing streams by hand.",
+    "description": "Download Soundgasm audio content with user collections and playlists.",
+    "name": "Soundgasm Downloader",
+    "slug": "soundgasm-downloader",
+    "url": "/products/soundgasm-downloader",
+    "website": "https://serp.ly/soundgasm-downloader"
   },
   {
     "category": "video-downloaders",
@@ -508,6 +748,18 @@
     "categories": [
       "video-downloaders"
     ],
+    "content": "## Overview\n\nTeachable Video Downloader helps you save Teachable course videos for offline study, travel, and backup workflows. Open the lesson you want, start playback if needed, and use the extension to download the media locally.\n\n## Why It Exists\n\nThis extension is built for people who want to download Teachable courses with all lectures into their own offline workflow.",
+    "description": "Download Teachable courses with all lectures.",
+    "name": "Teachable Video Downloader",
+    "slug": "teachable-video-downloader",
+    "url": "/products/teachable-video-downloader",
+    "website": "https://serp.ly/teachable-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
     "content": "## Overview\n\nTellaTV Downloader is a browser extension that saves videos from Tella.tv to your computer. Navigate to any Tella video or presentation, press play, and click the download button or the extension icon. The extension detects the signed HLS stream, converts it to a standard MP4 file, and saves it locally. No external software needed. 3 free downloads included.\n\n## Why It Exists\n\nPurpose-built for Tella.tv with deep integration into Tella's signed CloudFront streaming infrastructure. Multi-pass manifest detection across frames, automatic signed URL refresh, and in-browser HLS-to-MP4 conversion. Works on Tella video pages, embedded presentations, and third-party pages hosting Tella embeds.\n\n## Offline use cases\n\n- Save your own Tella screen recordings for offline access\n- Download team presentations shared via Tella for archival\n- Back up Tella video projects before account changes\n- Save training or onboarding videos from Tella for offline viewing\n- Download Tella videos embedded on third-party websites\n\n## FAQ\n\n### How do I download a Tella video?\n\nGo to any Tella.tv video page and press play. Then click the download button that appears on the player, or click the extension icon in your toolbar.\n\n### Does this work with Tella videos embedded on other websites?\n\nYes. The extension scans all frames on the page and detects Tella embeds on any website, not just tella.tv.\n\n### What format are downloaded videos?\n\nAll videos are saved as standard MP4 files that play on any device or media player.\n\n### Why do I need to press play first?\n\nTella uses signed streaming URLs that are only generated when playback starts. The extension needs the stream to load before it can detect and download the video.\n\n### What if the download fails with an expired URL error?\n\nThe extension automatically attempts to refresh expired manifest URLs. If it still fails, press play on the video again and retry the download.\n\n### How many free downloads do I get?\n\n3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads.\n\n### Does this work on Firefox?\n\nYes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox.\n\n### Is my data safe?\n\nYes. All video processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored.\n\n### Can I download my own Tella recordings?\n\nYes. If you can view the recording in your browser, the extension can detect and download it.",
     "description": "Download videos from Tella.tv. Detects signed HLS streams, converts to MP4. Works on embeds. 3 free downloads included.",
     "name": "TellaTV Downloader",
@@ -520,12 +772,36 @@
     "categories": [
       "video-downloaders"
     ],
+    "content": "## Overview\n\nTeraBox Downloader helps you pull files from TeraBox down to your computer for offline access, backup, and transfer into your own storage workflow. Open the file or folder you want, run the extension, and save the asset locally without relying on web-only access.\n\n## Why It Exists\n\nThis extension is built for people who want a direct way to download from TeraBox cloud storage without speed restrictions or extra friction.",
+    "description": "Download from TeraBox cloud storage without limits or speed restrictions.",
+    "name": "TeraBox Downloader",
+    "slug": "terabox-downloader",
+    "url": "/products/terabox-downloader",
+    "website": "https://serp.ly/terabox-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
     "content": "## Overview\n\nThisVid Downloader is a browser extension that saves videos from ThisVid.com to your computer. Play a video, click the download button on the player or the extension icon, pick your quality, and it saves as MP4. No extra software needed. 3 free downloads included.\n\n## Why It Exists\n\nPurpose-built for ThisVid with flashvars extraction, XHR/fetch HLS interception, and automatic HLS-to-MP4 conversion. In-page download button and quality popover. Everything happens in your browser — no external tools required.\n\n## Offline use cases\n\n- Save a video from ThisVid for offline viewing\n- Download in your preferred quality\n- Build a personal library\n- Use the in-page player button for one-click downloads without the popup\n- Right-click any video to download via context menu\n\n## FAQ\n\n### How do I download a video?\n\nGo to any video page on ThisVid.com and press play. Then click the download button on the player, click the extension icon, or right-click and select \"Download ThisVid Video.\"\n\n### What quality options are available?\n\nThe extension detects all available qualities from flashvars and HLS playlists — typically multiple resolutions. Formats are sorted by quality (highest first), with MP4 preferred over HLS.\n\n### What format are downloaded videos?\n\nAll videos are saved as standard MP4 files that play on any device or media player.\n\n### Where are my downloads saved?\n\nVideos automatically save to a ThisVid subfolder inside your browser's default Downloads directory.\n\n### How many free downloads do I get?\n\n3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads.\n\n### Does this work on Firefox?\n\nYes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox.\n\n### Why isn't the extension finding my video?\n\nPress play on the video first. The extension needs the stream to start before detection works. If issues persist, refresh the page.\n\n### Is my data safe?\n\nYes. Video processing happens entirely in your browser. Authentication uses secure OTP — no passwords stored.",
     "description": "Download videos from ThisVid.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
     "name": "ThisVid Downloader",
     "slug": "thisvid-downloader",
     "url": "/products/thisvid-downloader",
     "website": "https://serp.ly/thisvid-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "## Overview\n\nThumbnail Downloader helps you extract thumbnail images from supported video pages for research, content planning, swipe files, and design reference work. Open the page you want, run the extension, and save the thumbnail image locally in one step.\n\n## Why It Exists\n\nThis extension is built for people who repeatedly need to extract video thumbnails from YouTube and other supported pages without digging through source code or network requests.",
+    "description": "Extract video thumbnails from YouTube and other supported video pages.",
+    "name": "Thumbnail Downloader",
+    "slug": "thumbnail-downloader",
+    "url": "/products/thumbnail-downloader",
+    "website": "https://serp.ly/thumbnail-downloader"
   },
   {
     "category": "video-downloaders",
@@ -550,6 +826,30 @@
     "slug": "twitter-x-downloader",
     "url": "/products/twitter-x-downloader",
     "website": "https://serp.ly/twitter-x-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "## Overview\n\nUnsplash Downloader helps you save high-resolution Unsplash photos for offline reference, design research, moodboards, and local archives. Open the photo page you want, run the extension, and download the original asset without juggling manual saves across large collections.\n\n## Why It Exists\n\nThis extension is built for people who want a faster way to download high-resolution photos from Unsplash, including collection-driven workflows.",
+    "description": "Download high-resolution photos from Unsplash with collections support.",
+    "name": "Unsplash Downloader",
+    "slug": "unsplash-downloader",
+    "url": "/products/unsplash-downloader",
+    "website": "https://serp.ly/unsplash-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "## Overview\n\nVectorStock Downloader helps you save VectorStock vectors and illustrations for offline design work, creative review, and local reference libraries. Open the asset page you want, run the extension, and download the original file without repetitive manual extraction.\n\n## Why It Exists\n\nThis extension is built for people who need a direct workflow for extracting VectorStock vectors and illustrations in their original formats.",
+    "description": "Extract VectorStock vectors and illustrations in original formats.",
+    "name": "VectorStock Downloader",
+    "slug": "vectorstock-downloader",
+    "url": "/products/vectorstock-downloader",
+    "website": "https://serp.ly/vectorstock-downloader"
   },
   {
     "category": "video-downloaders",
@@ -916,6 +1216,18 @@
     "categories": [
       "video-downloaders"
     ],
+    "content": "## Overview\n\nWistia Video Downloader helps you save Wistia-hosted videos for offline viewing, research, review, and backup. Open the page or embed you want, start playback if needed, and use the extension to detect and download the media in the best available quality.\n\n## Why It Exists\n\nThis extension is built for people who need a straightforward way to download Wistia videos embedded around the web without hunting for manifests or hidden source URLs.",
+    "description": "Download Wistia-hosted videos embedded around the web for offline viewing.",
+    "name": "Wistia Video Downloader",
+    "slug": "wistia-video-downloader",
+    "url": "/products/wistia-video-downloader",
+    "website": "https://serp.ly/wistia-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
     "content": "## Overview\n\nXHamsterLive Downloader is a browser extension that records live streams and downloads recordings from XHamsterLive.com. Open a model's page, click Start to capture the live stream, or download a saved recording. Handles LL-HLS live capture, VOD downloads, and VR streams. Saves as MP4. No external software. 3 free downloads included.\n\n## Why It Exists\n\nPurpose-built for XHamsterLive with real-time live stream capture, VOD recording downloads, and VR support. Extracts stream metadata from the site's internal state, discovers CDN hosts automatically, decodes obfuscated stream URIs, and converts HLS to MP4 in your browser. Start/stop live recording with one click.\n\n## Offline use cases\n\n- Capture a live stream from XHamsterLive in real time\n- Download a saved recording (VOD) from a model's profile\n- Record VR live streams with proper metadata in the filename\n- Use the in-page player button for one-click capture without the popup\n- Right-click any stream page to start a download via context menu\n\n## FAQ\n\n### How do I capture a live stream?\n\nGo to a model's page on XHamsterLive.com while they're live. Click the extension icon or the player download button, select quality, and click Start. Click Stop when you want to end the recording. The captured stream saves as MP4.\n\n### How do I download a saved recording (VOD)?\n\nNavigate to a model's video recording page (the URL contains /videos/). Open the extension, select quality, and click Download. The recording saves as MP4.\n\n### Does this work with VR streams?\n\nYes. The extension detects VR streams automatically and includes VR metadata (stereoPacking, frameFormat, angle) in the filename. A VR badge appears in the popup for VR content.\n\n### What quality options are available?\n\nThe extension detects all available quality levels from the HLS master playlist. For live streams, qualities vary by the model's broadcast settings. Formats are sorted by resolution (highest first).\n\n### What format are downloaded videos?\n\nAll videos — live captures, VOD recordings, and VR streams — are saved as standard MP4 files that play on any device or media player.\n\n### Where are my downloads saved?\n\nVideos automatically save to an XHamsterLive subfolder inside your browser's default Downloads directory.\n\n### How many free downloads do I get?\n\n3 free trial downloads after signing in with your email. Purchase a license for unlimited downloads.\n\n### Does this work on Firefox?\n\nYes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox.\n\n### What if the model is offline or in a private show?\n\nThe extension will show a status message. Live capture only works when the model is streaming publicly. Saved VOD recordings can be downloaded anytime.\n\n### Is my data safe?\n\nYes. All stream processing and HLS-to-MP4 conversion happens entirely in your browser. Authentication uses secure OTP — no passwords stored.",
     "description": "Download XHamsterLive live streams and recordings. Real-time capture, VOD downloads, VR support. Converts to MP4. 3 free downloads.",
     "name": "XHamsterLive Downloader",
@@ -934,5 +1246,17 @@
     "slug": "xlovecam-downloader",
     "url": "/products/xlovecam-downloader",
     "website": "https://serp.ly/xlovecam-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "## Overview\n\nXNXX Video Downloader helps you save XNXX videos for offline viewing, review, and backup. Open the page you want, start playback if needed, and use the extension to detect and download the media locally in the best available quality.\n\n## Why It Exists\n\nThis extension is built for people who want a direct workflow for saving XNXX videos in HD with fast batch downloading.",
+    "description": "Save XNXX videos in HD with fast batch downloading.",
+    "name": "XNXX Video Downloader",
+    "slug": "xnxx-video-downloader",
+    "url": "/products/xnxx-video-downloader",
+    "website": "https://serp.ly/xnxx-video-downloader"
   }
 ]
