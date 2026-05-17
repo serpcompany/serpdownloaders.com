@@ -5,8 +5,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from 123Movies and mirror sites. Auto-detects streams, converts to MP4. 3 free downloads included.",
-    "name": "123Movies Downloader",
+    "description": "Stop losing movies when streaming mirrors go down. Save them as MP4 files you keep forever.",
+    "name": "123Movies Video Downloader",
     "slug": "123movies-downloader",
     "url": "/products/123movies-downloader",
     "website": "https://serp.ly/123movies-downloader"
@@ -17,7 +17,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download Adobe Stock images.",
+    "description": "Skip the Creative Cloud download dance — pull your licensed Adobe Stock photos, vectors, and videos straight to local folders in one batch.",
     "name": "Adobe Stock Downloader",
     "slug": "adobe-stock-downloader",
     "url": "/products/adobe-stock-downloader",
@@ -29,7 +29,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Extract Alamy stock photos in full resolution without watermarks or restrictions.",
+    "description": "Alamy's download interface slowing you down? Batch pull licensed editorial and stock images with captions intact.",
     "name": "Alamy Downloader",
     "slug": "alamy-downloader",
     "url": "/products/alamy-downloader",
@@ -41,8 +41,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from AlphaPorno.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "AlphaPorno Downloader",
+    "description": "Love a video on AlphaPorno but there is no save button? Download it in full quality with one click and watch offline anytime.",
+    "name": "AlphaPorno Video Downloader",
     "slug": "alphaporno-downloader",
     "url": "/products/alphaporno-downloader",
     "website": "https://serp.ly/alpha-porno-downloader"
@@ -53,8 +53,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from AShemaleTube.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "AShemaleTube Downloader",
+    "description": "Found something worth saving on AShemaleTube? Download it privately in the quality you want, no extra software needed.",
+    "name": "AShemaleTube Video Downloader",
     "slug": "ashemaletube-downloader",
     "url": "/products/ashemaletube-downloader",
     "website": "https://serp.ly/ashemaletube-downloader"
@@ -65,11 +65,11 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from Beeg.com. Auto-detects streams via Beeg API, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Beeg Downloader",
+    "description": "Beeg keeps it clean but offers no downloads. Now you can save any Beeg video as an MP4 with a single click.",
+    "name": "Beeg Video Downloader",
     "slug": "beeg-downloader",
     "url": "/products/beeg-downloader",
-    "website": "https://serp.ly/beeg-downloader"
+    "website": "https://serp.ly/beeg-video-downloader"
   },
   {
     "category": "video-downloaders",
@@ -77,20 +77,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Record BongaCams live streams and download recordings. Auto-detects HLS, handles Mouflon DRM, converts to MP4. Choose quality. 3 free captures included.",
-    "name": "BongaCams Downloader",
-    "slug": "bongacams-downloader",
-    "url": "/products/bongacams-downloader",
-    "website": "https://serp.ly/bongacams-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from BoyFriendTV.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "BoyFriendTV Downloader",
+    "description": "BoyFriendTV has no download option. Now you can save any video privately to your device and watch offline whenever you want.",
+    "name": "BoyFriendTV Video Downloader",
     "slug": "boyfriendtv-downloader",
     "url": "/products/boyfriendtv-downloader",
     "website": "https://serp.ly/boyfriendtv-downloader"
@@ -101,8 +89,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download Cam4 live streams and recorded videos. Captures LL-HLS streams, converts to MP4. Choose quality. 3 free downloads included.",
-    "name": "Cam4 Downloader",
+    "description": "Cam4 shows disappear when they end. Record live streams and save recordings before they are gone, all privately on your device.",
+    "name": "Cam4 Video Downloader",
     "slug": "cam4-downloader",
     "url": "/products/cam4-downloader",
     "website": "https://serp.ly/cam4-video-downloader"
@@ -113,20 +101,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Record live streams and download videos from Cams.com. Live capture, HLS to MP4, quality selection. 3 free downloads included.",
-    "name": "CamsCom Downloader",
-    "slug": "camscom-downloader",
-    "url": "/products/camscom-downloader",
-    "website": "https://serp.ly/camscom-video-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Record CamSoda live streams and download recordings. Live capture, HLS to MP4, quality selection. 3 free downloads included.",
-    "name": "CamSoda Downloader",
+    "description": "CamSoda recordings expire and shows end without a trace. Keep offline copies before they're lost.",
+    "name": "CamSoda Video Downloader",
     "slug": "camsoda-downloader",
     "url": "/products/camsoda-downloader",
     "website": "https://serp.ly/camsoda-downloader"
@@ -137,20 +113,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Record live streams and download videos from Chaturbate.com. Live capture, VOD support, HLS to MP4. Choose quality. 3 free downloads.",
-    "name": "Chaturbate Downloader",
-    "slug": "chaturbate-downloader",
-    "url": "/products/chaturbate-downloader",
-    "website": "https://serp.ly/chaturbate-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from Circle.so, Tella, Loom, Vimeo, YouTube, Wistia. Converts HLS/DASH to MP4. 3 free downloads included.",
-    "name": "Circle Downloader",
+    "description": "Community memberships end — save every Circle video, replay, and lesson as MP4 before your access disappears.",
+    "name": "Circle Video Downloader",
     "slug": "circle-downloader",
     "url": "/products/circle-downloader",
     "website": "https://serp.ly/circle-downloader"
@@ -161,8 +125,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from ClientClub/GoHighLevel portals. Detects Loom, Vimeo, Wistia, YouTube embeds. 3 free downloads included.",
-    "name": "ClientClub Downloader",
+    "description": "Your agency's ClientClub training videos could vanish when access changes. Download them as MP4 while you can.",
+    "name": "ClientClub Video Downloader",
     "slug": "clientclub-downloader",
     "url": "/products/clientclub-downloader",
     "website": "https://serp.ly/clientclub-downloader"
@@ -173,7 +137,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos, images, GIFs, and text from Coomer.su. Bulk save creator content. Organized folders. 3 free downloads included.",
+    "description": "Coomer content rotates fast. Save videos, images, and posts to your device in bulk before they cycle out of reach.",
     "name": "Coomer Downloader",
     "slug": "coomer-downloader",
     "url": "/products/coomer-downloader",
@@ -185,7 +149,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download complete Coursera courses with videos.",
+    "description": "Courses retire, subscriptions lapse, content vanishes. Save your Coursera lectures as MP4s before they disappear.",
     "name": "Coursera Downloader",
     "slug": "coursera-downloader",
     "url": "/products/coursera-downloader",
@@ -197,8 +161,20 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Comprehensive DeviantArt downloader for artwork.",
-    "name": "DeviantArt Downloader",
+    "description": "Save any Dailymotion video as MP4 in the quality you choose — no ad-filled converter sites, no malware risk, one click.",
+    "name": "Dailymotion Video Downloader",
+    "slug": "dailymotion-downloader",
+    "url": "/products/dailymotion-downloader",
+    "website": "https://serp.ly/dailymotion-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "See DeviantArt art the way it was meant to look -- full resolution, not compressed previews.",
+    "name": "Deviantart Downloader",
     "slug": "deviantart-downloader",
     "url": "/products/deviantart-downloader",
     "website": "https://serp.ly/deviantart-downloader"
@@ -209,11 +185,11 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Record DreamCam live streams and download recordings. Live capture, HLS to MP4, VR support. 3 free downloads included.",
-    "name": "DreamCam Downloader",
-    "slug": "dreamcam-downloader",
-    "url": "/products/dreamcam-downloader",
-    "website": "https://serp.ly/dreamcam-video-downloader"
+    "description": "Waxed is powered by Cams.com. Save live streams and recordings as MP4 files using the same downloader.",
+    "name": "Downloader for Waxed",
+    "slug": "camscom-downloader",
+    "url": "/products/camscom-downloader",
+    "website": "https://serp.ly/camscom-video-downloader"
   },
   {
     "category": "video-downloaders",
@@ -221,56 +197,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Record live streams and download recordings from DreamCamVR. VR metadata, quality selection, HLS to MP4. 3 free downloads included.",
-    "name": "DreamCamVR Downloader",
-    "slug": "dreamcam-vr-downloader",
-    "url": "/products/dreamcam-vr-downloader",
-    "website": "https://serp.ly/dreamcam-vr-video-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos and images from EroMe.com. Detects album media, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Erome Downloader",
-    "slug": "erome-downloader",
-    "url": "/products/erome-downloader",
-    "website": "https://serp.ly/erome-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos, images, and text from Facebook.com. Auto-detects media, converts to MP4. Choose quality. 3 free downloads.",
-    "name": "Facebook Downloader by SERP",
-    "slug": "facebook-downloader",
-    "url": "/products/facebook-downloader",
-    "website": "https://serp.ly/facebook-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Record Fansly live streams and download VODs. Real-time HLS capture, converts to MP4. Choose quality. 3 free downloads included.",
-    "name": "FanslyLive Downloader",
-    "slug": "fansly-live-downloader",
-    "url": "/products/fansly-live-downloader",
-    "website": "https://serp.ly/fansly-live-video-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Record Flirt4Free live streams and download videos. HLS capture to MP4. VR support. Quality selection. 3 free downloads included.",
-    "name": "Flirt4Free Downloader",
+    "description": "Webcam Sex Chat XXX is powered by Flirt4Free. Save live streams and recordings as MP4 files using the same downloader.",
+    "name": "Downloader for Webcam Sex Chat XXX",
     "slug": "flirt4free-downloader",
     "url": "/products/flirt4free-downloader",
     "website": "https://serp.ly/flirt4free-video-downloader"
@@ -281,7 +209,127 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download Getty Images editorial and creative content in full resolution.",
+    "description": "XXX Tube Chat is powered by Chaturbate. Save live streams and recordings as MP4 files using the same downloader.",
+    "name": "Downloader for XXX Tube Chat",
+    "slug": "chaturbate-downloader",
+    "url": "/products/chaturbate-downloader",
+    "website": "https://serp.ly/chaturbate-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Zreliy RU is powered by BongaCams. Save live streams and recordings as MP4 files using the same downloader.",
+    "name": "Downloader for Zreliy RU",
+    "slug": "bongacams-downloader",
+    "url": "/products/bongacams-downloader",
+    "website": "https://serp.ly/bongacams-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Zula Cams is powered by Streamate. Save live streams and recordings as MP4 files using the same downloader.",
+    "name": "Downloader for Zula Cams",
+    "slug": "streamate-downloader",
+    "url": "/products/streamate-downloader",
+    "website": "https://serp.ly/streamate-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "DreamCam has no download option. Capture live shows and save recordings as MP4 files on your device.",
+    "name": "DreamCam Video Downloader",
+    "slug": "dreamcam-downloader",
+    "url": "/products/dreamcam-downloader",
+    "website": "https://serp.ly/dreamcam-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "VR content is huge and impossible to re-stream smoothly. Save DreamCamVR shows locally for flawless playback.",
+    "name": "DreamCamVR Video Downloader",
+    "slug": "dreamcam-vr-downloader",
+    "url": "/products/dreamcam-vr-downloader",
+    "website": "https://serp.ly/dreamcam-vr-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "EPorner serves up to 4K but gives you no way to save it. Download full-quality videos as MP4 files right from your browser.",
+    "name": "EPorner Video Downloader",
+    "slug": "eporner-downloader",
+    "url": "/products/eporner-downloader",
+    "website": "https://serp.ly/eporner-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "EroMe albums disappear without warning. Save every video and image to your device before the content is gone for good.",
+    "name": "EroMe Downloader",
+    "slug": "erome-downloader",
+    "url": "/products/erome-downloader",
+    "website": "https://serp.ly/erome-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "EroThots content disappears constantly. Grab the videos you want as MP4 files before they rotate off the site.",
+    "name": "EroThots Video Downloader",
+    "slug": "erothots-downloader",
+    "url": "/products/erothots-downloader",
+    "website": "https://serp.ly/erothots-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Finally download Facebook videos, Reels, and Live replays — just click the button on any video and save the HD file to your computer.",
+    "name": "Facebook Video Downloader",
+    "slug": "facebook-downloader",
+    "url": "/products/facebook-downloader",
+    "website": "https://serp.ly/facebook-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Record Fansly live streams directly to your device in real time. Never miss a broadcast you paid to watch.",
+    "name": "Fansly Live Downloader",
+    "slug": "fansly-live-downloader",
+    "url": "/products/fansly-live-downloader",
+    "website": "https://serp.ly/fansly-live-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Getty's download interface is painfully slow — batch-save your licensed photos, editorial images, and video clips in full quality with one click.",
     "name": "Getty Images Downloader",
     "slug": "getty-images-downloader",
     "url": "/products/getty-images-downloader",
@@ -293,8 +341,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from GoHighLevel portals and courses. Detects Loom, Vimeo, Wistia, YouTube embeds. 3 free downloads included.",
-    "name": "GoHighLevel Downloader",
+    "description": "GoHighLevel tutorials get updated and old versions vanish. Save the training videos you need as MP4 files.",
+    "name": "GoHighLevel Video Downloader",
     "slug": "gohighlevel-downloader",
     "url": "/products/gohighlevel-downloader",
     "website": "https://serp.ly/gohighlevel-downloader"
@@ -305,8 +353,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos, images & text from GoKollab courses. Detects Loom, YouTube, Vimeo, Wistia embeds. 3 free downloads included.",
-    "name": "GoKollab Video Downloader",
+    "description": "Workshop replays on GoKollab expire. Save lesson videos, images, and notes before your access runs out.",
+    "name": "GoKollab Downloader",
     "slug": "gokollab-downloader",
     "url": "/products/gokollab-downloader",
     "website": "https://serp.ly/gokollab-downloader"
@@ -317,7 +365,19 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from HentaiHaven.xxx. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
+    "description": "HDZog has no download button, but you can still save any video to your device in the quality you choose. Fast, private, reliable.",
+    "name": "HDZog Video Downloader",
+    "slug": "hdzog-downloader",
+    "url": "/products/hdzog-downloader",
+    "website": "https://serp.ly/hdzog-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Stop buffering through HentaiHaven episodes. Download them in full quality and watch offline without interruptions.",
     "name": "HentaiHaven Video Downloader",
     "slug": "hentaihaven-downloader",
     "url": "/products/hentaihaven-downloader",
@@ -329,7 +389,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Save Hulu shows and movies with subtitles and commercial-free playback.",
+    "description": "Cancel Hulu whenever you want — but keep the shows. Download episodes as MP4 files you own forever.",
     "name": "Hulu Downloader",
     "slug": "hulu-downloader",
     "url": "/products/hulu-downloader",
@@ -341,8 +401,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download Instagram videos, Reels, photos & Stories. In-page buttons on every post. Saves as MP4 or original format. Free trial.",
-    "name": "Instagram Downloader by SERP",
+    "description": "Download Instagram Reels, Stories before they vanish, every slide from carousels, and full-size profile pics — all in original quality.",
+    "name": "Instagram Downloader",
     "slug": "instagram-downloader",
     "url": "/products/instagram-downloader",
     "website": "https://serp.ly/instagram-downloader"
@@ -353,7 +413,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Access and download books.",
+    "description": "Archive.org downloads are painfully slow. Batch save books, videos, and entire collections the easy way.",
     "name": "Internet Archive Downloader",
     "slug": "internet-archive-downloader",
     "url": "/products/internet-archive-downloader",
@@ -365,7 +425,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos, images, and text from JustFor.Fans. Auto-detects streams, converts HLS to MP4. 3 free downloads included.",
+    "description": "Your JustForFans subscription could end tomorrow. Save every video, photo, and post to your device while you still have access.",
     "name": "JustForFans Downloader",
     "slug": "justforfans-downloader",
     "url": "/products/justforfans-downloader",
@@ -377,7 +437,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download Kajabi course videos. Detects Loom, Vimeo, YouTube, Wistia embeds. Quality selection. MP4 output. 3 free downloads.",
+    "description": "Memberships expire, coaches remove content, and there is no download button. Save your Kajabi course videos as MP4s before they are gone.",
     "name": "Kajabi Video Downloader",
     "slug": "kajabi-downloader",
     "url": "/products/kajabi-downloader",
@@ -389,11 +449,11 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos, images & text from LinkedIn posts. Scans your feed, organizes by author. 3 free downloads included.",
-    "name": "LinkedIn Video Downloader",
+    "description": "That viral thought-leadership post with the perfect carousel? It'll be buried in your feed by tomorrow. Save LinkedIn posts and videos before the algorithm moves on.",
+    "name": "LinkedIn Downloader",
     "slug": "linkedin-downloader",
     "url": "/products/linkedin-downloader",
-    "website": "https://serp.ly/linkedin-learning-downloader"
+    "website": "https://serp.ly/linkedin-downloader"
   },
   {
     "category": "video-downloaders",
@@ -401,8 +461,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Record LiveJasmin private shows and cam sessions automatically.",
-    "name": "LiveJasmin Downloader",
+    "description": "LiveJasmin recordings are temporary and locked behind paywalls. Save the shows you have access to before they vanish.",
+    "name": "Livejasmin Downloader",
     "slug": "livejasmin-downloader",
     "url": "/products/livejasmin-downloader",
     "website": "https://serp.ly/livejasmin-downloader"
@@ -413,8 +473,20 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from LuxureTV.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "LuxureTV Downloader",
+    "description": "Your team's Loom walkthroughs won't last forever. Download them as MP4 before links expire or workspaces change.",
+    "name": "Loom Video Downloader",
+    "slug": "loom-downloader",
+    "url": "/products/loom-downloader",
+    "website": "https://serp.ly/loom-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save LuxureTV videos to your device in one click. Keep your niche collection offline and always available.",
+    "name": "LuxureTV Video Downloader",
     "slug": "luxuretv-downloader",
     "url": "/products/luxuretv-downloader",
     "website": "https://serp.ly/luxuretv-downloader"
@@ -425,8 +497,20 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from ManyVids.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "ManyVids Downloader",
+    "description": "Save streaming videos that normal downloaders can't touch — delivered as a clean MP4.",
+    "name": "M3U8 Stream Downloader",
+    "slug": "m3u8-downloader",
+    "url": "/products/m3u8-downloader",
+    "website": "https://serp.ly/m3u8-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "You bought it, you should own it. Save your ManyVids purchases as MP4 files that live on your device, not someone else's server.",
+    "name": "ManyVids Video Downloader",
     "slug": "manyvids-downloader",
     "url": "/products/manyvids-downloader",
     "website": "https://serp.ly/manyvids-downloader"
@@ -437,7 +521,19 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Backup complete Moodle courses with all resources and activities.",
+    "description": "Paying $499/year for Mindvalley? Keep every quest lesson on your computer so canceling never means losing your progress.",
+    "name": "Mindvalley Video Downloader",
+    "slug": "mindvalley-downloader",
+    "url": "/products/mindvalley-downloader",
+    "website": "https://serp.ly/mindvalley-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Semester ending? Save your Moodle lectures and course files as MP4 before the university locks you out.",
     "name": "Moodle Downloader",
     "slug": "moodle-downloader",
     "url": "/products/moodle-downloader",
@@ -449,7 +545,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from Motherless.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
+    "description": "Content on Motherless disappears without warning. Save the videos you care about before they are gone forever.",
     "name": "Motherless Downloader",
     "slug": "motherless-downloader",
     "url": "/products/motherless-downloader",
@@ -461,8 +557,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download MyFreeCams live streams and recordings. Live capture, HLS to MP4 conversion. Choose quality. VR support. 3 free downloads.",
-    "name": "MyFreeCams Downloader",
+    "description": "MyFreeCams archives rotate out and older streams disappear. Save them permanently to your computer.",
+    "name": "MyFreeCams Video Downloader",
     "slug": "myfreecams-downloader",
     "url": "/products/myfreecams-downloader",
     "website": "https://serp.ly/myfreecams-downloader"
@@ -473,7 +569,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download Netflix shows and movies in 4K with multiple audio tracks.",
+    "description": "Keep Netflix shows and movies forever — download as MP4 before they expire or vanish from the platform.",
     "name": "Netflix Downloader",
     "slug": "netflix-downloader",
     "url": "/products/netflix-downloader",
@@ -485,8 +581,20 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Save Niconico videos with comments.",
-    "name": "NicoVideo Downloader",
+    "description": "Save nhentai doujinshi and videos for offline reading. No more slow loading or worrying about takedowns.",
+    "name": "nhentai Downloader",
+    "slug": "nhentai-downloader",
+    "url": "/products/nhentai-downloader",
+    "website": "https://serp.ly/nhentai-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save Niconico videos with the iconic scrolling comments intact. Full quality, no buffering, offline.",
+    "name": "Nicovideo Downloader",
     "slug": "nicovideo-downloader",
     "url": "/products/nicovideo-downloader",
     "website": "https://serp.ly/nicovideo-downloader"
@@ -521,7 +629,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos, images, and posts from OnlyFans. Bulk tools. HLS to MP4 conversion. Per-creator folders. In-page overlays.",
+    "description": "Save the OnlyFans content you're paying for before creators delete it or your subscription ends.",
     "name": "OnlyFans Downloader",
     "slug": "onlyfans-downloader",
     "url": "/products/onlyfans-downloader",
@@ -533,7 +641,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download Patreon videos directly to your local computer for offline viewing and easy backing up of your media.",
+    "description": "You paid for it. Keep it. Save Patreon posts, art, videos, and files before they disappear.",
     "name": "Patreon Downloader",
     "slug": "patreon-downloader",
     "url": "/products/patreon-downloader",
@@ -545,7 +653,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download free Pexels videos in 4K quality with batch support.",
+    "description": "Pexels has amazing free stock footage. But downloading clips one at a time? Not amazing. Batch-save videos in HD and 4K instantly.",
     "name": "Pexels Video Downloader",
     "slug": "pexels-video-downloader",
     "url": "/products/pexels-video-downloader",
@@ -557,7 +665,19 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download Podia course videos for convenient offline viewing or safe backups.",
+    "description": "Save Pinterest pins in actual full resolution — not the blurry compressed version. Download entire boards at once into organized folders.",
+    "name": "Pinterest Downloader",
+    "slug": "pinterest-downloader",
+    "url": "/products/pinterest-downloader",
+    "website": "https://serp.ly/pinterest-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "No download button on Podia? No problem. Save every course lesson as MP4 while you still have access.",
     "name": "Podia Downloader",
     "slug": "podia-downloader",
     "url": "/products/podia-downloader",
@@ -569,8 +689,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from Pornhub.com. Auto-detects flashvars and HLS streams, converts to MP4. Choose quality. 3 free downloads.",
-    "name": "PornHub Downloader",
+    "description": "Stop risking malware from shady online converters. Save Pornhub videos safely with one click.",
+    "name": "Pornhub Video Downloader",
     "slug": "pornhub-downloader",
     "url": "/products/pornhub-downloader",
     "website": "https://serp.ly/pornhub-video-downloader"
@@ -581,7 +701,19 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Extract Rawpixel premium PNGs.",
+    "description": "PornTrex has no download button. Save your favorites offline as MP4 before they disappear from the site.",
+    "name": "PornTrex Video Downloader",
+    "slug": "porntrex-downloader",
+    "url": "/products/porntrex-downloader",
+    "website": "https://serp.ly/porntrex-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Rawpixel has thousands of incredible design resources. Downloading them one at a time is not incredible. Batch-save mockups, vectors, and art in seconds.",
     "name": "Rawpixel Downloader",
     "slug": "rawpixel-downloader",
     "url": "/products/rawpixel-downloader",
@@ -593,7 +725,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos, images & text from Reddit.com. Detects v.redd.it streams, captures images, exports text. 3 free downloads.",
+    "description": "Download Reddit videos with sound, full image galleries, and GIFs — no more silent clips or missing audio. One click, proper MP4.",
     "name": "Reddit Downloader",
     "slug": "reddit-downloader",
     "url": "/products/reddit-downloader",
@@ -605,8 +737,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos and GIFs from RedGifs.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "RedGifs Downloader",
+    "description": "Save any RedGifs video or clip to your computer as MP4 — one click, full quality, no sketchy third-party sites.",
+    "name": "RedGifs Video Downloader",
     "slug": "redgifs-downloader",
     "url": "/products/redgifs-downloader",
     "website": "https://serp.ly/redgifs-downloader"
@@ -617,7 +749,19 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download RedTube videos in multiple qualities with premium content access.",
+    "description": "Skip the sketchy converter sites. Download RedTube videos as clean MP4 files straight to your device in the quality you choose.",
+    "name": "RedTube Video Downloader",
+    "slug": "redtube-downloader",
+    "url": "/products/redtube-downloader",
+    "website": "https://serp.ly/redtube-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Skip the sketchy converter sites. Download RedTube videos as clean MP4 files straight to your device in the quality you choose.",
     "name": "RedTube Video Downloader",
     "slug": "redtube-video-downloader",
     "url": "/products/redtube-video-downloader",
@@ -629,8 +773,20 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download streams from SexChatHU. Live capture, VR support, HLS to MP4 conversion. Choose quality. 3 free downloads included.",
-    "name": "SexChatHU Downloader",
+    "description": "Stop juggling a dozen download extensions. One tool handles 1,000+ sites instantly.",
+    "name": "SERP Video Downloader",
+    "slug": "serp-video-downloader",
+    "url": "/products/serp-video-downloader",
+    "website": "https://serp.ly/serp-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save SexChat.hu streams and recordings to your device. High quality, fully private, processed entirely on your machine.",
+    "name": "SexChat.hu Video Downloader",
     "slug": "sexchathu-downloader",
     "url": "/products/sexchathu-downloader",
     "website": "https://serp.ly/sexchathu-video-downloader"
@@ -641,7 +797,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Save complete Skillshare classes with projects and resources.",
+    "description": "Cancel Skillshare without losing your favorite classes. Download them as MP4s you can keep and rewatch anytime.",
     "name": "Skillshare Downloader",
     "slug": "skillshare-downloader",
     "url": "/products/skillshare-downloader",
@@ -653,8 +809,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from Skool.com classrooms and courses. Detects Loom, Vimeo, YouTube, Wistia, and native. MP4. 3 free downloads.",
-    "name": "Skool Downloader",
+    "description": "Your Skool cohort won't last forever — save every lesson and replay as MP4 before access disappears.",
+    "name": "Skool Video Downloader",
     "slug": "skool-downloader",
     "url": "/products/skool-downloader",
     "website": "https://serp.ly/skool-video-downloader"
@@ -665,11 +821,11 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from your Skool classroom and back up your work for offline access.",
+    "description": "Your Skool cohort won't last forever — save every lesson and replay as MP4 before access disappears.",
     "name": "Skool Video Downloader",
     "slug": "skool-video-downloader",
     "url": "/products/skool-video-downloader",
-    "website": "https://serp.ly/skool-downloader"
+    "website": "https://serp.ly/skool-video-downloader"
   },
   {
     "category": "video-downloaders",
@@ -677,7 +833,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Save Snapchat stories and videos for offline access.",
+    "description": "Snapchat content disappears by design. Save Stories and Spotlight videos before they are gone for good.",
     "name": "Snapchat Video Downloader",
     "slug": "snapchat-video-downloader",
     "url": "/products/snapchat-video-downloader",
@@ -689,7 +845,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download Soundgasm audio content with user collections and playlists.",
+    "description": "Soundgasm has no download button. This extension adds one. Save audio tracks for offline listening with a single click.",
     "name": "Soundgasm Downloader",
     "slug": "soundgasm-downloader",
     "url": "/products/soundgasm-downloader",
@@ -701,7 +857,19 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download SproutVideo videos to your computer. Detects embeds on any site, handles passwords and HLS. 3 free downloads included.",
+    "description": "Stop losing quality to third-party tools. Save SpankBang videos as perfect MP4 files directly from your browser.",
+    "name": "SpankBang Video Downloader",
+    "slug": "spankbang-downloader",
+    "url": "/products/spankbang-downloader",
+    "website": "https://serp.ly/spankbang-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "That course uses SproutVideo and there's no download button. Now there is. Save lessons as MP4 files.",
     "name": "SproutVideo Downloader",
     "slug": "sprout-downloader",
     "url": "/products/sprout-downloader",
@@ -713,20 +881,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download Streamate live streams and recordings. Captures HLS to MP4. Quality selection. VR support. 3 free downloads included.",
-    "name": "Streamate Downloader",
-    "slug": "streamate-downloader",
-    "url": "/products/streamate-downloader",
-    "website": "https://serp.ly/streamate-video-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Record live streams and download videos from Stripchat.com. Live capture, HLS to MP4 conversion. Quality selection. 3 free downloads.",
-    "name": "Stripchat Downloader",
+    "description": "Stripchat recordings get removed without warning. Save shows to your computer before they're gone.",
+    "name": "Stripchat Video Downloader",
     "slug": "stripchat-downloader",
     "url": "/products/stripchat-downloader",
     "website": "https://serp.ly/stripchat-video-downloader"
@@ -737,8 +893,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Record Stripchat VR live streams. Real-time HLS capture to MP4. VR metadata preserved. Quality selection. 3 free downloads.",
-    "name": "StripchatVR Downloader",
+    "description": "Download VR cam recordings from Stripchat and watch them offline in any compatible headset. Fully local, fully private.",
+    "name": "Stripchat VR Video Downloader",
     "slug": "stripchat-vr-downloader",
     "url": "/products/stripchat-vr-downloader",
     "website": "https://serp.ly/stripchat-vr-video-downloader"
@@ -749,7 +905,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download Teachable courses with all lectures.",
+    "description": "You bought the course — but the creator can take it down anytime. Download your Teachable videos before access disappears.",
     "name": "Teachable Video Downloader",
     "slug": "teachable-video-downloader",
     "url": "/products/teachable-video-downloader",
@@ -761,8 +917,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from Tella.tv. Detects signed HLS streams, converts to MP4. Works on embeds. 3 free downloads included.",
-    "name": "TellaTV Downloader",
+    "description": "Tella recordings don't last forever. Save screen recordings and presentations as MP4 before links expire.",
+    "name": "Tella.tv Video Downloader",
     "slug": "tellatv-downloader",
     "url": "/products/tellatv-downloader",
     "website": "https://serp.ly/tellatv-downloader"
@@ -773,8 +929,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download from TeraBox cloud storage without limits or speed restrictions.",
-    "name": "TeraBox Downloader",
+    "description": "Someone sent you a TeraBox link? Download it right from your browser. No app install, no account, full speed.",
+    "name": "Terabox Downloader",
     "slug": "terabox-downloader",
     "url": "/products/terabox-downloader",
     "website": "https://serp.ly/terabox-downloader"
@@ -785,8 +941,20 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from ThisVid.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "ThisVid Downloader",
+    "description": "You paid for that Thinkific course — download every lesson as MP4 so the creator can never take it away from you.",
+    "name": "Thinkific Video Downloader",
+    "slug": "thinkific-downloader",
+    "url": "/products/thinkific-downloader",
+    "website": "https://serp.ly/thinkific-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "User-uploaded ThisVid content disappears all the time. Save the videos you love before they are gone.",
+    "name": "ThisVid Video Downloader",
     "slug": "thisvid-downloader",
     "url": "/products/thisvid-downloader",
     "website": "https://serp.ly/thisvid-downloader"
@@ -797,7 +965,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Extract video thumbnails from YouTube and other supported video pages.",
+    "description": "Need a YouTube thumbnail at full resolution? One click. No URL hacking, no guessing, no tiny previews.",
     "name": "Thumbnail Downloader",
     "slug": "thumbnail-downloader",
     "url": "/products/thumbnail-downloader",
@@ -809,8 +977,32 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from TokyoMotion.net. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "TokyoMotion Downloader",
+    "description": "Save TikTok videos straight from your feed as MP4 — one click while you scroll, no shady websites, no copy-pasting links.",
+    "name": "TikTok Video Downloader",
+    "slug": "tiktok-downloader",
+    "url": "/products/tiktok-downloader",
+    "website": "https://serp.ly/tiktok-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "TNAFlix has no download button. This extension adds one. Save any video as an MP4 file straight to your computer.",
+    "name": "TNAFlix Video Downloader",
+    "slug": "tnaflix-downloader",
+    "url": "/products/tnaflix-downloader",
+    "website": "https://serp.ly/tnaflix-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "TokyoMotion servers are slow and content gets removed often. Download videos to your device for fast, reliable access.",
+    "name": "TokyoMotion Video Downloader",
     "slug": "tokyomotion-downloader",
     "url": "/products/tokyomotion-downloader",
     "website": "https://serp.ly/tokyomotion-downloader"
@@ -833,7 +1025,31 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download high-resolution photos from Unsplash with collections support.",
+    "description": "TXXX has no download button. Save your favorites as MP4 files for offline viewing, anytime you want.",
+    "name": "TXXX Video Downloader",
+    "slug": "txxx-downloader",
+    "url": "/products/txxx-downloader",
+    "website": "https://serp.ly/txxx-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "You paid for the course — keep it forever. Download full Udemy courses as MP4 videos you own, not ones that expire.",
+    "name": "Udemy Video Downloader",
+    "slug": "udemy-downloader",
+    "url": "/products/udemy-downloader",
+    "website": "https://serp.ly/udemy-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Grab entire Unsplash collections at full resolution in one click — no more downloading photos one at a time through that annoying modal.",
     "name": "Unsplash Downloader",
     "slug": "unsplash-downloader",
     "url": "/products/unsplash-downloader",
@@ -845,236 +1061,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Extract VectorStock vectors and illustrations in original formats.",
-    "name": "VectorStock Downloader",
-    "slug": "vectorstock-downloader",
-    "url": "/products/vectorstock-downloader",
-    "website": "https://serp.ly/vectorstock-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from Dailymotion.com. Detects all qualities, converts HLS to MP4. Choose resolution. 3 free downloads included.",
-    "name": "Video Downloader for Dailymotion",
-    "slug": "dailymotion-downloader",
-    "url": "/products/dailymotion-downloader",
-    "website": "https://serp.ly/dailymotion-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from EPorner.com. Auto-detects streams via API, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for Eporner",
-    "slug": "eporner-downloader",
-    "url": "/products/eporner-downloader",
-    "website": "https://serp.ly/eporner-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from EroThots.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for EroThots",
-    "slug": "erothots-downloader",
-    "url": "/products/erothots-downloader",
-    "website": "https://serp.ly/erothots-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from HDZog.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for HDZog",
-    "slug": "hdzog-downloader",
-    "url": "/products/hdzog-downloader",
-    "website": "https://serp.ly/hdzog-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download Loom videos to your computer as MP4. Works on share links and embeds. Handles HLS/DASH streams. Free trial included.",
-    "name": "Video Downloader for Loom",
-    "slug": "loom-downloader",
-    "url": "/products/loom-downloader",
-    "website": "https://serp.ly/loom-video-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download M3U8/HLS video streams from any website. Auto-detects streams, converts to MP4. Works everywhere. 3 free downloads.",
-    "name": "Video Downloader for M3U8",
-    "slug": "m3u8-downloader",
-    "url": "/products/m3u8-downloader",
-    "website": "https://serp.ly/m3u8-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from Mindvalley.com. Detects HLS streams, converts to MP4. Supports Vimeo, YouTube, Loom embeds. 3 free downloads.",
-    "name": "Video Downloader for Mindvalley",
-    "slug": "mindvalley-downloader",
-    "url": "/products/mindvalley-downloader",
-    "website": "https://serp.ly/mindvalley-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from nhentai.net. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for NHentai",
-    "slug": "nhentai-downloader",
-    "url": "/products/nhentai-downloader",
-    "website": "https://serp.ly/nhentai-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos, images, and text from Pinterest. Auto-detects media, converts HLS to MP4. Bulk download. 3 free downloads.",
-    "name": "Video Downloader for Pinterest",
-    "slug": "pinterest-downloader",
-    "url": "/products/pinterest-downloader",
-    "website": "https://serp.ly/pinterest-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from PornTrex.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for PornTrex",
-    "slug": "porntrex-downloader",
-    "url": "/products/porntrex-downloader",
-    "website": "https://serp.ly/porntrex-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from RedTube.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for RedTube",
-    "slug": "redtube-downloader",
-    "url": "/products/redtube-downloader",
-    "website": "https://serp.ly/redtube-video-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from any site. Supports MP4, HLS, DASH, YouTube, Vimeo, Loom, Wistia, Skool, and more. 3 free downloads.",
-    "name": "Video Downloader for SERP",
-    "slug": "serp-video-downloader",
-    "url": "/products/serp-video-downloader",
-    "website": "https://serp.ly/serp-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from SpankBang.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for SpankBang",
-    "slug": "spankbang-downloader",
-    "url": "/products/spankbang-downloader",
-    "website": "https://serp.ly/spankbang-video-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from Thinkific courses. Auto-detects Wistia streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for Thinkific",
-    "slug": "thinkific-downloader",
-    "url": "/products/thinkific-downloader",
-    "website": "https://serp.ly/thinkific-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download TikTok videos as MP4. Auto-detects from feed and video pages. Multi-quality support. 3 free downloads included.",
-    "name": "Video Downloader for TikTok",
-    "slug": "tiktok-downloader",
-    "url": "/products/tiktok-downloader",
-    "website": "https://serp.ly/tiktok-video-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from TNAFlix.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for TNAFlix",
-    "slug": "tnaflix-downloader",
-    "url": "/products/tnaflix-downloader",
-    "website": "https://serp.ly/tnaflix-video-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from TXXX.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for TXXX",
-    "slug": "txxx-downloader",
-    "url": "/products/txxx-downloader",
-    "website": "https://serp.ly/txxx-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download Udemy course videos as MP4. Bulk download entire courses. Auto-detects lectures. Quality selection. 3 free downloads.",
-    "name": "Video Downloader for Udemy",
-    "slug": "udemy-downloader",
-    "url": "/products/udemy-downloader",
-    "website": "https://serp.ly/udemy-video-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from Upornia.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for Upornia",
+    "description": "Upornia has no built-in save option. Download videos privately as clean MP4 files with one click.",
+    "name": "Upornia Video Downloader",
     "slug": "upornia-downloader",
     "url": "/products/upornia-downloader",
     "website": "https://serp.ly/upornia-downloader"
@@ -1085,8 +1073,20 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download videos from Vimeo.com and embedded Vimeo players. Auto-detects streams, converts HLS to MP4. 3 free downloads included.",
-    "name": "Video Downloader for Vimeo",
+    "description": "Tired of buying VectorStock graphics one at a time and losing track of what you own? Batch-download and organize your licensed vectors effortlessly.",
+    "name": "Vectorstock Downloader",
+    "slug": "vectorstock-downloader",
+    "url": "/products/vectorstock-downloader",
+    "website": "https://serp.ly/vectorstock-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download Vimeo videos even when the uploader disabled downloads — password-protected, embedded, or private. Pick your quality and save the MP4.",
+    "name": "Vimeo Video Downloader",
     "slug": "vimeo-downloader",
     "url": "/products/vimeo-downloader",
     "website": "https://serp.ly/vimeo-video-downloader"
@@ -1097,115 +1097,7 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download Wistia videos from any website. Detects embedded players, shows all qualities, saves as MP4. 3 free downloads included.",
-    "name": "Video Downloader for Wistia",
-    "slug": "wistia-downloader",
-    "url": "/products/wistia-downloader",
-    "website": "https://serp.ly/wistia-video-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from XFantazy.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for XFantazy",
-    "slug": "xfantazy-downloader",
-    "url": "/products/xfantazy-downloader",
-    "website": "https://serp.ly/xfantazy-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from xHamster.com and mirrors. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads.",
-    "name": "Video Downloader for XHamster",
-    "slug": "xhamster-downloader",
-    "url": "/products/xhamster-downloader",
-    "website": "https://serp.ly/xhamster-video-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from XNXX.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for XNXX",
-    "slug": "xnxx-downloader",
-    "url": "/products/xnxx-downloader",
-    "website": "https://serp.ly/xnxx-video-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from XVideos.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for XVideos",
-    "slug": "xvideos-downloader",
-    "url": "/products/xvideos-downloader",
-    "website": "https://serp.ly/xvideos-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from YesPornPlease.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for YesPornPlease",
-    "slug": "yespornplease-downloader",
-    "url": "/products/yespornplease-downloader",
-    "website": "https://serp.ly/yespornplease-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from YouJizz.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for YouJizz",
-    "slug": "youjizz-downloader",
-    "url": "/products/youjizz-downloader",
-    "website": "https://serp.ly/youjizz-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos from YouPorn.com. Auto-detects streams, converts HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "Video Downloader for YouPorn",
-    "slug": "youporn-downloader",
-    "url": "/products/youporn-downloader",
-    "website": "https://serp.ly/youporn-video-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download YouTube videos in any quality. In-page button on the player. Multi-format extraction. 3 free downloads included.",
-    "name": "Video Downloader for YouTube",
-    "slug": "youtube-downloader",
-    "url": "/products/youtube-downloader",
-    "website": "https://serp.ly/youtube-downloader"
-  },
-  {
-    "category": "video-downloaders",
-    "categories": [
-      "video-downloaders"
-    ],
-    "content": "",
-    "description": "Download videos, images, and text from Whop.com. Detects Mux streams, bulk download support. 3 free downloads included.",
+    "description": "Cancel your Whop membership and lose every video you paid for. Unless you download them first.",
     "name": "Whop Downloader",
     "slug": "whop-downloader",
     "url": "/products/whop-downloader",
@@ -1217,7 +1109,19 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download Wistia-hosted videos embedded around the web for offline viewing.",
+    "description": "Every course and SaaS company uses Wistia, and none of them give you a download button. This does.",
+    "name": "Wistia Video Downloader",
+    "slug": "wistia-downloader",
+    "url": "/products/wistia-downloader",
+    "website": "https://serp.ly/wistia-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Every course and SaaS company uses Wistia, and none of them give you a download button. This does.",
     "name": "Wistia Video Downloader",
     "slug": "wistia-video-downloader",
     "url": "/products/wistia-video-downloader",
@@ -1229,8 +1133,32 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download XHamsterLive live streams and recordings. Real-time capture, VOD downloads, VR support. Converts to MP4. 3 free downloads.",
-    "name": "XHamsterLive Downloader",
+    "description": "Xfantazy has no download option. Save videos to your device in full quality and watch them on your terms.",
+    "name": "Xfantazy Video Downloader",
+    "slug": "xfantazy-downloader",
+    "url": "/products/xfantazy-downloader",
+    "website": "https://serp.ly/xfantazy-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Tired of pop-ups and fake buttons on third-party sites? Download XHamster videos the safe way.",
+    "name": "xHamster Video Downloader",
+    "slug": "xhamster-downloader",
+    "url": "/products/xhamster-downloader",
+    "website": "https://serp.ly/xhamster-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Capture xHamsterLive cam sessions and save them as MP4 files on your own hardware. Stream once, keep forever.",
+    "name": "xHamsterLive Video Downloader",
     "slug": "xhamsterlive-downloader",
     "url": "/products/xhamsterlive-downloader",
     "website": "https://serp.ly/xhamsterlive-video-downloader"
@@ -1241,8 +1169,8 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Download live streams and recordings from XLoveCam.com. Live capture, HLS to MP4. Choose quality. 3 free downloads included.",
-    "name": "XLoveCam Downloader",
+    "description": "XLoveCam recordings rotate out constantly. Save live shows and recordings as permanent MP4 files on your device.",
+    "name": "XLoveCam Video Downloader",
     "slug": "xlovecam-downloader",
     "url": "/products/xlovecam-downloader",
     "website": "https://serp.ly/xlovecam-video-downloader"
@@ -1253,10 +1181,82 @@
       "video-downloaders"
     ],
     "content": "",
-    "description": "Save XNXX videos in HD with fast batch downloading.",
+    "description": "No built-in download on XNXX? No problem. Save videos offline without sketchy converter sites.",
+    "name": "XNXX Video Downloader",
+    "slug": "xnxx-downloader",
+    "url": "/products/xnxx-downloader",
+    "website": "https://serp.ly/xnxx-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "No built-in download on XNXX? No problem. Save videos offline without sketchy converter sites.",
     "name": "XNXX Video Downloader",
     "slug": "xnxx-video-downloader",
     "url": "/products/xnxx-video-downloader",
     "website": "https://serp.ly/xnxx-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Finally, an XVideos downloader that actually works. Clean, fast MP4 saves without the ad-filled nonsense.",
+    "name": "XVideos Downloader",
+    "slug": "xvideos-downloader",
+    "url": "/products/xvideos-downloader",
+    "website": "https://serp.ly/xvideos-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "YesPornPlease pulls from dozens of sources, making downloads tricky. This extension handles it all for you.",
+    "name": "YesPornPlease Video Downloader",
+    "slug": "yespornplease-downloader",
+    "url": "/products/yespornplease-downloader",
+    "website": "https://serp.ly/yespornplease-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Stop using unreliable online converters. Download YouJizz videos directly in HD with a tool you can trust.",
+    "name": "YouJizz Video Downloader",
+    "slug": "youjizz-downloader",
+    "url": "/products/youjizz-downloader",
+    "website": "https://serp.ly/youjizz-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Tired of slow, ad-heavy online downloaders? Save YouPorn videos fast as clean MP4 files with zero pop-ups or waiting.",
+    "name": "YouPorn Video Downloader",
+    "slug": "youporn-downloader",
+    "url": "/products/youporn-downloader",
+    "website": "https://serp.ly/youporn-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download any YouTube video, Short, or playlist as an MP4 — pick your quality, click once, and it's on your computer in seconds.",
+    "name": "YouTube Video Downloader",
+    "slug": "youtube-downloader",
+    "url": "/products/youtube-downloader",
+    "website": "https://serp.ly/youtube-downloader"
   }
 ]
