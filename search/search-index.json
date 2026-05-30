@@ -12,6 +12,123 @@
     "website": "https://serp.ly/123movies-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download 321Tube Videos — One Click, Private, Browser-Based.",
+    "name": "321tube Video Downloader",
+    "slug": "321tube-downloader",
+    "url": "/products/321tube-downloader",
+    "website": "https://serp.ly/321tube-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download 3movs videos from the page you're watching.",
+    "name": "3movs Video Downloader",
+    "slug": "3movs-downloader",
+    "url": "/products/3movs-downloader",
+    "website": "https://serp.ly/3movs-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Detect MP4/HLS options on 4K69 watch pages and save exposed video sources with a focused browser extension. 3 free.",
+    "name": "4k69 Video Downloader",
+    "slug": "4k69-downloader",
+    "url": "/products/4k69-downloader",
+    "website": "https://serp.ly/4k69-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download 4kPorn videos from your browser with a player button, quality picker, and MP4/HLS support.",
+    "name": "4kporn Video Downloader",
+    "slug": "4kporn-downloader",
+    "url": "/products/4kporn-downloader",
+    "website": "https://serp.ly/4kporn-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from 5MoviesPorn with a browser button workflow. Detects available media candidates and saves through the extension.",
+    "name": "5moviesporn Video Downloader",
+    "slug": "5moviesporn-downloader",
+    "url": "/products/5moviesporn-downloader",
+    "website": "https://serp.ly/5moviesporn-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Detect and save available videos from 8K Porner with a private browser-extension workflow. Quality depends on the source stream.",
+    "name": "8kporner Video Downloader",
+    "slug": "8kporner-downloader",
+    "url": "/products/8kporner-downloader",
+    "website": "https://serp.ly/8kporner-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from 8TeenXXX (18+) watch pages with in-browser detection, a player button, and offscreen HLS handling.",
+    "name": "8teenxxx18 Video Downloader",
+    "slug": "8teenxxx18-downloader",
+    "url": "/products/8teenxxx18-downloader",
+    "website": "https://serp.ly/8teenxxx18-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download AbellaDanger.tv videos from a clean browser workflow.",
+    "name": "Abelladangertv Video Downloader",
+    "slug": "abelladangertv-downloader",
+    "url": "/products/abelladangertv-downloader",
+    "website": "https://serp.ly/abelladangertv-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download ABXXX videos from your browser with a simple detection workflow that saves detected media as MP4 files.",
+    "name": "Abxxx Video Downloader",
+    "slug": "abxxx-downloader",
+    "url": "/products/abxxx-downloader",
+    "website": "https://serp.ly/abxxx-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -22,6 +139,32 @@
     "slug": "adobe-stock-downloader",
     "url": "/products/adobe-stock-downloader",
     "website": "https://serp.ly/adobe-stock-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Archive supported AdultDVDMovies movie pages when exposed MP4/HLS media appears on AdultDVDMovies or bkcdn.net hosts.",
+    "name": "Adultdvdmovies Video Downloader",
+    "slug": "adultdvdmovies-downloader",
+    "url": "/products/adultdvdmovies-downloader",
+    "website": "https://serp.ly/adultdvdmovies-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download AL4A videos from your browser with a focused extension workflow and in-page player button.",
+    "name": "Al4a Video Downloader",
+    "slug": "al4a-downloader",
+    "url": "/products/al4a-downloader",
+    "website": "https://serp.ly/al4a-downloader"
   },
   {
     "category": "video-downloaders",
@@ -36,6 +179,19 @@
     "website": "https://serp.ly/alamy-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save videos from AllPornStream post pages with a browser-based download flow.",
+    "name": "Allpornstream Video Downloader",
+    "slug": "allpornstream-downloader",
+    "url": "/products/allpornstream-downloader",
+    "website": "https://serp.ly/allpornstream-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -46,6 +202,71 @@
     "slug": "alphaporno-downloader",
     "url": "/products/alphaporno-downloader",
     "website": "https://serp.ly/alpha-porno-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save videos from AmigosPorn permalink pages with a browser button and metadata-based detection.",
+    "name": "Amigosporn Video Downloader",
+    "slug": "amigosporn-downloader",
+    "url": "/products/amigosporn-downloader",
+    "website": "https://serp.ly/amigosporn-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download AM Tube videos from adver-media.com. Detect page and host media, use the player button, and save exposed streams.",
+    "name": "Amtube Video Downloader",
+    "slug": "amtube-downloader",
+    "url": "/products/amtube-downloader",
+    "website": "https://serp.ly/amtube-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download Analdin videos from clean watch pages with a player-button workflow and browser-based media capture.",
+    "name": "Analdin Video Downloader",
+    "slug": "analdin-downloader",
+    "url": "/products/analdin-downloader",
+    "website": "https://serp.ly/analdin-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save available videos from AnyPorn with a browser-based workflow built for category discovery, numeric detail pages, and player-level access.",
+    "name": "Anyporn Video Downloader",
+    "slug": "anyporn-downloader",
+    "url": "/products/anyporn-downloader",
+    "website": "https://serp.ly/anyporn-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Detect AnySex media in your browser, add a player download button, and save exposed streams with a seed-based workflow.",
+    "name": "Anysex Video Downloader",
+    "slug": "anysex-downloader",
+    "url": "/products/anysex-downloader",
+    "website": "https://serp.ly/anysex-downloader"
   },
   {
     "category": "video-downloaders",
@@ -60,6 +281,19 @@
     "website": "https://serp.ly/ashemaletube-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save BananaMovies Videos — One Click, Straight from the `.org` Player.",
+    "name": "Bananamovies Video Downloader",
+    "slug": "bananamovies-downloader",
+    "url": "/products/bananamovies-downloader",
+    "website": "https://serp.ly/bananamovies-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -72,6 +306,123 @@
     "website": "https://serp.ly/beeg-video-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save BestPornFlix videos directly from your browser with page-level media detection, a player button, and local download handling.",
+    "name": "Bestpornflix Video Downloader",
+    "slug": "bestpornflix-downloader",
+    "url": "/products/bestpornflix-downloader",
+    "website": "https://serp.ly/bestpornflix-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download BibaMax Videos from the Browser — Fast, Private, One Click",
+    "name": "Bibamax Video Downloader",
+    "slug": "bibamax-downloader",
+    "url": "/products/bibamax-downloader",
+    "website": "https://serp.ly/bibamax-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from BibaMax.ph player pages with a browser-based, one-click workflow built around direct media detection.",
+    "name": "Bibamaxph Video Downloader",
+    "slug": "bibamaxph-downloader",
+    "url": "/products/bibamaxph-downloader",
+    "website": "https://serp.ly/bibamaxph-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save available Big Butts Hub videos from the browser with a page-level button workflow.",
+    "name": "Bigbuttshub Video Downloader",
+    "slug": "bigbuttshub-downloader",
+    "url": "/products/bigbuttshub-downloader",
+    "website": "https://serp.ly/bigbuttshub-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from Bingato item pages with a player-button workflow built for Bingato's clean single-domain structure.",
+    "name": "Bingato Video Downloader",
+    "slug": "bingato-downloader",
+    "url": "/products/bingato-downloader",
+    "website": "https://serp.ly/bingato-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download BiPornFun videos from date-based post pages, captured directly from your browser.",
+    "name": "Bipornfun Video Downloader",
+    "slug": "bipornfun-downloader",
+    "url": "/products/bipornfun-downloader",
+    "website": "https://serp.ly/bipornfun-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save available Booty Christmas videos from themed page URLs with a browser-based player-button workflow.",
+    "name": "Bootychristmas Video Downloader",
+    "slug": "bootychristmas-downloader",
+    "url": "/products/bootychristmas-downloader",
+    "website": "https://serp.ly/bootychristmas-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download BootyExpo Video Pages — Fast, Private, Browser-Based",
+    "name": "Bootyexpo Video Downloader",
+    "slug": "bootyexpo-downloader",
+    "url": "/products/bootyexpo-downloader",
+    "website": "https://serp.ly/bootyexpo-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A conservative browser-based downloader candidate for legacy-style Borwap pages, designed to detect and save media from Borwap's mixed http/https surface.",
+    "name": "Borwap Video Downloader",
+    "slug": "borwap-downloader",
+    "url": "/products/borwap-downloader",
+    "website": "https://serp.ly/borwap-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -82,6 +433,71 @@
     "slug": "boyfriendtv-downloader",
     "url": "/products/boyfriendtv-downloader",
     "website": "https://serp.ly/boyfriendtv-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from BoysFood detail pages with a focused browser workflow and player-level button.",
+    "name": "Boysfood Video Downloader",
+    "slug": "boysfood-downloader",
+    "url": "/products/boysfood-downloader",
+    "website": "https://serp.ly/boysfood-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download BravoTube Videos — Easy Browser Workflow, No Extra App",
+    "name": "Bravotube Video Downloader",
+    "slug": "bravotube-downloader",
+    "url": "/products/bravotube-downloader",
+    "website": "https://serp.ly/bravotube-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from Brazz with a browser-based workflow. Detects available media candidates, adds player controls, and saves through the extension.",
+    "name": "Brazz Video Downloader",
+    "slug": "brazz-downloader",
+    "url": "/products/brazz-downloader",
+    "website": "https://serp.ly/brazz-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save Brazzers3x Videos in Your Browser",
+    "name": "Brazzers3x Video Downloader",
+    "slug": "brazzers3x-downloader",
+    "url": "/products/brazzers3x-downloader",
+    "website": "https://serp.ly/brazzers3x-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download BrazzPW videos in your browser. Detects exposed media candidates, adds a player button, and includes 3 free downloads.",
+    "name": "Brazzpw Video Downloader",
+    "slug": "brazzpw-downloader",
+    "url": "/products/brazzpw-downloader",
+    "website": "https://serp.ly/brazzpw-downloader"
   },
   {
     "category": "video-downloaders",
@@ -120,6 +536,19 @@
     "website": "https://serp.ly/circle-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download ClicPorn videos from your browser with a player button, popup controls, and 3 free trial downloads.",
+    "name": "Clicporn Video Downloader",
+    "slug": "clicporn-downloader",
+    "url": "/products/clicporn-downloader",
+    "website": "https://serp.ly/clicporn-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -130,6 +559,19 @@
     "slug": "clientclub-downloader",
     "url": "/products/clientclub-downloader",
     "website": "https://serp.ly/clientclub-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from CollectionOfBestPorn directly in your browser with page-aware media detection and simple one-click saving.",
+    "name": "Collectionofbestporn Video Downloader",
+    "slug": "collectionofbestporn-downloader",
+    "url": "/products/collectionofbestporn-downloader",
+    "website": "https://serp.ly/collectionofbestporn-downloader"
   },
   {
     "category": "video-downloaders",
@@ -156,6 +598,32 @@
     "website": "https://serp.ly/coursera-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from Cumlouder with a browser extension. Detects page media, adds a player button, and includes 3 free downloads.",
+    "name": "Cumlouder Video Downloader",
+    "slug": "cumlouder-downloader",
+    "url": "/products/cumlouder-downloader",
+    "website": "https://serp.ly/cumlouder-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from CzechVideo. Detect page media, add a player button, and save through your browser. 3 free downloads.",
+    "name": "Czechvideo Video Downloader",
+    "slug": "czechvideo-downloader",
+    "url": "/products/czechvideo-downloader",
+    "website": "https://serp.ly/czechvideo-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -166,6 +634,32 @@
     "slug": "dailymotion-downloader",
     "url": "/products/dailymotion-downloader",
     "website": "https://serp.ly/dailymotion-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from DefineBabe with an on-page browser extension. Detect playable media, use a player button, and save directly in your browser.",
+    "name": "Definebabe Video Downloader",
+    "slug": "definebabe-downloader",
+    "url": "/products/definebabe-downloader",
+    "website": "https://serp.ly/definebabe-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download DEFLR Videos — Private, Browser-Based, One Click",
+    "name": "Deflr Video Downloader",
+    "slug": "deflr-downloader",
+    "url": "/products/deflr-downloader",
+    "website": "https://serp.ly/deflr-downloader"
   },
   {
     "category": "video-downloaders",
@@ -264,6 +758,45 @@
     "website": "https://serp.ly/dreamcam-vr-video-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download DrTuber videos in your browser — fast, private, and straightforward.",
+    "name": "Drtuber Video Downloader",
+    "slug": "drtuber-downloader",
+    "url": "/products/drtuber-downloader",
+    "website": "https://serp.ly/drtuber-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download EmpFlix Videos — One Click, Private, Browser-Based.",
+    "name": "Empflix Video Downloader",
+    "slug": "empflix-downloader",
+    "url": "/products/empflix-downloader",
+    "website": "https://serp.ly/empflix-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from Entensity. Detect playable media, add a player button, and save in-browser with 3 free downloads.",
+    "name": "Entensity Video Downloader",
+    "slug": "entensity-downloader",
+    "url": "/products/entensity-downloader",
+    "website": "https://serp.ly/entensity-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -300,6 +833,32 @@
     "website": "https://serp.ly/erothots-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save EroticMV videos from the page itself. Detect available media, choose a format, and download in-browser.",
+    "name": "Eroticmv Video Downloader",
+    "slug": "eroticmv-downloader",
+    "url": "/products/eroticmv-downloader",
+    "website": "https://serp.ly/eroticmv-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from EuroXXX. Detects playable media, adds a player button, and saves through your browser.",
+    "name": "Euroxxx Video Downloader",
+    "slug": "euroxxx-downloader",
+    "url": "/products/euroxxx-downloader",
+    "website": "https://serp.ly/euroxxx-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -310,6 +869,19 @@
     "slug": "facebook-downloader",
     "url": "/products/facebook-downloader",
     "website": "https://serp.ly/facebook-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from FAkings TV. Detects playable media, adds a player button, and saves through your browser. 3 free downloads.",
+    "name": "Fakingstv Video Downloader",
+    "slug": "fakingstv-downloader",
+    "url": "/products/fakingstv-downloader",
+    "website": "https://serp.ly/fakingstv-downloader"
   },
   {
     "category": "video-downloaders",
@@ -324,6 +896,188 @@
     "website": "https://serp.ly/fansly-live-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download Fapality videos directly from your browser with a single click. Save media as MP4 files for offline viewing.",
+    "name": "Fapality Video Downloader",
+    "slug": "fapality-downloader",
+    "url": "/products/fapality-downloader",
+    "website": "https://serp.ly/fapality-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from Fapnado. Detect playable media, add a player button, and save through your browser. 3 free downloads.",
+    "name": "Fapnado Video Downloader",
+    "slug": "fapnado-downloader",
+    "url": "/products/fapnado-downloader",
+    "website": "https://serp.ly/fapnado-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from FapTap directly in your browser. Detect MP4 or playlist media, use a player button, and save files locally.",
+    "name": "Faptap Video Downloader",
+    "slug": "faptap-downloader",
+    "url": "/products/faptap-downloader",
+    "website": "https://serp.ly/faptap-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save FoxTube videos in your browser. Finds playable media, adds a download button, and includes 3 free downloads.",
+    "name": "Foxtube Video Downloader",
+    "slug": "foxtube-downloader",
+    "url": "/products/foxtube-downloader",
+    "website": "https://serp.ly/foxtube-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from FPOXXX pages with a browser button, direct media detection, and a clean page-native flow.",
+    "name": "Fpoxxx Video Downloader",
+    "slug": "fpoxxx-downloader",
+    "url": "/products/fpoxxx-downloader",
+    "website": "https://serp.ly/fpoxxx-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save Freeomovie videos in your browser.",
+    "name": "Freeomovie Video Downloader",
+    "slug": "freeomovie-downloader",
+    "url": "/products/freeomovie-downloader",
+    "website": "https://serp.ly/freeomovie-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download FreeOnes Tube videos in your browser. Detect playable media, click the player button, and save with 3 free downloads.",
+    "name": "Freeonestube Video Downloader",
+    "slug": "freeonestube-downloader",
+    "url": "/products/freeonestube-downloader",
+    "website": "https://serp.ly/freeonestube-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser-based FreePornSex.net downloader candidate for supported pages, long text-slug posts, and on-page media detection.",
+    "name": "Freepornsexnet Video Downloader",
+    "slug": "freepornsexnet-downloader",
+    "url": "/products/freepornsexnet-downloader",
+    "website": "https://serp.ly/freepornsexnet-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download FreePornVideos.xxx videos in browser. Detect page media, click the player button, and save available sources.",
+    "name": "Freepornvideosxxx Video Downloader",
+    "slug": "freepornvideosxxx-downloader",
+    "url": "/products/freepornvideosxxx-downloader",
+    "website": "https://serp.ly/freepornvideosxxx-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from FullPorner watch pages with a private browser workflow and broad helper-host coverage.",
+    "name": "Fullporner Video Downloader",
+    "slug": "fullporner-downloader",
+    "url": "/products/fullporner-downloader",
+    "website": "https://serp.ly/fullporner-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download FullXXXMovies Videos Across the Brand and Playback Domains",
+    "name": "Fullxxxmovies Video Downloader",
+    "slug": "fullxxxmovies-downloader",
+    "url": "/products/fullxxxmovies-downloader",
+    "website": "https://serp.ly/fullxxxmovies-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from FOXNXX pages with a browser extension flow, player button support, and compact media detection.",
+    "name": "Fuxnxx Video Downloader",
+    "slug": "fuxnxx-downloader",
+    "url": "/products/fuxnxx-downloader",
+    "website": "https://serp.ly/fuxnxx-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from Fuxxx with a clean browser workflow, player button access, and one-click saving when media is exposed.",
+    "name": "Fuxxx Video Downloader",
+    "slug": "fuxxx-downloader",
+    "url": "/products/fuxxx-downloader",
+    "website": "https://serp.ly/fuxxx-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from GalaxyPorn with a private browser workflow shaped for broad helper-host playback surfaces.",
+    "name": "Galaxyporn Video Downloader",
+    "slug": "galaxyporn-downloader",
+    "url": "/products/galaxyporn-downloader",
+    "website": "https://serp.ly/galaxyporn-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -334,6 +1088,19 @@
     "slug": "getty-images-downloader",
     "url": "/products/getty-images-downloader",
     "website": "https://serp.ly/getty-images-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download GimmePorn videos with a button-driven browser flow that follows branded pages into helper-host playback delivery.",
+    "name": "Gimmeporn Video Downloader",
+    "slug": "gimmeporn-downloader",
+    "url": "/products/gimmeporn-downloader",
+    "website": "https://serp.ly/gimmeporn-downloader"
   },
   {
     "category": "video-downloaders",
@@ -360,6 +1127,71 @@
     "website": "https://serp.ly/gokollab-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from GoonChan pages with a simple browser workflow, player button support, and compact on-page detection.",
+    "name": "Goonchan Video Downloader",
+    "slug": "goonchan-downloader",
+    "url": "/products/goonchan-downloader",
+    "website": "https://serp.ly/goonchan-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from GOONIT with a simple browser workflow, player button access, and GOONIT-focused host coverage.",
+    "name": "Goonit Video Downloader",
+    "slug": "goonit-downloader",
+    "url": "/products/goonit-downloader",
+    "website": "https://serp.ly/goonit-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save HD-EasyPorn videos in your browser with a site-focused workflow, player button access, and 3 free downloads.",
+    "name": "Hdeasyporn Video Downloader",
+    "slug": "hdeasyporn-downloader",
+    "url": "/products/hdeasyporn-downloader",
+    "website": "https://serp.ly/hdeasyporn-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download HDPorn92 videos with a button-first browser workflow. Detects page media, offers simple saves, and includes 3 free downloads.",
+    "name": "Hdporn92 Video Downloader",
+    "slug": "hdporn92-downloader",
+    "url": "/products/hdporn92-downloader",
+    "website": "https://serp.ly/hdporn92-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save HDPorn.watch videos from the browser with .watch page targeting, player-button access, and 3 free trial downloads.",
+    "name": "Hdpornwatch Video Downloader",
+    "slug": "hdpornwatch-downloader",
+    "url": "/products/hdpornwatch-downloader",
+    "website": "https://serp.ly/hdpornwatch-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -370,6 +1202,19 @@
     "slug": "hdzog-downloader",
     "url": "/products/hdzog-downloader",
     "website": "https://serp.ly/hdzog-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download Hello Porn videos in your browser with a player button, popup access, and direct-media detection.",
+    "name": "Helloporn Video Downloader",
+    "slug": "helloporn-downloader",
+    "url": "/products/helloporn-downloader",
+    "website": "https://serp.ly/helloporn-downloader"
   },
   {
     "category": "video-downloaders",
@@ -384,6 +1229,58 @@
     "website": "https://serp.ly/hentaihaven-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download HornyButt videos with a browser workflow tuned for iframe pages and RubyVidHub/StreamRuby media hosts.",
+    "name": "Hornybutt Video Downloader",
+    "slug": "hornybutt-downloader",
+    "url": "/products/hornybutt-downloader",
+    "website": "https://serp.ly/hornybutt-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download HotMovs videos from HotMovs video pages with browser-based media detection, iframe/player handoff awareness, and 1-click flow.",
+    "name": "Hotmovs Video Downloader",
+    "slug": "hotmovs-downloader",
+    "url": "/products/hotmovs-downloader",
+    "website": "https://serp.ly/hotmovs-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save HQFap videos from the watch page with a private local-download flow built for MP4 and M3U8 detection.",
+    "name": "Hqfap Video Downloader",
+    "slug": "hqfap-downloader",
+    "url": "/products/hqfap-downloader",
+    "website": "https://serp.ly/hqfap-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Capture HQporner videos from /hdporn/ pages with messaging built around mydaddy.cc embed handoff and direct MP4 discovery.",
+    "name": "Hqporner Video Downloader",
+    "slug": "hqporner-downloader",
+    "url": "/products/hqporner-downloader",
+    "website": "https://serp.ly/hqporner-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -394,6 +1291,45 @@
     "slug": "hulu-downloader",
     "url": "/products/hulu-downloader",
     "website": "https://serp.ly/hulu-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download HutPorner videos with verified relay-aware detection for iframe playback that shifts from hutporner.com to hornysimp.com.lv.",
+    "name": "Hutporner Video Downloader",
+    "slug": "hutporner-downloader",
+    "url": "/products/hutporner-downloader",
+    "website": "https://serp.ly/hutporner-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Capture IcePornCasting videos from /video/ pages with iframe-handoff messaging and m3u8 or mp4 discovery.",
+    "name": "Iceporncasting Video Downloader",
+    "slug": "iceporncasting-downloader",
+    "url": "/products/iceporncasting-downloader",
+    "website": "https://serp.ly/iceporncasting-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download InPorn videos from direct `/video/&lt;id&gt;/&lt;slug&gt;/` pages with simple player handoff framing and cautious m3u8/mp4 support.",
+    "name": "Inporn Video Downloader",
+    "slug": "inporn-downloader",
+    "url": "/products/inporn-downloader",
+    "website": "https://serp.ly/inporn-downloader"
   },
   {
     "category": "video-downloaders",
@@ -420,6 +1356,71 @@
     "website": "https://serp.ly/internet-archive-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from inXXX with a browser workflow tuned for /v/ pages, iframe/player discovery, and exposed m3u8 or mp4 streams.",
+    "name": "Inxxx Video Downloader",
+    "slug": "inxxx-downloader",
+    "url": "/products/inxxx-downloader",
+    "website": "https://serp.ly/inxxx-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Capture media from iPornTV's /download/video/ pages with TV-style brand framing, iframe discovery, and m3u8 or mp4 support.",
+    "name": "Iporntv Video Downloader",
+    "slug": "iporntv-downloader",
+    "url": "/products/iporntv-downloader",
+    "website": "https://serp.ly/iporntv-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save media from ItNaked `/views/` relay pages with one-click detection for iframe-based m3u8 or mp4 sources when available.",
+    "name": "Itnaked Video Downloader",
+    "slug": "itnaked-downloader",
+    "url": "/products/itnaked-downloader",
+    "website": "https://serp.ly/itnaked-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Clip-focused JerkMotion helper for repeated `video-leak` pages, embed handoffs, and careful `m3u8` or `mp4` source checks.",
+    "name": "Jerkmotion Video Downloader",
+    "slug": "jerkmotion-downloader",
+    "url": "/products/jerkmotion-downloader",
+    "website": "https://serp.ly/jerkmotion-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save Joystube videos from article-style pages. Built for likely iframe handoff, MP4/M3U8 detection, and tube-site workflow.",
+    "name": "Joystube Video Downloader",
+    "slug": "joystube-downloader",
+    "url": "/products/joystube-downloader",
+    "website": "https://serp.ly/joystube-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -432,6 +1433,32 @@
     "website": "https://serp.ly/justforfans-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Built for bestporn4free.com entry pages that reveal media through iframe relays and downstream m3u8 or mp4 hosts.",
+    "name": "Justfullporn Video Downloader",
+    "slug": "justfullporn-downloader",
+    "url": "/products/justfullporn-downloader",
+    "website": "https://serp.ly/justfullporn-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A focused video downloader for JustPorn pages that follow the `/video/&lt;id&gt;/&lt;slug&gt;/` route, detecting media through embedded players and surfacing available stream formats.",
+    "name": "Justporn Video Downloader",
+    "slug": "justporn-downloader",
+    "url": "/products/justporn-downloader",
+    "website": "https://serp.ly/justporn-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -442,6 +1469,97 @@
     "slug": "kajabi-downloader",
     "url": "/products/kajabi-downloader",
     "website": "https://serp.ly/kajabi-video-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension for downloading media from Kompoz2 TV listing pages with iframe playback checks and m3u8 or mp4 source detection.",
+    "name": "Kompoz2 Video Downloader",
+    "slug": "kompoz2-downloader",
+    "url": "/products/kompoz2-downloader",
+    "website": "https://serp.ly/kompoz2-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Fast, private video downloader for Lady Banana UK pages with iframe-aware detection and support for m3u8 and mp4 sources.",
+    "name": "Ladybanana Video Downloader",
+    "slug": "ladybanana-downloader",
+    "url": "/products/ladybanana-downloader",
+    "website": "https://serp.ly/ladybanana-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Capture media from LanaRhoades.tv /en/videos/ pages with performer-branded .tv framing, iframe discovery, and m3u8 or mp4 hints.",
+    "name": "Lanarhoadestv Video Downloader",
+    "slug": "lanarhoadestv-downloader",
+    "url": "/products/lanarhoadestv-downloader",
+    "website": "https://serp.ly/lanarhoadestv-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save Latestleaks videos from fresh slug pages. Built for likely iframe handoff, numeric-tail routes, and MP4/M3U8 discovery.",
+    "name": "Latestleaks Video Downloader",
+    "slug": "latestleaks-downloader",
+    "url": "/products/latestleaks-downloader",
+    "website": "https://serp.ly/latestleaks-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Numeric-route MP4 finder for Latestpornvideo — follow iframe sources and capture direct file exposures.",
+    "name": "Latestpornvideo Video Downloader",
+    "slug": "latestpornvideo-downloader",
+    "url": "/products/latestpornvideo-downloader",
+    "website": "https://serp.ly/latestpornvideo-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Short-code-aware LetMeJerk helper for LetMeJerk or LetMeJizz pages, embed handoffs, and careful m3u8 or mp4 source checks.",
+    "name": "Letmejerk Video Downloader",
+    "slug": "letmejerk-downloader",
+    "url": "/products/letmejerk-downloader",
+    "website": "https://serp.ly/letmejerk-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Route-aware LetsJerk .tv helper for long episode-style pages, iframe handoffs, and careful m3u8 or mp4 source checks.",
+    "name": "Letsjerk Video Downloader",
+    "slug": "letsjerk-downloader",
+    "url": "/products/letsjerk-downloader",
+    "website": "https://serp.ly/letsjerk-downloader"
   },
   {
     "category": "video-downloaders",
@@ -480,6 +1598,32 @@
     "website": "https://serp.ly/loom-video-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from Lustbb with support for embedded player detection and cross-domain media capture.",
+    "name": "Lustbb Video Downloader",
+    "slug": "lustbb-downloader",
+    "url": "/products/lustbb-downloader",
+    "website": "https://serp.ly/lustbb-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download LuxPorn premium video pages — tuned for `/movies/` routes and multi-host playback chains.",
+    "name": "Luxporn Video Downloader",
+    "slug": "luxporn-downloader",
+    "url": "/products/luxporn-downloader",
+    "website": "https://serp.ly/luxporn-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -504,6 +1648,19 @@
     "website": "https://serp.ly/m3u8-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension that detects and downloads video sources from Mangoporn movie pages, handling iframe-based playback to find available m3u8 or mp4 streams.",
+    "name": "Mangoporn Video Downloader",
+    "slug": "mangoporn-downloader",
+    "url": "/products/mangoporn-downloader",
+    "website": "https://serp.ly/mangoporn-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -516,6 +1673,45 @@
     "website": "https://serp.ly/manyvids-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension for downloading videos from Max Porn clip pages, delivering output in standard MP4 format.",
+    "name": "Maxporn Video Downloader",
+    "slug": "maxporn-downloader",
+    "url": "/products/maxporn-downloader",
+    "website": "https://serp.ly/maxporn-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save videos from Megatube .xxx clip pages with one-click iframe-led detection for exposed m3u8 or mp4 media.",
+    "name": "Megatube Video Downloader",
+    "slug": "megatube-downloader",
+    "url": "/products/megatube-downloader",
+    "website": "https://serp.ly/megatube-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Capture media from MiaKhalifa.tv /en/videos/ pages with performer-branded .tv framing, iframe discovery, and m3u8 or mp4 hints.",
+    "name": "Miakhalifatv Video Downloader",
+    "slug": "miakhalifatv-downloader",
+    "url": "/products/miakhalifatv-downloader",
+    "website": "https://serp.ly/miakhalifatv-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -526,6 +1722,45 @@
     "slug": "mindvalley-downloader",
     "url": "/products/mindvalley-downloader",
     "website": "https://serp.ly/mindvalley-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A focused downloader for MobiFcuk root-level article slug pages, designed to handle iframe playback handoff and inspect m3u8 or mp4 sources.",
+    "name": "Mobifcuk Video Downloader",
+    "slug": "mobifcuk-downloader",
+    "url": "/products/mobifcuk-downloader",
+    "website": "https://serp.ly/mobifcuk-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Clip-page downloader for ModPorn with iframe-aware media detection and careful m3u8 or mp4 discovery.",
+    "name": "Modporn Video Downloader",
+    "slug": "modporn-downloader",
+    "url": "/products/modporn-downloader",
+    "website": "https://serp.ly/modporn-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download from MonsterFap root-level slug pages with iframe handoff awareness and m3u8 or mp4 stream detection.",
+    "name": "Monsterfap Video Downloader",
+    "slug": "monsterfap-downloader",
+    "url": "/products/monsterfap-downloader",
+    "website": "https://serp.ly/monsterfap-downloader"
   },
   {
     "category": "video-downloaders",
@@ -562,6 +1797,71 @@
     "slug": "myfreecams-downloader",
     "url": "/products/myfreecams-downloader",
     "website": "https://serp.ly/myfreecams-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save MyGoodPorn.tv videos from `/video/&lt;id&gt;/&lt;slug&gt;/` pages with likely iframe handoff and MP4/M3U8 stream discovery.",
+    "name": "Mygoodporn Video Downloader",
+    "slug": "mygoodporn-downloader",
+    "url": "/products/mygoodporn-downloader",
+    "website": "https://serp.ly/mygoodporn-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Built for MyPornerLeak pages that hand playback into w8.mypornerleak.com and surface m3u8 or mp4 via iframe flow.",
+    "name": "Mypornerleak Video Downloader",
+    "slug": "mypornerleak-downloader",
+    "url": "/products/mypornerleak-downloader",
+    "website": "https://serp.ly/mypornerleak-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download NePorn videos from your browser with a focused workflow for iframe-based playback.",
+    "name": "Neporn Video Downloader",
+    "slug": "neporn-downloader",
+    "url": "/products/neporn-downloader",
+    "website": "https://serp.ly/neporn-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension candidate for downloading videos from Netfapx dated article-style pages, supporting iframe handoffs and M3U8/MP4 video streams.",
+    "name": "Netfapx Video Downloader",
+    "slug": "netfapx-downloader",
+    "url": "/products/netfapx-downloader",
+    "website": "https://serp.ly/netfapx-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A focused download helper for NetFapX.net pages that use bare numeric routes and embedded player handoff patterns.",
+    "name": "Netfapxnet Video Downloader",
+    "slug": "netfapxnet-downloader",
+    "url": "/products/netfapxnet-downloader",
+    "website": "https://serp.ly/netfapxnet-downloader"
   },
   {
     "category": "video-downloaders",
@@ -612,6 +1912,58 @@
     "website": "https://serp.ly/serp-notes"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Fast, private, one-click video downloads from OGPorn pages with iframe-based playback and likely m3u8/mp4 stream handoff.",
+    "name": "Ogporn Video Downloader",
+    "slug": "ogporn-downloader",
+    "url": "/products/ogporn-downloader",
+    "website": "https://serp.ly/ogporn-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Capture OK Porn videos from ok.porn/video/&lt;id&gt;/ pages with iframe-handoff messaging and m3u8 or mp4 discovery.",
+    "name": "Okporn Video Downloader",
+    "slug": "okporn-downloader",
+    "url": "/products/okporn-downloader",
+    "website": "https://serp.ly/okporn-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension for downloading videos from OK.xxx pages, supporting iframe-based playback handoffs and M3U8/MP4 video streams.",
+    "name": "Okxxx Video Downloader",
+    "slug": "okxxx-downloader",
+    "url": "/products/okxxx-downloader",
+    "website": "https://serp.ly/okxxx-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser-first OMG XXX downloader candidate for iframe-handoff video pages, branded /videos routes, and m3u8/mp4 stream discovery.",
+    "name": "Omgxxx Video Downloader",
+    "slug": "omgxxx-downloader",
+    "url": "/products/omgxxx-downloader",
+    "website": "https://serp.ly/omgxxx-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -636,6 +1988,32 @@
     "website": "https://serp.ly/onlyfans-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save PandaMovies videos from watch-style movie pages with likely iframe handoff and MP4/M3U8 stream discovery.",
+    "name": "Pandamovies Video Downloader",
+    "slug": "pandamovies-downloader",
+    "url": "/products/pandamovies-downloader",
+    "website": "https://serp.ly/pandamovies-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Follow ParadiseHill's iframe/player handoff in-browser and save exposed MP4 or HLS streams with clear QA caveats.",
+    "name": "Paradisehill Video Downloader",
+    "slug": "paradisehill-downloader",
+    "url": "/products/paradisehill-downloader",
+    "website": "https://serp.ly/paradisehill-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -646,6 +2024,45 @@
     "slug": "patreon-downloader",
     "url": "/products/patreon-downloader",
     "website": "https://serp.ly/patreon-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension candidate for saving video clips from Peekvids `/v` routes, supporting iframe-led playback handoff and cautious m3u8/mp4 stream discovery.",
+    "name": "Peekvids Video Downloader",
+    "slug": "peekvids-downloader",
+    "url": "/products/peekvids-downloader",
+    "website": "https://serp.ly/peekvids-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A curated downloader for Perfect Girls .xxx video pages with numeric routes, iframe playback, and cautious m3u8/mp4 support.",
+    "name": "Perfectgirls Video Downloader",
+    "slug": "perfectgirls-downloader",
+    "url": "/products/perfectgirls-downloader",
+    "website": "https://serp.ly/perfectgirls-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension for downloading video content from tube.perverzija.com pages, supporting iframe-embedded players and M3U8/MP4 stream formats.",
+    "name": "Perverzija Video Downloader",
+    "slug": "perverzija-downloader",
+    "url": "/products/perverzija-downloader",
+    "website": "https://serp.ly/perverzija-downloader"
   },
   {
     "category": "video-downloaders",
@@ -660,6 +2077,19 @@
     "website": "https://serp.ly/pexels-video-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Route-aware PhonErotica downloader candidate for mobile-portal video pages, iframe playback handoff, and cautious m3u8/mp4 capture.",
+    "name": "Phonerotica Video Downloader",
+    "slug": "phonerotica-downloader",
+    "url": "/products/phonerotica-downloader",
+    "website": "https://serp.ly/phonerotica-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -670,6 +2100,19 @@
     "slug": "pinterest-downloader",
     "url": "/products/pinterest-downloader",
     "website": "https://serp.ly/pinterest-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension candidate for detecting and downloading video streams from Playhdporn video pages, with support for iframe-led playback handoff and m3u8/mp4 media discovery.",
+    "name": "Playhdporn Video Downloader",
+    "slug": "playhdporn-downloader",
+    "url": "/products/playhdporn-downloader",
+    "website": "https://serp.ly/playhdporn-downloader"
   },
   {
     "category": "video-downloaders",
@@ -684,6 +2127,266 @@
     "website": "https://serp.ly/podia-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A practical downloader for discovering and saving videos from Porn00's numeric-brand catalog.",
+    "name": "Porn00 Video Downloader",
+    "slug": "porn00-downloader",
+    "url": "/products/porn00-downloader",
+    "website": "https://serp.ly/porn00-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from Porn2all broad collection pages with support for embedded player handoff and M3U8/MP4 stream sources.",
+    "name": "Porn2all Video Downloader",
+    "slug": "porn2all-downloader",
+    "url": "/products/porn2all-downloader",
+    "website": "https://serp.ly/porn2all-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension to download videos from Porn300 title-led `/video/&lt;slug&gt;/` pages with support for embedded player handoff and MP4 export.",
+    "name": "Porn300 Video Downloader",
+    "slug": "porn300-downloader",
+    "url": "/products/porn300-downloader",
+    "website": "https://serp.ly/porn300-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save videos from Porn4days video pages with support for iframe-delivered M3U8 or MP4 playback.",
+    "name": "Porn4days Video Downloader",
+    "slug": "porn4days-downloader",
+    "url": "/products/porn4days-downloader",
+    "website": "https://serp.ly/porn4days-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save Porn API videos from /watch pages with iframe-aware media detection and MP4/HLS handoff tracking.",
+    "name": "Pornapi Video Downloader",
+    "slug": "pornapi-downloader",
+    "url": "/products/pornapi-downloader",
+    "website": "https://serp.ly/pornapi-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from Pornbaker numeric-ID-plus-slug pages with iframe-delivered M3U8 or MP4 playback.",
+    "name": "Pornbaker Video Downloader",
+    "slug": "pornbaker-downloader",
+    "url": "/products/pornbaker-downloader",
+    "website": "https://serp.ly/pornbaker-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A downloader for PornBusy pages with long title slugs, embedded iframe playback, and possible M3U8 or MP4 media capture.",
+    "name": "Pornbusy Video Downloader",
+    "slug": "pornbusy-downloader",
+    "url": "/products/pornbusy-downloader",
+    "website": "https://serp.ly/pornbusy-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from Porndig video pages directly to MP4 files.",
+    "name": "Porndig Video Downloader",
+    "slug": "porndig-downloader",
+    "url": "/products/porndig-downloader",
+    "website": "https://serp.ly/porndig-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A route-aware browser extension for downloading videos from Pornditt's dedicated playback surface on v.pornditt.com, outputting MP4 files from detected m3u8 or mp4 streams.",
+    "name": "Pornditt Video Downloader",
+    "slug": "pornditt-downloader",
+    "url": "/products/pornditt-downloader",
+    "website": "https://serp.ly/pornditt-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Fast, private, one-click video downloads from Porndoe watch pages with iframe-based playback and MP4 output.",
+    "name": "Porndoe Video Downloader",
+    "slug": "porndoe-downloader",
+    "url": "/products/porndoe-downloader",
+    "website": "https://serp.ly/porndoe-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A download tool for Porndroids video pages that handles iframe-embedded playback and delivers MP4 output.",
+    "name": "Porndroids Video Downloader",
+    "slug": "porndroids-downloader",
+    "url": "/products/porndroids-downloader",
+    "website": "https://serp.ly/porndroids-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Review Porneec pages with iframe-led playback and surface possible m3u8 or mp4 media using cautious QA-first copy.",
+    "name": "Porneec Video Downloader",
+    "slug": "porneec-downloader",
+    "url": "/products/porneec-downloader",
+    "website": "https://serp.ly/porneec-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A targeted download tool for PornEkip video pages, designed to handle iframe-delivered M3U8 or MP4 playback on numeric-slug routes.",
+    "name": "Pornekip Video Downloader",
+    "slug": "pornekip-downloader",
+    "url": "/products/pornekip-downloader",
+    "website": "https://serp.ly/pornekip-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A site-specific capture workflow for PornEZ.cam video pages that handles iframe-based playback and long root-level slug URLs.",
+    "name": "Pornezcam Video Downloader",
+    "slug": "pornezcam-downloader",
+    "url": "/products/pornezcam-downloader",
+    "website": "https://serp.ly/pornezcam-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download from Porngo video routes with iframe-aware detection and likely m3u8 or mp4 resolution.",
+    "name": "Porngo Video Downloader",
+    "slug": "porngo-downloader",
+    "url": "/products/porngo-downloader",
+    "website": "https://serp.ly/porngo-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save videos from PornHat's slug-based pages with iframe-aware detection and likely m3u8/mp4 resolution.",
+    "name": "Pornhat Video Downloader",
+    "slug": "pornhat-downloader",
+    "url": "/products/pornhat-downloader",
+    "website": "https://serp.ly/pornhat-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A focused browser-extension candidate for inspecting PornHD3x movie playback, following the iframe path on numbered subdomains, and capturing exposed m3u8 or mp4 media candidates.",
+    "name": "Pornhd3x Video Downloader",
+    "slug": "pornhd3x-downloader",
+    "url": "/products/pornhd3x-downloader",
+    "website": "https://serp.ly/pornhd3x-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser-first PornHD4K downloader candidate for iframe-handoff movie pages, branded /movies routes, and m3u8/mp4 stream discovery.",
+    "name": "Pornhd4k Video Downloader",
+    "slug": "pornhd4k-downloader",
+    "url": "/products/pornhd4k-downloader",
+    "website": "https://serp.ly/pornhd4k-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A site-specific browser extension candidate for identifying and capturing stream references from PornHD8k en8 playback pages.",
+    "name": "Pornhd8k Video Downloader",
+    "slug": "pornhd8k-downloader",
+    "url": "/products/pornhd8k-downloader",
+    "website": "https://serp.ly/pornhd8k-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save PornHits video entries from /video/&lt;id&gt;/&lt;slug&gt;/ pages with iframe-aware lookup and likely m3u8 or mp4 outcomes.",
+    "name": "Pornhits Video Downloader",
+    "slug": "pornhits-downloader",
+    "url": "/products/pornhits-downloader",
+    "website": "https://serp.ly/pornhits-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -696,6 +2399,188 @@
     "website": "https://serp.ly/pornhub-video-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from PornLib /video pages with iframe-aware detection and likely m3u8 or mp4 stream resolution.",
+    "name": "Pornlib Video Downloader",
+    "slug": "pornlib-downloader",
+    "url": "/products/pornlib-downloader",
+    "website": "https://serp.ly/pornlib-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Capture PornMedium videos from slug-plus-ID pages with iframe-handoff messaging and cautious m3u8 or mp4 discovery.",
+    "name": "Pornmedium Video Downloader",
+    "slug": "pornmedium-downloader",
+    "url": "/products/pornmedium-downloader",
+    "website": "https://serp.ly/pornmedium-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension that downloads videos from PornMike video pages and exports them as MP4 files.",
+    "name": "Pornmike Video Downloader",
+    "slug": "pornmike-downloader",
+    "url": "/products/pornmike-downloader",
+    "website": "https://serp.ly/pornmike-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Capture media from PornMK slug pages with iframe-aware lookup and likely m3u8 or mp4 results.",
+    "name": "Pornmk Video Downloader",
+    "slug": "pornmk-downloader",
+    "url": "/products/pornmk-downloader",
+    "website": "https://serp.ly/pornmk-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download from PornMZ video pages using MZ route targeting, iframe handoff detection, and m3u8 or mp4 stream hints.",
+    "name": "Pornmz Video Downloader",
+    "slug": "pornmz-downloader",
+    "url": "/products/pornmz-downloader",
+    "website": "https://serp.ly/pornmz-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from PornoBae root-level slug pages with iframe-aware detection and m3u8 or mp4 output.",
+    "name": "Pornobae Video Downloader",
+    "slug": "pornobae-downloader",
+    "url": "/products/pornobae-downloader",
+    "website": "https://serp.ly/pornobae-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser-based download candidate for Pornoflix root-level title links, iframe player handoff, and m3u8/mp4 stream capture.",
+    "name": "Pornoflix Video Downloader",
+    "slug": "pornoflix-downloader",
+    "url": "/products/pornoflix-downloader",
+    "website": "https://serp.ly/pornoflix-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser-based downloader candidate for Pornoframe frame archives, gallery entries, and embedded player paths with careful MP4 support.",
+    "name": "Pornoframe Video Downloader",
+    "slug": "pornoframe-downloader",
+    "url": "/products/pornoframe-downloader",
+    "website": "https://serp.ly/pornoframe-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Fast, private, one-click video downloads from PornOne pages with iframe-based playback and stream discovery.",
+    "name": "Pornone Video Downloader",
+    "slug": "pornone-downloader",
+    "url": "/products/pornone-downloader",
+    "website": "https://serp.ly/pornone-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save PornSlash videos from your browser with detected MP4/HLS options, a player button, and 3 free trial downloads.",
+    "name": "Pornslash Video Downloader",
+    "slug": "pornslash-downloader",
+    "url": "/products/pornslash-downloader",
+    "website": "https://serp.ly/pornslash-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download PornsOK videos in the browser with detected MP4 or HLS options, a player button, and 3 free trial downloads.",
+    "name": "Pornsok Video Downloader",
+    "slug": "pornsok-downloader",
+    "url": "/products/pornsok-downloader",
+    "website": "https://serp.ly/pornsok-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download PornStarsTube videos directly from your browser with detected format options and an in-page download button.",
+    "name": "Pornstarstube Video Downloader",
+    "slug": "pornstarstube-downloader",
+    "url": "/products/pornstarstube-downloader",
+    "website": "https://serp.ly/pornstarstube-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download Pornsy videos from the active page using a dedicated browser extension workflow.",
+    "name": "Pornsy Video Downloader",
+    "slug": "pornsy-downloader",
+    "url": "/products/pornsy-downloader",
+    "website": "https://serp.ly/pornsy-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download PornTop videos from the browser with detected MP4 or HLS options and a player button.",
+    "name": "Porntop Video Downloader",
+    "slug": "porntop-downloader",
+    "url": "/products/porntop-downloader",
+    "website": "https://serp.ly/porntop-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -706,6 +2591,97 @@
     "slug": "porntrex-downloader",
     "url": "/products/porntrex-downloader",
     "website": "https://serp.ly/porntrex-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension workflow for detecting PornVe video media and saving available MP4 or HLS options from the active page.",
+    "name": "Pornve Video Downloader",
+    "slug": "pornve-downloader",
+    "url": "/products/pornve-downloader",
+    "website": "https://serp.ly/pornve-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download videos from Pornvibe quickly and save them as MP4 files.",
+    "name": "Pornvibe Video Downloader",
+    "slug": "pornvibe-downloader",
+    "url": "/products/pornvibe-downloader",
+    "website": "https://serp.ly/pornvibe-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A focused browser-extension downloader for PornVideoBB content-video pages, saving videos as MP4 files.",
+    "name": "Pornvideobb Video Downloader",
+    "slug": "pornvideobb-downloader",
+    "url": "/products/pornvideobb-downloader",
+    "website": "https://serp.ly/pornvideobb-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Detect Pornwex video media in-browser, review MP4 or HLS options when available, and try 3 free downloads.",
+    "name": "Pornwex Video Downloader",
+    "slug": "pornwex-downloader",
+    "url": "/products/pornwex-downloader",
+    "website": "https://serp.ly/pornwex-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download PornXP videos from your browser and save them as MP4 files.",
+    "name": "Pornxp Video Downloader",
+    "slug": "pornxp-downloader",
+    "url": "/products/pornxp-downloader",
+    "website": "https://serp.ly/pornxp-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download Pussyspace Videos from Your Browser",
+    "name": "Pussyspace Video Downloader",
+    "slug": "pussyspace-downloader",
+    "url": "/products/pussyspace-downloader",
+    "website": "https://serp.ly/pussyspace-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save RajWap Videos from Supported `rajwap.biz` Pages",
+    "name": "Rajwap Video Downloader",
+    "slug": "rajwap-downloader",
+    "url": "/products/rajwap-downloader",
+    "website": "https://serp.ly/rajwap-downloader"
   },
   {
     "category": "video-downloaders",
@@ -730,6 +2706,19 @@
     "slug": "reddit-downloader",
     "url": "/products/reddit-downloader",
     "website": "https://serp.ly/reddit-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save Reddit Tube videos from Reddit Tube and ReddVideo pages as MP4 files.",
+    "name": "Reddittube Video Downloader",
+    "slug": "reddittube-downloader",
+    "url": "/products/reddittube-downloader",
+    "website": "https://serp.ly/reddittube-downloader"
   },
   {
     "category": "video-downloaders",
@@ -768,6 +2757,32 @@
     "website": "https://serp.ly/redtube-video-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension downloader for RedWap video pages. Download videos from Redwap in MP4 format.",
+    "name": "Redwap Video Downloader",
+    "slug": "redwap-downloader",
+    "url": "/products/redwap-downloader",
+    "website": "https://serp.ly/redwap-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension downloader for SaintPorn video pages that saves media as MP4 files.",
+    "name": "Saintporn Video Downloader",
+    "slug": "saintporn-downloader",
+    "url": "/products/saintporn-downloader",
+    "website": "https://serp.ly/saintporn-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -780,6 +2795,19 @@
     "website": "https://serp.ly/serp-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension for detecting and downloading videos from SeverePorn directly in your browser, saving them as standard MP4 files.",
+    "name": "Severeporn Video Downloader",
+    "slug": "severeporn-downloader",
+    "url": "/products/severeporn-downloader",
+    "website": "https://serp.ly/severeporn-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -790,6 +2818,97 @@
     "slug": "sexchathu-downloader",
     "url": "/products/sexchathu-downloader",
     "website": "https://serp.ly/sexchathu-video-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension downloader for SexTu videos. Save media from SexTu and FullVideoPorn pages as MP4 files.",
+    "name": "Sextu Video Downloader",
+    "slug": "sextu-downloader",
+    "url": "/products/sextu-downloader",
+    "website": "https://serp.ly/sextu-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension downloader for saving videos from SexTVx as MP4 files.",
+    "name": "Sextvx Video Downloader",
+    "slug": "sextvx-downloader",
+    "url": "/products/sextvx-downloader",
+    "website": "https://serp.ly/sextvx-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download Sexu Videos from the Browser Page",
+    "name": "Sexu Video Downloader",
+    "slug": "sexu-downloader",
+    "url": "/products/sexu-downloader",
+    "website": "https://serp.ly/sexu-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save SexVid Videos from the Page You Are Watching",
+    "name": "Sexvid Video Downloader",
+    "slug": "sexvid-downloader",
+    "url": "/products/sexvid-downloader",
+    "website": "https://serp.ly/sexvid-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save supported Shooshtime videos directly from the watch page using a button-driven browser extension workflow.",
+    "name": "Shooshtime Video Downloader",
+    "slug": "shooshtime-downloader",
+    "url": "/products/shooshtime-downloader",
+    "website": "https://serp.ly/shooshtime-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension downloader for SinParty Tube that lets you save videos from sinparty.com as MP4 files.",
+    "name": "Sinpartytube Video Downloader",
+    "slug": "sinpartytube-downloader",
+    "url": "/products/sinpartytube-downloader",
+    "website": "https://serp.ly/sinpartytube-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension downloader for Siska. Chrome, Edge, Brave, Firefox.",
+    "name": "Siska Video Downloader",
+    "slug": "siska-downloader",
+    "url": "/products/siska-downloader",
+    "website": "https://serp.ly/siska-downloader"
   },
   {
     "category": "video-downloaders",
@@ -864,6 +2983,19 @@
     "website": "https://serp.ly/spankbang-video-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension downloader for SpeedPorn that lets you save videos from speedporn.net as MP4 files.",
+    "name": "Speedporn Video Downloader",
+    "slug": "speedporn-downloader",
+    "url": "/products/speedporn-downloader",
+    "website": "https://serp.ly/speedporn-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -874,6 +3006,32 @@
     "slug": "sprout-downloader",
     "url": "/products/sprout-downloader",
     "website": "https://serp.ly/sprout-video-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save SquirtVideos videos directly from your browser with a dedicated downloader extension.",
+    "name": "Squirtvideos Video Downloader",
+    "slug": "squirtvideos-downloader",
+    "url": "/products/squirtvideos-downloader",
+    "website": "https://serp.ly/squirtvideos-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension downloader for StreamPorn. Chrome, Edge, Brave, Firefox.",
+    "name": "Streamporn Video Downloader",
+    "slug": "streamporn-downloader",
+    "url": "/products/streamporn-downloader",
+    "website": "https://serp.ly/streamporn-downloader"
   },
   {
     "category": "video-downloaders",
@@ -898,6 +3056,71 @@
     "slug": "stripchat-vr-downloader",
     "url": "/products/stripchat-vr-downloader",
     "website": "https://serp.ly/stripchat-vr-video-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension that detects and saves available MP4 or HLS video options from supported Sunporno pages.",
+    "name": "Sunporno Video Downloader",
+    "slug": "sunporno-downloader",
+    "url": "/products/sunporno-downloader",
+    "website": "https://serp.ly/sunporno-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension that detects and downloads video content from Superporn video pages, saving it as MP4 files.",
+    "name": "Superporn Video Downloader",
+    "slug": "superporn-downloader",
+    "url": "/products/superporn-downloader",
+    "website": "https://serp.ly/superporn-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save SwingerPornFun videos from post pages directly to MP4.",
+    "name": "Swingerpornfun Video Downloader",
+    "slug": "swingerpornfun-downloader",
+    "url": "/products/swingerpornfun-downloader",
+    "website": "https://serp.ly/swingerpornfun-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension downloader for SxyLand video pages. Chrome, Edge, Brave, Firefox.",
+    "name": "Sxyland Video Downloader",
+    "slug": "sxyland-downloader",
+    "url": "/products/sxyland-downloader",
+    "website": "https://serp.ly/sxyland-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension downloader for Taxi69. Chrome, Edge, Brave, Firefox.",
+    "name": "Taxi69 Video Downloader",
+    "slug": "taxi69-downloader",
+    "url": "/products/taxi69-downloader",
+    "website": "https://serp.ly/taxi69-downloader"
   },
   {
     "category": "video-downloaders",
@@ -934,6 +3157,19 @@
     "slug": "terabox-downloader",
     "url": "/products/terabox-downloader",
     "website": "https://serp.ly/terabox-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension for downloading videos from ThePornArea video pages directly as MP4 files.",
+    "name": "Thepornarea Video Downloader",
+    "slug": "thepornarea-downloader",
+    "url": "/products/thepornarea-downloader",
+    "website": "https://serp.ly/thepornarea-downloader"
   },
   {
     "category": "video-downloaders",
@@ -1008,6 +3244,58 @@
     "website": "https://serp.ly/tokyomotion-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download TrendyPorn videos with a target-specific browser flow backed by verified URL evidence and browser-network handoff signals.",
+    "name": "Trendyporn Video Downloader",
+    "slug": "trendyporn-downloader",
+    "url": "/products/trendyporn-downloader",
+    "website": "https://serp.ly/trendyporn-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension for downloading videos from Tube8 as MP4 files.",
+    "name": "Tube8 Video Downloader",
+    "slug": "tube8-downloader",
+    "url": "/products/tube8-downloader",
+    "website": "https://serp.ly/tube8-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download TubeOrigin creator videos from `@creator/video` pages directly to MP4.",
+    "name": "Tubeorigin Video Downloader",
+    "slug": "tubeorigin-downloader",
+    "url": "/products/tubeorigin-downloader",
+    "website": "https://serp.ly/tubeorigin-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download TubeV videos from your browser with a simple detection workflow.",
+    "name": "Tubev Video Downloader",
+    "slug": "tubev-downloader",
+    "url": "/products/tubev-downloader",
+    "website": "https://serp.ly/tubev-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -1018,6 +3306,19 @@
     "slug": "twitter-x-downloader",
     "url": "/products/twitter-x-downloader",
     "website": "https://serp.ly/twitter-x-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download TW Pornstars Videos from the Page",
+    "name": "Twpornstars Video Downloader",
+    "slug": "twpornstars-downloader",
+    "url": "/products/twpornstars-downloader",
+    "website": "https://serp.ly/twpornstars-downloader"
   },
   {
     "category": "video-downloaders",
@@ -1068,6 +3369,19 @@
     "website": "https://serp.ly/upornia-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension downloader for saving videos from Usersporn.com as MP4 files.",
+    "name": "Usersporn Video Downloader",
+    "slug": "usersporn-downloader",
+    "url": "/products/usersporn-downloader",
+    "website": "https://serp.ly/usersporn-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -1078,6 +3392,19 @@
     "slug": "vectorstock-downloader",
     "url": "/products/vectorstock-downloader",
     "website": "https://serp.ly/vectorstock-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download Veporn videos directly from your browser tab and save them as MP4 files.",
+    "name": "Veporn Video Downloader",
+    "slug": "veporn-downloader",
+    "url": "/products/veporn-downloader",
+    "website": "https://serp.ly/veporn-downloader"
   },
   {
     "category": "video-downloaders",
@@ -1092,6 +3419,84 @@
     "website": "https://serp.ly/vimeo-video-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save videos from Vivamaxsexscene with a button-driven workflow built around a verified sample page.",
+    "name": "Vivamaxsexscene Video Downloader",
+    "slug": "vivamaxsexscene-downloader",
+    "url": "/products/vivamaxsexscene-downloader",
+    "website": "https://serp.ly/vivamaxsexscene-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download VRSmash Videos for Offline Viewing",
+    "name": "Vrsmash Video Downloader",
+    "slug": "vrsmash-downloader",
+    "url": "/products/vrsmash-downloader",
+    "website": "https://serp.ly/vrsmash-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download Vxxx videos with a button-driven browser flow and save them as MP4 files.",
+    "name": "Vxxx Video Downloader",
+    "slug": "vxxx-downloader",
+    "url": "/products/vxxx-downloader",
+    "website": "https://serp.ly/vxxx-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A focused browser extension for downloading videos from WatchPorn video pages, outputting standard MP4 files.",
+    "name": "Watchporn Video Downloader",
+    "slug": "watchporn-downloader",
+    "url": "/products/watchporn-downloader",
+    "website": "https://serp.ly/watchporn-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension that helps you download videos from Watchxxxfree and save them as MP4 files.",
+    "name": "Watchxxxfree Video Downloader",
+    "slug": "watchxxxfree-downloader",
+    "url": "/products/watchxxxfree-downloader",
+    "website": "https://serp.ly/watchxxxfree-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A focused browser extension downloader for supported WhatBoysWant video pages, enabling you to save MP4 files locally.",
+    "name": "Whatboyswant Video Downloader",
+    "slug": "whatboyswant-downloader",
+    "url": "/products/whatboyswant-downloader",
+    "website": "https://serp.ly/whatboyswant-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -1102,6 +3507,19 @@
     "slug": "whop-downloader",
     "url": "/products/whop-downloader",
     "website": "https://serp.ly/whop-video-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download Whoreshub Videos from Your Browser",
+    "name": "Whoreshub Video Downloader",
+    "slug": "whoreshub-downloader",
+    "url": "/products/whoreshub-downloader",
+    "website": "https://serp.ly/whoreshub-downloader"
   },
   {
     "category": "video-downloaders",
@@ -1128,6 +3546,71 @@
     "website": "https://serp.ly/wistia-video-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save WorldSex Videos with a browser-based downloader extension.",
+    "name": "Worldsex Video Downloader",
+    "slug": "worldsex-downloader",
+    "url": "/products/worldsex-downloader",
+    "website": "https://serp.ly/worldsex-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension downloader for WOW XXX videos. Chrome, Edge, Brave, Firefox.",
+    "name": "Wowxxx Video Downloader",
+    "slug": "wowxxx-downloader",
+    "url": "/products/wowxxx-downloader",
+    "website": "https://serp.ly/wowxxx-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension for downloading videos from WTF People pages directly to MP4 format.",
+    "name": "Wtfpeople Video Downloader",
+    "slug": "wtfpeople-downloader",
+    "url": "/products/wtfpeople-downloader",
+    "website": "https://serp.ly/wtfpeople-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download XCafe videos from your browser with a focused extension workflow.",
+    "name": "Xcafe Video Downloader",
+    "slug": "xcafe-downloader",
+    "url": "/products/xcafe-downloader",
+    "website": "https://serp.ly/xcafe-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download xCum videos from your browser and save them as MP4 files.",
+    "name": "Xcum Video Downloader",
+    "slug": "xcum-downloader",
+    "url": "/products/xcum-downloader",
+    "website": "https://serp.ly/xcum-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -1138,6 +3621,45 @@
     "slug": "xfantazy-downloader",
     "url": "/products/xfantazy-downloader",
     "website": "https://serp.ly/xfantazy-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension downloader for XFreeHD. Chrome, Edge, Brave, Firefox.",
+    "name": "Xfreehd Video Downloader",
+    "slug": "xfreehd-downloader",
+    "url": "/products/xfreehd-downloader",
+    "website": "https://serp.ly/xfreehd-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension downloader for Xfuntaxy videos, saving them as MP4 files.",
+    "name": "Xfuntaxy Video Downloader",
+    "slug": "xfuntaxy-downloader",
+    "url": "/products/xfuntaxy-downloader",
+    "website": "https://serp.ly/xfuntaxy-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download XGROOVY Videos from the Browser Page",
+    "name": "Xgroovy Video Downloader",
+    "slug": "xgroovy-downloader",
+    "url": "/products/xgroovy-downloader",
+    "website": "https://serp.ly/xgroovy-downloader"
   },
   {
     "category": "video-downloaders",
@@ -1164,6 +3686,19 @@
     "website": "https://serp.ly/xhamsterlive-video-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension downloader for XkeezMovies. Chrome, Edge, Brave, Firefox.",
+    "name": "Xkeezmovies Video Downloader",
+    "slug": "xkeezmovies-downloader",
+    "url": "/products/xkeezmovies-downloader",
+    "website": "https://serp.ly/xkeezmovies-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -1174,6 +3709,45 @@
     "slug": "xlovecam-downloader",
     "url": "/products/xlovecam-downloader",
     "website": "https://serp.ly/xlovecam-video-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension downloader for XMegaDrive video pages. Chrome, Edge, Brave, Firefox.",
+    "name": "Xmegadrive Video Downloader",
+    "slug": "xmegadrive-downloader",
+    "url": "/products/xmegadrive-downloader",
+    "website": "https://serp.ly/xmegadrive-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension downloader for detecting and saving supported video media from xMonter video pages.",
+    "name": "Xmonter Video Downloader",
+    "slug": "xmonter-downloader",
+    "url": "/products/xmonter-downloader",
+    "website": "https://serp.ly/xmonter-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension downloader for XMoviesForYou that saves videos directly to your device in MP4 format.",
+    "name": "Xmoviesforyou Video Downloader",
+    "slug": "xmoviesforyou-downloader",
+    "url": "/products/xmoviesforyou-downloader",
+    "website": "https://serp.ly/xmoviesforyou-downloader"
   },
   {
     "category": "video-downloaders",
@@ -1200,6 +3774,45 @@
     "website": "https://serp.ly/xnxx-video-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download Xozilla videos directly from the page you are watching and save them as MP4 files.",
+    "name": "Xozilla Video Downloader",
+    "slug": "xozilla-downloader",
+    "url": "/products/xozilla-downloader",
+    "website": "https://serp.ly/xozilla-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension that detects and downloads videos from supported Xtapes pages, saving them directly to your computer as MP4 files.",
+    "name": "Xtapes Video Downloader",
+    "slug": "xtapes-downloader",
+    "url": "/products/xtapes-downloader",
+    "website": "https://serp.ly/xtapes-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Browser extension downloader for XVGold. Chrome, Edge, Brave, Firefox.",
+    "name": "Xvgold Video Downloader",
+    "slug": "xvgold-downloader",
+    "url": "/products/xvgold-downloader",
+    "website": "https://serp.ly/xvgold-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -1210,6 +3823,97 @@
     "slug": "xvideos-downloader",
     "url": "/products/xvideos-downloader",
     "website": "https://serp.ly/xvideos-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Save videos from Xxvideoss directly in your browser with a site-aware extension designed for xxvideoss.org pages.",
+    "name": "Xxvideoss Video Downloader",
+    "slug": "xxvideoss-downloader",
+    "url": "/products/xxvideoss-downloader",
+    "website": "https://serp.ly/xxvideoss-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension downloader for detecting and saving media from supported Xxxbp video pages.",
+    "name": "Xxxbp Video Downloader",
+    "slug": "xxxbp-downloader",
+    "url": "/products/xxxbp-downloader",
+    "website": "https://serp.ly/xxxbp-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A dedicated browser extension for downloading videos from Xxxfiles.com as MP4 files.",
+    "name": "Xxxfiles Video Downloader",
+    "slug": "xxxfiles-downloader",
+    "url": "/products/xxxfiles-downloader",
+    "website": "https://serp.ly/xxxfiles-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download XXX Shut videos directly from your browser and save them as MP4 files.",
+    "name": "Xxxshut Video Downloader",
+    "slug": "xxxshut-downloader",
+    "url": "/products/xxxshut-downloader",
+    "website": "https://serp.ly/xxxshut-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension downloader for XXX Tube videos, delivering MP4 output from supported video pages.",
+    "name": "Xxxtube Video Downloader",
+    "slug": "xxxtube-downloader",
+    "url": "/products/xxxtube-downloader",
+    "website": "https://serp.ly/xxxtube-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension downloader for Xxxtv that saves videos from xxxz.tv directly to your device as MP4 files.",
+    "name": "Xxxtv Video Downloader",
+    "slug": "xxxtv-downloader",
+    "url": "/products/xxxtv-downloader",
+    "website": "https://serp.ly/xxxtv-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension downloader for YesPorn video pages that saves content as MP4 files.",
+    "name": "Yesporn Video Downloader",
+    "slug": "yesporn-downloader",
+    "url": "/products/yesporn-downloader",
+    "website": "https://serp.ly/yesporn-downloader"
   },
   {
     "category": "video-downloaders",
@@ -1224,6 +3928,32 @@
     "website": "https://serp.ly/yespornplease-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension for detecting and saving supported video streams from YesPornPleaseXXX as MP4 files.",
+    "name": "Yespornpleasexxx Video Downloader",
+    "slug": "yespornpleasexxx-downloader",
+    "url": "/products/yespornpleasexxx-downloader",
+    "website": "https://serp.ly/yespornpleasexxx-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension downloader for YesPornVip video pages that exports content as MP4 files.",
+    "name": "Yespornvip Video Downloader",
+    "slug": "yespornvip-downloader",
+    "url": "/products/yespornvip-downloader",
+    "website": "https://serp.ly/yespornvip-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -1234,6 +3964,19 @@
     "slug": "youjizz-downloader",
     "url": "/products/youjizz-downloader",
     "website": "https://serp.ly/youjizz-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension downloader for YouPerv video pages, saving content as MP4 files.",
+    "name": "Youperv Video Downloader",
+    "slug": "youperv-downloader",
+    "url": "/products/youperv-downloader",
+    "website": "https://serp.ly/youperv-downloader"
   },
   {
     "category": "video-downloaders",
@@ -1248,6 +3991,32 @@
     "website": "https://serp.ly/youporn-video-downloader"
   },
   {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension downloader for YourDailyPornVideos that saves video content from slug-based pages on the .ws domain.",
+    "name": "Yourdailypornvideos Video Downloader",
+    "slug": "yourdailypornvideos-downloader",
+    "url": "/products/yourdailypornvideos-downloader",
+    "website": "https://serp.ly/yourdailypornvideos-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension downloader for YourPorn that lets you save videos from sxyprn.com as MP4 files.",
+    "name": "Yourporn Video Downloader",
+    "slug": "yourporn-downloader",
+    "url": "/products/yourporn-downloader",
+    "website": "https://serp.ly/yourporn-downloader"
+  },
+  {
     "category": "video-downloaders",
     "categories": [
       "video-downloaders"
@@ -1258,5 +4027,18 @@
     "slug": "youtube-downloader",
     "url": "/products/youtube-downloader",
     "website": "https://serp.ly/youtube-downloader"
+  },
+  {
+    "category": "adult",
+    "categories": [
+      "adult",
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "A browser extension for saving videos from Zbporn as MP4 files directly from your browser.",
+    "name": "Zbporn Video Downloader",
+    "slug": "zbporn-downloader",
+    "url": "/products/zbporn-downloader",
+    "website": "https://serp.ly/zbporn-downloader"
   }
 ]
