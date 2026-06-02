@@ -591,6 +591,18 @@
       "video-downloaders"
     ],
     "content": "",
+    "description": "Download Coomer media posts for offline use. Fast, private Coomer downloader.",
+    "name": "Coomer Video Downloader",
+    "slug": "coomervideodownloader.pages.dev",
+    "url": "/products/coomervideodownloader.pages.dev",
+    "website": "https://coomervideodownloader.pages.dev"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
     "description": "Courses retire, subscriptions lapse, content vanishes. Save your Coursera lectures as MP4s before they disappear.",
     "name": "Coursera Downloader",
     "slug": "coursera-downloader",
@@ -672,6 +684,18 @@
     "slug": "deviantart-downloader",
     "url": "/products/deviantart-downloader",
     "website": "https://serp.ly/deviantart-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download DoodStream videos as MP4 files without countdowns, with direct URL resolution and private local saves.",
+    "name": "DoodStream Video Downloader",
+    "slug": "doodstreamvideodownloader.pages.dev",
+    "url": "/products/doodstreamvideodownloader.pages.dev",
+    "website": "https://doodstreamvideodownloader.pages.dev"
   },
   {
     "category": "video-downloaders",
@@ -1204,6 +1228,18 @@
     "website": "https://serp.ly/hdzog-downloader"
   },
   {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download HDZog videos for offline use. Fast, private HDZog downloader.",
+    "name": "HDZog Video Downloader",
+    "slug": "hdzogvideodownloader.pages.dev",
+    "url": "/products/hdzogvideodownloader.pages.dev",
+    "website": "https://hdzogvideodownloader.pages.dev"
+  },
+  {
     "category": "adult",
     "categories": [
       "adult",
@@ -1253,6 +1289,18 @@
     "slug": "hotmovs-downloader",
     "url": "/products/hotmovs-downloader",
     "website": "https://serp.ly/hotmovs-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download accessible HotMovs videos as MP4 files with private browser detection, local saving, and offline playback.",
+    "name": "HotMovs Video Downloader",
+    "slug": "hotmovsvideodownloader.pages.dev",
+    "url": "/products/hotmovsvideodownloader.pages.dev",
+    "website": "https://hotmovsvideodownloader.pages.dev"
   },
   {
     "category": "adult",
@@ -1393,6 +1441,18 @@
     "slug": "itnaked-downloader",
     "url": "/products/itnaked-downloader",
     "website": "https://serp.ly/itnaked-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download JAVHD videos for offline use. Fast, private JAVHD downloader.",
+    "name": "JAV Video Downloader",
+    "slug": "javvideodownloader.pages.dev",
+    "url": "/products/javvideodownloader.pages.dev",
+    "website": "https://javvideodownloader.pages.dev"
   },
   {
     "category": "adult",
@@ -1641,6 +1701,18 @@
       "video-downloaders"
     ],
     "content": "",
+    "description": "Download LuxureTV videos for offline use. Fast, private LuxureTV downloader.",
+    "name": "LuxureTV Video Downloader",
+    "slug": "luxuretvvideodownloader.pages.dev",
+    "url": "/products/luxuretvvideodownloader.pages.dev",
+    "website": "https://luxuretvvideodownloader.pages.dev"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
     "description": "Save streaming videos that normal downloaders can't touch — delivered as a clean MP4.",
     "name": "M3U8 Stream Downloader",
     "slug": "m3u8-downloader",
@@ -1671,6 +1743,18 @@
     "slug": "manyvids-downloader",
     "url": "/products/manyvids-downloader",
     "website": "https://serp.ly/manyvids-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download ManyVids videos you own in original quality. Secure ManyVids downloader with batch support.",
+    "name": "ManyVids Video Downloader",
+    "slug": "manyvidsvideodownloader.pages.dev",
+    "url": "/products/manyvidsvideodownloader.pages.dev",
+    "website": "https://manyvidsvideodownloader.pages.dev"
   },
   {
     "category": "adult",
@@ -1986,6 +2070,18 @@
     "slug": "onlyfans-downloader",
     "url": "/products/onlyfans-downloader",
     "website": "https://serp.ly/onlyfans-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download OnlyFans videos, images, GIFs, and text posts for offline viewing with a browser extension.",
+    "name": "OnlyFans Video Downloader",
+    "slug": "onlyfansvideodownloader.pages.dev",
+    "url": "/products/onlyfansvideodownloader.pages.dev",
+    "website": "https://onlyfansvideodownloader.pages.dev"
   },
   {
     "category": "adult",
@@ -2335,6 +2431,18 @@
     "website": "https://serp.ly/pornhat-downloader"
   },
   {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download accessible PornHat videos as MP4 files with private local processing, supported host detection, and offline playback.",
+    "name": "PornHat Video Downloader",
+    "slug": "pornhatvideodownloader.pages.dev",
+    "url": "/products/pornhatvideodownloader.pages.dev",
+    "website": "https://pornhatvideodownloader.pages.dev"
+  },
+  {
     "category": "adult",
     "categories": [
       "adult",
@@ -2397,6 +2505,18 @@
     "slug": "pornhub-downloader",
     "url": "/products/pornhub-downloader",
     "website": "https://serp.ly/pornhub-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download Pornhub videos easily for offline viewing. Fast, reliable Pornhub video downloader with high-quality downloads.",
+    "name": "Pornhub Video Downloader",
+    "slug": "pornhubvideodownloader.pages.dev",
+    "url": "/products/pornhubvideodownloader.pages.dev",
+    "website": "https://pornhubvideodownloader.pages.dev"
   },
   {
     "category": "adult",
@@ -2514,6 +2634,18 @@
     "slug": "pornone-downloader",
     "url": "/products/pornone-downloader",
     "website": "https://serp.ly/pornone-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download accessible PornOne videos as MP4 files with local browser detection, private saving, and offline playback.",
+    "name": "PornOne Video Downloader",
+    "slug": "pornonevideodownloader.pages.dev",
+    "url": "/products/pornonevideodownloader.pages.dev",
+    "website": "https://pornonevideodownloader.pages.dev"
   },
   {
     "category": "adult",
@@ -3051,6 +3183,18 @@
       "video-downloaders"
     ],
     "content": "",
+    "description": "Download videos, images, and content from Stripchat with a reliable downloader tool built for local saves.",
+    "name": "Stripchat Video Downloader",
+    "slug": "stripchatvideodownloader.pages.dev",
+    "url": "/products/stripchatvideodownloader.pages.dev",
+    "website": "https://stripchatvideodownloader.pages.dev"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
     "description": "Download VR cam recordings from Stripchat and watch them offline in any compatible headset. Fully local, fully private.",
     "name": "Stripchat VR Video Downloader",
     "slug": "stripchat-vr-downloader",
@@ -3338,6 +3482,18 @@
       "video-downloaders"
     ],
     "content": "",
+    "description": "Download TXXX videos for offline use. Fast, private TXXX downloader.",
+    "name": "TXXX Video Downloader",
+    "slug": "txxxvideodownloader.pages.dev",
+    "url": "/products/txxxvideodownloader.pages.dev",
+    "website": "https://txxxvideodownloader.pages.dev"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
     "description": "You paid for the course — keep it forever. Download full Udemy courses as MP4 videos you own, not ones that expire.",
     "name": "Udemy Video Downloader",
     "slug": "udemy-downloader",
@@ -3367,6 +3523,18 @@
     "slug": "upornia-downloader",
     "url": "/products/upornia-downloader",
     "website": "https://serp.ly/upornia-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download Upornia videos for offline use. Fast, private Upornia downloader.",
+    "name": "Upornia Video Downloader",
+    "slug": "uporniavideodownloader.pages.dev",
+    "url": "/products/uporniavideodownloader.pages.dev",
+    "website": "https://uporniavideodownloader.pages.dev"
   },
   {
     "category": "adult",
@@ -3509,6 +3677,18 @@
     "website": "https://serp.ly/whop-video-downloader"
   },
   {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download Whop videos, images, and text posts from courses, lessons, and community pages with a browser extension built for Whop&#x27;s page structure.",
+    "name": "Whop Video Downloader",
+    "slug": "whopvideodownloader.pages.dev",
+    "url": "/products/whopvideodownloader.pages.dev",
+    "website": "https://whopvideodownloader.pages.dev"
+  },
+  {
     "category": "adult",
     "categories": [
       "adult",
@@ -3623,6 +3803,18 @@
     "website": "https://serp.ly/xfantazy-downloader"
   },
   {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download XFantazy videos you are authorized to view. Fast, private XFantazy downloader with batch support.",
+    "name": "XFantazy Video Downloader",
+    "slug": "xfantazyvideodownloader.pages.dev",
+    "url": "/products/xfantazyvideodownloader.pages.dev",
+    "website": "https://xfantazyvideodownloader.pages.dev"
+  },
+  {
     "category": "adult",
     "categories": [
       "adult",
@@ -3634,6 +3826,18 @@
     "slug": "xfreehd-downloader",
     "url": "/products/xfreehd-downloader",
     "website": "https://serp.ly/xfreehd-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download accessible XFreeHD videos as MP4 files with private local browser detection, supported host matching, and offline playback.",
+    "name": "XFreeHD Video Downloader",
+    "slug": "xfreehdvideodownloader.pages.dev",
+    "url": "/products/xfreehdvideodownloader.pages.dev",
+    "website": "https://xfreehdvideodownloader.pages.dev"
   },
   {
     "category": "adult",
@@ -3660,6 +3864,18 @@
     "slug": "xgroovy-downloader",
     "url": "/products/xgroovy-downloader",
     "website": "https://serp.ly/xgroovy-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download accessible XGroovy videos as MP4 files with private local processing, supported host detection, and offline playback.",
+    "name": "XGroovy Video Downloader",
+    "slug": "xgroovyvideodownloader.pages.dev",
+    "url": "/products/xgroovyvideodownloader.pages.dev",
+    "website": "https://xgroovyvideodownloader.pages.dev"
   },
   {
     "category": "video-downloaders",
@@ -3989,6 +4205,18 @@
     "slug": "youporn-downloader",
     "url": "/products/youporn-downloader",
     "website": "https://serp.ly/youporn-video-downloader"
+  },
+  {
+    "category": "video-downloaders",
+    "categories": [
+      "video-downloaders"
+    ],
+    "content": "",
+    "description": "Download YouPorn videos easily for offline viewing. Fast, reliable YouPorn video downloader with high-quality downloads.",
+    "name": "YouPorn Video Downloader",
+    "slug": "youpornvideodownloader.pages.dev",
+    "url": "/products/youpornvideodownloader.pages.dev",
+    "website": "https://youpornvideodownloader.pages.dev"
   },
   {
     "category": "adult",
