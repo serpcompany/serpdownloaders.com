@@ -1,0 +1,22 @@
+name: Verify badge on issue
+
+on:
+  issue_comment:
+    types: [created]
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  verify:
+    if: >-
+      (github.event_name == 'issues') ||
+      (!github.event.issue.pull_request &&
+      contains(github.event.comment.body, '/check-badge'))
+    permissions:
+      issues: write
+    uses: serpcompany/json-directory-template/.github/workflows/reusable-verify-badge.yml@main
+    secrets:
+      GH_PAT: ${{ secrets.GH_PAT }}
